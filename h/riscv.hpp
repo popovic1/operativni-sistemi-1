@@ -3,6 +3,7 @@
 
 
 #include "../h/MemoryAllocator.hpp"
+#include "PCB.hpp"
 
 
 #define readUsrReg(reg, dst) __asm__ volatile("mv %0,"#reg : "=r" (dst));
@@ -103,6 +104,14 @@ public:
     static uint64 r_a1();
 
     static void w_a1(uint64 a1);
+
+    static uint64 r_a2();
+
+    static void w_a2(uint64 a1);
+
+    static uint64 r_a3();
+
+    static void w_a3(uint64 a1);
 
     static void push_a0(long a0);
 
@@ -232,6 +241,26 @@ inline uint64 Riscv::r_a1() {
 
 inline void Riscv::w_a1(uint64 a1) {
     __asm__ volatile ("mv a1, %0" : : "r"(a1));
+}
+
+inline uint64 Riscv::r_a2() {
+    uint64 volatile a2;
+    __asm__ volatile ("ld %0, 12*8(fp)" : "=r"(a2));
+    return a2;
+}
+
+inline void Riscv::w_a2(uint64 a2) {
+    __asm__ volatile ("mv a2, %0" : : "r"(a2));
+}
+
+inline uint64 Riscv::r_a3() {
+    uint64 volatile a3;
+    __asm__ volatile ("ld %0, 13*8(fp)" : "=r"(a3));
+    return a3;
+}
+
+inline void Riscv::w_a3(uint64 a3) {
+    __asm__ volatile ("mv a3, %0" : : "r"(a3));
 }
 
 inline void Riscv::push_a0(long a0) {

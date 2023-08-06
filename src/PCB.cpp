@@ -5,17 +5,12 @@
 #include "../h/PCB.hpp"
 
 
+PCB* PCB::running;
 
 PCB *PCB::createThread(PCB::Body body, void *args) {
     return new PCB(body, args);
 }
 
-bool PCB::start() {
-    if(state!=INITIALIZED)return false;
-    state = READY;
-    Scheduler::put(this);
-    return true;
-}
 
 void PCB::dispatch() {
     Riscv::pushRegisters();
@@ -45,5 +40,5 @@ int PCB::exit() {
 void PCB::wrapper() {
     Riscv::popSppSpie();
     running->body(running->args);
-    exit(); //thread_exit()?
+    thread_exit();
 }
