@@ -12,6 +12,7 @@ void Riscv::trapHandler() {
     uint64 scause = r_scause();
     uint64 a0 = r_a0();
     uint64 a1 = r_a1();
+    uint64 a2 = r_a2();
     uint64 sepc;
     uint64 sstatus;
 
@@ -31,7 +32,19 @@ void Riscv::trapHandler() {
                 case 0x02: // deallocate
                     push_a0(MemoryAllocator::getInstance().deallocate((void *)a1));
                     break;
+                case 0x11: //thread_create
+                    push_a0((uint64)PCB::createThread((PCB::Body)a1, (void*)a2));
+                    break;
+                case 0x12: // thread_exit
+                    push_a0(PCB::exit());
+                    break;
+                case 0x13:
+                    PCB::dispatch();
+                    break;
+                case 0x14:
+                    break;
                 default:
+                    //printString("Unknown interrupt!");
                     break;
 
             }
@@ -48,7 +61,8 @@ void Riscv::trapHandler() {
             console_handler();
             break;
         default:
-            printString("ERROR: Unexpected interrupt!");
+            break;
+            //printString("ERROR: Unexpected interrupt!");
     }
 
 }

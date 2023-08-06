@@ -3,6 +3,7 @@
 
 
 #include "riscv.hpp"
+#include "print.hpp"
 
 
 void *mem_alloc(size_t size);

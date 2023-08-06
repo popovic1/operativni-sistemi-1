@@ -21,12 +21,12 @@ Thread::Thread(void (*body)(void*), void* arg) {
 }
 
 Thread::Thread() {
-    //TODO
+    new Thread(nullptr, nullptr);
 }
 
 int Thread::start() {
-    //TODO
-    // Scheduler::put
+    Scheduler::put((PCB*)myHandle);
+
     return 0;
 }
 
@@ -39,7 +39,7 @@ void Thread::dispatch() {
 }
 
 Thread::~Thread() {
-    //TODO
+    delete (PCB*)myHandle;
 }
 
 //Semaphore::Semaphore(unsigned int init)  {

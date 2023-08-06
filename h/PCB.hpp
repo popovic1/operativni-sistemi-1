@@ -4,6 +4,7 @@
 
 #include "Scheduler.hpp"
 #include "riscv.hpp"
+#include "../h/syscall_c.hpp"
 
 
 
@@ -18,7 +19,6 @@ public:
     };
 
     enum State{
-        INITIALIZED,
         READY,
         RUNNING,
         SUSPENDED,
@@ -41,8 +41,6 @@ public:
 
     static PCB *running;
 
-    bool start();
-
 private:
 
     static void contextSwitch(Context* old, Context* running);
@@ -55,7 +53,7 @@ private:
             context({   (uint64)&wrapper,
                         stack != nullptr ? (uint64) &stack[DEFAULT_STACK_SIZE] : 0
                     }),
-            state(INITIALIZED)
+            state(READY)
     {
         this->args=args;
 //        if (body != nullptr) { Scheduler::put(this); }
