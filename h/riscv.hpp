@@ -2,10 +2,7 @@
 #define PROJECT_BASE_V1_1_RISCV_HPP
 
 
-#include "../lib/hw.h"
 #include "../h/MemoryAllocator.hpp"
-#include "../lib/console.h"
-#include "../h/print.hpp"
 
 
 #define readUsrReg(reg, dst) __asm__ volatile("mv %0,"#reg : "=r" (dst));

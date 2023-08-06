@@ -2,7 +2,7 @@
 #define SYSCALL_C_H
 
 
-#include "../lib/hw.h"
+#include "riscv.hpp"
 
 
 void *mem_alloc(size_t size);
