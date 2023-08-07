@@ -20,7 +20,7 @@ void Riscv::trapHandler() {
         case 0x08:
         case 0x09:
             //ecall: software interrupt
-            sepc = r_sepc() + 4;
+            sepc = r_sepc();
             sstatus = r_sstatus();
             void* mem;
 
@@ -50,7 +50,7 @@ void Riscv::trapHandler() {
             }
 
             w_sstatus(sstatus);
-            w_sepc(sepc);
+            w_sepc(sepc + 4);
             break;
         case 0x8000000000000001UL:
             //timer interrupt

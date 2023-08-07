@@ -28,7 +28,7 @@ public:
 
     bool isFinished() const { return state==FINISHED; }
 
-    void setFinished() { state = FINISHED; }
+    void setState(State s) { state = s; }
 
     using Body = void (*)(void*);
 
