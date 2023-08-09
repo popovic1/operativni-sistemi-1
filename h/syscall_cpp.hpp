@@ -11,6 +11,8 @@ void operator delete(void *ptr);
 
 void operator delete[](void *ptr);
 
+void switchToUserMode();
+
 class Thread {
 public:
     Thread(void (*body)(void *), void *arg);

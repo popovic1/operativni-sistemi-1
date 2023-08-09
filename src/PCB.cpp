@@ -7,8 +7,8 @@
 
 PCB* PCB::running;
 
-PCB *PCB::createThread(PCB::Body body, void *args) {
-    return new PCB(body, args);
+PCB *PCB::createThread(PCB::Body body, void *args, uint64* stack) {
+    return new PCB(body, args, stack);
 }
 
 

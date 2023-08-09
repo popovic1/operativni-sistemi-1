@@ -5,16 +5,18 @@
 #include "../h/syscall_cpp.hpp"
 
 void* operator new(size_t size) {
-    return (void*)mem_alloc(size);
+    return mem_alloc(size);
 }
 
 void* operator new[](size_t size) {
-    return (void*)mem_alloc(size);
+    return mem_alloc(size);
 }
 
 void operator delete(void *ptr) { mem_free(ptr); }
 
 void operator delete[](void *ptr) { mem_free(ptr); }
+
+void switchToUserMode(){ toUserMode();}
 
 Thread::Thread(void (*body)(void*), void* arg) {
     thread_create(&myHandle, body, arg);

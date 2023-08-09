@@ -13,6 +13,7 @@ void Riscv::trapHandler() {
     uint64 a0 = r_a0();
     uint64 a1 = r_a1();
     uint64 a2 = r_a2();
+
     uint64 sepc;
     uint64 sstatus;
 
@@ -23,17 +24,19 @@ void Riscv::trapHandler() {
             sepc = r_sepc();
             sstatus = r_sstatus();
             void* mem;
-
+            uint64* stack;
             switch(a0){
                 case 0x01: // allocate
                     mem = MemoryAllocator::getInstance().allocate((size_t) a1);
-                    push_a0((long) mem);
+                    push_a0((uint64) mem);
                     break;
                 case 0x02: // deallocate
                     push_a0(MemoryAllocator::getInstance().deallocate((void *)a1));
                     break;
                 case 0x11: //thread_create
-                    push_a0((uint64)PCB::createThread((PCB::Body)a1, (void*)a2));
+                    if((uint64*)a1!= nullptr) stack = (uint64*)MemoryAllocator::getInstance().allocate(((DEFAULT_STACK_SIZE + 16+ MEM_BLOCK_SIZE - 1) / MEM_BLOCK_SIZE));
+                    else stack = nullptr;
+                    push_a0((uint64)PCB::createThread((PCB::Body)a1, (void*)a2, stack));
                     break;
                 case 0x12: // thread_exit
                     push_a0(PCB::exit());
@@ -43,6 +46,12 @@ void Riscv::trapHandler() {
                     break;
                 case 0x14:
                     break;
+                case 0x51:
+                    w_sstatus(sstatus);
+                    mc_sstatus(1<<8);
+                    w_sepc(sepc+4);
+                    mc_sip(SIP_SSIP);
+                    return;
                 default:
                     //printString("Unknown interrupt!");
                     break;
@@ -51,6 +60,7 @@ void Riscv::trapHandler() {
 
             w_sstatus(sstatus);
             w_sepc(sepc + 4);
+            mc_sip(SIP_SSIP);
             break;
         case 0x8000000000000001UL:
             //timer interrupt

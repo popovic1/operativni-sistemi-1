@@ -47,55 +47,6 @@ void *MemoryAllocator::allocate(size_t size) {
                 }
 
 
-
-                // Split the block and merge it with a neighbour if possible
-//                uint8 flag1 = 0;
-//                uint8 flag2 = 0;
-//
-//
-//                if (prev != nullptr) {
-//                    if ((uint64 *) prev + prev->size == (uint64 *) current) {
-//                        //left neighbour
-//                        flag1 = 1;
-//                        prev->size = prev->size + current->size - sizeToAllocate;
-//                        current = (Block *) ((uint64 *) current + sizeToAllocate);
-//                        current->size = sizeToAllocate;
-//                    }
-//                }
-//                if (current->next != nullptr && flag1 == 0) {
-//                    if ((uint64 *) current + current->size == (uint64 *) (current->next)) {
-//                        //right neighbour
-//                        flag2 = 1;
-//                        Block *new_block;
-//                        new_block = (Block *) ((uint64 *) current + sizeToAllocate);
-//                        new_block->size = prev->next->size + current->size - sizeToAllocate;
-//                        new_block->next = prev->next->next;
-//                        prev->next = new_block;
-//                        current->size = sizeToAllocate;
-//                    }
-//                }
-//                if (flag1 == 0 && flag2 == 0) {
-//                    //add another block
-//                    Block *new_block;
-//                    new_block = (Block *) ((uint64 *) current + sizeToAllocate);
-//                    new_block->size = current->size - sizeToAllocate;
-//                    current->size = sizeToAllocate;
-//                    if (free_list == nullptr) {
-//                        free_list = new_block;
-//
-//                        free_list->next = nullptr;
-//                    } else if (prev == nullptr) {
-//                        new_block->next = free_list;
-//                        free_list = new_block;
-//                    } else if (prev->next == nullptr) {
-//                        prev->next = new_block;
-//                        new_block->next = nullptr;
-//                    } else {
-//                        new_block->next = prev->next;
-//                        prev->next = new_block;
-//                    }
-//
-//                }
             }
             //add block to allocated list
             if (!allocated_list) {

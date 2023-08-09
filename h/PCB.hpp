@@ -11,7 +11,6 @@
 
 class PCB {
 public:
-
     struct Context
     {
         uint64 ra;
@@ -32,7 +31,7 @@ public:
 
     using Body = void (*)(void*);
 
-    static PCB *createThread(Body body, void* args);
+    static PCB *createThread(Body body, void* args, uint64* stack);
 
     static void dispatch();
 
@@ -46,16 +45,16 @@ private:
     static void contextSwitch(Context* old, Context* running);
 
     static void wrapper();
-
-    PCB(Body body, void* args) :
-            body(body),
-            stack(body != nullptr ? new uint64[DEFAULT_STACK_SIZE] : nullptr),
-            context({   (uint64)&wrapper,
-                        stack != nullptr ? (uint64) &stack[DEFAULT_STACK_SIZE] : 0
-                    }),
-            state(READY)
+public:
+    PCB(Body body, void* args, uint64* stack)
     {
+        this->body = body;
+        this->stack = stack;
+        context = {   (uint64)&wrapper,
+                      stack != nullptr ? (uint64) &stack[DEFAULT_STACK_SIZE] : 0
+        };
         this->args=args;
+        state = READY;
 //        if (body != nullptr) { Scheduler::put(this); }
     }
 

@@ -8,8 +8,7 @@ void *mem_alloc(size_t size) {
 
     __asm__ volatile ("ecall");
 
-    volatile long a0;
-    a0 = Riscv::r_a0();
+    uint64 a0 = Riscv::r_a0();
     return (void *) a0;
 }
 
@@ -24,8 +23,13 @@ int mem_free(void *ptr) {
     return a0;
 }
 
+void toUserMode(){
+    Riscv::w_a0(0x51);
+    __asm__ volatile ("ecall");
+}
+
 int thread_create(thread_t *handle, void(*start_routine)(void *), void *arg) {
-    if(!handle)return -1;
+
 
     Riscv::w_a0(0x11);
     Riscv::w_a1((uint64) start_routine);
@@ -33,9 +37,9 @@ int thread_create(thread_t *handle, void(*start_routine)(void *), void *arg) {
 
     __asm__ volatile ("ecall");
 
-    *handle = (thread_t) Riscv::r_a0();
-
-    return 0;
+    handle = (thread_t*) Riscv::r_a0();
+    if(handle)return 0;
+    return -1;
 
 }
 

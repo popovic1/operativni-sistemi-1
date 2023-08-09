@@ -10,6 +10,8 @@ void *mem_alloc(size_t size);
 
 int mem_free(void *);
 
+void toUserMode();
+
 class _thread;
 
 typedef _thread *thread_t;
