@@ -1,6 +1,6 @@
 #ifndef PROJECT_BASE_V1_1_MEMORYALLOCATOR_HPP
 #define PROJECT_BASE_V1_1_MEMORYALLOCATOR_HPP
-#include "print.hpp"
+#include "../lib/hw.h"
 
 struct Block {
     size_t size;
