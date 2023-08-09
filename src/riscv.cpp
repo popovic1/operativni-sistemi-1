@@ -13,6 +13,7 @@ void Riscv::trapHandler() {
     uint64 a0 = r_a0();
     uint64 a1 = r_a1();
     uint64 a2 = r_a2();
+    uint64 a3 = r_a3();
 
     uint64 sepc;
     uint64 sstatus;
@@ -21,10 +22,11 @@ void Riscv::trapHandler() {
         case 0x08:
         case 0x09:
             //ecall: software interrupt
-            sepc = r_sepc();
+            sepc = r_sepc() + 4;
             sstatus = r_sstatus();
             void* mem;
             uint64* stack;
+            PCB** handle;
             switch(a0){
                 case 0x01: // allocate
                     mem = MemoryAllocator::getInstance().allocate((size_t) a1);
@@ -36,7 +38,13 @@ void Riscv::trapHandler() {
                 case 0x11: //thread_create
                     if((uint64*)a1!= nullptr) stack = (uint64*)MemoryAllocator::getInstance().allocate(((DEFAULT_STACK_SIZE + 16+ MEM_BLOCK_SIZE - 1) / MEM_BLOCK_SIZE));
                     else stack = nullptr;
-                    push_a0((uint64)PCB::createThread((PCB::Body)a1, (void*)a2, stack));
+                    handle = (PCB**) a3;
+                    *handle = new PCB((PCB::Body)a1, (void*)a2, stack);
+                    //if(!handle)push_a0(-1);
+
+                    push_a0(0);
+
+
                     break;
                 case 0x12: // thread_exit
                     push_a0(PCB::exit());
@@ -59,8 +67,8 @@ void Riscv::trapHandler() {
             }
 
             w_sstatus(sstatus);
-            w_sepc(sepc + 4);
-            mc_sip(SIP_SSIP);
+            w_sepc(sepc);
+            //mc_sip(SIP_SSIP); remove this comment later and see if it works
             break;
         case 0x8000000000000001UL:
             //timer interrupt
@@ -71,7 +79,7 @@ void Riscv::trapHandler() {
             console_handler();
             break;
         default:
-            break;
+            return;
             //printString("ERROR: Unexpected interrupt!");
     }
 

@@ -1,7 +1,9 @@
 
-
-
 #include "../h/riscv.hpp"
+#include "../h/syscall_c.hpp"
+#include "../h/print.hpp"
+#include "../h/PCB.hpp"
+#include "../h/syscall_cpp.hpp"
 
 
 struct A {
@@ -17,124 +19,51 @@ struct B {
 };
 
 class C{
-public:
-    struct Context
-    {
-        uint64 ra;
-        uint64 sp;
-    };
-
-    enum State{
-        READY,
-        RUNNING,
-        SUSPENDED,
-        FINISHED
-    };
-
-    using Body = void (*)(void*);
-    static C *createC(Body body, void* args){
-        return new C(body, args);
-    }
-
-    void setState(State s) { state = s; }
 private:
+    uint64 num;
 
-    Body body;
-    void* args = nullptr; //TODD proveri da li ostaje nullptr ili se lepo inicializuje
-    Context context;
-    State state;
-    uint64 *stack;
+public:
 
-    C(Body body, void* args)
-    {
-        this->body = body;
-        stack = nullptr;
-        //stack=(body != nullptr ? new uint64[DEFAULT_STACK_SIZE] : nullptr);
-        context = {   (uint64)&body,
-                      stack != nullptr ? (uint64) &stack[DEFAULT_STACK_SIZE] : 0
-        };
-        this->args=args;
-        state = READY;
+    C(uint64 n){
+        num = n;
     }
+
+
+
 
 };
 
-class D{
-private:
-    uint64 num = 0;
-public:
-
-
-
-    static D* createD(uint64 n){
-        return new D();
-
-
-    }
-
-
-};
+C* createC(uint64 n){
+    return new C(n);
+}
 
 extern void userMain();
-extern void switchToUserMode();
+
 int main() {
 
 
     MemoryAllocator::getInstance().init();
-
     Riscv::w_stvec((uint64) &Riscv::supervisorTrap+1);
+    PCB* pcb = new PCB(nullptr, nullptr, nullptr);
+    PCB::running=pcb;
     Riscv::ms_sstatus(Riscv::SSTATUS_SIE);
 
-//    D* d1 = new D(2);
-//    D* d3 = new D(3);
-//    D* d4 = new D(5);
+    switchToUserMode();
 
-    D* d1 = new D();
-    D* d2 = D::createD(4);
-    delete d1;
-    delete d2;
-    //delete d3;
-    //delete d4;
+    Thread* userThread = new Thread((void (*)(void *))(userMain), nullptr);
+    userThread->start();
 
-//    PCB* pcb = new PCB(nullptr, nullptr, nullptr);
-//    PCB::running = pcb;
-//    PCB::running->setState(PCB::RUNNING);
-//
-//    switchToUserMode();
-//
-//    userMain();
-//    delete pcb;
+    thread_dispatch();
 
+    delete userThread;
+    delete pcb;
 
     //printString("MAIN START\n");
 
-//    thread_t t;
-//    thread_create(&t, (void (*)(void *))(userMain), nullptr);
-//
-//    while(!((PCB*)t)->isFinished()){
-//        thread_dispatch();
-//    }
-//
-//    delete (PCB*)t;
-//
-//    delete PCB::running;
-//
-//    A* a0 = new A();
-//    B* b0 = new B();
-//    A* a1 = new A();
-//    a0->a = 0;
-//    a1->a = 1;
-//    b0->a = 10;
-//    delete(a0);
-//    B* b1 = new B();
-//    b1->a = 11;
-//    delete(a1);
-//    delete(b0);
-//    delete(b1);
-//
-//
-//
-//    //printString("Finished\n");
-//
+
+
+
+    //printString("Finished\n");
+
     return 0;
 }

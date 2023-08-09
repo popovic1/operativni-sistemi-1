@@ -7,9 +7,7 @@
 
 PCB* PCB::running;
 
-PCB *PCB::createThread(PCB::Body body, void *args, uint64* stack) {
-    return new PCB(body, args, stack);
-}
+
 
 
 void PCB::dispatch() {
@@ -42,3 +40,4 @@ void PCB::wrapper() {
     running->body(running->args);
     thread_exit();
 }
+
