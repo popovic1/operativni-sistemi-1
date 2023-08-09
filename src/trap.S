@@ -1,8 +1,8 @@
 .extern _ZN5Riscv11trapHandlerEv
-.type _ZN5Riscv11trapHandlerEv, @function
-.global _ZN5Riscv14supervisorTrapEv
-.align 4
 
+.align 4
+.global _ZN5Riscv14supervisorTrapEv
+.type _ZN5Riscv14supervisorTrapEv, @function
 _ZN5Riscv14supervisorTrapEv:
     nop
     nop
@@ -13,6 +13,7 @@ _ZN5Riscv14supervisorTrapEv:
     nop
     nop
     nop
+
 
     # push all registers to stack
     addi sp, sp, -256
@@ -29,4 +30,3 @@ _ZN5Riscv14supervisorTrapEv:
     addi sp, sp, 256
 
     sret
-

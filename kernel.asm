@@ -19,10 +19,10 @@ Disassembly of section .text:
 	...
 
 0000000080001000 <_ZN5Riscv14supervisorTrapEv>:
-.type _ZN5Riscv11trapHandlerEv, @function
-.global _ZN5Riscv14supervisorTrapEv
-.align 4
 
+.align 4
+.global _ZN5Riscv14supervisorTrapEv
+.type _ZN5Riscv14supervisorTrapEv, @function
 _ZN5Riscv14supervisorTrapEv:
     nop
     80001000:	00000013          	nop
@@ -42,6 +42,7 @@ _ZN5Riscv14supervisorTrapEv:
     8000101c:	00000013          	nop
     nop
     80001020:	00000013          	nop
+
 
     # push all registers to stack
     addi sp, sp, -256
