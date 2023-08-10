@@ -39,9 +39,7 @@ int thread_create(thread_t *handle, void(*start_routine)(void *), void *arg) {
 
     __asm__ volatile ("ecall");
 
-    handle = (thread_t*) Riscv::r_a0();
-    if(handle)return 0;
-    return -1;
+    return 0;
 
 }
 

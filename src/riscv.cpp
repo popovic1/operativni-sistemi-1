@@ -68,7 +68,7 @@ void Riscv::trapHandler() {
 
             w_sstatus(sstatus);
             w_sepc(sepc);
-            //mc_sip(SIP_SSIP); remove this comment later and see if it works
+            mc_sip(SIP_SSIP);
             break;
         case 0x8000000000000001UL:
             //timer interrupt
