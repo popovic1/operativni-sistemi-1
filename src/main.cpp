@@ -46,6 +46,7 @@ int main() {
     Riscv::w_stvec((uint64) &Riscv::supervisorTrap+1);
     PCB* pcb = new PCB(nullptr, nullptr, nullptr);
     PCB::running=pcb;
+    pcb->setState(PCB::RUNNING);
     Riscv::ms_sstatus(Riscv::SSTATUS_SIE);
 
     switchToUserMode();
