@@ -1,4 +1,4 @@
-GAS LISTING /tmp/cchmtwv7.s 			page 1
+GAS LISTING /tmp/ccP51DCP.s 			page 1
 
 
    1              		.file	"syscall_cpp.cpp"
@@ -58,7 +58,7 @@ GAS LISTING /tmp/cchmtwv7.s 			page 1
   24              		.cfi_restore 8
   25              		.cfi_def_cfa 2, 16
   26 0010 13010101 		addi	sp,sp,16
-GAS LISTING /tmp/cchmtwv7.s 			page 2
+GAS LISTING /tmp/ccP51DCP.s 			page 2
 
 
   27              		.cfi_def_cfa_offset 0
@@ -118,7 +118,7 @@ GAS LISTING /tmp/cchmtwv7.s 			page 1
   73              	.LVL3:
   74 0028 130101FF 		addi	sp,sp,-16
   75              		.cfi_def_cfa_offset 16
-GAS LISTING /tmp/cchmtwv7.s 			page 3
+GAS LISTING /tmp/ccP51DCP.s 			page 3
 
 
   76 002c 23341100 		sd	ra,8(sp)
@@ -178,7 +178,7 @@ GAS LISTING /tmp/cchmtwv7.s 			page 1
  126 0074 67800000 		jr	ra
  127              		.cfi_endproc
  128              	.LFE51:
-GAS LISTING /tmp/cchmtwv7.s 			page 4
+GAS LISTING /tmp/ccP51DCP.s 			page 4
 
 
  130              		.align	2
@@ -238,7 +238,7 @@ GAS LISTING /tmp/cchmtwv7.s 			page 1
   35:src/syscall_cpp.cpp **** 
   36:src/syscall_cpp.cpp **** void Thread::join() {
   37:src/syscall_cpp.cpp ****     thread_join(myHandle);
-GAS LISTING /tmp/cchmtwv7.s 			page 5
+GAS LISTING /tmp/ccP51DCP.s 			page 5
 
 
   38:src/syscall_cpp.cpp **** }
@@ -298,7 +298,7 @@ GAS LISTING /tmp/cchmtwv7.s 			page 1
   18:src/../h/PCB.hpp ****         READY,
   19:src/../h/PCB.hpp ****         RUNNING,
   20:src/../h/PCB.hpp ****         SUSPENDED,
-GAS LISTING /tmp/cchmtwv7.s 			page 6
+GAS LISTING /tmp/ccP51DCP.s 			page 6
 
 
   21:src/../h/PCB.hpp ****         FINISHED
@@ -358,7 +358,7 @@ GAS LISTING /tmp/cchmtwv7.s 			page 1
  243              		.cfi_startproc
  244              	.LVL14:
  245 00f8 130101FE 		addi	sp,sp,-32
-GAS LISTING /tmp/cchmtwv7.s 			page 7
+GAS LISTING /tmp/ccP51DCP.s 			page 7
 
 
  246              		.cfi_def_cfa_offset 32
@@ -418,7 +418,7 @@ GAS LISTING /tmp/cchmtwv7.s 			page 1
  295              		.loc 2 19 39
  296 0150 83308100 		ld	ra,8(sp)
  297              		.cfi_restore 1
-GAS LISTING /tmp/cchmtwv7.s 			page 8
+GAS LISTING /tmp/ccP51DCP.s 			page 8
 
 
  298 0154 03340100 		ld	s0,0(sp)
@@ -478,7 +478,7 @@ GAS LISTING /tmp/cchmtwv7.s 			page 1
  344 0198 13010101 		addi	sp,sp,16
  345              		.cfi_def_cfa_offset 0
  346 019c 67800000 		jr	ra
-GAS LISTING /tmp/cchmtwv7.s 			page 9
+GAS LISTING /tmp/ccP51DCP.s 			page 9
 
 
  347              		.cfi_endproc
@@ -538,7 +538,7 @@ GAS LISTING /tmp/cchmtwv7.s 			page 1
  396 01ec 13850400 		mv	a0,s1
  397 01f0 97000000 		call	_ZdlPv
  397      E7800000 
-GAS LISTING /tmp/cchmtwv7.s 			page 10
+GAS LISTING /tmp/ccP51DCP.s 			page 10
 
 
  398              	.LVL27:
@@ -598,7 +598,7 @@ GAS LISTING /tmp/cchmtwv7.s 			page 1
  451 021c 130101FF 		addi	sp,sp,-16
  452              		.cfi_def_cfa_offset 16
  453 0220 23341100 		sd	ra,8(sp)
-GAS LISTING /tmp/cchmtwv7.s 			page 11
+GAS LISTING /tmp/ccP51DCP.s 			page 11
 
 
  454 0224 23308100 		sd	s0,0(sp)
@@ -658,7 +658,7 @@ GAS LISTING /tmp/cchmtwv7.s 			page 1
   38:src/syscall_cpp.cpp **** 
  501              		.loc 2 38 1
  502 0268 83308100 		ld	ra,8(sp)
-GAS LISTING /tmp/cchmtwv7.s 			page 12
+GAS LISTING /tmp/ccP51DCP.s 			page 12
 
 
  503              		.cfi_restore 1
@@ -718,7 +718,7 @@ GAS LISTING /tmp/cchmtwv7.s 			page 1
  553      00000000 
  554 0020 00000000 		.dword	_ZN6Thread3runEv
  554      00000000 
-GAS LISTING /tmp/cchmtwv7.s 			page 13
+GAS LISTING /tmp/ccP51DCP.s 			page 13
 
 
  555              		.text
@@ -732,452 +732,452 @@ GAS LISTING /tmp/cchmtwv7.s 			page 1
  3162      00000000 
  3163              		.ident	"GCC: (Ubuntu 9.4.0-1ubuntu1~20.04) 9.4.0"
  3164              		.section	.note.GNU-stack,"",@progbits
-GAS LISTING /tmp/cchmtwv7.s 			page 14
+GAS LISTING /tmp/ccP51DCP.s 			page 14
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 syscall_cpp.cpp
-     /tmp/cchmtwv7.s:10     .text._ZN6Thread3runEv:0000000000000000 _ZN6Thread3runEv
-     /tmp/cchmtwv7.s:14     .text._ZN6Thread3runEv:0000000000000000 .L0 
-     /tmp/cchmtwv7.s:16     .text._ZN6Thread3runEv:0000000000000000 .L0 
-     /tmp/cchmtwv7.s:17     .text._ZN6Thread3runEv:0000000000000004 .L0 
-     /tmp/cchmtwv7.s:19     .text._ZN6Thread3runEv:0000000000000008 .L0 
-     /tmp/cchmtwv7.s:21     .text._ZN6Thread3runEv:000000000000000c .L0 
-     /tmp/cchmtwv7.s:23     .text._ZN6Thread3runEv:000000000000000c .L0 
-     /tmp/cchmtwv7.s:24     .text._ZN6Thread3runEv:0000000000000010 .L0 
-     /tmp/cchmtwv7.s:25     .text._ZN6Thread3runEv:0000000000000010 .L0 
-     /tmp/cchmtwv7.s:27     .text._ZN6Thread3runEv:0000000000000014 .L0 
-     /tmp/cchmtwv7.s:29     .text._ZN6Thread3runEv:0000000000000018 .L0 
-     /tmp/cchmtwv7.s:36     .text:0000000000000000 _Znwm
-     /tmp/cchmtwv7.s:40     .text:0000000000000000 .L0 
-     /tmp/cchmtwv7.s:42     .text:0000000000000000 .L0 
-     /tmp/cchmtwv7.s:43     .text:0000000000000004 .L0 
-     /tmp/cchmtwv7.s:46     .text:000000000000000c .L0 
-     /tmp/cchmtwv7.s:47     .text:000000000000000c .L0 
-     /tmp/cchmtwv7.s:49     .text:0000000000000010 .L0 
-     /tmp/cchmtwv7.s:51     .text:0000000000000010 .L0 
-     /tmp/cchmtwv7.s:52     .text:0000000000000010 .L0 
-     /tmp/cchmtwv7.s:55     .text:0000000000000018 .L0 
-     /tmp/cchmtwv7.s:56     .text:000000000000001c .L0 
-     /tmp/cchmtwv7.s:58     .text:0000000000000020 .L0 
-     /tmp/cchmtwv7.s:59     .text:0000000000000020 .L0 
-     /tmp/cchmtwv7.s:61     .text:0000000000000024 .L0 
-     /tmp/cchmtwv7.s:63     .text:0000000000000028 .L0 
-     /tmp/cchmtwv7.s:69     .text:0000000000000028 _Znam
-     /tmp/cchmtwv7.s:72     .text:0000000000000028 .L0 
-     /tmp/cchmtwv7.s:74     .text:0000000000000028 .L0 
-     /tmp/cchmtwv7.s:75     .text:000000000000002c .L0 
-     /tmp/cchmtwv7.s:78     .text:0000000000000034 .L0 
-     /tmp/cchmtwv7.s:79     .text:0000000000000034 .L0 
-     /tmp/cchmtwv7.s:81     .text:0000000000000038 .L0 
-     /tmp/cchmtwv7.s:83     .text:0000000000000038 .L0 
-     /tmp/cchmtwv7.s:84     .text:0000000000000038 .L0 
-     /tmp/cchmtwv7.s:87     .text:0000000000000040 .L0 
-     /tmp/cchmtwv7.s:88     .text:0000000000000044 .L0 
-     /tmp/cchmtwv7.s:90     .text:0000000000000048 .L0 
-     /tmp/cchmtwv7.s:91     .text:0000000000000048 .L0 
-     /tmp/cchmtwv7.s:93     .text:000000000000004c .L0 
-     /tmp/cchmtwv7.s:95     .text:0000000000000050 .L0 
-     /tmp/cchmtwv7.s:101    .text:0000000000000050 _ZdlPv
-     /tmp/cchmtwv7.s:104    .text:0000000000000050 .L0 
-     /tmp/cchmtwv7.s:106    .text:0000000000000050 .L0 
-     /tmp/cchmtwv7.s:107    .text:0000000000000054 .L0 
-     /tmp/cchmtwv7.s:110    .text:000000000000005c .L0 
-     /tmp/cchmtwv7.s:111    .text:000000000000005c .L0 
-     /tmp/cchmtwv7.s:113    .text:0000000000000060 .L0 
-     /tmp/cchmtwv7.s:115    .text:0000000000000060 .L0 
-     /tmp/cchmtwv7.s:116    .text:0000000000000060 .L0 
-     /tmp/cchmtwv7.s:119    .text:0000000000000068 .L0 
-     /tmp/cchmtwv7.s:120    .text:000000000000006c .L0 
-     /tmp/cchmtwv7.s:122    .text:0000000000000070 .L0 
-     /tmp/cchmtwv7.s:123    .text:0000000000000070 .L0 
-     /tmp/cchmtwv7.s:125    .text:0000000000000074 .L0 
-GAS LISTING /tmp/cchmtwv7.s 			page 15
+     /tmp/ccP51DCP.s:10     .text._ZN6Thread3runEv:0000000000000000 _ZN6Thread3runEv
+     /tmp/ccP51DCP.s:14     .text._ZN6Thread3runEv:0000000000000000 .L0 
+     /tmp/ccP51DCP.s:16     .text._ZN6Thread3runEv:0000000000000000 .L0 
+     /tmp/ccP51DCP.s:17     .text._ZN6Thread3runEv:0000000000000004 .L0 
+     /tmp/ccP51DCP.s:19     .text._ZN6Thread3runEv:0000000000000008 .L0 
+     /tmp/ccP51DCP.s:21     .text._ZN6Thread3runEv:000000000000000c .L0 
+     /tmp/ccP51DCP.s:23     .text._ZN6Thread3runEv:000000000000000c .L0 
+     /tmp/ccP51DCP.s:24     .text._ZN6Thread3runEv:0000000000000010 .L0 
+     /tmp/ccP51DCP.s:25     .text._ZN6Thread3runEv:0000000000000010 .L0 
+     /tmp/ccP51DCP.s:27     .text._ZN6Thread3runEv:0000000000000014 .L0 
+     /tmp/ccP51DCP.s:29     .text._ZN6Thread3runEv:0000000000000018 .L0 
+     /tmp/ccP51DCP.s:36     .text:0000000000000000 _Znwm
+     /tmp/ccP51DCP.s:40     .text:0000000000000000 .L0 
+     /tmp/ccP51DCP.s:42     .text:0000000000000000 .L0 
+     /tmp/ccP51DCP.s:43     .text:0000000000000004 .L0 
+     /tmp/ccP51DCP.s:46     .text:000000000000000c .L0 
+     /tmp/ccP51DCP.s:47     .text:000000000000000c .L0 
+     /tmp/ccP51DCP.s:49     .text:0000000000000010 .L0 
+     /tmp/ccP51DCP.s:51     .text:0000000000000010 .L0 
+     /tmp/ccP51DCP.s:52     .text:0000000000000010 .L0 
+     /tmp/ccP51DCP.s:55     .text:0000000000000018 .L0 
+     /tmp/ccP51DCP.s:56     .text:000000000000001c .L0 
+     /tmp/ccP51DCP.s:58     .text:0000000000000020 .L0 
+     /tmp/ccP51DCP.s:59     .text:0000000000000020 .L0 
+     /tmp/ccP51DCP.s:61     .text:0000000000000024 .L0 
+     /tmp/ccP51DCP.s:63     .text:0000000000000028 .L0 
+     /tmp/ccP51DCP.s:69     .text:0000000000000028 _Znam
+     /tmp/ccP51DCP.s:72     .text:0000000000000028 .L0 
+     /tmp/ccP51DCP.s:74     .text:0000000000000028 .L0 
+     /tmp/ccP51DCP.s:75     .text:000000000000002c .L0 
+     /tmp/ccP51DCP.s:78     .text:0000000000000034 .L0 
+     /tmp/ccP51DCP.s:79     .text:0000000000000034 .L0 
+     /tmp/ccP51DCP.s:81     .text:0000000000000038 .L0 
+     /tmp/ccP51DCP.s:83     .text:0000000000000038 .L0 
+     /tmp/ccP51DCP.s:84     .text:0000000000000038 .L0 
+     /tmp/ccP51DCP.s:87     .text:0000000000000040 .L0 
+     /tmp/ccP51DCP.s:88     .text:0000000000000044 .L0 
+     /tmp/ccP51DCP.s:90     .text:0000000000000048 .L0 
+     /tmp/ccP51DCP.s:91     .text:0000000000000048 .L0 
+     /tmp/ccP51DCP.s:93     .text:000000000000004c .L0 
+     /tmp/ccP51DCP.s:95     .text:0000000000000050 .L0 
+     /tmp/ccP51DCP.s:101    .text:0000000000000050 _ZdlPv
+     /tmp/ccP51DCP.s:104    .text:0000000000000050 .L0 
+     /tmp/ccP51DCP.s:106    .text:0000000000000050 .L0 
+     /tmp/ccP51DCP.s:107    .text:0000000000000054 .L0 
+     /tmp/ccP51DCP.s:110    .text:000000000000005c .L0 
+     /tmp/ccP51DCP.s:111    .text:000000000000005c .L0 
+     /tmp/ccP51DCP.s:113    .text:0000000000000060 .L0 
+     /tmp/ccP51DCP.s:115    .text:0000000000000060 .L0 
+     /tmp/ccP51DCP.s:116    .text:0000000000000060 .L0 
+     /tmp/ccP51DCP.s:119    .text:0000000000000068 .L0 
+     /tmp/ccP51DCP.s:120    .text:000000000000006c .L0 
+     /tmp/ccP51DCP.s:122    .text:0000000000000070 .L0 
+     /tmp/ccP51DCP.s:123    .text:0000000000000070 .L0 
+     /tmp/ccP51DCP.s:125    .text:0000000000000074 .L0 
+GAS LISTING /tmp/ccP51DCP.s 			page 15
 
 
-     /tmp/cchmtwv7.s:127    .text:0000000000000078 .L0 
-     /tmp/cchmtwv7.s:133    .text:0000000000000078 _ZdaPv
-     /tmp/cchmtwv7.s:136    .text:0000000000000078 .L0 
-     /tmp/cchmtwv7.s:138    .text:0000000000000078 .L0 
-     /tmp/cchmtwv7.s:139    .text:000000000000007c .L0 
-     /tmp/cchmtwv7.s:142    .text:0000000000000084 .L0 
-     /tmp/cchmtwv7.s:143    .text:0000000000000084 .L0 
-     /tmp/cchmtwv7.s:145    .text:0000000000000088 .L0 
-     /tmp/cchmtwv7.s:147    .text:0000000000000088 .L0 
-     /tmp/cchmtwv7.s:148    .text:0000000000000088 .L0 
-     /tmp/cchmtwv7.s:151    .text:0000000000000090 .L0 
-     /tmp/cchmtwv7.s:152    .text:0000000000000094 .L0 
-     /tmp/cchmtwv7.s:154    .text:0000000000000098 .L0 
-     /tmp/cchmtwv7.s:155    .text:0000000000000098 .L0 
-     /tmp/cchmtwv7.s:157    .text:000000000000009c .L0 
-     /tmp/cchmtwv7.s:159    .text:00000000000000a0 .L0 
-     /tmp/cchmtwv7.s:165    .text:00000000000000a0 _ZN6ThreadD2Ev
-     /tmp/cchmtwv7.s:168    .text:00000000000000a0 .L0 
-     /tmp/cchmtwv7.s:3161   .data.rel.local.DW.ref.__gxx_personality_v0:0000000000000000 DW.ref.__gxx_personality_v0
-     /tmp/cchmtwv7.s:172    .text:00000000000000a0 .L0 
-     /tmp/cchmtwv7.s:173    .text:00000000000000a4 .L0 
-     /tmp/cchmtwv7.s:177    .text:00000000000000b0 .L0 
-     /tmp/cchmtwv7.s:178    .text:00000000000000b0 .L0 
-     /tmp/cchmtwv7.s:179    .text:00000000000000b0 .L0 
-     /tmp/cchmtwv7.s:181    .text:00000000000000b4 .L0 
-     /tmp/cchmtwv7.s:549    .data.rel.ro.local._ZTV6Thread:0000000000000000 _ZTV6Thread
-     /tmp/cchmtwv7.s:184    .text:00000000000000b4 .L0 
-     /tmp/cchmtwv7.s:187    .text:00000000000000c0 .L0 
-     /tmp/cchmtwv7.s:188    .text:00000000000000c0 .L0 
-     /tmp/cchmtwv7.s:190    .text:00000000000000c4 .L0 
-     /tmp/cchmtwv7.s:196    .text:00000000000000c8 .L0 
-     /tmp/cchmtwv7.s:197    .text:00000000000000c8 .L0 
-     /tmp/cchmtwv7.s:200    .text:00000000000000cc .L0 
-     /tmp/cchmtwv7.s:202    .text:00000000000000d0 .L0 
-     /tmp/cchmtwv7.s:208    .text:00000000000000d8 .L0 
-     /tmp/cchmtwv7.s:214    .text:00000000000000e4 .L0 
-     /tmp/cchmtwv7.s:215    .text:00000000000000e8 .L0 
-     /tmp/cchmtwv7.s:217    .text:00000000000000ec .L0 
-     /tmp/cchmtwv7.s:218    .text:00000000000000ec .L0 
-     /tmp/cchmtwv7.s:220    .text:00000000000000f0 .L0 
-     /tmp/cchmtwv7.s:222    .text:00000000000000f4 .L0 
-     /tmp/cchmtwv7.s:224    .text:00000000000000f8 .L0 
-     /tmp/cchmtwv7.s:165    .text:00000000000000a0 _ZN6ThreadD1Ev
-     /tmp/cchmtwv7.s:240    .text:00000000000000f8 _ZN6ThreadD0Ev
-     /tmp/cchmtwv7.s:243    .text:00000000000000f8 .L0 
-     /tmp/cchmtwv7.s:245    .text:00000000000000f8 .L0 
-     /tmp/cchmtwv7.s:246    .text:00000000000000fc .L0 
-     /tmp/cchmtwv7.s:250    .text:0000000000000108 .L0 
-     /tmp/cchmtwv7.s:251    .text:0000000000000108 .L0 
-     /tmp/cchmtwv7.s:252    .text:0000000000000108 .L0 
-     /tmp/cchmtwv7.s:254    .text:000000000000010c .L0 
-     /tmp/cchmtwv7.s:257    .text:0000000000000110 .L0 
-     /tmp/cchmtwv7.s:263    .text:0000000000000128 .L0 
-     /tmp/cchmtwv7.s:265    .text:000000000000012c .L0 
-     /tmp/cchmtwv7.s:266    .text:000000000000012c .L0 
-     /tmp/cchmtwv7.s:268    .text:0000000000000130 .L0 
-     /tmp/cchmtwv7.s:271    .text:0000000000000134 .L0 
-GAS LISTING /tmp/cchmtwv7.s 			page 16
+     /tmp/ccP51DCP.s:127    .text:0000000000000078 .L0 
+     /tmp/ccP51DCP.s:133    .text:0000000000000078 _ZdaPv
+     /tmp/ccP51DCP.s:136    .text:0000000000000078 .L0 
+     /tmp/ccP51DCP.s:138    .text:0000000000000078 .L0 
+     /tmp/ccP51DCP.s:139    .text:000000000000007c .L0 
+     /tmp/ccP51DCP.s:142    .text:0000000000000084 .L0 
+     /tmp/ccP51DCP.s:143    .text:0000000000000084 .L0 
+     /tmp/ccP51DCP.s:145    .text:0000000000000088 .L0 
+     /tmp/ccP51DCP.s:147    .text:0000000000000088 .L0 
+     /tmp/ccP51DCP.s:148    .text:0000000000000088 .L0 
+     /tmp/ccP51DCP.s:151    .text:0000000000000090 .L0 
+     /tmp/ccP51DCP.s:152    .text:0000000000000094 .L0 
+     /tmp/ccP51DCP.s:154    .text:0000000000000098 .L0 
+     /tmp/ccP51DCP.s:155    .text:0000000000000098 .L0 
+     /tmp/ccP51DCP.s:157    .text:000000000000009c .L0 
+     /tmp/ccP51DCP.s:159    .text:00000000000000a0 .L0 
+     /tmp/ccP51DCP.s:165    .text:00000000000000a0 _ZN6ThreadD2Ev
+     /tmp/ccP51DCP.s:168    .text:00000000000000a0 .L0 
+     /tmp/ccP51DCP.s:3161   .data.rel.local.DW.ref.__gxx_personality_v0:0000000000000000 DW.ref.__gxx_personality_v0
+     /tmp/ccP51DCP.s:172    .text:00000000000000a0 .L0 
+     /tmp/ccP51DCP.s:173    .text:00000000000000a4 .L0 
+     /tmp/ccP51DCP.s:177    .text:00000000000000b0 .L0 
+     /tmp/ccP51DCP.s:178    .text:00000000000000b0 .L0 
+     /tmp/ccP51DCP.s:179    .text:00000000000000b0 .L0 
+     /tmp/ccP51DCP.s:181    .text:00000000000000b4 .L0 
+     /tmp/ccP51DCP.s:549    .data.rel.ro.local._ZTV6Thread:0000000000000000 _ZTV6Thread
+     /tmp/ccP51DCP.s:184    .text:00000000000000b4 .L0 
+     /tmp/ccP51DCP.s:187    .text:00000000000000c0 .L0 
+     /tmp/ccP51DCP.s:188    .text:00000000000000c0 .L0 
+     /tmp/ccP51DCP.s:190    .text:00000000000000c4 .L0 
+     /tmp/ccP51DCP.s:196    .text:00000000000000c8 .L0 
+     /tmp/ccP51DCP.s:197    .text:00000000000000c8 .L0 
+     /tmp/ccP51DCP.s:200    .text:00000000000000cc .L0 
+     /tmp/ccP51DCP.s:202    .text:00000000000000d0 .L0 
+     /tmp/ccP51DCP.s:208    .text:00000000000000d8 .L0 
+     /tmp/ccP51DCP.s:214    .text:00000000000000e4 .L0 
+     /tmp/ccP51DCP.s:215    .text:00000000000000e8 .L0 
+     /tmp/ccP51DCP.s:217    .text:00000000000000ec .L0 
+     /tmp/ccP51DCP.s:218    .text:00000000000000ec .L0 
+     /tmp/ccP51DCP.s:220    .text:00000000000000f0 .L0 
+     /tmp/ccP51DCP.s:222    .text:00000000000000f4 .L0 
+     /tmp/ccP51DCP.s:224    .text:00000000000000f8 .L0 
+     /tmp/ccP51DCP.s:165    .text:00000000000000a0 _ZN6ThreadD1Ev
+     /tmp/ccP51DCP.s:240    .text:00000000000000f8 _ZN6ThreadD0Ev
+     /tmp/ccP51DCP.s:243    .text:00000000000000f8 .L0 
+     /tmp/ccP51DCP.s:245    .text:00000000000000f8 .L0 
+     /tmp/ccP51DCP.s:246    .text:00000000000000fc .L0 
+     /tmp/ccP51DCP.s:250    .text:0000000000000108 .L0 
+     /tmp/ccP51DCP.s:251    .text:0000000000000108 .L0 
+     /tmp/ccP51DCP.s:252    .text:0000000000000108 .L0 
+     /tmp/ccP51DCP.s:254    .text:000000000000010c .L0 
+     /tmp/ccP51DCP.s:257    .text:0000000000000110 .L0 
+     /tmp/ccP51DCP.s:263    .text:0000000000000128 .L0 
+     /tmp/ccP51DCP.s:265    .text:000000000000012c .L0 
+     /tmp/ccP51DCP.s:266    .text:000000000000012c .L0 
+     /tmp/ccP51DCP.s:268    .text:0000000000000130 .L0 
+     /tmp/ccP51DCP.s:271    .text:0000000000000134 .L0 
+GAS LISTING /tmp/ccP51DCP.s 			page 16
 
 
-     /tmp/cchmtwv7.s:273    .text:0000000000000138 .L0 
-     /tmp/cchmtwv7.s:279    .text:0000000000000138 _Z16switchToUserModev
-     /tmp/cchmtwv7.s:282    .text:0000000000000138 .L0 
-     /tmp/cchmtwv7.s:283    .text:0000000000000138 .L0 
-     /tmp/cchmtwv7.s:284    .text:000000000000013c .L0 
-     /tmp/cchmtwv7.s:287    .text:0000000000000144 .L0 
-     /tmp/cchmtwv7.s:288    .text:0000000000000144 .L0 
-     /tmp/cchmtwv7.s:290    .text:0000000000000148 .L0 
-     /tmp/cchmtwv7.s:292    .text:0000000000000148 .L0 
-     /tmp/cchmtwv7.s:293    .text:0000000000000148 .L0 
-     /tmp/cchmtwv7.s:296    .text:0000000000000150 .L0 
-     /tmp/cchmtwv7.s:297    .text:0000000000000154 .L0 
-     /tmp/cchmtwv7.s:299    .text:0000000000000158 .L0 
-     /tmp/cchmtwv7.s:300    .text:0000000000000158 .L0 
-     /tmp/cchmtwv7.s:302    .text:000000000000015c .L0 
-     /tmp/cchmtwv7.s:304    .text:0000000000000160 .L0 
-     /tmp/cchmtwv7.s:310    .text:0000000000000160 _ZN6ThreadC2EPFvPvES0_
-     /tmp/cchmtwv7.s:313    .text:0000000000000160 .L0 
-     /tmp/cchmtwv7.s:315    .text:0000000000000160 .L0 
-     /tmp/cchmtwv7.s:316    .text:0000000000000164 .L0 
-     /tmp/cchmtwv7.s:319    .text:000000000000016c .L0 
-     /tmp/cchmtwv7.s:320    .text:000000000000016c .L0 
-     /tmp/cchmtwv7.s:322    .text:0000000000000170 .L0 
-     /tmp/cchmtwv7.s:325    .text:0000000000000170 .L0 
-     /tmp/cchmtwv7.s:328    .text:000000000000017c .L0 
-     /tmp/cchmtwv7.s:329    .text:000000000000017c .L0 
-     /tmp/cchmtwv7.s:334    .text:0000000000000188 .L0 
-     /tmp/cchmtwv7.s:335    .text:0000000000000188 .L0 
-     /tmp/cchmtwv7.s:339    .text:0000000000000190 .L0 
-     /tmp/cchmtwv7.s:340    .text:0000000000000194 .L0 
-     /tmp/cchmtwv7.s:342    .text:0000000000000198 .L0 
-     /tmp/cchmtwv7.s:343    .text:0000000000000198 .L0 
-     /tmp/cchmtwv7.s:345    .text:000000000000019c .L0 
-     /tmp/cchmtwv7.s:347    .text:00000000000001a0 .L0 
-     /tmp/cchmtwv7.s:310    .text:0000000000000160 _ZN6ThreadC1EPFvPvES0_
-     /tmp/cchmtwv7.s:355    .text:00000000000001a0 _ZN6ThreadC2Ev
-     /tmp/cchmtwv7.s:358    .text:00000000000001a0 .L0 
-     /tmp/cchmtwv7.s:362    .text:00000000000001a0 .L0 
-     /tmp/cchmtwv7.s:363    .text:00000000000001a4 .L0 
-     /tmp/cchmtwv7.s:368    .text:00000000000001b4 .L0 
-     /tmp/cchmtwv7.s:369    .text:00000000000001b4 .L0 
-     /tmp/cchmtwv7.s:370    .text:00000000000001b4 .L0 
-     /tmp/cchmtwv7.s:371    .text:00000000000001b4 .L0 
-     /tmp/cchmtwv7.s:373    .text:00000000000001b8 .L0 
-     /tmp/cchmtwv7.s:376    .text:00000000000001b8 .L0 
-     /tmp/cchmtwv7.s:379    .text:00000000000001c4 .L0 
-     /tmp/cchmtwv7.s:380    .text:00000000000001c4 .L0 
-     /tmp/cchmtwv7.s:407    .text:0000000000000204 .L0 
-     /tmp/cchmtwv7.s:408    .text:0000000000000208 .L0 
-     /tmp/cchmtwv7.s:410    .text:000000000000020c .L0 
-     /tmp/cchmtwv7.s:411    .text:000000000000020c .L0 
-     /tmp/cchmtwv7.s:413    .text:0000000000000210 .L0 
-     /tmp/cchmtwv7.s:415    .text:0000000000000214 .L0 
-     /tmp/cchmtwv7.s:417    .text:0000000000000218 .L0 
-     /tmp/cchmtwv7.s:419    .text:000000000000021c .L0 
-     /tmp/cchmtwv7.s:355    .text:00000000000001a0 _ZN6ThreadC1Ev
-     /tmp/cchmtwv7.s:446    .text:000000000000021c _ZN6Thread5startEv
-GAS LISTING /tmp/cchmtwv7.s 			page 17
+     /tmp/ccP51DCP.s:273    .text:0000000000000138 .L0 
+     /tmp/ccP51DCP.s:279    .text:0000000000000138 _Z16switchToUserModev
+     /tmp/ccP51DCP.s:282    .text:0000000000000138 .L0 
+     /tmp/ccP51DCP.s:283    .text:0000000000000138 .L0 
+     /tmp/ccP51DCP.s:284    .text:000000000000013c .L0 
+     /tmp/ccP51DCP.s:287    .text:0000000000000144 .L0 
+     /tmp/ccP51DCP.s:288    .text:0000000000000144 .L0 
+     /tmp/ccP51DCP.s:290    .text:0000000000000148 .L0 
+     /tmp/ccP51DCP.s:292    .text:0000000000000148 .L0 
+     /tmp/ccP51DCP.s:293    .text:0000000000000148 .L0 
+     /tmp/ccP51DCP.s:296    .text:0000000000000150 .L0 
+     /tmp/ccP51DCP.s:297    .text:0000000000000154 .L0 
+     /tmp/ccP51DCP.s:299    .text:0000000000000158 .L0 
+     /tmp/ccP51DCP.s:300    .text:0000000000000158 .L0 
+     /tmp/ccP51DCP.s:302    .text:000000000000015c .L0 
+     /tmp/ccP51DCP.s:304    .text:0000000000000160 .L0 
+     /tmp/ccP51DCP.s:310    .text:0000000000000160 _ZN6ThreadC2EPFvPvES0_
+     /tmp/ccP51DCP.s:313    .text:0000000000000160 .L0 
+     /tmp/ccP51DCP.s:315    .text:0000000000000160 .L0 
+     /tmp/ccP51DCP.s:316    .text:0000000000000164 .L0 
+     /tmp/ccP51DCP.s:319    .text:000000000000016c .L0 
+     /tmp/ccP51DCP.s:320    .text:000000000000016c .L0 
+     /tmp/ccP51DCP.s:322    .text:0000000000000170 .L0 
+     /tmp/ccP51DCP.s:325    .text:0000000000000170 .L0 
+     /tmp/ccP51DCP.s:328    .text:000000000000017c .L0 
+     /tmp/ccP51DCP.s:329    .text:000000000000017c .L0 
+     /tmp/ccP51DCP.s:334    .text:0000000000000188 .L0 
+     /tmp/ccP51DCP.s:335    .text:0000000000000188 .L0 
+     /tmp/ccP51DCP.s:339    .text:0000000000000190 .L0 
+     /tmp/ccP51DCP.s:340    .text:0000000000000194 .L0 
+     /tmp/ccP51DCP.s:342    .text:0000000000000198 .L0 
+     /tmp/ccP51DCP.s:343    .text:0000000000000198 .L0 
+     /tmp/ccP51DCP.s:345    .text:000000000000019c .L0 
+     /tmp/ccP51DCP.s:347    .text:00000000000001a0 .L0 
+     /tmp/ccP51DCP.s:310    .text:0000000000000160 _ZN6ThreadC1EPFvPvES0_
+     /tmp/ccP51DCP.s:355    .text:00000000000001a0 _ZN6ThreadC2Ev
+     /tmp/ccP51DCP.s:358    .text:00000000000001a0 .L0 
+     /tmp/ccP51DCP.s:362    .text:00000000000001a0 .L0 
+     /tmp/ccP51DCP.s:363    .text:00000000000001a4 .L0 
+     /tmp/ccP51DCP.s:368    .text:00000000000001b4 .L0 
+     /tmp/ccP51DCP.s:369    .text:00000000000001b4 .L0 
+     /tmp/ccP51DCP.s:370    .text:00000000000001b4 .L0 
+     /tmp/ccP51DCP.s:371    .text:00000000000001b4 .L0 
+     /tmp/ccP51DCP.s:373    .text:00000000000001b8 .L0 
+     /tmp/ccP51DCP.s:376    .text:00000000000001b8 .L0 
+     /tmp/ccP51DCP.s:379    .text:00000000000001c4 .L0 
+     /tmp/ccP51DCP.s:380    .text:00000000000001c4 .L0 
+     /tmp/ccP51DCP.s:407    .text:0000000000000204 .L0 
+     /tmp/ccP51DCP.s:408    .text:0000000000000208 .L0 
+     /tmp/ccP51DCP.s:410    .text:000000000000020c .L0 
+     /tmp/ccP51DCP.s:411    .text:000000000000020c .L0 
+     /tmp/ccP51DCP.s:413    .text:0000000000000210 .L0 
+     /tmp/ccP51DCP.s:415    .text:0000000000000214 .L0 
+     /tmp/ccP51DCP.s:417    .text:0000000000000218 .L0 
+     /tmp/ccP51DCP.s:419    .text:000000000000021c .L0 
+     /tmp/ccP51DCP.s:355    .text:00000000000001a0 _ZN6ThreadC1Ev
+     /tmp/ccP51DCP.s:446    .text:000000000000021c _ZN6Thread5startEv
+GAS LISTING /tmp/ccP51DCP.s 			page 17
 
 
-     /tmp/cchmtwv7.s:449    .text:000000000000021c .L0 
-     /tmp/cchmtwv7.s:451    .text:000000000000021c .L0 
-     /tmp/cchmtwv7.s:452    .text:0000000000000220 .L0 
-     /tmp/cchmtwv7.s:455    .text:0000000000000228 .L0 
-     /tmp/cchmtwv7.s:456    .text:0000000000000228 .L0 
-     /tmp/cchmtwv7.s:458    .text:000000000000022c .L0 
-     /tmp/cchmtwv7.s:460    .text:000000000000022c .L0 
-     /tmp/cchmtwv7.s:461    .text:000000000000022c .L0 
-     /tmp/cchmtwv7.s:466    .text:0000000000000238 .L0 
-     /tmp/cchmtwv7.s:467    .text:0000000000000238 .L0 
-     /tmp/cchmtwv7.s:469    .text:0000000000000240 .L0 
-     /tmp/cchmtwv7.s:471    .text:0000000000000244 .L0 
-     /tmp/cchmtwv7.s:472    .text:0000000000000244 .L0 
-     /tmp/cchmtwv7.s:474    .text:0000000000000248 .L0 
-     /tmp/cchmtwv7.s:476    .text:000000000000024c .L0 
-     /tmp/cchmtwv7.s:482    .text:000000000000024c _ZN6Thread4joinEv
-     /tmp/cchmtwv7.s:485    .text:000000000000024c .L0 
-     /tmp/cchmtwv7.s:487    .text:000000000000024c .L0 
-     /tmp/cchmtwv7.s:488    .text:0000000000000250 .L0 
-     /tmp/cchmtwv7.s:491    .text:0000000000000258 .L0 
-     /tmp/cchmtwv7.s:492    .text:0000000000000258 .L0 
-     /tmp/cchmtwv7.s:494    .text:000000000000025c .L0 
-     /tmp/cchmtwv7.s:496    .text:000000000000025c .L0 
-     /tmp/cchmtwv7.s:497    .text:000000000000025c .L0 
-     /tmp/cchmtwv7.s:502    .text:0000000000000268 .L0 
-     /tmp/cchmtwv7.s:503    .text:000000000000026c .L0 
-     /tmp/cchmtwv7.s:505    .text:0000000000000270 .L0 
-     /tmp/cchmtwv7.s:506    .text:0000000000000270 .L0 
-     /tmp/cchmtwv7.s:508    .text:0000000000000274 .L0 
-     /tmp/cchmtwv7.s:510    .text:0000000000000278 .L0 
-     /tmp/cchmtwv7.s:516    .text:0000000000000278 _ZN6Thread8dispatchEv
-     /tmp/cchmtwv7.s:519    .text:0000000000000278 .L0 
-     /tmp/cchmtwv7.s:520    .text:0000000000000278 .L0 
-     /tmp/cchmtwv7.s:521    .text:000000000000027c .L0 
-     /tmp/cchmtwv7.s:524    .text:0000000000000284 .L0 
-     /tmp/cchmtwv7.s:525    .text:0000000000000284 .L0 
-     /tmp/cchmtwv7.s:527    .text:0000000000000288 .L0 
-     /tmp/cchmtwv7.s:529    .text:0000000000000288 .L0 
-     /tmp/cchmtwv7.s:530    .text:0000000000000288 .L0 
-     /tmp/cchmtwv7.s:533    .text:0000000000000290 .L0 
-     /tmp/cchmtwv7.s:534    .text:0000000000000294 .L0 
-     /tmp/cchmtwv7.s:536    .text:0000000000000298 .L0 
-     /tmp/cchmtwv7.s:537    .text:0000000000000298 .L0 
-     /tmp/cchmtwv7.s:539    .text:000000000000029c .L0 
-     /tmp/cchmtwv7.s:541    .text:00000000000002a0 .L0 
-     /tmp/cchmtwv7.s:32     .text._ZN6Thread3runEv:0000000000000018 .L0 
-     /tmp/cchmtwv7.s:560    .text:00000000000002a0 .L0 
-     /tmp/cchmtwv7.s:184    .text:00000000000000b4 .L0 
-     /tmp/cchmtwv7.s:325    .text:0000000000000170 .L0 
-     /tmp/cchmtwv7.s:376    .text:00000000000001b8 .L0 
-     /tmp/cchmtwv7.s:211    .text:00000000000000e4 .L11
-     /tmp/cchmtwv7.s:204    .text:00000000000000d8 .L13
-     /tmp/cchmtwv7.s:404    .text:0000000000000204 .L26
-     /tmp/cchmtwv7.s:382    .text:00000000000001c8 .LEHB0
-     /tmp/cchmtwv7.s:356    .text:00000000000001a0 .LFB58
-     /tmp/cchmtwv7.s:385    .text:00000000000001d0 .LEHE0
-     /tmp/cchmtwv7.s:389    .text:00000000000001dc .LEHB1
-GAS LISTING /tmp/cchmtwv7.s 			page 18
+     /tmp/ccP51DCP.s:449    .text:000000000000021c .L0 
+     /tmp/ccP51DCP.s:451    .text:000000000000021c .L0 
+     /tmp/ccP51DCP.s:452    .text:0000000000000220 .L0 
+     /tmp/ccP51DCP.s:455    .text:0000000000000228 .L0 
+     /tmp/ccP51DCP.s:456    .text:0000000000000228 .L0 
+     /tmp/ccP51DCP.s:458    .text:000000000000022c .L0 
+     /tmp/ccP51DCP.s:460    .text:000000000000022c .L0 
+     /tmp/ccP51DCP.s:461    .text:000000000000022c .L0 
+     /tmp/ccP51DCP.s:466    .text:0000000000000238 .L0 
+     /tmp/ccP51DCP.s:467    .text:0000000000000238 .L0 
+     /tmp/ccP51DCP.s:469    .text:0000000000000240 .L0 
+     /tmp/ccP51DCP.s:471    .text:0000000000000244 .L0 
+     /tmp/ccP51DCP.s:472    .text:0000000000000244 .L0 
+     /tmp/ccP51DCP.s:474    .text:0000000000000248 .L0 
+     /tmp/ccP51DCP.s:476    .text:000000000000024c .L0 
+     /tmp/ccP51DCP.s:482    .text:000000000000024c _ZN6Thread4joinEv
+     /tmp/ccP51DCP.s:485    .text:000000000000024c .L0 
+     /tmp/ccP51DCP.s:487    .text:000000000000024c .L0 
+     /tmp/ccP51DCP.s:488    .text:0000000000000250 .L0 
+     /tmp/ccP51DCP.s:491    .text:0000000000000258 .L0 
+     /tmp/ccP51DCP.s:492    .text:0000000000000258 .L0 
+     /tmp/ccP51DCP.s:494    .text:000000000000025c .L0 
+     /tmp/ccP51DCP.s:496    .text:000000000000025c .L0 
+     /tmp/ccP51DCP.s:497    .text:000000000000025c .L0 
+     /tmp/ccP51DCP.s:502    .text:0000000000000268 .L0 
+     /tmp/ccP51DCP.s:503    .text:000000000000026c .L0 
+     /tmp/ccP51DCP.s:505    .text:0000000000000270 .L0 
+     /tmp/ccP51DCP.s:506    .text:0000000000000270 .L0 
+     /tmp/ccP51DCP.s:508    .text:0000000000000274 .L0 
+     /tmp/ccP51DCP.s:510    .text:0000000000000278 .L0 
+     /tmp/ccP51DCP.s:516    .text:0000000000000278 _ZN6Thread8dispatchEv
+     /tmp/ccP51DCP.s:519    .text:0000000000000278 .L0 
+     /tmp/ccP51DCP.s:520    .text:0000000000000278 .L0 
+     /tmp/ccP51DCP.s:521    .text:000000000000027c .L0 
+     /tmp/ccP51DCP.s:524    .text:0000000000000284 .L0 
+     /tmp/ccP51DCP.s:525    .text:0000000000000284 .L0 
+     /tmp/ccP51DCP.s:527    .text:0000000000000288 .L0 
+     /tmp/ccP51DCP.s:529    .text:0000000000000288 .L0 
+     /tmp/ccP51DCP.s:530    .text:0000000000000288 .L0 
+     /tmp/ccP51DCP.s:533    .text:0000000000000290 .L0 
+     /tmp/ccP51DCP.s:534    .text:0000000000000294 .L0 
+     /tmp/ccP51DCP.s:536    .text:0000000000000298 .L0 
+     /tmp/ccP51DCP.s:537    .text:0000000000000298 .L0 
+     /tmp/ccP51DCP.s:539    .text:000000000000029c .L0 
+     /tmp/ccP51DCP.s:541    .text:00000000000002a0 .L0 
+     /tmp/ccP51DCP.s:32     .text._ZN6Thread3runEv:0000000000000018 .L0 
+     /tmp/ccP51DCP.s:560    .text:00000000000002a0 .L0 
+     /tmp/ccP51DCP.s:184    .text:00000000000000b4 .L0 
+     /tmp/ccP51DCP.s:325    .text:0000000000000170 .L0 
+     /tmp/ccP51DCP.s:376    .text:00000000000001b8 .L0 
+     /tmp/ccP51DCP.s:211    .text:00000000000000e4 .L11
+     /tmp/ccP51DCP.s:204    .text:00000000000000d8 .L13
+     /tmp/ccP51DCP.s:404    .text:0000000000000204 .L26
+     /tmp/ccP51DCP.s:382    .text:00000000000001c8 .LEHB0
+     /tmp/ccP51DCP.s:356    .text:00000000000001a0 .LFB58
+     /tmp/ccP51DCP.s:385    .text:00000000000001d0 .LEHE0
+     /tmp/ccP51DCP.s:389    .text:00000000000001dc .LEHB1
+GAS LISTING /tmp/ccP51DCP.s 			page 18
 
 
-     /tmp/cchmtwv7.s:392    .text:00000000000001e4 .LEHE1
-     /tmp/cchmtwv7.s:394    .text:00000000000001e8 .L23
-     /tmp/cchmtwv7.s:400    .text:00000000000001fc .LEHB2
-     /tmp/cchmtwv7.s:403    .text:0000000000000204 .LEHE2
-     /tmp/cchmtwv7.s:1630   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-     /tmp/cchmtwv7.s:3121   .debug_str:00000000000004cb .LASF85
-     /tmp/cchmtwv7.s:3033   .debug_str:0000000000000259 .LASF86
-     /tmp/cchmtwv7.s:3127   .debug_str:00000000000005b6 .LASF87
-     /tmp/cchmtwv7.s:2931   .debug_ranges:0000000000000000 .Ldebug_ranges0
-     /tmp/cchmtwv7.s:2939   .debug_line:0000000000000000 .Ldebug_line0
-     /tmp/cchmtwv7.s:3027   .debug_str:0000000000000238 .LASF0
-     /tmp/cchmtwv7.s:3041   .debug_str:0000000000000297 .LASF1
-     /tmp/cchmtwv7.s:3079   .debug_str:00000000000003b7 .LASF2
-     /tmp/cchmtwv7.s:3087   .debug_str:00000000000003ec .LASF4
-     /tmp/cchmtwv7.s:3035   .debug_str:000000000000026d .LASF3
-     /tmp/cchmtwv7.s:2949   .debug_str:0000000000000034 .LASF5
-     /tmp/cchmtwv7.s:3065   .debug_str:0000000000000342 .LASF6
-     /tmp/cchmtwv7.s:3037   .debug_str:000000000000027f .LASF7
-     /tmp/cchmtwv7.s:3013   .debug_str:00000000000001d4 .LASF8
-     /tmp/cchmtwv7.s:3017   .debug_str:00000000000001fc .LASF9
-     /tmp/cchmtwv7.s:2969   .debug_str:00000000000000cf .LASF10
-     /tmp/cchmtwv7.s:3007   .debug_str:00000000000001b6 .LASF11
-     /tmp/cchmtwv7.s:2977   .debug_str:0000000000000105 .LASF12
-     /tmp/cchmtwv7.s:2967   .debug_str:00000000000000bf .LASF13
-     /tmp/cchmtwv7.s:3107   .debug_str:0000000000000486 .LASF14
-     /tmp/cchmtwv7.s:2997   .debug_str:0000000000000172 .LASF15
-     /tmp/cchmtwv7.s:3101   .debug_str:0000000000000446 .LASF16
-     /tmp/cchmtwv7.s:3011   .debug_str:00000000000001ca .LASF17
-     /tmp/cchmtwv7.s:2975   .debug_str:00000000000000fa .LASF31
-     /tmp/cchmtwv7.s:3147   .debug_str:0000000000000645 .LASF88
-     /tmp/cchmtwv7.s:2951   .debug_str:000000000000003b .LASF89
-     /tmp/cchmtwv7.s:2941   .debug_str:0000000000000000 .LASF26
-     /tmp/cchmtwv7.s:3091   .debug_str:0000000000000409 .LASF28
-     /tmp/cchmtwv7.s:2965   .debug_str:00000000000000b5 .LASF41
-     /tmp/cchmtwv7.s:3111   .debug_str:00000000000004a4 .LASF90
-     /tmp/cchmtwv7.s:3117   .debug_str:00000000000004bd .LASF91
-     /tmp/cchmtwv7.s:2963   .debug_str:00000000000000af .LASF18
-     /tmp/cchmtwv7.s:3093   .debug_str:0000000000000420 .LASF19
-     /tmp/cchmtwv7.s:2971   .debug_str:00000000000000de .LASF20
-     /tmp/cchmtwv7.s:2959   .debug_str:0000000000000096 .LASF21
-     /tmp/cchmtwv7.s:3039   .debug_str:0000000000000292 .LASF22
-     /tmp/cchmtwv7.s:3149   .debug_str:0000000000000659 .LASF24
-     /tmp/cchmtwv7.s:3113   .debug_str:00000000000004ac .LASF46
-     /tmp/cchmtwv7.s:3139   .debug_str:0000000000000608 .LASF47
-     /tmp/cchmtwv7.s:3085   .debug_str:00000000000003e3 .LASF23
-     /tmp/cchmtwv7.s:3103   .debug_str:000000000000045c .LASF25
-     /tmp/cchmtwv7.s:2987   .debug_str:0000000000000139 .LASF27
-     /tmp/cchmtwv7.s:2953   .debug_str:0000000000000053 .LASF29
-     /tmp/cchmtwv7.s:3097   .debug_str:000000000000042e .LASF30
-     /tmp/cchmtwv7.s:3083   .debug_str:00000000000003d4 .LASF92
-     /tmp/cchmtwv7.s:3119   .debug_str:00000000000004c3 .LASF93
-     /tmp/cchmtwv7.s:2981   .debug_str:000000000000011a .LASF43
-     /tmp/cchmtwv7.s:2955   .debug_str:0000000000000066 .LASF94
-     /tmp/cchmtwv7.s:3133   .debug_str:00000000000005e6 .LASF95
-     /tmp/cchmtwv7.s:3109   .debug_str:0000000000000492 .LASF96
-     /tmp/cchmtwv7.s:3089   .debug_str:00000000000003f3 .LASF97
-     /tmp/cchmtwv7.s:3059   .debug_str:000000000000031c .LASF98
-GAS LISTING /tmp/cchmtwv7.s 			page 19
+     /tmp/ccP51DCP.s:392    .text:00000000000001e4 .LEHE1
+     /tmp/ccP51DCP.s:394    .text:00000000000001e8 .L23
+     /tmp/ccP51DCP.s:400    .text:00000000000001fc .LEHB2
+     /tmp/ccP51DCP.s:403    .text:0000000000000204 .LEHE2
+     /tmp/ccP51DCP.s:1630   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+     /tmp/ccP51DCP.s:3121   .debug_str:00000000000004cb .LASF85
+     /tmp/ccP51DCP.s:3033   .debug_str:0000000000000259 .LASF86
+     /tmp/ccP51DCP.s:3127   .debug_str:00000000000005b6 .LASF87
+     /tmp/ccP51DCP.s:2931   .debug_ranges:0000000000000000 .Ldebug_ranges0
+     /tmp/ccP51DCP.s:2939   .debug_line:0000000000000000 .Ldebug_line0
+     /tmp/ccP51DCP.s:3027   .debug_str:0000000000000238 .LASF0
+     /tmp/ccP51DCP.s:3041   .debug_str:0000000000000297 .LASF1
+     /tmp/ccP51DCP.s:3079   .debug_str:00000000000003b7 .LASF2
+     /tmp/ccP51DCP.s:3087   .debug_str:00000000000003ec .LASF4
+     /tmp/ccP51DCP.s:3035   .debug_str:000000000000026d .LASF3
+     /tmp/ccP51DCP.s:2949   .debug_str:0000000000000034 .LASF5
+     /tmp/ccP51DCP.s:3065   .debug_str:0000000000000342 .LASF6
+     /tmp/ccP51DCP.s:3037   .debug_str:000000000000027f .LASF7
+     /tmp/ccP51DCP.s:3013   .debug_str:00000000000001d4 .LASF8
+     /tmp/ccP51DCP.s:3017   .debug_str:00000000000001fc .LASF9
+     /tmp/ccP51DCP.s:2969   .debug_str:00000000000000cf .LASF10
+     /tmp/ccP51DCP.s:3007   .debug_str:00000000000001b6 .LASF11
+     /tmp/ccP51DCP.s:2977   .debug_str:0000000000000105 .LASF12
+     /tmp/ccP51DCP.s:2967   .debug_str:00000000000000bf .LASF13
+     /tmp/ccP51DCP.s:3107   .debug_str:0000000000000486 .LASF14
+     /tmp/ccP51DCP.s:2997   .debug_str:0000000000000172 .LASF15
+     /tmp/ccP51DCP.s:3101   .debug_str:0000000000000446 .LASF16
+     /tmp/ccP51DCP.s:3011   .debug_str:00000000000001ca .LASF17
+     /tmp/ccP51DCP.s:2975   .debug_str:00000000000000fa .LASF31
+     /tmp/ccP51DCP.s:3147   .debug_str:0000000000000645 .LASF88
+     /tmp/ccP51DCP.s:2951   .debug_str:000000000000003b .LASF89
+     /tmp/ccP51DCP.s:2941   .debug_str:0000000000000000 .LASF26
+     /tmp/ccP51DCP.s:3091   .debug_str:0000000000000409 .LASF28
+     /tmp/ccP51DCP.s:2965   .debug_str:00000000000000b5 .LASF41
+     /tmp/ccP51DCP.s:3111   .debug_str:00000000000004a4 .LASF90
+     /tmp/ccP51DCP.s:3117   .debug_str:00000000000004bd .LASF91
+     /tmp/ccP51DCP.s:2963   .debug_str:00000000000000af .LASF18
+     /tmp/ccP51DCP.s:3093   .debug_str:0000000000000420 .LASF19
+     /tmp/ccP51DCP.s:2971   .debug_str:00000000000000de .LASF20
+     /tmp/ccP51DCP.s:2959   .debug_str:0000000000000096 .LASF21
+     /tmp/ccP51DCP.s:3039   .debug_str:0000000000000292 .LASF22
+     /tmp/ccP51DCP.s:3149   .debug_str:0000000000000659 .LASF24
+     /tmp/ccP51DCP.s:3113   .debug_str:00000000000004ac .LASF46
+     /tmp/ccP51DCP.s:3139   .debug_str:0000000000000608 .LASF47
+     /tmp/ccP51DCP.s:3085   .debug_str:00000000000003e3 .LASF23
+     /tmp/ccP51DCP.s:3103   .debug_str:000000000000045c .LASF25
+     /tmp/ccP51DCP.s:2987   .debug_str:0000000000000139 .LASF27
+     /tmp/ccP51DCP.s:2953   .debug_str:0000000000000053 .LASF29
+     /tmp/ccP51DCP.s:3097   .debug_str:000000000000042e .LASF30
+     /tmp/ccP51DCP.s:3083   .debug_str:00000000000003d4 .LASF92
+     /tmp/ccP51DCP.s:3119   .debug_str:00000000000004c3 .LASF93
+     /tmp/ccP51DCP.s:2981   .debug_str:000000000000011a .LASF43
+     /tmp/ccP51DCP.s:2955   .debug_str:0000000000000066 .LASF94
+     /tmp/ccP51DCP.s:3133   .debug_str:00000000000005e6 .LASF95
+     /tmp/ccP51DCP.s:3109   .debug_str:0000000000000492 .LASF96
+     /tmp/ccP51DCP.s:3089   .debug_str:00000000000003f3 .LASF97
+     /tmp/ccP51DCP.s:3059   .debug_str:000000000000031c .LASF98
+GAS LISTING /tmp/ccP51DCP.s 			page 19
 
 
-     /tmp/cchmtwv7.s:2985   .debug_str:0000000000000134 .LASF32
-     /tmp/cchmtwv7.s:3095   .debug_str:0000000000000428 .LASF33
-     /tmp/cchmtwv7.s:3131   .debug_str:00000000000005e1 .LASF34
-     /tmp/cchmtwv7.s:3129   .debug_str:00000000000005d9 .LASF35
-     /tmp/cchmtwv7.s:2991   .debug_str:000000000000015b .LASF36
-     /tmp/cchmtwv7.s:3145   .debug_str:000000000000063f .LASF37
-     /tmp/cchmtwv7.s:3123   .debug_str:000000000000058f .LASF99
-     /tmp/cchmtwv7.s:3047   .debug_str:00000000000002de .LASF38
-     /tmp/cchmtwv7.s:2993   .debug_str:0000000000000161 .LASF39
-     /tmp/cchmtwv7.s:3135   .debug_str:00000000000005ee .LASF40
-     /tmp/cchmtwv7.s:2957   .debug_str:000000000000008e .LASF42
-     /tmp/cchmtwv7.s:3021   .debug_str:0000000000000218 .LASF44
-     /tmp/cchmtwv7.s:2973   .debug_str:00000000000000e8 .LASF100
-     /tmp/cchmtwv7.s:3077   .debug_str:00000000000003aa .LASF101
-     /tmp/cchmtwv7.s:3153   .debug_str:0000000000000672 .LASF45
-     /tmp/cchmtwv7.s:2995   .debug_str:000000000000016a .LASF66
-     /tmp/cchmtwv7.s:3003   .debug_str:00000000000001a1 .LASF68
-     /tmp/cchmtwv7.s:2945   .debug_str:0000000000000017 .LASF48
-     /tmp/cchmtwv7.s:3029   .debug_str:0000000000000245 .LASF49
-     /tmp/cchmtwv7.s:3067   .debug_str:0000000000000355 .LASF50
-     /tmp/cchmtwv7.s:3061   .debug_str:0000000000000321 .LASF51
-     /tmp/cchmtwv7.s:3031   .debug_str:000000000000024a .LASF52
-     /tmp/cchmtwv7.s:3141   .debug_str:000000000000061f .LASF102
-     /tmp/cchmtwv7.s:2999   .debug_str:0000000000000188 .LASF53
-     /tmp/cchmtwv7.s:3025   .debug_str:0000000000000228 .LASF103
-     /tmp/cchmtwv7.s:3009   .debug_str:00000000000001c5 .LASF54
-     /tmp/cchmtwv7.s:2947   .debug_str:000000000000002a .LASF55
-     /tmp/cchmtwv7.s:3043   .debug_str:00000000000002aa .LASF56
-     /tmp/cchmtwv7.s:241    .text:00000000000000f8 .LFB66
-     /tmp/cchmtwv7.s:274    .text:0000000000000138 .LFE66
-     /tmp/cchmtwv7.s:2731   .debug_loc:0000000000000000 .LLST6
-     /tmp/cchmtwv7.s:258    .text:0000000000000118 .LVL15
-     /tmp/cchmtwv7.s:261    .text:0000000000000124 .LVL16
-     /tmp/cchmtwv7.s:3069   .debug_str:0000000000000367 .LASF57
-     /tmp/cchmtwv7.s:166    .text:00000000000000a0 .LFB64
-     /tmp/cchmtwv7.s:225    .text:00000000000000f8 .LFE64
-     /tmp/cchmtwv7.s:2749   .debug_loc:000000000000004c .LLST4
-     /tmp/cchmtwv7.s:192    .text:00000000000000c8 .LBB7
-     /tmp/cchmtwv7.s:206    .text:00000000000000d8 .LBE7
-     /tmp/cchmtwv7.s:2763   .debug_loc:0000000000000085 .LLST5
-     /tmp/cchmtwv7.s:203    .text:00000000000000d8 .LVL12
-     /tmp/cchmtwv7.s:210    .text:00000000000000e4 .LVL13
-     /tmp/cchmtwv7.s:517    .text:0000000000000278 .LFB62
-     /tmp/cchmtwv7.s:542    .text:00000000000002a0 .LFE62
-     /tmp/cchmtwv7.s:531    .text:0000000000000290 .LVL35
-     /tmp/cchmtwv7.s:483    .text:000000000000024c .LFB61
-     /tmp/cchmtwv7.s:511    .text:0000000000000278 .LFE61
-     /tmp/cchmtwv7.s:2770   .debug_loc:00000000000000a8 .LLST12
-     /tmp/cchmtwv7.s:500    .text:0000000000000268 .LVL34
-     /tmp/cchmtwv7.s:447    .text:000000000000021c .LFB60
-     /tmp/cchmtwv7.s:477    .text:000000000000024c .LFE60
-     /tmp/cchmtwv7.s:2784   .debug_loc:00000000000000e1 .LLST11
-     /tmp/cchmtwv7.s:464    .text:0000000000000238 .LVL31
-     /tmp/cchmtwv7.s:3081   .debug_str:00000000000003c5 .LASF58
-     /tmp/cchmtwv7.s:420    .text:000000000000021c .LFE58
-     /tmp/cchmtwv7.s:2798   .debug_loc:000000000000011a .LLST10
-     /tmp/cchmtwv7.s:384    .text:00000000000001d0 .LVL25
-GAS LISTING /tmp/cchmtwv7.s 			page 20
+     /tmp/ccP51DCP.s:2985   .debug_str:0000000000000134 .LASF32
+     /tmp/ccP51DCP.s:3095   .debug_str:0000000000000428 .LASF33
+     /tmp/ccP51DCP.s:3131   .debug_str:00000000000005e1 .LASF34
+     /tmp/ccP51DCP.s:3129   .debug_str:00000000000005d9 .LASF35
+     /tmp/ccP51DCP.s:2991   .debug_str:000000000000015b .LASF36
+     /tmp/ccP51DCP.s:3145   .debug_str:000000000000063f .LASF37
+     /tmp/ccP51DCP.s:3123   .debug_str:000000000000058f .LASF99
+     /tmp/ccP51DCP.s:3047   .debug_str:00000000000002de .LASF38
+     /tmp/ccP51DCP.s:2993   .debug_str:0000000000000161 .LASF39
+     /tmp/ccP51DCP.s:3135   .debug_str:00000000000005ee .LASF40
+     /tmp/ccP51DCP.s:2957   .debug_str:000000000000008e .LASF42
+     /tmp/ccP51DCP.s:3021   .debug_str:0000000000000218 .LASF44
+     /tmp/ccP51DCP.s:2973   .debug_str:00000000000000e8 .LASF100
+     /tmp/ccP51DCP.s:3077   .debug_str:00000000000003aa .LASF101
+     /tmp/ccP51DCP.s:3153   .debug_str:0000000000000672 .LASF45
+     /tmp/ccP51DCP.s:2995   .debug_str:000000000000016a .LASF66
+     /tmp/ccP51DCP.s:3003   .debug_str:00000000000001a1 .LASF68
+     /tmp/ccP51DCP.s:2945   .debug_str:0000000000000017 .LASF48
+     /tmp/ccP51DCP.s:3029   .debug_str:0000000000000245 .LASF49
+     /tmp/ccP51DCP.s:3067   .debug_str:0000000000000355 .LASF50
+     /tmp/ccP51DCP.s:3061   .debug_str:0000000000000321 .LASF51
+     /tmp/ccP51DCP.s:3031   .debug_str:000000000000024a .LASF52
+     /tmp/ccP51DCP.s:3141   .debug_str:000000000000061f .LASF102
+     /tmp/ccP51DCP.s:2999   .debug_str:0000000000000188 .LASF53
+     /tmp/ccP51DCP.s:3025   .debug_str:0000000000000228 .LASF103
+     /tmp/ccP51DCP.s:3009   .debug_str:00000000000001c5 .LASF54
+     /tmp/ccP51DCP.s:2947   .debug_str:000000000000002a .LASF55
+     /tmp/ccP51DCP.s:3043   .debug_str:00000000000002aa .LASF56
+     /tmp/ccP51DCP.s:241    .text:00000000000000f8 .LFB66
+     /tmp/ccP51DCP.s:274    .text:0000000000000138 .LFE66
+     /tmp/ccP51DCP.s:2731   .debug_loc:0000000000000000 .LLST6
+     /tmp/ccP51DCP.s:258    .text:0000000000000118 .LVL15
+     /tmp/ccP51DCP.s:261    .text:0000000000000124 .LVL16
+     /tmp/ccP51DCP.s:3069   .debug_str:0000000000000367 .LASF57
+     /tmp/ccP51DCP.s:166    .text:00000000000000a0 .LFB64
+     /tmp/ccP51DCP.s:225    .text:00000000000000f8 .LFE64
+     /tmp/ccP51DCP.s:2749   .debug_loc:000000000000004c .LLST4
+     /tmp/ccP51DCP.s:192    .text:00000000000000c8 .LBB7
+     /tmp/ccP51DCP.s:206    .text:00000000000000d8 .LBE7
+     /tmp/ccP51DCP.s:2763   .debug_loc:0000000000000085 .LLST5
+     /tmp/ccP51DCP.s:203    .text:00000000000000d8 .LVL12
+     /tmp/ccP51DCP.s:210    .text:00000000000000e4 .LVL13
+     /tmp/ccP51DCP.s:517    .text:0000000000000278 .LFB62
+     /tmp/ccP51DCP.s:542    .text:00000000000002a0 .LFE62
+     /tmp/ccP51DCP.s:531    .text:0000000000000290 .LVL35
+     /tmp/ccP51DCP.s:483    .text:000000000000024c .LFB61
+     /tmp/ccP51DCP.s:511    .text:0000000000000278 .LFE61
+     /tmp/ccP51DCP.s:2770   .debug_loc:00000000000000a8 .LLST12
+     /tmp/ccP51DCP.s:500    .text:0000000000000268 .LVL34
+     /tmp/ccP51DCP.s:447    .text:000000000000021c .LFB60
+     /tmp/ccP51DCP.s:477    .text:000000000000024c .LFE60
+     /tmp/ccP51DCP.s:2784   .debug_loc:00000000000000e1 .LLST11
+     /tmp/ccP51DCP.s:464    .text:0000000000000238 .LVL31
+     /tmp/ccP51DCP.s:3081   .debug_str:00000000000003c5 .LASF58
+     /tmp/ccP51DCP.s:420    .text:000000000000021c .LFE58
+     /tmp/ccP51DCP.s:2798   .debug_loc:000000000000011a .LLST10
+     /tmp/ccP51DCP.s:384    .text:00000000000001d0 .LVL25
+GAS LISTING /tmp/ccP51DCP.s 			page 20
 
 
-     /tmp/cchmtwv7.s:391    .text:00000000000001e4 .LVL26
-     /tmp/cchmtwv7.s:398    .text:00000000000001f8 .LVL27
-     /tmp/cchmtwv7.s:402    .text:0000000000000204 .LVL28
-     /tmp/cchmtwv7.s:3125   .debug_str:000000000000059f .LASF59
-     /tmp/cchmtwv7.s:311    .text:0000000000000160 .LFB55
-     /tmp/cchmtwv7.s:348    .text:00000000000001a0 .LFE55
-     /tmp/cchmtwv7.s:2812   .debug_loc:0000000000000153 .LLST7
-     /tmp/cchmtwv7.s:2832   .debug_loc:00000000000001a1 .LLST8
-     /tmp/cchmtwv7.s:2846   .debug_loc:00000000000001da .LLST9
-     /tmp/cchmtwv7.s:332    .text:0000000000000188 .LVL21
-     /tmp/cchmtwv7.s:336    .text:0000000000000190 .LVL22
-     /tmp/cchmtwv7.s:3137   .debug_str:00000000000005f7 .LASF60
-     /tmp/cchmtwv7.s:3071   .debug_str:0000000000000376 .LASF61
-     /tmp/cchmtwv7.s:280    .text:0000000000000138 .LFB53
-     /tmp/cchmtwv7.s:305    .text:0000000000000160 .LFE53
-     /tmp/cchmtwv7.s:294    .text:0000000000000150 .LVL18
-     /tmp/cchmtwv7.s:3099   .debug_str:0000000000000433 .LASF62
-     /tmp/cchmtwv7.s:3055   .debug_str:000000000000030e .LASF63
-     /tmp/cchmtwv7.s:134    .text:0000000000000078 .LFB52
-     /tmp/cchmtwv7.s:160    .text:00000000000000a0 .LFE52
-     /tmp/cchmtwv7.s:2860   .debug_loc:0000000000000213 .LLST3
-     /tmp/cchmtwv7.s:149    .text:0000000000000090 .LVL8
-     /tmp/cchmtwv7.s:2943   .debug_str:0000000000000007 .LASF64
-     /tmp/cchmtwv7.s:3057   .debug_str:0000000000000315 .LASF65
-     /tmp/cchmtwv7.s:102    .text:0000000000000050 .LFB51
-     /tmp/cchmtwv7.s:128    .text:0000000000000078 .LFE51
-     /tmp/cchmtwv7.s:2874   .debug_loc:000000000000024c .LLST2
-     /tmp/cchmtwv7.s:117    .text:0000000000000068 .LVL6
-     /tmp/cchmtwv7.s:2961   .debug_str:000000000000009f .LASF67
-     /tmp/cchmtwv7.s:3115   .debug_str:00000000000004b7 .LASF69
-     /tmp/cchmtwv7.s:70     .text:0000000000000028 .LFB50
-     /tmp/cchmtwv7.s:96     .text:0000000000000050 .LFE50
-     /tmp/cchmtwv7.s:2979   .debug_str:0000000000000115 .LASF70
-     /tmp/cchmtwv7.s:2888   .debug_loc:0000000000000285 .LLST1
-     /tmp/cchmtwv7.s:85     .text:0000000000000040 .LVL4
-     /tmp/cchmtwv7.s:3151   .debug_str:0000000000000665 .LASF71
-     /tmp/cchmtwv7.s:3005   .debug_str:00000000000001b0 .LASF72
-     /tmp/cchmtwv7.s:37     .text:0000000000000000 .LFB49
-     /tmp/cchmtwv7.s:64     .text:0000000000000028 .LFE49
-     /tmp/cchmtwv7.s:2902   .debug_loc:00000000000002be .LLST0
-     /tmp/cchmtwv7.s:53     .text:0000000000000018 .LVL2
-     /tmp/cchmtwv7.s:11     .text._ZN6Thread3runEv:0000000000000000 .LFB48
-     /tmp/cchmtwv7.s:30     .text._ZN6Thread3runEv:0000000000000018 .LFE48
-     /tmp/cchmtwv7.s:2983   .debug_str:0000000000000128 .LASF104
-     /tmp/cchmtwv7.s:3051   .debug_str:00000000000002ed .LASF73
-     /tmp/cchmtwv7.s:3073   .debug_str:000000000000038c .LASF75
-     /tmp/cchmtwv7.s:2989   .debug_str:0000000000000142 .LASF74
-     /tmp/cchmtwv7.s:3053   .debug_str:0000000000000302 .LASF76
-     /tmp/cchmtwv7.s:3143   .debug_str:0000000000000630 .LASF105
-     /tmp/cchmtwv7.s:3015   .debug_str:00000000000001e4 .LASF106
-     /tmp/cchmtwv7.s:3045   .debug_str:00000000000002b9 .LASF77
-     /tmp/cchmtwv7.s:3105   .debug_str:0000000000000478 .LASF78
-     /tmp/cchmtwv7.s:3001   .debug_str:0000000000000191 .LASF79
-     /tmp/cchmtwv7.s:3063   .debug_str:0000000000000337 .LASF80
-     /tmp/cchmtwv7.s:3075   .debug_str:000000000000039c .LASF81
-     /tmp/cchmtwv7.s:3023   .debug_str:000000000000021f .LASF82
-     /tmp/cchmtwv7.s:3019   .debug_str:000000000000020a .LASF83
-GAS LISTING /tmp/cchmtwv7.s 			page 21
+     /tmp/ccP51DCP.s:391    .text:00000000000001e4 .LVL26
+     /tmp/ccP51DCP.s:398    .text:00000000000001f8 .LVL27
+     /tmp/ccP51DCP.s:402    .text:0000000000000204 .LVL28
+     /tmp/ccP51DCP.s:3125   .debug_str:000000000000059f .LASF59
+     /tmp/ccP51DCP.s:311    .text:0000000000000160 .LFB55
+     /tmp/ccP51DCP.s:348    .text:00000000000001a0 .LFE55
+     /tmp/ccP51DCP.s:2812   .debug_loc:0000000000000153 .LLST7
+     /tmp/ccP51DCP.s:2832   .debug_loc:00000000000001a1 .LLST8
+     /tmp/ccP51DCP.s:2846   .debug_loc:00000000000001da .LLST9
+     /tmp/ccP51DCP.s:332    .text:0000000000000188 .LVL21
+     /tmp/ccP51DCP.s:336    .text:0000000000000190 .LVL22
+     /tmp/ccP51DCP.s:3137   .debug_str:00000000000005f7 .LASF60
+     /tmp/ccP51DCP.s:3071   .debug_str:0000000000000376 .LASF61
+     /tmp/ccP51DCP.s:280    .text:0000000000000138 .LFB53
+     /tmp/ccP51DCP.s:305    .text:0000000000000160 .LFE53
+     /tmp/ccP51DCP.s:294    .text:0000000000000150 .LVL18
+     /tmp/ccP51DCP.s:3099   .debug_str:0000000000000433 .LASF62
+     /tmp/ccP51DCP.s:3055   .debug_str:000000000000030e .LASF63
+     /tmp/ccP51DCP.s:134    .text:0000000000000078 .LFB52
+     /tmp/ccP51DCP.s:160    .text:00000000000000a0 .LFE52
+     /tmp/ccP51DCP.s:2860   .debug_loc:0000000000000213 .LLST3
+     /tmp/ccP51DCP.s:149    .text:0000000000000090 .LVL8
+     /tmp/ccP51DCP.s:2943   .debug_str:0000000000000007 .LASF64
+     /tmp/ccP51DCP.s:3057   .debug_str:0000000000000315 .LASF65
+     /tmp/ccP51DCP.s:102    .text:0000000000000050 .LFB51
+     /tmp/ccP51DCP.s:128    .text:0000000000000078 .LFE51
+     /tmp/ccP51DCP.s:2874   .debug_loc:000000000000024c .LLST2
+     /tmp/ccP51DCP.s:117    .text:0000000000000068 .LVL6
+     /tmp/ccP51DCP.s:2961   .debug_str:000000000000009f .LASF67
+     /tmp/ccP51DCP.s:3115   .debug_str:00000000000004b7 .LASF69
+     /tmp/ccP51DCP.s:70     .text:0000000000000028 .LFB50
+     /tmp/ccP51DCP.s:96     .text:0000000000000050 .LFE50
+     /tmp/ccP51DCP.s:2979   .debug_str:0000000000000115 .LASF70
+     /tmp/ccP51DCP.s:2888   .debug_loc:0000000000000285 .LLST1
+     /tmp/ccP51DCP.s:85     .text:0000000000000040 .LVL4
+     /tmp/ccP51DCP.s:3151   .debug_str:0000000000000665 .LASF71
+     /tmp/ccP51DCP.s:3005   .debug_str:00000000000001b0 .LASF72
+     /tmp/ccP51DCP.s:37     .text:0000000000000000 .LFB49
+     /tmp/ccP51DCP.s:64     .text:0000000000000028 .LFE49
+     /tmp/ccP51DCP.s:2902   .debug_loc:00000000000002be .LLST0
+     /tmp/ccP51DCP.s:53     .text:0000000000000018 .LVL2
+     /tmp/ccP51DCP.s:11     .text._ZN6Thread3runEv:0000000000000000 .LFB48
+     /tmp/ccP51DCP.s:30     .text._ZN6Thread3runEv:0000000000000018 .LFE48
+     /tmp/ccP51DCP.s:2983   .debug_str:0000000000000128 .LASF104
+     /tmp/ccP51DCP.s:3051   .debug_str:00000000000002ed .LASF73
+     /tmp/ccP51DCP.s:3073   .debug_str:000000000000038c .LASF75
+     /tmp/ccP51DCP.s:2989   .debug_str:0000000000000142 .LASF74
+     /tmp/ccP51DCP.s:3053   .debug_str:0000000000000302 .LASF76
+     /tmp/ccP51DCP.s:3143   .debug_str:0000000000000630 .LASF105
+     /tmp/ccP51DCP.s:3015   .debug_str:00000000000001e4 .LASF106
+     /tmp/ccP51DCP.s:3045   .debug_str:00000000000002b9 .LASF77
+     /tmp/ccP51DCP.s:3105   .debug_str:0000000000000478 .LASF78
+     /tmp/ccP51DCP.s:3001   .debug_str:0000000000000191 .LASF79
+     /tmp/ccP51DCP.s:3063   .debug_str:0000000000000337 .LASF80
+     /tmp/ccP51DCP.s:3075   .debug_str:000000000000039c .LASF81
+     /tmp/ccP51DCP.s:3023   .debug_str:000000000000021f .LASF82
+     /tmp/ccP51DCP.s:3019   .debug_str:000000000000020a .LASF83
+GAS LISTING /tmp/ccP51DCP.s 			page 21
 
 
-     /tmp/cchmtwv7.s:3049   .debug_str:00000000000002e3 .LASF84
-     /tmp/cchmtwv7.s:244    .text:00000000000000f8 .LVL14
-     /tmp/cchmtwv7.s:269    .text:0000000000000130 .LVL17
-     /tmp/cchmtwv7.s:171    .text:00000000000000a0 .LVL9
-     /tmp/cchmtwv7.s:198    .text:00000000000000cc .LVL11
-     /tmp/cchmtwv7.s:191    .text:00000000000000c8 .LVL10
-     /tmp/cchmtwv7.s:486    .text:000000000000024c .LVL32
-     /tmp/cchmtwv7.s:498    .text:0000000000000260 .LVL33
-     /tmp/cchmtwv7.s:450    .text:000000000000021c .LVL29
-     /tmp/cchmtwv7.s:462    .text:0000000000000230 .LVL30
-     /tmp/cchmtwv7.s:361    .text:00000000000001a0 .LVL23
-     /tmp/cchmtwv7.s:381    .text:00000000000001c8 .LVL24
-     /tmp/cchmtwv7.s:314    .text:0000000000000160 .LVL19
-     /tmp/cchmtwv7.s:330    .text:0000000000000180 .LVL20
-     /tmp/cchmtwv7.s:137    .text:0000000000000078 .LVL7
-     /tmp/cchmtwv7.s:105    .text:0000000000000050 .LVL5
-     /tmp/cchmtwv7.s:73     .text:0000000000000028 .LVL3
-     /tmp/cchmtwv7.s:41     .text:0000000000000000 .LVL1
-     /tmp/cchmtwv7.s:561    .debug_info:0000000000000000 .Ldebug_info0
-     /tmp/cchmtwv7.s:5      .text:0000000000000000 .Ltext0
-     /tmp/cchmtwv7.s:556    .text:00000000000002a0 .Letext0
-     /tmp/cchmtwv7.s:228    .gcc_except_table:0000000000000000 .LLSDA64
-     /tmp/cchmtwv7.s:422    .gcc_except_table:0000000000000004 .LLSDA58
+     /tmp/ccP51DCP.s:3049   .debug_str:00000000000002e3 .LASF84
+     /tmp/ccP51DCP.s:244    .text:00000000000000f8 .LVL14
+     /tmp/ccP51DCP.s:269    .text:0000000000000130 .LVL17
+     /tmp/ccP51DCP.s:171    .text:00000000000000a0 .LVL9
+     /tmp/ccP51DCP.s:198    .text:00000000000000cc .LVL11
+     /tmp/ccP51DCP.s:191    .text:00000000000000c8 .LVL10
+     /tmp/ccP51DCP.s:486    .text:000000000000024c .LVL32
+     /tmp/ccP51DCP.s:498    .text:0000000000000260 .LVL33
+     /tmp/ccP51DCP.s:450    .text:000000000000021c .LVL29
+     /tmp/ccP51DCP.s:462    .text:0000000000000230 .LVL30
+     /tmp/ccP51DCP.s:361    .text:00000000000001a0 .LVL23
+     /tmp/ccP51DCP.s:381    .text:00000000000001c8 .LVL24
+     /tmp/ccP51DCP.s:314    .text:0000000000000160 .LVL19
+     /tmp/ccP51DCP.s:330    .text:0000000000000180 .LVL20
+     /tmp/ccP51DCP.s:137    .text:0000000000000078 .LVL7
+     /tmp/ccP51DCP.s:105    .text:0000000000000050 .LVL5
+     /tmp/ccP51DCP.s:73     .text:0000000000000028 .LVL3
+     /tmp/ccP51DCP.s:41     .text:0000000000000000 .LVL1
+     /tmp/ccP51DCP.s:561    .debug_info:0000000000000000 .Ldebug_info0
+     /tmp/ccP51DCP.s:5      .text:0000000000000000 .Ltext0
+     /tmp/ccP51DCP.s:556    .text:00000000000002a0 .Letext0
+     /tmp/ccP51DCP.s:228    .gcc_except_table:0000000000000000 .LLSDA64
+     /tmp/ccP51DCP.s:422    .gcc_except_table:0000000000000004 .LLSDA58
 
 UNDEFINED SYMBOLS
 _Z9mem_allocm

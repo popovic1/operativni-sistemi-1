@@ -897,8 +897,7 @@ public:
     bool isFinished() const { return state == FINISHED; }
     800017e8:	0284a703          	lw	a4,40(s1)
 
-//    Thread* userThread = new Thread((void (*)(void *))(userMain), nullptr);
-//    userThread->start();
+
     while (!usrT->isFinished()){
     800017ec:	00300793          	li	a5,3
     800017f0:	00f70c63          	beq	a4,a5,80001808 <main+0x16c>
