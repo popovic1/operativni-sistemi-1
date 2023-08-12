@@ -29,7 +29,7 @@ void PCB::dispatch() {
 int PCB::exit() {
     if(running->state==RUNNING){
         running->state=FINISHED;
-        dispatch();
+        thread_dispatch();
         return 0;
     }
     return -1;

@@ -13,3 +13,7 @@ PCB *Scheduler::get() {
 void Scheduler::put(PCB *handle) {
     Scheduler::readyQueue.addLast(handle);
 }
+
+void Scheduler::remove() {
+    Scheduler::readyQueue.removeLast();
+}

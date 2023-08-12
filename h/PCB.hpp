@@ -46,13 +46,18 @@ private:
 public:
     PCB(Body body, void *args, uint64 *stack) {
         this->body = body;
+
         this->stack = stack;
         context = {(uint64) &wrapper,
                    stack != nullptr ? (uint64) &stack[DEFAULT_STACK_SIZE] : 0
         };
         this->args = args;
         state = READY;
-//        if (body != nullptr) { Scheduler::put(this); }
+
+//        if (body != nullptr) {
+//            Scheduler::put(this);
+//        }
+
     }
 
 

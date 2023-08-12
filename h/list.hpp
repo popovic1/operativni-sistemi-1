@@ -51,7 +51,6 @@ public:
         if (!head) { tail = 0; }
 
         T *ret = elem->data;
-        delete elem;
         return ret;
     }
 
@@ -77,7 +76,6 @@ public:
         tail = prev;
 
         T *ret = elem->data;
-        delete elem;
         return ret;
     }
 

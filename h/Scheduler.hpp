@@ -14,6 +14,8 @@ public:
     static PCB* get();
 
     static void put(PCB* handle);
+
+    static void remove();
 };
 
 

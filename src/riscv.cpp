@@ -40,6 +40,8 @@ void Riscv::trapHandler() {
                     else stack = nullptr;
                     handleAddr = (PCB***) a3;
                     *(*handleAddr) = new PCB((PCB::Body)a1, (void*)a2, stack);
+                    if((PCB::Body)a1)Scheduler::put(*(*handleAddr));
+
                     //if(!handle)push_a0(-1);
 
                     push_a0(0);

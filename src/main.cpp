@@ -51,12 +51,17 @@ int main() {
 
     switchToUserMode();
 
-    Thread* userThread = new Thread((void (*)(void *))(userMain), nullptr);
-    userThread->start();
+    uint64* stack = (uint64*)MemoryAllocator::getInstance().allocate(((DEFAULT_STACK_SIZE + 16+ MEM_BLOCK_SIZE - 1) / MEM_BLOCK_SIZE));
+    PCB* usrT = new PCB((void (*)(void *))(userMain), nullptr, stack);
+    Scheduler::put(usrT);
 
-    thread_dispatch();
 
-    delete userThread;
+    while (!usrT->isFinished()){
+        thread_dispatch();
+    }
+
+
+    delete usrT;
     delete pcb;
 
     //printString("MAIN START\n");

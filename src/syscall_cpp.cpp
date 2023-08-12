@@ -20,6 +20,7 @@ void switchToUserMode(){ toUserMode();}
 
 Thread::Thread(void (*body)(void*), void* arg) {
     thread_create(&myHandle, body, arg);
+    Scheduler::remove();
 }
 
 Thread::Thread() {
