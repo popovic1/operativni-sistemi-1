@@ -26,7 +26,7 @@ void Riscv::trapHandler() {
             sstatus = r_sstatus();
             void* mem;
             uint64* stack;
-            PCB*** handleAddr;
+            PCB** handleAddr;
             switch(a0){
                 case 0x01: // allocate
                     mem = MemoryAllocator::getInstance().allocate((size_t) a1);
@@ -38,15 +38,12 @@ void Riscv::trapHandler() {
                 case 0x11: //thread_create
                     if((uint64*)a1!= nullptr) stack = (uint64*)MemoryAllocator::getInstance().allocate(((DEFAULT_STACK_SIZE + 16+ MEM_BLOCK_SIZE - 1) / MEM_BLOCK_SIZE));
                     else stack = nullptr;
-                    handleAddr = (PCB***) a3;
-                    *(*handleAddr) = new PCB((PCB::Body)a1, (void*)a2, stack);
-                    if((PCB::Body)a1)Scheduler::put(*(*handleAddr));
+                    handleAddr = (PCB**) a3;
+                    (*handleAddr) = new PCB((PCB::Body)a1, (void*)a2, stack);
+                    if((PCB::Body)a1)Scheduler::put(*handleAddr);
 
-                    //if(!handle)push_a0(-1);
-
+                    if(!(*handleAddr))push_a0(-1);
                     push_a0(0);
-
-
                     break;
                 case 0x12: // thread_exit
                     push_a0(PCB::exit());

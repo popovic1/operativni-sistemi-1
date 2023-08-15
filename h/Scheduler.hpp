@@ -3,6 +3,7 @@
 
 
 #include "list.hpp"
+#include "../lib/hw.h"
 
 
 class PCB;
@@ -15,7 +16,7 @@ public:
 
     static void put(PCB* handle);
 
-    static void remove();
+    static uint64 remove();
 };
 
 

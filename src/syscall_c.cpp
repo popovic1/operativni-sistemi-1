@@ -3,8 +3,9 @@
 
 void *mem_alloc(size_t size) {
     size_t sizeInBlocks = ((size + 16 + MEM_BLOCK_SIZE - 1) / MEM_BLOCK_SIZE);
-    Riscv::w_a0(0x01);
     Riscv::w_a1((uint64) sizeInBlocks);
+    Riscv::w_a0(0x01);
+
 
     __asm__ volatile ("ecall");
 
@@ -14,8 +15,9 @@ void *mem_alloc(size_t size) {
 }
 
 int mem_free(void *ptr) {
-    Riscv::w_a0(0x02);
     Riscv::w_a1((uint64) ptr);
+    Riscv::w_a0(0x02);
+
 
     __asm__ volatile ("ecall");
 
@@ -32,14 +34,18 @@ void toUserMode(){
 int thread_create(thread_t *handle, void(*start_routine)(void *), void *arg) {
 
 
-    Riscv::w_a0(0x11);
     Riscv::w_a1((uint64) start_routine);
     Riscv::w_a2((uint64) arg);
-    Riscv::w_a3((uint64) &handle);
+    //thread_t* t = handle;
+    Riscv::w_a3((uint64) handle);
+    Riscv::w_a0(0x11);
 
     __asm__ volatile ("ecall");
 
-    return 0;
+    return Riscv::r_a0();
+
+
+    //return 0;
 
 }
 

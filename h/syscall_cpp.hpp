@@ -37,6 +37,8 @@ private:
     void (*body)(void *);
 
     void *arg;
+
+    static void threadWrapper(void* t);
 };
 
 //class Semaphore {

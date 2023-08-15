@@ -20,11 +20,15 @@ void switchToUserMode(){ toUserMode();}
 
 Thread::Thread(void (*body)(void*), void* arg) {
     thread_create(&myHandle, body, arg);
-    Scheduler::remove();
+    //myHandle = (thread_t)Scheduler::remove();
 }
 
 Thread::Thread() {
-    new Thread(nullptr, nullptr);
+    new Thread(threadWrapper, this);
+}
+
+void Thread::threadWrapper(void *t) {
+    ((Thread*)t)->run();
 }
 
 int Thread::start() {
@@ -42,6 +46,7 @@ void Thread::dispatch() {
 }
 
 Thread::~Thread() {
+    thread_exit();
     delete (PCB*)myHandle;
 }
 

@@ -4,6 +4,7 @@
 
 #include "../h/Scheduler.hpp"
 
+
 List<PCB> Scheduler::readyQueue;
 
 PCB *Scheduler::get() {
@@ -14,6 +15,6 @@ void Scheduler::put(PCB *handle) {
     Scheduler::readyQueue.addLast(handle);
 }
 
-void Scheduler::remove() {
-    Scheduler::readyQueue.removeLast();
+uint64 Scheduler::remove() {
+    return (uint64)Scheduler::readyQueue.removeLast();
 }
