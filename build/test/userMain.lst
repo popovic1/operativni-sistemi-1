@@ -1,4 +1,4 @@
-GAS LISTING /tmp/cc7UEGqp.s 			page 1
+GAS LISTING /tmp/ccYdPX32.s 			page 1
 
 
    1              		.file	"userMain.cpp"
@@ -17,11 +17,11 @@ GAS LISTING /tmp/cc7UEGqp.s 			page 1
   10 001b 00000000 		.align	3
   10      00
   11              	.LC1:
-  12 0020 54455354 		.string	"TEST 2 (zadatak 2., niti CPP API i sinhrona promena konteksta)\n"
-  12      20322028 
+  12 0020 54455354 		.string	"TEST 1 (zadatak 2, niti C API i sinhrona promena konteksta)\n"
+  12      20312028 
   12      7A616461 
   12      74616B20 
-  12      322E2C20 
+  12      322C206E 
   13              		.text
   14              		.align	2
   15              		.globl	_Z8userMainv
@@ -58,7 +58,7 @@ GAS LISTING /tmp/cc7UEGqp.s 			page 1
   28:test/userMain.cpp **** #include "../test/ConsumerProducer_CPP_API_test.hpp"
   29:test/userMain.cpp **** #include "System_Mode_test.hpp"
   30:test/userMain.cpp **** 
-GAS LISTING /tmp/cc7UEGqp.s 			page 2
+GAS LISTING /tmp/ccYdPX32.s 			page 2
 
 
   31:test/userMain.cpp **** #endif
@@ -83,7 +83,7 @@ GAS LISTING /tmp/cc7UEGqp.s 			page 1
   33      E7800000 
   34              	.LVL0:
   35:test/userMain.cpp **** //    int test = getc() - '0';
-  36:test/userMain.cpp ****     int test = 2;
+  36:test/userMain.cpp ****     int test = 1;
   35              		.loc 1 36 5 is_stmt 1
   37:test/userMain.cpp ****     //getc(); // Enter posle broja
   38:test/userMain.cpp **** 
@@ -114,34 +114,34 @@ GAS LISTING /tmp/cc7UEGqp.s 			page 1
   60:test/userMain.cpp ****     switch (test) {
   39              		.loc 1 60 5
   61:test/userMain.cpp ****         case 1:
+  40              		.loc 1 61 9
   62:test/userMain.cpp **** #if LEVEL_2_IMPLEMENTED == 1
   63:test/userMain.cpp ****             Threads_C_API_test();
-  64:test/userMain.cpp ****             printString("TEST 1 (zadatak 2, niti C API i sinhrona promena konteksta)\n");
-  65:test/userMain.cpp **** #endif
-GAS LISTING /tmp/cc7UEGqp.s 			page 3
+  41              		.loc 1 63 13
+GAS LISTING /tmp/ccYdPX32.s 			page 3
 
 
-  66:test/userMain.cpp ****             break;
-  67:test/userMain.cpp ****         case 2:
-  40              		.loc 1 67 9
-  68:test/userMain.cpp **** #if LEVEL_2_IMPLEMENTED == 1
-  69:test/userMain.cpp ****             Threads_CPP_API_test();
-  41              		.loc 1 69 13
-  42              		.loc 1 69 33 is_stmt 0
-  43 0020 97000000 		call	_Z20Threads_CPP_API_testv@plt
+  42              		.loc 1 63 31 is_stmt 0
+  43 0020 97000000 		call	_Z18Threads_C_API_testv@plt
   43      E7800000 
   44              	.LVL1:
-  70:test/userMain.cpp ****             printString("TEST 2 (zadatak 2., niti CPP API i sinhrona promena konteksta)\n");
-  45              		.loc 1 70 13 is_stmt 1
-  46              		.loc 1 70 24 is_stmt 0
+  64:test/userMain.cpp ****             printString("TEST 1 (zadatak 2, niti C API i sinhrona promena konteksta)\n");
+  45              		.loc 1 64 13 is_stmt 1
+  46              		.loc 1 64 24 is_stmt 0
   47 0028 17050000 		lla	a0,.LC1
   47      13050500 
   48 0030 97000000 		call	_Z11printStringPKc@plt
   48      E7800000 
   49              	.LVL2:
+  65:test/userMain.cpp **** #endif
+  66:test/userMain.cpp ****             break;
+  50              		.loc 1 66 13 is_stmt 1
+  67:test/userMain.cpp ****         case 2:
+  68:test/userMain.cpp **** #if LEVEL_2_IMPLEMENTED == 1
+  69:test/userMain.cpp ****             Threads_CPP_API_test();
+  70:test/userMain.cpp ****             printString("TEST 2 (zadatak 2., niti CPP API i sinhrona promena konteksta)\n");
   71:test/userMain.cpp **** #endif
   72:test/userMain.cpp ****             break;
-  50              		.loc 1 72 13 is_stmt 1
   73:test/userMain.cpp ****         case 3:
   74:test/userMain.cpp **** #if LEVEL_3_IMPLEMENTED == 1
   75:test/userMain.cpp ****             producerConsumer_C_API();
@@ -178,7 +178,7 @@ GAS LISTING /tmp/cc7UEGqp.s 			page 1
  106:test/userMain.cpp ****     }
  107:test/userMain.cpp **** }...
   51              		.loc 1 107 1 is_stmt 0
-GAS LISTING /tmp/cc7UEGqp.s 			page 4
+GAS LISTING /tmp/ccYdPX32.s 			page 4
 
 
   52 0038 83308100 		ld	ra,8(sp)
@@ -194,86 +194,86 @@ GAS LISTING /tmp/cc7UEGqp.s 			page 1
   63              	.Letext0:
   64              		.file 2 "test/../h/../h/../lib/hw.h"
   65              		.file 3 "test/printing.hpp"
-  66              		.file 4 "test/../test/Threads_CPP_API_test.hpp"
-GAS LISTING /tmp/cc7UEGqp.s 			page 5
+  66              		.file 4 "test/../test/Threads_C_API_test.hpp"
+GAS LISTING /tmp/ccYdPX32.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 userMain.cpp
-     /tmp/cc7UEGqp.s:17     .text:0000000000000000 _Z8userMainv
-     /tmp/cc7UEGqp.s:21     .text:0000000000000000 .L0 
-     /tmp/cc7UEGqp.s:22     .text:0000000000000000 .L0 
-     /tmp/cc7UEGqp.s:23     .text:0000000000000004 .L0 
-     /tmp/cc7UEGqp.s:26     .text:000000000000000c .L0 
-     /tmp/cc7UEGqp.s:27     .text:000000000000000c .L0 
-     /tmp/cc7UEGqp.s:29     .text:0000000000000010 .L0 
-     /tmp/cc7UEGqp.s:31     .text:0000000000000010 .L0 
-     /tmp/cc7UEGqp.s:32     .text:0000000000000010 .L0 
-     /tmp/cc7UEGqp.s:36     .text:0000000000000020 .L0 
-     /tmp/cc7UEGqp.s:37     .text:0000000000000020 .L0 
-     /tmp/cc7UEGqp.s:38     .text:0000000000000020 .L0 
-     /tmp/cc7UEGqp.s:39     .text:0000000000000020 .L0 
-     /tmp/cc7UEGqp.s:40     .text:0000000000000020 .L0 
-     /tmp/cc7UEGqp.s:41     .text:0000000000000020 .L0 
-     /tmp/cc7UEGqp.s:42     .text:0000000000000020 .L0 
-     /tmp/cc7UEGqp.s:43     .text:0000000000000020 .L0 
-     /tmp/cc7UEGqp.s:46     .text:0000000000000028 .L0 
-     /tmp/cc7UEGqp.s:47     .text:0000000000000028 .L0 
-     /tmp/cc7UEGqp.s:51     .text:0000000000000038 .L0 
-     /tmp/cc7UEGqp.s:52     .text:0000000000000038 .L0 
-     /tmp/cc7UEGqp.s:53     .text:000000000000003c .L0 
-     /tmp/cc7UEGqp.s:55     .text:0000000000000040 .L0 
-     /tmp/cc7UEGqp.s:56     .text:0000000000000040 .L0 
-     /tmp/cc7UEGqp.s:58     .text:0000000000000044 .L0 
-     /tmp/cc7UEGqp.s:60     .text:0000000000000048 .L0 
-     /tmp/cc7UEGqp.s:67     .text:0000000000000048 .L0 
-     /tmp/cc7UEGqp.s:8      .rodata.str1.8:0000000000000000 .LC0
-     /tmp/cc7UEGqp.s:32     .text:0000000000000010 .L0 
-     /tmp/cc7UEGqp.s:11     .rodata.str1.8:0000000000000020 .LC1
-     /tmp/cc7UEGqp.s:47     .text:0000000000000028 .L0 
-     /tmp/cc7UEGqp.s:258    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-     /tmp/cc7UEGqp.s:519    .debug_str:00000000000000fe .LASF24
-     /tmp/cc7UEGqp.s:507    .debug_str:000000000000009d .LASF25
-     /tmp/cc7UEGqp.s:501    .debug_str:0000000000000060 .LASF26
-     /tmp/cc7UEGqp.s:5      .text:0000000000000000 .Ltext0
-     /tmp/cc7UEGqp.s:63     .text:0000000000000048 .Letext0
-     /tmp/cc7UEGqp.s:487    .debug_line:0000000000000000 .Ldebug_line0
-     /tmp/cc7UEGqp.s:533    .debug_str:000000000000021d .LASF0
-     /tmp/cc7UEGqp.s:527    .debug_str:00000000000001eb .LASF1
-     /tmp/cc7UEGqp.s:513    .debug_str:00000000000000d1 .LASF2
-     /tmp/cc7UEGqp.s:505    .debug_str:0000000000000096 .LASF4
-     /tmp/cc7UEGqp.s:499    .debug_str:000000000000004e .LASF3
-     /tmp/cc7UEGqp.s:491    .debug_str:000000000000001a .LASF5
-     /tmp/cc7UEGqp.s:503    .debug_str:0000000000000083 .LASF6
-     /tmp/cc7UEGqp.s:525    .debug_str:00000000000001d8 .LASF7
-     /tmp/cc7UEGqp.s:537    .debug_str:000000000000022f .LASF8
-     /tmp/cc7UEGqp.s:493    .debug_str:0000000000000021 .LASF9
-     /tmp/cc7UEGqp.s:495    .debug_str:000000000000002f .LASF10
-     /tmp/cc7UEGqp.s:531    .debug_str:000000000000020e .LASF11
-     /tmp/cc7UEGqp.s:497    .debug_str:000000000000003e .LASF12
-     /tmp/cc7UEGqp.s:529    .debug_str:00000000000001fe .LASF13
-     /tmp/cc7UEGqp.s:511    .debug_str:00000000000000c5 .LASF14
-     /tmp/cc7UEGqp.s:509    .debug_str:00000000000000af .LASF15
-     /tmp/cc7UEGqp.s:515    .debug_str:00000000000000df .LASF16
-GAS LISTING /tmp/cc7UEGqp.s 			page 6
+     /tmp/ccYdPX32.s:17     .text:0000000000000000 _Z8userMainv
+     /tmp/ccYdPX32.s:21     .text:0000000000000000 .L0 
+     /tmp/ccYdPX32.s:22     .text:0000000000000000 .L0 
+     /tmp/ccYdPX32.s:23     .text:0000000000000004 .L0 
+     /tmp/ccYdPX32.s:26     .text:000000000000000c .L0 
+     /tmp/ccYdPX32.s:27     .text:000000000000000c .L0 
+     /tmp/ccYdPX32.s:29     .text:0000000000000010 .L0 
+     /tmp/ccYdPX32.s:31     .text:0000000000000010 .L0 
+     /tmp/ccYdPX32.s:32     .text:0000000000000010 .L0 
+     /tmp/ccYdPX32.s:36     .text:0000000000000020 .L0 
+     /tmp/ccYdPX32.s:37     .text:0000000000000020 .L0 
+     /tmp/ccYdPX32.s:38     .text:0000000000000020 .L0 
+     /tmp/ccYdPX32.s:39     .text:0000000000000020 .L0 
+     /tmp/ccYdPX32.s:40     .text:0000000000000020 .L0 
+     /tmp/ccYdPX32.s:41     .text:0000000000000020 .L0 
+     /tmp/ccYdPX32.s:42     .text:0000000000000020 .L0 
+     /tmp/ccYdPX32.s:43     .text:0000000000000020 .L0 
+     /tmp/ccYdPX32.s:46     .text:0000000000000028 .L0 
+     /tmp/ccYdPX32.s:47     .text:0000000000000028 .L0 
+     /tmp/ccYdPX32.s:51     .text:0000000000000038 .L0 
+     /tmp/ccYdPX32.s:52     .text:0000000000000038 .L0 
+     /tmp/ccYdPX32.s:53     .text:000000000000003c .L0 
+     /tmp/ccYdPX32.s:55     .text:0000000000000040 .L0 
+     /tmp/ccYdPX32.s:56     .text:0000000000000040 .L0 
+     /tmp/ccYdPX32.s:58     .text:0000000000000044 .L0 
+     /tmp/ccYdPX32.s:60     .text:0000000000000048 .L0 
+     /tmp/ccYdPX32.s:67     .text:0000000000000048 .L0 
+     /tmp/ccYdPX32.s:8      .rodata.str1.8:0000000000000000 .LC0
+     /tmp/ccYdPX32.s:32     .text:0000000000000010 .L0 
+     /tmp/ccYdPX32.s:11     .rodata.str1.8:0000000000000020 .LC1
+     /tmp/ccYdPX32.s:47     .text:0000000000000028 .L0 
+     /tmp/ccYdPX32.s:258    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+     /tmp/ccYdPX32.s:519    .debug_str:00000000000000fc .LASF24
+     /tmp/ccYdPX32.s:507    .debug_str:000000000000009b .LASF25
+     /tmp/ccYdPX32.s:501    .debug_str:000000000000005e .LASF26
+     /tmp/ccYdPX32.s:5      .text:0000000000000000 .Ltext0
+     /tmp/ccYdPX32.s:63     .text:0000000000000048 .Letext0
+     /tmp/ccYdPX32.s:487    .debug_line:0000000000000000 .Ldebug_line0
+     /tmp/ccYdPX32.s:535    .debug_str:000000000000022e .LASF0
+     /tmp/ccYdPX32.s:529    .debug_str:00000000000001fc .LASF1
+     /tmp/ccYdPX32.s:513    .debug_str:00000000000000cf .LASF2
+     /tmp/ccYdPX32.s:505    .debug_str:0000000000000094 .LASF4
+     /tmp/ccYdPX32.s:497    .debug_str:0000000000000034 .LASF3
+     /tmp/ccYdPX32.s:489    .debug_str:0000000000000000 .LASF5
+     /tmp/ccYdPX32.s:503    .debug_str:0000000000000081 .LASF6
+     /tmp/ccYdPX32.s:527    .debug_str:00000000000001e9 .LASF7
+     /tmp/ccYdPX32.s:539    .debug_str:0000000000000240 .LASF8
+     /tmp/ccYdPX32.s:491    .debug_str:0000000000000007 .LASF9
+     /tmp/ccYdPX32.s:493    .debug_str:0000000000000015 .LASF10
+     /tmp/ccYdPX32.s:533    .debug_str:000000000000021f .LASF11
+     /tmp/ccYdPX32.s:495    .debug_str:0000000000000024 .LASF12
+     /tmp/ccYdPX32.s:531    .debug_str:000000000000020f .LASF13
+     /tmp/ccYdPX32.s:511    .debug_str:00000000000000c3 .LASF14
+     /tmp/ccYdPX32.s:509    .debug_str:00000000000000ad .LASF15
+     /tmp/ccYdPX32.s:515    .debug_str:00000000000000dd .LASF16
+GAS LISTING /tmp/ccYdPX32.s 			page 6
 
 
-     /tmp/cc7UEGqp.s:539    .debug_str:000000000000023f .LASF17
-     /tmp/cc7UEGqp.s:523    .debug_str:00000000000001cf .LASF18
-     /tmp/cc7UEGqp.s:517    .debug_str:00000000000000f5 .LASF27
-     /tmp/cc7UEGqp.s:521    .debug_str:00000000000001c2 .LASF28
-     /tmp/cc7UEGqp.s:18     .text:0000000000000000 .LFB48
-     /tmp/cc7UEGqp.s:61     .text:0000000000000048 .LFE48
-     /tmp/cc7UEGqp.s:535    .debug_str:000000000000022a .LASF19
-     /tmp/cc7UEGqp.s:34     .text:0000000000000020 .LVL0
-     /tmp/cc7UEGqp.s:44     .text:0000000000000028 .LVL1
-     /tmp/cc7UEGqp.s:49     .text:0000000000000038 .LVL2
-     /tmp/cc7UEGqp.s:543    .debug_str:0000000000000250 .LASF20
-     /tmp/cc7UEGqp.s:541    .debug_str:0000000000000244 .LASF22
-     /tmp/cc7UEGqp.s:489    .debug_str:0000000000000000 .LASF21
-     /tmp/cc7UEGqp.s:545    .debug_str:0000000000000263 .LASF23
-     /tmp/cc7UEGqp.s:68     .debug_info:0000000000000000 .Ldebug_info0
+     /tmp/ccYdPX32.s:541    .debug_str:0000000000000250 .LASF17
+     /tmp/ccYdPX32.s:523    .debug_str:00000000000001cd .LASF18
+     /tmp/ccYdPX32.s:517    .debug_str:00000000000000f3 .LASF27
+     /tmp/ccYdPX32.s:521    .debug_str:00000000000001c0 .LASF28
+     /tmp/ccYdPX32.s:18     .text:0000000000000000 .LFB48
+     /tmp/ccYdPX32.s:61     .text:0000000000000048 .LFE48
+     /tmp/ccYdPX32.s:537    .debug_str:000000000000023b .LASF19
+     /tmp/ccYdPX32.s:34     .text:0000000000000020 .LVL0
+     /tmp/ccYdPX32.s:44     .text:0000000000000028 .LVL1
+     /tmp/ccYdPX32.s:49     .text:0000000000000038 .LVL2
+     /tmp/ccYdPX32.s:545    .debug_str:0000000000000261 .LASF20
+     /tmp/ccYdPX32.s:543    .debug_str:0000000000000255 .LASF22
+     /tmp/ccYdPX32.s:499    .debug_str:0000000000000046 .LASF21
+     /tmp/ccYdPX32.s:525    .debug_str:00000000000001d6 .LASF23
+     /tmp/ccYdPX32.s:68     .debug_info:0000000000000000 .Ldebug_info0
 
 UNDEFINED SYMBOLS
 _Z11printStringPKc
-_Z20Threads_CPP_API_testv
+_Z18Threads_C_API_testv

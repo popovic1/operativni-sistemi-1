@@ -143,9 +143,9 @@ void Threads_CPP_API_test() {
     threads[3] = new WorkerD();
     printString("ThreadD created\n");
 
-//    for(int i=0; i<4; i++) {
-//        threads[i]->start();
-//    }
+    for(int i=0; i<4; i++) {
+        threads[i]->start();
+    }
 
     while (!(finishedA && finishedB && finishedC && finishedD)) {
         Thread::dispatch();
