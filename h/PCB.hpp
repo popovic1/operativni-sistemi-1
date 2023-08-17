@@ -6,6 +6,7 @@
 #include "riscv.hpp"
 #include "../h/syscall_c.hpp"
 
+class Sem;
 
 class PCB {
 public:
@@ -34,8 +35,14 @@ public:
 
     static int exit();
 
+    PCB(Body body, void *args, uint64 *stack);
+
+    void start();
+
 
     static PCB *running;
+
+    void join();
 
 private:
 
@@ -43,32 +50,15 @@ private:
 
     static void wrapper();
 
-public:
-    PCB(Body body, void *args, uint64 *stack) {
-        this->body = body;
-
-        this->stack = stack;
-        context = {(uint64) &wrapper,
-                   stack != nullptr ? (uint64) &stack[DEFAULT_STACK_SIZE] : 0
-        };
-        this->args = args;
-        state = READY;
-
-//        if (body != nullptr) {
-//            Scheduler::put(this);
-//        }
-
-    }
-
+    Sem* semaphore;
 
     Body body;
     uint64 *stack;
-    void *args = nullptr; //TODD proveri da li ostaje nullptr ili se lepo inicializuje
+    void *args = nullptr;
     Context context;
     State state;
 
 
-    void start();
 };
 
 

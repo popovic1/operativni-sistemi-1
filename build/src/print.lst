@@ -1,4 +1,4 @@
-GAS LISTING /tmp/ccu9npSf.s 			page 1
+GAS LISTING /tmp/ccrxBDF3.s 			page 1
 
 
    1              		.file	"print.cpp"
@@ -58,7 +58,7 @@ GAS LISTING /tmp/ccu9npSf.s 			page 1
   15 0000 130101FF 		addi	sp,sp,-16
   16              		.cfi_def_cfa_offset 16
   17 0004 23341100 		sd	ra,8(sp)
-GAS LISTING /tmp/ccu9npSf.s 			page 2
+GAS LISTING /tmp/ccrxBDF3.s 			page 2
 
 
   18 0008 23308100 		sd	s0,0(sp)
@@ -118,91 +118,91 @@ GAS LISTING /tmp/ccu9npSf.s 			page 1
   66 004c 67800000 		jr	ra
   67              		.cfi_endproc
   68              	.LFE1:
-GAS LISTING /tmp/ccu9npSf.s 			page 3
+GAS LISTING /tmp/ccrxBDF3.s 			page 3
 
 
   70              	.Letext0:
   71              		.file 2 "src/../h/../lib/hw.h"
   72              		.file 3 "src/../h/../lib/console.h"
-GAS LISTING /tmp/ccu9npSf.s 			page 4
+GAS LISTING /tmp/ccrxBDF3.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 print.cpp
-     /tmp/ccu9npSf.s:9      .text:0000000000000000 _Z4putcc
-     /tmp/ccu9npSf.s:13     .text:0000000000000000 .L0 
-     /tmp/ccu9npSf.s:15     .text:0000000000000000 .L0 
-     /tmp/ccu9npSf.s:16     .text:0000000000000004 .L0 
-     /tmp/ccu9npSf.s:19     .text:000000000000000c .L0 
-     /tmp/ccu9npSf.s:20     .text:000000000000000c .L0 
-     /tmp/ccu9npSf.s:22     .text:0000000000000010 .L0 
-     /tmp/ccu9npSf.s:24     .text:0000000000000010 .L0 
-     /tmp/ccu9npSf.s:25     .text:0000000000000010 .L0 
-     /tmp/ccu9npSf.s:28     .text:0000000000000018 .L0 
-     /tmp/ccu9npSf.s:29     .text:000000000000001c .L0 
-     /tmp/ccu9npSf.s:31     .text:0000000000000020 .L0 
-     /tmp/ccu9npSf.s:32     .text:0000000000000020 .L0 
-     /tmp/ccu9npSf.s:34     .text:0000000000000024 .L0 
-     /tmp/ccu9npSf.s:36     .text:0000000000000028 .L0 
-     /tmp/ccu9npSf.s:42     .text:0000000000000028 _Z4getcv
-     /tmp/ccu9npSf.s:45     .text:0000000000000028 .L0 
-     /tmp/ccu9npSf.s:46     .text:0000000000000028 .L0 
-     /tmp/ccu9npSf.s:47     .text:000000000000002c .L0 
-     /tmp/ccu9npSf.s:50     .text:0000000000000034 .L0 
-     /tmp/ccu9npSf.s:51     .text:0000000000000034 .L0 
-     /tmp/ccu9npSf.s:53     .text:0000000000000038 .L0 
-     /tmp/ccu9npSf.s:55     .text:0000000000000038 .L0 
-     /tmp/ccu9npSf.s:56     .text:0000000000000038 .L0 
-     /tmp/ccu9npSf.s:59     .text:0000000000000040 .L0 
-     /tmp/ccu9npSf.s:60     .text:0000000000000044 .L0 
-     /tmp/ccu9npSf.s:62     .text:0000000000000048 .L0 
-     /tmp/ccu9npSf.s:63     .text:0000000000000048 .L0 
-     /tmp/ccu9npSf.s:65     .text:000000000000004c .L0 
-     /tmp/ccu9npSf.s:67     .text:0000000000000050 .L0 
-     /tmp/ccu9npSf.s:73     .text:0000000000000050 .L0 
-     /tmp/ccu9npSf.s:251    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-     /tmp/ccu9npSf.s:544    .debug_str:0000000000000124 .LASF20
-     /tmp/ccu9npSf.s:510    .debug_str:000000000000002a .LASF21
-     /tmp/ccu9npSf.s:522    .debug_str:0000000000000071 .LASF22
-     /tmp/ccu9npSf.s:5      .text:0000000000000000 .Ltext0
-     /tmp/ccu9npSf.s:70     .text:0000000000000050 .Letext0
-     /tmp/ccu9npSf.s:502    .debug_line:0000000000000000 .Ldebug_line0
-     /tmp/ccu9npSf.s:504    .debug_str:0000000000000000 .LASF0
-     /tmp/ccu9npSf.s:542    .debug_str:0000000000000111 .LASF1
-     /tmp/ccu9npSf.s:530    .debug_str:00000000000000ba .LASF2
-     /tmp/ccu9npSf.s:526    .debug_str:00000000000000a7 .LASF4
-     /tmp/ccu9npSf.s:520    .debug_str:000000000000005f .LASF3
-     /tmp/ccu9npSf.s:518    .debug_str:0000000000000058 .LASF5
-     /tmp/ccu9npSf.s:524    .debug_str:0000000000000094 .LASF6
-     /tmp/ccu9npSf.s:540    .debug_str:00000000000000fe .LASF7
-     /tmp/ccu9npSf.s:552    .debug_str:0000000000000205 .LASF8
-     /tmp/ccu9npSf.s:506    .debug_str:000000000000000d .LASF9
-     /tmp/ccu9npSf.s:508    .debug_str:000000000000001b .LASF10
-     /tmp/ccu9npSf.s:546    .debug_str:00000000000001e8 .LASF11
-     /tmp/ccu9npSf.s:512    .debug_str:0000000000000038 .LASF12
-     /tmp/ccu9npSf.s:556    .debug_str:000000000000021c .LASF13
-     /tmp/ccu9npSf.s:528    .debug_str:00000000000000ae .LASF14
-     /tmp/ccu9npSf.s:538    .debug_str:00000000000000e8 .LASF15
-     /tmp/ccu9npSf.s:536    .debug_str:00000000000000d2 .LASF16
-GAS LISTING /tmp/ccu9npSf.s 			page 5
+     /tmp/ccrxBDF3.s:9      .text:0000000000000000 _Z4putcc
+     /tmp/ccrxBDF3.s:13     .text:0000000000000000 .L0 
+     /tmp/ccrxBDF3.s:15     .text:0000000000000000 .L0 
+     /tmp/ccrxBDF3.s:16     .text:0000000000000004 .L0 
+     /tmp/ccrxBDF3.s:19     .text:000000000000000c .L0 
+     /tmp/ccrxBDF3.s:20     .text:000000000000000c .L0 
+     /tmp/ccrxBDF3.s:22     .text:0000000000000010 .L0 
+     /tmp/ccrxBDF3.s:24     .text:0000000000000010 .L0 
+     /tmp/ccrxBDF3.s:25     .text:0000000000000010 .L0 
+     /tmp/ccrxBDF3.s:28     .text:0000000000000018 .L0 
+     /tmp/ccrxBDF3.s:29     .text:000000000000001c .L0 
+     /tmp/ccrxBDF3.s:31     .text:0000000000000020 .L0 
+     /tmp/ccrxBDF3.s:32     .text:0000000000000020 .L0 
+     /tmp/ccrxBDF3.s:34     .text:0000000000000024 .L0 
+     /tmp/ccrxBDF3.s:36     .text:0000000000000028 .L0 
+     /tmp/ccrxBDF3.s:42     .text:0000000000000028 _Z4getcv
+     /tmp/ccrxBDF3.s:45     .text:0000000000000028 .L0 
+     /tmp/ccrxBDF3.s:46     .text:0000000000000028 .L0 
+     /tmp/ccrxBDF3.s:47     .text:000000000000002c .L0 
+     /tmp/ccrxBDF3.s:50     .text:0000000000000034 .L0 
+     /tmp/ccrxBDF3.s:51     .text:0000000000000034 .L0 
+     /tmp/ccrxBDF3.s:53     .text:0000000000000038 .L0 
+     /tmp/ccrxBDF3.s:55     .text:0000000000000038 .L0 
+     /tmp/ccrxBDF3.s:56     .text:0000000000000038 .L0 
+     /tmp/ccrxBDF3.s:59     .text:0000000000000040 .L0 
+     /tmp/ccrxBDF3.s:60     .text:0000000000000044 .L0 
+     /tmp/ccrxBDF3.s:62     .text:0000000000000048 .L0 
+     /tmp/ccrxBDF3.s:63     .text:0000000000000048 .L0 
+     /tmp/ccrxBDF3.s:65     .text:000000000000004c .L0 
+     /tmp/ccrxBDF3.s:67     .text:0000000000000050 .L0 
+     /tmp/ccrxBDF3.s:73     .text:0000000000000050 .L0 
+     /tmp/ccrxBDF3.s:251    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+     /tmp/ccrxBDF3.s:544    .debug_str:0000000000000124 .LASF20
+     /tmp/ccrxBDF3.s:510    .debug_str:000000000000002a .LASF21
+     /tmp/ccrxBDF3.s:522    .debug_str:0000000000000071 .LASF22
+     /tmp/ccrxBDF3.s:5      .text:0000000000000000 .Ltext0
+     /tmp/ccrxBDF3.s:70     .text:0000000000000050 .Letext0
+     /tmp/ccrxBDF3.s:502    .debug_line:0000000000000000 .Ldebug_line0
+     /tmp/ccrxBDF3.s:504    .debug_str:0000000000000000 .LASF0
+     /tmp/ccrxBDF3.s:542    .debug_str:0000000000000111 .LASF1
+     /tmp/ccrxBDF3.s:530    .debug_str:00000000000000ba .LASF2
+     /tmp/ccrxBDF3.s:526    .debug_str:00000000000000a7 .LASF4
+     /tmp/ccrxBDF3.s:520    .debug_str:000000000000005f .LASF3
+     /tmp/ccrxBDF3.s:518    .debug_str:0000000000000058 .LASF5
+     /tmp/ccrxBDF3.s:524    .debug_str:0000000000000094 .LASF6
+     /tmp/ccrxBDF3.s:540    .debug_str:00000000000000fe .LASF7
+     /tmp/ccrxBDF3.s:552    .debug_str:0000000000000205 .LASF8
+     /tmp/ccrxBDF3.s:506    .debug_str:000000000000000d .LASF9
+     /tmp/ccrxBDF3.s:508    .debug_str:000000000000001b .LASF10
+     /tmp/ccrxBDF3.s:546    .debug_str:00000000000001e8 .LASF11
+     /tmp/ccrxBDF3.s:512    .debug_str:0000000000000038 .LASF12
+     /tmp/ccrxBDF3.s:556    .debug_str:000000000000021c .LASF13
+     /tmp/ccrxBDF3.s:528    .debug_str:00000000000000ae .LASF14
+     /tmp/ccrxBDF3.s:538    .debug_str:00000000000000e8 .LASF15
+     /tmp/ccrxBDF3.s:536    .debug_str:00000000000000d2 .LASF16
+GAS LISTING /tmp/ccrxBDF3.s 			page 5
 
 
-     /tmp/ccu9npSf.s:534    .debug_str:00000000000000cd .LASF23
-     /tmp/ccu9npSf.s:516    .debug_str:000000000000004f .LASF24
-     /tmp/ccu9npSf.s:43     .text:0000000000000028 .LFB1
-     /tmp/ccu9npSf.s:68     .text:0000000000000050 .LFE1
-     /tmp/ccu9npSf.s:57     .text:0000000000000040 .LVL2
-     /tmp/ccu9npSf.s:532    .debug_str:00000000000000c8 .LASF17
-     /tmp/ccu9npSf.s:550    .debug_str:0000000000000200 .LASF25
-     /tmp/ccu9npSf.s:548    .debug_str:00000000000001f7 .LASF26
-     /tmp/ccu9npSf.s:10     .text:0000000000000000 .LFB0
-     /tmp/ccu9npSf.s:37     .text:0000000000000028 .LFE0
-     /tmp/ccu9npSf.s:475    .debug_loc:0000000000000000 .LLST0
-     /tmp/ccu9npSf.s:26     .text:0000000000000018 .LVL1
-     /tmp/ccu9npSf.s:514    .debug_str:0000000000000048 .LASF18
-     /tmp/ccu9npSf.s:554    .debug_str:0000000000000215 .LASF19
-     /tmp/ccu9npSf.s:14     .text:0000000000000000 .LVL0
-     /tmp/ccu9npSf.s:74     .debug_info:0000000000000000 .Ldebug_info0
+     /tmp/ccrxBDF3.s:534    .debug_str:00000000000000cd .LASF23
+     /tmp/ccrxBDF3.s:516    .debug_str:000000000000004f .LASF24
+     /tmp/ccrxBDF3.s:43     .text:0000000000000028 .LFB1
+     /tmp/ccrxBDF3.s:68     .text:0000000000000050 .LFE1
+     /tmp/ccrxBDF3.s:57     .text:0000000000000040 .LVL2
+     /tmp/ccrxBDF3.s:532    .debug_str:00000000000000c8 .LASF17
+     /tmp/ccrxBDF3.s:550    .debug_str:0000000000000200 .LASF25
+     /tmp/ccrxBDF3.s:548    .debug_str:00000000000001f7 .LASF26
+     /tmp/ccrxBDF3.s:10     .text:0000000000000000 .LFB0
+     /tmp/ccrxBDF3.s:37     .text:0000000000000028 .LFE0
+     /tmp/ccrxBDF3.s:475    .debug_loc:0000000000000000 .LLST0
+     /tmp/ccrxBDF3.s:26     .text:0000000000000018 .LVL1
+     /tmp/ccrxBDF3.s:514    .debug_str:0000000000000048 .LASF18
+     /tmp/ccrxBDF3.s:554    .debug_str:0000000000000215 .LASF19
+     /tmp/ccrxBDF3.s:14     .text:0000000000000000 .LVL0
+     /tmp/ccrxBDF3.s:74     .debug_info:0000000000000000 .Ldebug_info0
 
 UNDEFINED SYMBOLS
 __putc

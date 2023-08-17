@@ -2,9 +2,9 @@
 // Created by os on 8/17/23.
 //
 
-#include "../h/Semaphore.hpp"
+#include "../h/Sem.hpp"
 
-void Semaphore::wait() {
+void Sem::wait() {
     value--;
     if (value < 0) {
         // Block the current thread
@@ -15,10 +15,23 @@ void Semaphore::wait() {
     }
 }
 
-void Semaphore::signal() {
+void Sem::signal() {
     value++;
     if (value <= 0) {
         // Wake up a waiting thread
+        PCB *threadToWake = waitQueue.removeFirst();
+        threadToWake->setState(PCB::READY);
+        Scheduler::put(threadToWake);
+    }
+}
+
+Sem::~Sem() {
+    signalAll();
+}
+
+void Sem::signalAll() {
+
+    while (waitQueue.peekFirst() != 0) {
         PCB *threadToWake = waitQueue.removeFirst();
         threadToWake->setState(PCB::READY);
         Scheduler::put(threadToWake);

@@ -4,6 +4,7 @@
 
 #include "riscv.hpp"
 #include "print.hpp"
+#include "Sem.hpp"
 
 
 void *mem_alloc(size_t size);
