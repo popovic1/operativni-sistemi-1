@@ -26,9 +26,9 @@ void Riscv::trapHandler() {
             sstatus = r_sstatus();
             void* mem;
             uint64* stack;
-            PCB** handleAddr;
-            Sem** semAddr;
-            Sem* sem;
+            _thread** handleAddr;
+            _sem** semAddr;
+            _sem* sem;
             int value;
             char c;
             switch(a0){
@@ -42,45 +42,45 @@ void Riscv::trapHandler() {
                 case 0x11: //thread_create
                     if(a1 != 0) stack = (uint64*)MemoryAllocator::getInstance().allocate(((DEFAULT_STACK_SIZE + 16+ MEM_BLOCK_SIZE - 1) / MEM_BLOCK_SIZE));
                     else stack = nullptr;
-                    handleAddr = (PCB**) a3;
-                    (*handleAddr) = new PCB((PCB::Body)a1, (void*)a2, stack);
-                    if((PCB::Body)a1)Scheduler::put(*handleAddr);
+                    handleAddr = (_thread**) a3;
+                    (*handleAddr) = new _thread((_thread::Body)a1, (void*)a2, stack);
+                    if((_thread::Body)a1)Scheduler::put(*handleAddr);
 
                     if(!(*handleAddr))push_a0(-1);
                     push_a0(0);
                     break;
                 case 0x12: // thread_exit
-                    push_a0(PCB::exit());
+                    push_a0(_thread::exit());
                     break;
                 case 0x13:
-                    PCB::dispatch();
+                    _thread::dispatch();
                     break;
                 case 0x14:
-                    ((PCB*)a1)->join();
+                    ((_thread*)a1)->join();
                     break;
                 case 0x21: //sem_open
                     value = a2;
-                    semAddr = (Sem**) a1;
-                    *semAddr = new Sem(value);
+                    semAddr = (_sem**) a1;
+                    *semAddr = new _sem(value);
                     if(!(*semAddr))push_a0(-1);
                     push_a0(0);
                     break;
                 case 0x22: //sem_close
-                    push_a0(((Sem*)a1)->close());
+                    push_a0(((_sem*)a1)->close());
                     break;
                 case 0x23: //sem_wait
-                    sem = (Sem*)a1;
+                    sem = (_sem*)a1;
                     push_a0(sem->wait());
                     break;
                 case 0x24: //sem_signal
-                    push_a0(((Sem*)a1)->signal());
+                    push_a0(((_sem*)a1)->signal());
                     break;
                 case 0x41: //getc
                     c = __getc();
                     push_a0((char)c);
                     break;
                 case 0x42:
-                    __putc(a1);
+                    __putc((char)a3);
                 case 0x51:
                     w_sstatus(sstatus);
                     mc_sstatus(1<<8);

@@ -126,7 +126,8 @@ char getc(){
 }
 
 void putc(char c){
-    Riscv::w_a1(c);
-    Riscv::w_a0(0x42);
-    __asm__ volatile ("ecall");
+    __putc(c);
+//    __asm__ volatile ("mv a7, %0" : : "r"(c));
+//    Riscv::w_a0(0x42);
+//    __asm__ volatile ("ecall");
 }

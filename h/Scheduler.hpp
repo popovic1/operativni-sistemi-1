@@ -6,15 +6,15 @@
 #include "../lib/hw.h"
 
 
-class PCB;
+class _thread;
 
 class Scheduler {
 private:
-    static List<PCB> readyQueue;
+    static List<_thread> readyQueue;
 public:
-    static PCB* get();
+    static _thread* get();
 
-    static void put(PCB* handle);
+    static void put(_thread* handle);
 
     static uint64 remove();
 };

@@ -2,20 +2,20 @@
 //
 //
 //void Tests::test_pcb1() {
-//    PCB *processes[3];
+//    _thread *processes[3];
 //
-//    processes[0] = PCB::createProcess(nullptr);
-//    PCB::running = processes[0];
+//    processes[0] = _thread::createProcess(nullptr);
+//    _thread::running = processes[0];
 //
-//    processes[1] = PCB::createProcess(workerBodyA);
+//    processes[1] = _thread::createProcess(workerBodyA);
 //    printString("CoroutineA created\n");
-//    processes[2] = PCB::createProcess(workerBodyB);
+//    processes[2] = _thread::createProcess(workerBodyB);
 //    printString("CoroutineB created\n");
 //
 //    while (!(processes[1]->isFinished() &&
 //             processes[2]->isFinished()))
 //    {
-//        PCB::yield();
+//        _thread::yield();
 //    }
 //
 //    for (auto &process: processes)

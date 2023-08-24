@@ -2,13 +2,13 @@
 // Created by os on 7/28/23.
 //
 
-#include "../h/PCB.hpp"
-#include "../h/Sem.hpp"
+#include "../h/_thread.hpp"
+#include "../h/_sem.hpp"
 
-PCB* PCB::running;
+_thread* _thread::running;
 
 
-PCB::PCB(PCB::Body body, void *args, uint64 *stack) {
+_thread::_thread(_thread::Body body, void *args, uint64 *stack) {
     this->body = body;
 
     this->stack = stack;
@@ -18,38 +18,38 @@ PCB::PCB(PCB::Body body, void *args, uint64 *stack) {
     this->args = args;
     state = READY;
 
-    //semaphore = new Sem();
+    //semaphore = new _sem();
 }
 
-PCB::~PCB() {
+_thread::~_thread() {
     if(body)delete[] stack;
     //delete semaphore;
 }
 
 
-void PCB::dispatch() {
+void _thread::dispatch() {
     Riscv::pushRegisters();
 
-    PCB *old = running;
-    if (!old->isFinished()) {
+    _thread *old = running;
+    if (!old->isFinished() && !(old->state == _thread::SUSPENDED)) {
         old->state = READY;
         Scheduler::put(old);
     }
     running = Scheduler::get();
     running->state=RUNNING;
 
-    PCB::contextSwitch(&old->context, &running->context);
+    _thread::contextSwitch(&old->context, &running->context);
 
     Riscv::popRegisters();
 }
 
-void PCB::join() {
+void _thread::join() {
     //semaphore->wait();
 }
 
-int PCB::exit() {
+int _thread::exit() {
     if(running->state==RUNNING){
-        //delete PCB::running->semaphore;
+        //delete _thread::running->semaphore;
         running->state=FINISHED;
         thread_dispatch();
         return 0;
@@ -57,9 +57,10 @@ int PCB::exit() {
     return -1;
 }
 
-void PCB::wrapper() {
+void _thread::wrapper() {
     Riscv::popSppSpie();
     running->body(running->args);
-    thread_exit();
+    running->state=FINISHED;
+    thread_dispatch();
 }
 

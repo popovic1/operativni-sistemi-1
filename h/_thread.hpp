@@ -1,14 +1,14 @@
-#ifndef PROJECT_BASE_V1_1_PCB_HPP
-#define PROJECT_BASE_V1_1_PCB_HPP
+#ifndef PROJECT_BASE_V1_1__THREAD_HPP
+#define PROJECT_BASE_V1_1__THREAD_HPP
 
 
 #include "Scheduler.hpp"
 #include "riscv.hpp"
 #include "../h/syscall_c.hpp"
 
-class Sem;
+class _sem;
 
-class PCB {
+class _thread {
 public:
     struct Context {
         uint64 ra;
@@ -22,7 +22,7 @@ public:
         FINISHED
     };
 
-    ~PCB();
+    ~_thread();
 
     bool isFinished() const { return state == FINISHED; }
 
@@ -35,12 +35,12 @@ public:
 
     static int exit();
 
-    PCB(Body body, void *args, uint64 *stack);
+    _thread(Body body, void *args, uint64 *stack);
 
     void start();
 
 
-    static PCB *running;
+    static _thread *running;
 
     void join();
 
@@ -50,7 +50,7 @@ private:
 
     static void wrapper();
 
-    //Sem* semaphore;
+    //_sem* semaphore;
 
     Body body;
     uint64 *stack;
@@ -62,4 +62,4 @@ private:
 };
 
 
-#endif //PROJECT_BASE_V1_1_PCB_HPP
+#endif //PROJECT_BASE_V1_1__THREAD_HPP

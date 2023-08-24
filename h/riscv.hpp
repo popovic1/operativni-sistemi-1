@@ -3,7 +3,7 @@
 
 
 #include "../h/MemoryAllocator.hpp"
-#include "PCB.hpp"
+#include "_thread.hpp"
 
 
 #define readUsrReg(reg, dst) __asm__ volatile("mv %0,"#reg : "=r" (dst));

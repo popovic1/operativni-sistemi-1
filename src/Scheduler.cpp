@@ -5,13 +5,13 @@
 #include "../h/Scheduler.hpp"
 
 
-List<PCB> Scheduler::readyQueue;
+List<_thread> Scheduler::readyQueue;
 
-PCB *Scheduler::get() {
+_thread *Scheduler::get() {
     return Scheduler::readyQueue.removeFirst();
 }
 
-void Scheduler::put(PCB *handle) {
+void Scheduler::put(_thread *handle) {
     Scheduler::readyQueue.addLast(handle);
 }
 

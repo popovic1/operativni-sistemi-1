@@ -2,28 +2,28 @@
 // Created by os on 8/17/23.
 //
 
-#ifndef PROJECT_BASE_V1_1_SEM_HPP
-#define PROJECT_BASE_V1_1_SEM_HPP
+#ifndef PROJECT_BASE_V1_1__SEM_HPP
+#define PROJECT_BASE_V1_1__SEM_HPP
 
-#include "PCB.hpp"
-class Sem {
+#include "_thread.hpp"
+class _sem {
 private:
     int value;
-    List<PCB> waitQueue;
+    List<_thread> waitQueue;
     bool valid;
 
 public:
-    Sem(int initial_value) {
+    _sem(int initial_value) {
         value = initial_value;
         valid = true;
     }
 
-    Sem() {
+    _sem() {
         value = 0;
         valid = true;
     }
 
-    ~Sem();
+    ~_sem();
 
     int wait();
 
@@ -36,4 +36,4 @@ public:
 
 
 
-#endif //PROJECT_BASE_V1_1_SEM_HPP
+#endif //PROJECT_BASE_V1_1__SEM_HPP

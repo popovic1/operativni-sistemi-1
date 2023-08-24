@@ -30,7 +30,7 @@ void Thread::threadWrapper(void *t) {
 }
 
 int Thread::start() {
-    Scheduler::put((PCB*)myHandle);
+    Scheduler::put((_thread*)myHandle);
 
     return 0;
 }
@@ -44,8 +44,10 @@ void Thread::dispatch() {
 }
 
 Thread::~Thread() {
-    delete (PCB*)myHandle;
+    delete (_thread*)myHandle;
     thread_exit();
+
+
 
 }
 
@@ -55,7 +57,7 @@ Semaphore::Semaphore(unsigned int init)  {
 
 Semaphore::~Semaphore() {
     sem_close(myHandle);
-    delete (Sem*)myHandle;
+    delete (_sem*)myHandle;
 }
 
 int Semaphore::signal() {
