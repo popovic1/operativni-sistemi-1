@@ -37,5 +37,11 @@ int sem_wait(sem_t id);
 
 int sem_signal(sem_t id);
 
+const int EOF = -1;
+
+char getc();
+
+void putc(char c);
+
 
 #endif //SYSCALL_C_H

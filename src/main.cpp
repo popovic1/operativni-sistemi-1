@@ -49,11 +49,13 @@ int main() {
     pcb->setState(PCB::RUNNING);
     Riscv::ms_sstatus(Riscv::SSTATUS_SIE);
 
-    switchToUserMode();
+
 
     uint64* stack = (uint64*)MemoryAllocator::getInstance().allocate(((DEFAULT_STACK_SIZE + 16+ MEM_BLOCK_SIZE - 1) / MEM_BLOCK_SIZE));
     PCB* usrT = new PCB((void (*)(void *))(userMain), nullptr, stack);
     Scheduler::put(usrT);
+
+    switchToUserMode();
 
 
     while (!usrT->isFinished()){

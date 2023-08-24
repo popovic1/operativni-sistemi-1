@@ -10,20 +10,28 @@ class Sem {
 private:
     int value;
     List<PCB> waitQueue;
+    bool valid;
 
 public:
-    Sem(int initial_value) : value(initial_value) {}
+    Sem(int initial_value) {
+        value = initial_value;
+        valid = true;
+    }
 
-    Sem() : value(0) {}
+    Sem() {
+        value = 0;
+        valid = true;
+    }
 
     ~Sem();
 
-    void wait();
+    int wait();
 
-    void signal();
+    int signal();
 
+    int close();
 
-    void signalAll();
+    int signalAll();
 };
 
 

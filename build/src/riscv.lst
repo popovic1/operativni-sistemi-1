@@ -1,4 +1,4 @@
-GAS LISTING /tmp/ccvlzG8R.s 			page 1
+GAS LISTING /tmp/ccs9Di6y.s 			page 1
 
 
    1              		.file	"riscv.cpp"
@@ -9,7 +9,7 @@ GAS LISTING /tmp/ccvlzG8R.s 			page 1
    6              		.align	2
    7              		.globl	_ZN5Riscv10popSppSpieEv
    9              	_ZN5Riscv10popSppSpieEv:
-  10              	.LFB51:
+  10              	.LFB48:
   11              		.file 1 "src/riscv.cpp"
    1:src/riscv.cpp **** #include "../h/riscv.hpp"
    2:src/riscv.cpp **** 
@@ -48,20 +48,20 @@ GAS LISTING /tmp/ccvlzG8R.s 			page 1
   37              		.cfi_def_cfa_offset 0
   38 001c 67800000 		jr	ra
   39              		.cfi_endproc
-  40              	.LFE51:
+  40              	.LFE48:
   42              		.align	2
   43              		.globl	_ZN5Riscv11trapHandlerEv
   45              	_ZN5Riscv11trapHandlerEv:
-  46              	.LFB52:
+  46              	.LFB49:
   10:src/riscv.cpp **** 
   11:src/riscv.cpp **** void Riscv::trapHandler() {
   47              		.loc 1 11 27 is_stmt 1
   48              		.cfi_startproc
   49              		.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-GAS LISTING /tmp/ccvlzG8R.s 			page 2
+GAS LISTING /tmp/ccs9Di6y.s 			page 2
 
 
-  50              		.cfi_lsda 0x1b,.LLSDA52
+  50              		.cfi_lsda 0x1b,.LLSDA49
   51 0020 130101F7 		addi	sp,sp,-144
   52              		.cfi_def_cfa_offset 144
   53 0024 23341108 		sd	ra,136(sp)
@@ -88,8 +88,8 @@ GAS LISTING /tmp/ccvlzG8R.s 			page 1
   74              		.cfi_def_cfa 8, 0
   12:src/riscv.cpp ****     uint64 scause = r_scause();
   75              		.loc 1 12 5
-  76              	.LBB55:
-  77              	.LBB56:
+  76              	.LBB73:
+  77              	.LBB74:
   78              		.file 2 "src/../h/riscv.hpp"
    1:src/../h/riscv.hpp **** #ifndef PROJECT_BASE_V1_1_RISCV_HPP
    2:src/../h/riscv.hpp **** #define PROJECT_BASE_V1_1_RISCV_HPP
@@ -118,7 +118,7 @@ GAS LISTING /tmp/ccvlzG8R.s 			page 1
   25:src/../h/riscv.hpp ****     // pop x3..x31 registers onto stack
   26:src/../h/riscv.hpp ****     static void popRegisters();
   27:src/../h/riscv.hpp **** 
-GAS LISTING /tmp/ccvlzG8R.s 			page 3
+GAS LISTING /tmp/ccs9Di6y.s 			page 3
 
 
   28:src/../h/riscv.hpp ****     // read register scause
@@ -178,7 +178,7 @@ GAS LISTING /tmp/ccvlzG8R.s 			page 1
   82:src/../h/riscv.hpp **** 
   83:src/../h/riscv.hpp ****     // mask clear register sstatus
   84:src/../h/riscv.hpp ****     static void mc_sstatus(uint64 mask);
-GAS LISTING /tmp/ccvlzG8R.s 			page 4
+GAS LISTING /tmp/ccs9Di6y.s 			page 4
 
 
   85:src/../h/riscv.hpp **** 
@@ -208,9 +208,9 @@ GAS LISTING /tmp/ccvlzG8R.s 			page 1
  109:src/../h/riscv.hpp **** 
  110:src/../h/riscv.hpp ****     static void w_a2(uint64 a1);
  111:src/../h/riscv.hpp **** 
- 112:src/../h/riscv.hpp ****     static uint64 r_a3();
+ 112:src/../h/riscv.hpp ****     static uint64 r_a7();
  113:src/../h/riscv.hpp **** 
- 114:src/../h/riscv.hpp ****     static void w_a3(uint64 a1);
+ 114:src/../h/riscv.hpp ****     static void w_a7(uint64 a7);
  115:src/../h/riscv.hpp **** 
  116:src/../h/riscv.hpp ****     static void push_a0(long a0);
  117:src/../h/riscv.hpp **** 
@@ -236,17 +236,17 @@ GAS LISTING /tmp/ccvlzG8R.s 			page 1
   87 0054 233CF4F8 		sd	a5,-104(s0)
   88              		.loc 2 128 5 is_stmt 1
   89              		.loc 2 128 12 is_stmt 0
-  90 0058 033784F9 		ld	a4,-104(s0)
+  90 0058 833784F9 		ld	a5,-104(s0)
   91              	.LVL0:
-GAS LISTING /tmp/ccvlzG8R.s 			page 5
+GAS LISTING /tmp/ccs9Di6y.s 			page 5
 
 
-  92              	.LBE56:
-  93              	.LBE55:
+  92              	.LBE74:
+  93              	.LBE73:
   13:src/riscv.cpp ****     uint64 a0 = r_a0();
   94              		.loc 1 13 5 is_stmt 1
-  95              	.LBB57:
-  96              	.LBB58:
+  95              	.LBB75:
+  96              	.LBB76:
  129:src/../h/riscv.hpp **** }
  130:src/../h/riscv.hpp **** 
  131:src/../h/riscv.hpp **** inline void Riscv::w_scause(uint64 scause)
@@ -298,7 +298,7 @@ GAS LISTING /tmp/ccvlzG8R.s 			page 1
  177:src/../h/riscv.hpp **** inline void Riscv::mc_sip(uint64 mask)
  178:src/../h/riscv.hpp **** {
  179:src/../h/riscv.hpp ****     __asm__ volatile ("csrc sip, %[mask]" : : [mask] "r"(mask));
-GAS LISTING /tmp/ccvlzG8R.s 			page 6
+GAS LISTING /tmp/ccs9Di6y.s 			page 6
 
 
  180:src/../h/riscv.hpp **** }
@@ -350,29 +350,29 @@ GAS LISTING /tmp/ccvlzG8R.s 			page 1
  226:src/../h/riscv.hpp **** inline long Riscv::r_a0() {
  227:src/../h/riscv.hpp ****     long volatile a0;
   97              		.loc 2 227 5
- 228:src/../h/riscv.hpp ****     __asm__ volatile ("ld %0, 10*8(fp)" : "=r"(a0));
+ 228:src/../h/riscv.hpp ****     __asm__ volatile("mv %0, a0" : "=r"(a0));
   98              		.loc 2 228 5
-  99              		.loc 2 228 52 is_stmt 0
+  99              		.loc 2 228 45 is_stmt 0
  100              	#APP
  101              	# 228 "src/../h/riscv.hpp" 1
  229              	    return a0;
- 102              		ld a5, 10*8(fp)
+ 102              		mv a4, a0
  103              	# 0 "" 2
-GAS LISTING /tmp/ccvlzG8R.s 			page 7
+GAS LISTING /tmp/ccs9Di6y.s 			page 7
 
 
  104              	#NO_APP
- 105 0060 2338F4F8 		sd	a5,-112(s0)
+ 105 0060 2338E4F8 		sd	a4,-112(s0)
  106              		.loc 2 229 5 is_stmt 1
  107              		.loc 2 229 12 is_stmt 0
- 108 0064 833704F9 		ld	a5,-112(s0)
+ 108 0064 833604F9 		ld	a3,-112(s0)
  109              	.LVL1:
- 110              	.LBE58:
- 111              	.LBE57:
+ 110              	.LBE76:
+ 111              	.LBE75:
   14:src/riscv.cpp ****     uint64 a1 = r_a1();
  112              		.loc 1 14 5 is_stmt 1
- 113              	.LBB59:
- 114              	.LBB60:
+ 113              	.LBB77:
+ 114              	.LBB78:
  230:src/../h/riscv.hpp **** }
  231:src/../h/riscv.hpp **** 
  232:src/../h/riscv.hpp **** inline void Riscv::w_a0(long a0) {
@@ -382,26 +382,26 @@ GAS LISTING /tmp/ccvlzG8R.s 			page 1
  236:src/../h/riscv.hpp **** inline uint64 Riscv::r_a1() {
  237:src/../h/riscv.hpp ****     uint64 volatile a1;
  115              		.loc 2 237 5
- 238:src/../h/riscv.hpp ****     __asm__ volatile ("ld %0, 11*8(fp)" : "=r"(a1));
+ 238:src/../h/riscv.hpp ****     __asm__ volatile("mv %0, a1" : "=r"(a1));
  116              		.loc 2 238 5
- 117              		.loc 2 238 52 is_stmt 0
+ 117              		.loc 2 238 45 is_stmt 0
  118              	#APP
  119              	# 238 "src/../h/riscv.hpp" 1
  239              	    return a1;
- 120              		ld a3, 11*8(fp)
+ 120              		mv a4, a1
  121              	# 0 "" 2
  122              	#NO_APP
- 123 006c 2334D4F8 		sd	a3,-120(s0)
+ 123 006c 2334E4F8 		sd	a4,-120(s0)
  124              		.loc 2 239 5 is_stmt 1
  125              		.loc 2 239 12 is_stmt 0
  126 0070 833484F8 		ld	s1,-120(s0)
  127              	.LVL2:
- 128              	.LBE60:
- 129              	.LBE59:
+ 128              	.LBE78:
+ 129              	.LBE77:
   15:src/riscv.cpp ****     uint64 a2 = r_a2();
  130              		.loc 1 15 5 is_stmt 1
- 131              	.LBB61:
- 132              	.LBB62:
+ 131              	.LBB79:
+ 132              	.LBB80:
  240:src/../h/riscv.hpp **** }
  241:src/../h/riscv.hpp **** 
  242:src/../h/riscv.hpp **** inline void Riscv::w_a1(uint64 a1) {
@@ -411,54 +411,54 @@ GAS LISTING /tmp/ccvlzG8R.s 			page 1
  246:src/../h/riscv.hpp **** inline uint64 Riscv::r_a2() {
  247:src/../h/riscv.hpp ****     uint64 volatile a2;
  133              		.loc 2 247 5
- 248:src/../h/riscv.hpp ****     __asm__ volatile ("ld %0, 12*8(fp)" : "=r"(a2));
+ 248:src/../h/riscv.hpp ****     __asm__ volatile("mv %0, a2" : "=r"(a2));
  134              		.loc 2 248 5
- 135              		.loc 2 248 52 is_stmt 0
+ 135              		.loc 2 248 45 is_stmt 0
  136              	#APP
  137              	# 248 "src/../h/riscv.hpp" 1
  249              	    return a2;
- 138              		ld a3, 12*8(fp)
-GAS LISTING /tmp/ccvlzG8R.s 			page 8
+ 138              		mv a4, a2
+GAS LISTING /tmp/ccs9Di6y.s 			page 8
 
 
  139              	# 0 "" 2
  140              	#NO_APP
- 141 0078 2330D4F8 		sd	a3,-128(s0)
+ 141 0078 2330E4F8 		sd	a4,-128(s0)
  142              		.loc 2 249 5 is_stmt 1
  143              		.loc 2 249 12 is_stmt 0
- 144 007c 833904F8 		ld	s3,-128(s0)
+ 144 007c 033904F8 		ld	s2,-128(s0)
  145              	.LVL3:
- 146              	.LBE62:
- 147              	.LBE61:
-  16:src/riscv.cpp ****     uint64 a3 = r_a3();
+ 146              	.LBE80:
+ 147              	.LBE79:
+  16:src/riscv.cpp ****     uint64 a3 = r_a7();
  148              		.loc 1 16 5 is_stmt 1
- 149              	.LBB63:
- 150              	.LBB64:
+ 149              	.LBB81:
+ 150              	.LBB82:
  250:src/../h/riscv.hpp **** }
  251:src/../h/riscv.hpp **** 
  252:src/../h/riscv.hpp **** inline void Riscv::w_a2(uint64 a2) {
  253:src/../h/riscv.hpp ****     __asm__ volatile ("mv a2, %0" : : "r"(a2));
  254:src/../h/riscv.hpp **** }
  255:src/../h/riscv.hpp **** 
- 256:src/../h/riscv.hpp **** inline uint64 Riscv::r_a3() {
- 257:src/../h/riscv.hpp ****     uint64 volatile a3;
+ 256:src/../h/riscv.hpp **** inline uint64 Riscv::r_a7() {
+ 257:src/../h/riscv.hpp ****     uint64 volatile a7;
  151              		.loc 2 257 5
- 258:src/../h/riscv.hpp ****     __asm__ volatile ("ld %0, 13*8(fp)" : "=r"(a3));
+ 258:src/../h/riscv.hpp ****     __asm__ volatile("mv %0, a7" : "=r"(a7));
  152              		.loc 2 258 5
- 153              		.loc 2 258 52 is_stmt 0
+ 153              		.loc 2 258 45 is_stmt 0
  154              	#APP
  155              	# 258 "src/../h/riscv.hpp" 1
- 259              	    return a3;
- 156              		ld a3, 13*8(fp)
+ 259              	    return a7;
+ 156              		mv a4, a7
  157              	# 0 "" 2
  158              	#NO_APP
- 159 0084 233CD4F6 		sd	a3,-136(s0)
+ 159 0084 233CE4F6 		sd	a4,-136(s0)
  160              		.loc 2 259 5 is_stmt 1
  161              		.loc 2 259 12 is_stmt 0
- 162 0088 033984F7 		ld	s2,-136(s0)
+ 162 0088 833984F7 		ld	s3,-136(s0)
  163              	.LVL4:
- 164              	.LBE64:
- 165              	.LBE63:
+ 164              	.LBE82:
+ 165              	.LBE81:
   17:src/riscv.cpp **** 
   18:src/riscv.cpp ****     uint64 sepc;
  166              		.loc 1 18 5 is_stmt 1
@@ -467,23 +467,23 @@ GAS LISTING /tmp/ccvlzG8R.s 			page 1
   20:src/riscv.cpp **** 
   21:src/riscv.cpp ****     switch (scause) {
  168              		.loc 1 21 5
- 169              	.LBB65:
- 170 008c 9306F0FF 		li	a3,-1
- 171 0090 9396F603 		slli	a3,a3,63
- 172 0094 93861600 		addi	a3,a3,1
- 173 0098 6302D71C 		beq	a4,a3,.L4
- 174 009c 9306F0FF 		li	a3,-1
- 175 00a0 9396F603 		slli	a3,a3,63
- 176 00a4 93861600 		addi	a3,a3,1
- 177 00a8 63EEE604 		bgtu	a4,a3,.L5
- 178 00ac 130787FF 		addi	a4,a4,-8
+ 169              	.LBB83:
+ 170 008c 1307F0FF 		li	a4,-1
+ 171 0090 1317F703 		slli	a4,a4,63
+ 172 0094 13071700 		addi	a4,a4,1
+ 173 0098 6386E724 		beq	a5,a4,.L4
+ 174 009c 1307F0FF 		li	a4,-1
+ 175 00a0 1317F703 		slli	a4,a4,63
+ 176 00a4 13071700 		addi	a4,a4,1
+ 177 00a8 6368F704 		bgtu	a5,a4,.L5
+ 178 00ac 938787FF 		addi	a5,a5,-8
  179              	.LVL5:
-GAS LISTING /tmp/ccvlzG8R.s 			page 9
+GAS LISTING /tmp/ccs9Di6y.s 			page 9
 
 
- 180 00b0 93061000 		li	a3,1
- 181 00b4 63E8E61A 		bgtu	a4,a3,.L3
- 182              	.LBB66:
+ 180 00b0 13071000 		li	a4,1
+ 181 00b4 636CF722 		bgtu	a5,a4,.L3
+ 182              	.LBB84:
   22:src/riscv.cpp ****         case 0x08:
  183              		.loc 1 22 9
   23:src/riscv.cpp ****         case 0x09:
@@ -491,8 +491,8 @@ GAS LISTING /tmp/ccvlzG8R.s 			page 1
   24:src/riscv.cpp ****             //ecall: software interrupt
   25:src/riscv.cpp ****             sepc = r_sepc() + 4;
  185              		.loc 1 25 13
- 186              	.LBB67:
- 187              	.LBB68:
+ 186              	.LBB85:
+ 187              	.LBB86:
  138:src/../h/riscv.hpp ****     __asm__ volatile ("csrr %[sepc], sepc" : [sepc] "=r"(sepc));
  188              		.loc 2 138 5
  139:src/../h/riscv.hpp ****     return sepc;
@@ -501,25 +501,25 @@ GAS LISTING /tmp/ccvlzG8R.s 			page 1
  190              		.loc 2 139 64 is_stmt 0
  191              	#APP
  192              	# 139 "src/../h/riscv.hpp" 1
- 193              		csrr a4, sepc
+ 193              		csrr a5, sepc
  194              	# 0 "" 2
  195              	.LVL6:
  196              	#NO_APP
- 197 00bc 2334E4FA 		sd	a4,-88(s0)
+ 197 00bc 2334F4FA 		sd	a5,-88(s0)
  140:src/../h/riscv.hpp **** }
  198              		.loc 2 140 5 is_stmt 1
  140:src/../h/riscv.hpp **** }
  199              		.loc 2 140 12 is_stmt 0
- 200 00c0 033784FA 		ld	a4,-88(s0)
- 201              	.LBE68:
- 202              	.LBE67:
+ 200 00c0 033A84FA 		ld	s4,-88(s0)
+ 201              	.LBE86:
+ 202              	.LBE85:
  203              		.loc 1 25 18
- 204 00c4 930A4700 		addi	s5,a4,4
+ 204 00c4 130B4A00 		addi	s6,s4,4
  205              	.LVL7:
   26:src/riscv.cpp ****             sstatus = r_sstatus();
  206              		.loc 1 26 13 is_stmt 1
- 207              	.LBB69:
- 208              	.LBB70:
+ 207              	.LBB87:
+ 208              	.LBB88:
  206:src/../h/riscv.hpp ****     __asm__ volatile ("csrr %[sstatus], sstatus" : [sstatus] "=r"(sstatus));
  209              		.loc 2 206 5
  207:src/../h/riscv.hpp ****     return sstatus;
@@ -528,234 +528,242 @@ GAS LISTING /tmp/ccvlzG8R.s 			page 1
  211              		.loc 2 207 76 is_stmt 0
  212              	#APP
  213              	# 207 "src/../h/riscv.hpp" 1
- 214              		csrr a3, sstatus
+ 214              		csrr a5, sstatus
  215              	# 0 "" 2
  216              	#NO_APP
- 217 00cc 2330D4FA 		sd	a3,-96(s0)
+ 217 00cc 2330F4FA 		sd	a5,-96(s0)
  208:src/../h/riscv.hpp **** }
  218              		.loc 2 208 5 is_stmt 1
  208:src/../h/riscv.hpp **** }
  219              		.loc 2 208 12 is_stmt 0
- 220 00d0 033A04FA 		ld	s4,-96(s0)
+ 220 00d0 833A04FA 		ld	s5,-96(s0)
  221              	.LVL8:
-GAS LISTING /tmp/ccvlzG8R.s 			page 10
+GAS LISTING /tmp/ccs9Di6y.s 			page 10
 
 
- 222              	.LBE70:
- 223              	.LBE69:
+ 222              	.LBE88:
+ 223              	.LBE87:
   27:src/riscv.cpp ****             void* mem;
  224              		.loc 1 27 13 is_stmt 1
   28:src/riscv.cpp ****             uint64* stack;
  225              		.loc 1 28 13
   29:src/riscv.cpp ****             PCB** handleAddr;
  226              		.loc 1 29 13
-  30:src/riscv.cpp ****             switch(a0){
+  30:src/riscv.cpp ****             Sem** semAddr;
  227              		.loc 1 30 13
- 228 00d4 93063001 		li	a3,19
- 229 00d8 63C4F604 		bgt	a5,a3,.L9
- 230 00dc 635AF008 		blez	a5,.L10
- 231 00e0 13073001 		li	a4,19
- 232 00e4 6366F708 		bgtu	a5,a4,.L10
- 233 00e8 93972700 		slli	a5,a5,2
- 234              	.LVL9:
- 235 00ec 17070000 		lla	a4,.L12
- 235      13070700 
- 236 00f4 B387E700 		add	a5,a5,a4
- 237 00f8 83A70700 		lw	a5,0(a5)
- 238 00fc B387E700 		add	a5,a5,a4
- 239 0100 67800700 		jr	a5
- 240              		.section	.rodata
- 241              		.align	2
+  31:src/riscv.cpp ****             Sem* sem;
+ 228              		.loc 1 31 13
+  32:src/riscv.cpp ****             int value;
+ 229              		.loc 1 32 13
+  33:src/riscv.cpp ****             char c;
+ 230              		.loc 1 33 13
+  34:src/riscv.cpp ****             switch(a0){
+ 231              		.loc 1 34 13
+ 232 00d4 93071005 		li	a5,81
+ 233 00d8 63E2D706 		bgtu	a3,a5,.L9
+ 234 00dc 93962600 		slli	a3,a3,2
+ 235              	.LVL9:
+ 236 00e0 17070000 		lla	a4,.L11
+ 236      13070700 
+ 237 00e8 B386E600 		add	a3,a3,a4
+ 238 00ec 83A70600 		lw	a5,0(a3)
+ 239 00f0 B387E700 		add	a5,a5,a4
+ 240 00f4 67800700 		jr	a5
+ 241              		.section	.rodata
  242              		.align	2
- 243              	.L12:
- 244 0000 00000000 		.word	.L10-.L12
- 245 0004 00000000 		.word	.L16-.L12
- 246 0008 00000000 		.word	.L15-.L12
- 247 000c 00000000 		.word	.L10-.L12
- 248 0010 00000000 		.word	.L10-.L12
- 249 0014 00000000 		.word	.L10-.L12
- 250 0018 00000000 		.word	.L10-.L12
- 251 001c 00000000 		.word	.L10-.L12
- 252 0020 00000000 		.word	.L10-.L12
- 253 0024 00000000 		.word	.L10-.L12
- 254 0028 00000000 		.word	.L10-.L12
- 255 002c 00000000 		.word	.L10-.L12
- 256 0030 00000000 		.word	.L10-.L12
- 257 0034 00000000 		.word	.L10-.L12
- 258 0038 00000000 		.word	.L10-.L12
- 259 003c 00000000 		.word	.L10-.L12
- 260 0040 00000000 		.word	.L10-.L12
- 261 0044 00000000 		.word	.L14-.L12
- 262 0048 00000000 		.word	.L13-.L12
- 263 004c 00000000 		.word	.L11-.L12
- 264              		.text
- 265              	.LVL10:
- 266              	.L5:
- 267              	.LBE66:
+ 243              		.align	2
+ 244              	.L11:
+ 245 0000 00000000 		.word	.L9-.L11
+ 246 0004 00000000 		.word	.L23-.L11
+ 247 0008 00000000 		.word	.L22-.L11
+ 248 000c 00000000 		.word	.L9-.L11
+ 249 0010 00000000 		.word	.L9-.L11
+ 250 0014 00000000 		.word	.L9-.L11
+ 251 0018 00000000 		.word	.L9-.L11
+ 252 001c 00000000 		.word	.L9-.L11
+ 253 0020 00000000 		.word	.L9-.L11
+ 254 0024 00000000 		.word	.L9-.L11
+ 255 0028 00000000 		.word	.L9-.L11
+ 256 002c 00000000 		.word	.L9-.L11
+ 257 0030 00000000 		.word	.L9-.L11
+ 258 0034 00000000 		.word	.L9-.L11
+ 259 0038 00000000 		.word	.L9-.L11
+ 260 003c 00000000 		.word	.L9-.L11
+ 261 0040 00000000 		.word	.L9-.L11
+ 262 0044 00000000 		.word	.L21-.L11
+ 263 0048 00000000 		.word	.L20-.L11
+ 264 004c 00000000 		.word	.L19-.L11
+ 265 0050 00000000 		.word	.L18-.L11
+ 266 0054 00000000 		.word	.L9-.L11
+ 267 0058 00000000 		.word	.L9-.L11
+ 268 005c 00000000 		.word	.L9-.L11
+ 269 0060 00000000 		.word	.L9-.L11
+GAS LISTING /tmp/ccs9Di6y.s 			page 11
+
+
+ 270 0064 00000000 		.word	.L9-.L11
+ 271 0068 00000000 		.word	.L9-.L11
+ 272 006c 00000000 		.word	.L9-.L11
+ 273 0070 00000000 		.word	.L9-.L11
+ 274 0074 00000000 		.word	.L9-.L11
+ 275 0078 00000000 		.word	.L9-.L11
+ 276 007c 00000000 		.word	.L9-.L11
+ 277 0080 00000000 		.word	.L9-.L11
+ 278 0084 00000000 		.word	.L17-.L11
+ 279 0088 00000000 		.word	.L16-.L11
+ 280 008c 00000000 		.word	.L15-.L11
+ 281 0090 00000000 		.word	.L14-.L11
+ 282 0094 00000000 		.word	.L9-.L11
+ 283 0098 00000000 		.word	.L9-.L11
+ 284 009c 00000000 		.word	.L9-.L11
+ 285 00a0 00000000 		.word	.L9-.L11
+ 286 00a4 00000000 		.word	.L9-.L11
+ 287 00a8 00000000 		.word	.L9-.L11
+ 288 00ac 00000000 		.word	.L9-.L11
+ 289 00b0 00000000 		.word	.L9-.L11
+ 290 00b4 00000000 		.word	.L9-.L11
+ 291 00b8 00000000 		.word	.L9-.L11
+ 292 00bc 00000000 		.word	.L9-.L11
+ 293 00c0 00000000 		.word	.L9-.L11
+ 294 00c4 00000000 		.word	.L9-.L11
+ 295 00c8 00000000 		.word	.L9-.L11
+ 296 00cc 00000000 		.word	.L9-.L11
+ 297 00d0 00000000 		.word	.L9-.L11
+ 298 00d4 00000000 		.word	.L9-.L11
+ 299 00d8 00000000 		.word	.L9-.L11
+ 300 00dc 00000000 		.word	.L9-.L11
+ 301 00e0 00000000 		.word	.L9-.L11
+ 302 00e4 00000000 		.word	.L9-.L11
+ 303 00e8 00000000 		.word	.L9-.L11
+ 304 00ec 00000000 		.word	.L9-.L11
+ 305 00f0 00000000 		.word	.L9-.L11
+ 306 00f4 00000000 		.word	.L9-.L11
+ 307 00f8 00000000 		.word	.L9-.L11
+ 308 00fc 00000000 		.word	.L9-.L11
+ 309 0100 00000000 		.word	.L9-.L11
+ 310 0104 00000000 		.word	.L13-.L11
+ 311 0108 00000000 		.word	.L12-.L11
+ 312 010c 00000000 		.word	.L9-.L11
+ 313 0110 00000000 		.word	.L9-.L11
+ 314 0114 00000000 		.word	.L9-.L11
+ 315 0118 00000000 		.word	.L9-.L11
+ 316 011c 00000000 		.word	.L9-.L11
+ 317 0120 00000000 		.word	.L9-.L11
+ 318 0124 00000000 		.word	.L9-.L11
+ 319 0128 00000000 		.word	.L9-.L11
+ 320 012c 00000000 		.word	.L9-.L11
+ 321 0130 00000000 		.word	.L9-.L11
+ 322 0134 00000000 		.word	.L9-.L11
+ 323 0138 00000000 		.word	.L9-.L11
+ 324 013c 00000000 		.word	.L9-.L11
+ 325 0140 00000000 		.word	.L9-.L11
+ 326 0144 00000000 		.word	.L10-.L11
+GAS LISTING /tmp/ccs9Di6y.s 			page 12
+
+
+ 327              		.text
+ 328              	.LVL10:
+ 329              	.L5:
+ 330              	.LBE84:
   21:src/riscv.cpp ****         case 0x08:
- 268              		.loc 1 21 5 is_stmt 0
- 269 0104 9307F0FF 		li	a5,-1
- 270              	.LVL11:
- 271 0108 9397F703 		slli	a5,a5,63
- 272 010c 93879700 		addi	a5,a5,9
-GAS LISTING /tmp/ccvlzG8R.s 			page 11
+ 331              		.loc 1 21 5 is_stmt 0
+ 332 00f8 1307F0FF 		li	a4,-1
+ 333 00fc 1317F703 		slli	a4,a4,63
+ 334 0100 13079700 		addi	a4,a4,9
+ 335 0104 6394E71E 		bne	a5,a4,.L3
+ 336              	.LBB133:
+  35:src/riscv.cpp ****                 case 0x01: // allocate
+  36:src/riscv.cpp ****                     mem = MemoryAllocator::getInstance().allocate((size_t) a1);
+  37:src/riscv.cpp ****                     push_a0((uint64) mem);
+  38:src/riscv.cpp ****                     break;
+  39:src/riscv.cpp ****                 case 0x02: // deallocate
+  40:src/riscv.cpp ****                     push_a0(MemoryAllocator::getInstance().deallocate((void *)a1));
+  41:src/riscv.cpp ****                     break;
+  42:src/riscv.cpp ****                 case 0x11: //thread_create
+  43:src/riscv.cpp ****                     if(a1 != 0) stack = (uint64*)MemoryAllocator::getInstance().allocate(((DEFAULT_
+  44:src/riscv.cpp ****                     else stack = nullptr;
+  45:src/riscv.cpp ****                     handleAddr = (PCB**) a3;
+  46:src/riscv.cpp ****                     (*handleAddr) = new PCB((PCB::Body)a1, (void*)a2, stack);
+  47:src/riscv.cpp ****                     if((PCB::Body)a1)Scheduler::put(*handleAddr);
+  48:src/riscv.cpp **** 
+  49:src/riscv.cpp ****                     if(!(*handleAddr))push_a0(-1);
+  50:src/riscv.cpp ****                     push_a0(0);
+  51:src/riscv.cpp ****                     break;
+  52:src/riscv.cpp ****                 case 0x12: // thread_exit
+  53:src/riscv.cpp ****                     push_a0(PCB::exit());
+  54:src/riscv.cpp ****                     break;
+  55:src/riscv.cpp ****                 case 0x13:
+  56:src/riscv.cpp ****                     PCB::dispatch();
+  57:src/riscv.cpp ****                     break;
+  58:src/riscv.cpp ****                 case 0x14:
+  59:src/riscv.cpp ****                     ((PCB*)a1)->join();
+  60:src/riscv.cpp ****                     break;
+  61:src/riscv.cpp ****                 case 0x21: //sem_open
+  62:src/riscv.cpp ****                     value = a2;
+  63:src/riscv.cpp ****                     semAddr = (Sem**) a1;
+  64:src/riscv.cpp ****                     *semAddr = new Sem(value);
+  65:src/riscv.cpp ****                     if(!(*semAddr))push_a0(-1);
+  66:src/riscv.cpp ****                     push_a0(0);
+  67:src/riscv.cpp ****                     break;
+  68:src/riscv.cpp ****                 case 0x22: //sem_close
+  69:src/riscv.cpp ****                     push_a0(((Sem*)a1)->close());
+  70:src/riscv.cpp ****                     break;
+  71:src/riscv.cpp ****                 case 0x23: //sem_wait
+  72:src/riscv.cpp ****                     sem = (Sem*)a1;
+  73:src/riscv.cpp ****                     push_a0(sem->wait());
+  74:src/riscv.cpp ****                     break;
+  75:src/riscv.cpp ****                 case 0x24: //sem_signal
+  76:src/riscv.cpp ****                     push_a0(((Sem*)a1)->signal());
+  77:src/riscv.cpp ****                     break;
+  78:src/riscv.cpp ****                 case 0x41: //getc
+  79:src/riscv.cpp ****                     c = __getc();
+  80:src/riscv.cpp ****                     push_a0((char)c);
+GAS LISTING /tmp/ccs9Di6y.s 			page 13
 
 
- 273 0110 631AF714 		bne	a4,a5,.L3
- 274              	.LBB103:
-  31:src/riscv.cpp ****                 case 0x01: // allocate
-  32:src/riscv.cpp ****                     mem = MemoryAllocator::getInstance().allocate((size_t) a1);
-  33:src/riscv.cpp ****                     push_a0((uint64) mem);
-  34:src/riscv.cpp ****                     break;
-  35:src/riscv.cpp ****                 case 0x02: // deallocate
-  36:src/riscv.cpp ****                     push_a0(MemoryAllocator::getInstance().deallocate((void *)a1));
-  37:src/riscv.cpp ****                     break;
-  38:src/riscv.cpp ****                 case 0x11: //thread_create
-  39:src/riscv.cpp ****                     if((uint64*)a1!= nullptr) stack = (uint64*)MemoryAllocator::getInstance().alloc
-  40:src/riscv.cpp ****                     else stack = nullptr;
-  41:src/riscv.cpp ****                     handleAddr = (PCB**) a3;
-  42:src/riscv.cpp ****                     (*handleAddr) = new PCB((PCB::Body)a1, (void*)a2, stack);
-  43:src/riscv.cpp ****                     if((PCB::Body)a1)Scheduler::put(*handleAddr);
-  44:src/riscv.cpp **** 
-  45:src/riscv.cpp ****                     if(!(*handleAddr))push_a0(-1);
-  46:src/riscv.cpp ****                     push_a0(0);
-  47:src/riscv.cpp ****                     break;
-  48:src/riscv.cpp ****                 case 0x12: // thread_exit
-  49:src/riscv.cpp ****                     push_a0(PCB::exit());
-  50:src/riscv.cpp ****                     break;
-  51:src/riscv.cpp ****                 case 0x13:
-  52:src/riscv.cpp ****                     PCB::dispatch();
-  53:src/riscv.cpp ****                     break;
-  54:src/riscv.cpp ****                 case 0x14:
-  55:src/riscv.cpp ****                     break;
-  56:src/riscv.cpp ****                 case 0x51:
-  57:src/riscv.cpp ****                     w_sstatus(sstatus);
-  58:src/riscv.cpp ****                     mc_sstatus(1<<8);
-  59:src/riscv.cpp ****                     w_sepc(sepc+4);
-  60:src/riscv.cpp ****                     mc_sip(SIP_SSIP);
-  61:src/riscv.cpp ****                     return;
-  62:src/riscv.cpp ****                 default:
-  63:src/riscv.cpp ****                     //printString("Unknown interrupt!");
-  64:src/riscv.cpp ****                     break;
-  65:src/riscv.cpp **** 
-  66:src/riscv.cpp ****             }
-  67:src/riscv.cpp **** 
-  68:src/riscv.cpp ****             w_sstatus(sstatus);
-  69:src/riscv.cpp ****             w_sepc(sepc);
-  70:src/riscv.cpp ****             mc_sip(SIP_SSIP);
-  71:src/riscv.cpp ****             break;
-  72:src/riscv.cpp ****         case 0x8000000000000001UL:
-  73:src/riscv.cpp ****             //timer interrupt
-  74:src/riscv.cpp ****             mc_sip(SIP_SSIP);
-  75:src/riscv.cpp ****             break;
-  76:src/riscv.cpp ****         case 0x8000000000000009UL:
- 275              		.loc 1 76 9 is_stmt 1
-  77:src/riscv.cpp ****             //external hardware interrupt
-  78:src/riscv.cpp ****             console_handler();
- 276              		.loc 1 78 13
- 277              	.LEHB0:
- 278              		.loc 1 78 28 is_stmt 0
- 279 0114 97000000 		call	console_handler@plt
- 279      E7800000 
- 280              	.LVL12:
-GAS LISTING /tmp/ccvlzG8R.s 			page 12
-
-
-  79:src/riscv.cpp ****             break;
- 281              		.loc 1 79 13 is_stmt 1
- 282 011c 6F008014 		j	.L3
- 283              	.LVL13:
- 284              	.L9:
- 285 0120 93061005 		li	a3,81
- 286 0124 6396D704 		bne	a5,a3,.L10
-  56:src/riscv.cpp ****                     w_sstatus(sstatus);
- 287              		.loc 1 56 17
-  57:src/riscv.cpp ****                     mc_sstatus(1<<8);
- 288              		.loc 1 57 21
- 289              	.LVL14:
- 290              	.LBB71:
- 291              	.LBB72:
- 213:src/../h/riscv.hpp **** }
- 292              		.loc 2 213 5
- 213:src/../h/riscv.hpp **** }
- 293              		.loc 2 213 77 is_stmt 0
- 294              	#APP
- 295              	# 213 "src/../h/riscv.hpp" 1
- 296              		csrw sstatus, s4
- 297              	# 0 "" 2
- 298              	.LVL15:
- 299              	#NO_APP
- 300              	.LBE72:
- 301              	.LBE71:
-  58:src/riscv.cpp ****                     w_sepc(sepc+4);
- 302              		.loc 1 58 21 is_stmt 1
- 303              	.LBB73:
- 304              	.LBB74:
- 201:src/../h/riscv.hpp **** }
- 305              		.loc 2 201 5
- 201:src/../h/riscv.hpp **** }
- 306              		.loc 2 201 68 is_stmt 0
- 307 012c 93070010 		li	a5,256
- 308              	.LVL16:
- 309              	#APP
- 310              	# 201 "src/../h/riscv.hpp" 1
- 311              		csrc sstatus, a5
- 312              	# 0 "" 2
- 313              	.LVL17:
- 314              	#NO_APP
- 315              	.LBE74:
- 316              	.LBE73:
-  59:src/riscv.cpp ****                     mc_sip(SIP_SSIP);
- 317              		.loc 1 59 21 is_stmt 1
-  59:src/riscv.cpp ****                     mc_sip(SIP_SSIP);
- 318              		.loc 1 59 27 is_stmt 0
- 319 0134 13078700 		addi	a4,a4,8
- 320              	.LVL18:
- 321              	.LBB75:
- 322              	.LBB76:
- 145:src/../h/riscv.hpp **** }
- 323              		.loc 2 145 5 is_stmt 1
- 145:src/../h/riscv.hpp **** }
- 324              		.loc 2 145 65 is_stmt 0
- 325              	#APP
-GAS LISTING /tmp/ccvlzG8R.s 			page 13
-
-
- 326              	# 145 "src/../h/riscv.hpp" 1
- 327              		csrw sepc, a4
- 328              	# 0 "" 2
- 329              	.LVL19:
- 330              	#NO_APP
- 331              	.LBE76:
- 332              	.LBE75:
-  60:src/riscv.cpp ****                     return;
- 333              		.loc 1 60 21 is_stmt 1
- 334              	.LBB77:
- 335              	.LBB78:
- 179:src/../h/riscv.hpp **** }
- 336              		.loc 2 179 5
- 179:src/../h/riscv.hpp **** }
- 337              		.loc 2 179 64 is_stmt 0
- 338 013c 93072000 		li	a5,2
- 339              	#APP
- 340              	# 179 "src/../h/riscv.hpp" 1
- 180:src/../h/riscv.hpp **** 
- 341              		csrc sip, a5
- 342              	# 0 "" 2
- 343              		.loc 2 180 1
- 344              	#NO_APP
- 345 0144 6F000012 		j	.L3
- 346              	.LVL20:
- 347              	.L16:
- 348              	.LBE78:
- 349              	.LBE77:
-  31:src/riscv.cpp ****                     mem = MemoryAllocator::getInstance().allocate((size_t) a1);
- 350              		.loc 1 31 17 is_stmt 1
-  32:src/riscv.cpp ****                     push_a0((uint64) mem);
- 351              		.loc 1 32 21
- 352              	.LBB79:
- 353              	.LBB80:
- 354              		.file 3 "src/../h/../h/MemoryAllocator.hpp"
+  81:src/riscv.cpp ****                     break;
+  82:src/riscv.cpp ****                 case 0x42:
+  83:src/riscv.cpp ****                     __putc(a1);
+  84:src/riscv.cpp ****                 case 0x51:
+  85:src/riscv.cpp ****                     w_sstatus(sstatus);
+  86:src/riscv.cpp ****                     mc_sstatus(1<<8);
+  87:src/riscv.cpp ****                     w_sepc(sepc+4);
+  88:src/riscv.cpp ****                     return;
+  89:src/riscv.cpp ****                 default:
+  90:src/riscv.cpp ****                     //printString("Unknown interrupt!");
+  91:src/riscv.cpp ****                     break;
+  92:src/riscv.cpp **** 
+  93:src/riscv.cpp ****             }
+  94:src/riscv.cpp **** 
+  95:src/riscv.cpp ****             w_sstatus(sstatus);
+  96:src/riscv.cpp ****             w_sepc(sepc);
+  97:src/riscv.cpp ****             break;
+  98:src/riscv.cpp ****         case 0x8000000000000001UL:
+  99:src/riscv.cpp ****             //timer interrupt
+ 100:src/riscv.cpp ****             mc_sip(SIP_SSIP);
+ 101:src/riscv.cpp ****             break;
+ 102:src/riscv.cpp ****         case 0x8000000000000009UL:
+ 337              		.loc 1 102 9 is_stmt 1
+ 103:src/riscv.cpp ****             //external hardware interrupt
+ 104:src/riscv.cpp ****             console_handler();
+ 338              		.loc 1 104 13
+ 339              	.LEHB0:
+ 340              		.loc 1 104 28 is_stmt 0
+ 341 0108 97000000 		call	console_handler@plt
+ 341      E7800000 
+ 342              	.LVL11:
+ 105:src/riscv.cpp ****             break;
+ 343              		.loc 1 105 13 is_stmt 1
+ 344 0110 6F00C01D 		j	.L3
+ 345              	.LVL12:
+ 346              	.L23:
+  35:src/riscv.cpp ****                 case 0x01: // allocate
+ 347              		.loc 1 35 17
+  36:src/riscv.cpp ****                     push_a0((uint64) mem);
+ 348              		.loc 1 36 21
+ 349              	.LBB89:
+ 350              	.LBB90:
+ 351              		.file 3 "src/../h/../h/MemoryAllocator.hpp"
    1:src/../h/../h/MemoryAllocator.hpp **** #ifndef PROJECT_BASE_V1_1_MEMORYALLOCATOR_HPP
    2:src/../h/../h/MemoryAllocator.hpp **** #define PROJECT_BASE_V1_1_MEMORYALLOCATOR_HPP
    3:src/../h/../h/MemoryAllocator.hpp **** #include "print.hpp"
@@ -770,6 +778,9 @@ GAS LISTING /tmp/ccvlzG8R.s 			page 1
   12:src/../h/../h/MemoryAllocator.hpp **** private:
   13:src/../h/../h/MemoryAllocator.hpp **** 
   14:src/../h/../h/MemoryAllocator.hpp **** 
+GAS LISTING /tmp/ccs9Di6y.s 			page 14
+
+
   15:src/../h/../h/MemoryAllocator.hpp ****     MemoryAllocator() {}
   16:src/../h/../h/MemoryAllocator.hpp **** 
   17:src/../h/../h/MemoryAllocator.hpp ****     static Block *free_list;
@@ -778,1053 +789,1476 @@ GAS LISTING /tmp/ccvlzG8R.s 			page 1
   20:src/../h/../h/MemoryAllocator.hpp **** 
   21:src/../h/../h/MemoryAllocator.hpp **** public:
   22:src/../h/../h/MemoryAllocator.hpp **** 
-GAS LISTING /tmp/ccvlzG8R.s 			page 14
-
-
   23:src/../h/../h/MemoryAllocator.hpp **** 
   24:src/../h/../h/MemoryAllocator.hpp ****     // Get the singleton instance
   25:src/../h/../h/MemoryAllocator.hpp ****     static MemoryAllocator &getInstance() {
   26:src/../h/../h/MemoryAllocator.hpp ****         static MemoryAllocator instance;
- 355              		.loc 3 26 9
- 356              		.loc 3 26 32 is_stmt 0
- 357 0148 97070000 		lbu	a5,_ZGVZN15MemoryAllocator11getInstanceEvE8instance
- 357      83C70700 
- 358 0150 63980700 		bnez	a5,.L18
- 359              	.LVL21:
- 360 0154 93071000 		li	a5,1
- 361 0158 17070000 		sb	a5,_ZGVZN15MemoryAllocator11getInstanceEvE8instance,a4
- 361      2300F700 
- 362              	.LVL22:
- 363              	.L18:
+ 352              		.loc 3 26 9
+ 353              		.loc 3 26 32 is_stmt 0
+ 354 0114 97070000 		lbu	a5,_ZGVZN15MemoryAllocator11getInstanceEvE8instance
+ 354      83C70700 
+ 355 011c 63980700 		bnez	a5,.L24
+ 356              	.LVL13:
+ 357 0120 93071000 		li	a5,1
+ 358 0124 17070000 		sb	a5,_ZGVZN15MemoryAllocator11getInstanceEvE8instance,a4
+ 358      2300F700 
+ 359              	.LVL14:
+ 360              	.L24:
   27:src/../h/../h/MemoryAllocator.hpp ****         return instance;
- 364              		.loc 3 27 9 is_stmt 1
- 365              	.LBE80:
- 366              	.LBE79:
-  32:src/riscv.cpp ****                     push_a0((uint64) mem);
- 367              		.loc 1 32 78 is_stmt 0
- 368 0160 13850400 		mv	a0,s1
- 369 0164 97000000 		call	_ZN15MemoryAllocator8allocateEm@plt
- 369      E7800000 
- 370              	.LVL23:
-  33:src/riscv.cpp ****                     break;
- 371              		.loc 1 33 21 is_stmt 1
- 372              	.LBB81:
- 373              	.LBB82:
+ 361              		.loc 3 27 9 is_stmt 1
+ 362              	.LBE90:
+ 363              	.LBE89:
+  36:src/riscv.cpp ****                     push_a0((uint64) mem);
+ 364              		.loc 1 36 78 is_stmt 0
+ 365 012c 13850400 		mv	a0,s1
+ 366 0130 97000000 		call	_ZN15MemoryAllocator8allocateEm@plt
+ 366      E7800000 
+ 367              	.LVL15:
+  37:src/riscv.cpp ****                     break;
+ 368              		.loc 1 37 21 is_stmt 1
+ 369              	.LBB91:
+ 370              	.LBB92:
  260:src/../h/riscv.hpp **** }
  261:src/../h/riscv.hpp **** 
- 262:src/../h/riscv.hpp **** inline void Riscv::w_a3(uint64 a3) {
- 263:src/../h/riscv.hpp ****     __asm__ volatile ("mv a3, %0" : : "r"(a3));
+ 262:src/../h/riscv.hpp **** inline void Riscv::w_a7(uint64 a7) {
+ 263:src/../h/riscv.hpp ****     __asm__ volatile ("mv a7, %0" : : "r"(a7));
  264:src/../h/riscv.hpp **** }
  265:src/../h/riscv.hpp **** 
  266:src/../h/riscv.hpp **** inline void Riscv::push_a0(long a0) {
  267:src/../h/riscv.hpp ****     __asm__ volatile ("sd %0, 10*8(fp)" : : "r"(a0));
- 374              		.loc 2 267 5
- 375              		.loc 2 267 53 is_stmt 0
- 376              	#APP
- 377              	# 267 "src/../h/riscv.hpp" 1
+ 371              		.loc 2 267 5
+ 372              		.loc 2 267 53 is_stmt 0
+ 373              	#APP
+ 374              	# 267 "src/../h/riscv.hpp" 1
  268              	}
- 378              		sd a0, 10*8(fp)
- 379              	# 0 "" 2
- 380              	.LVL24:
- 381              	#NO_APP
- 382              	.L10:
- 383              	.LBE82:
- 384              	.LBE81:
-  68:src/riscv.cpp ****             w_sepc(sepc);
- 385              		.loc 1 68 13 is_stmt 1
- 386              	.LBB83:
- 387              	.LBB84:
+ 375              		sd a0, 10*8(fp)
+ 376              	# 0 "" 2
+ 377              	.LVL16:
+ 378              	#NO_APP
+ 379              	.L9:
+ 380              	.LBE92:
+ 381              	.LBE91:
+GAS LISTING /tmp/ccs9Di6y.s 			page 15
+
+
+  95:src/riscv.cpp ****             w_sepc(sepc);
+ 382              		.loc 1 95 13 is_stmt 1
+ 383              	.LBB93:
+ 384              	.LBB94:
  213:src/../h/riscv.hpp **** }
- 388              		.loc 2 213 5
+ 385              		.loc 2 213 5
  213:src/../h/riscv.hpp **** }
- 389              		.loc 2 213 77 is_stmt 0
-GAS LISTING /tmp/ccvlzG8R.s 			page 15
-
-
- 390              	#APP
- 391              	# 213 "src/../h/riscv.hpp" 1
- 392              		csrw sstatus, s4
- 393              	# 0 "" 2
- 394              	.LVL25:
- 395              	#NO_APP
- 396              	.LBE84:
- 397              	.LBE83:
-  69:src/riscv.cpp ****             mc_sip(SIP_SSIP);
- 398              		.loc 1 69 13 is_stmt 1
- 399              	.LBB85:
- 400              	.LBB86:
+ 386              		.loc 2 213 77 is_stmt 0
+ 387              	#APP
+ 388              	# 213 "src/../h/riscv.hpp" 1
+ 389              		csrw sstatus, s5
+ 390              	# 0 "" 2
+ 391              	.LVL17:
+ 392              	#NO_APP
+ 393              	.LBE94:
+ 394              	.LBE93:
+  96:src/riscv.cpp ****             break;
+ 395              		.loc 1 96 13 is_stmt 1
+ 396              	.LBB95:
+ 397              	.LBB96:
  145:src/../h/riscv.hpp **** }
- 401              		.loc 2 145 5
+ 398              		.loc 2 145 5
  145:src/../h/riscv.hpp **** }
- 402              		.loc 2 145 65 is_stmt 0
- 403              	#APP
- 404              	# 145 "src/../h/riscv.hpp" 1
- 405              		csrw sepc, s5
- 406              	# 0 "" 2
- 407              	.LVL26:
- 408              	#NO_APP
- 409              	.LBE86:
- 410              	.LBE85:
-  70:src/riscv.cpp ****             break;
- 411              		.loc 1 70 13 is_stmt 1
- 412              	.LBB87:
- 413              	.LBB88:
- 179:src/../h/riscv.hpp **** }
- 414              		.loc 2 179 5
- 179:src/../h/riscv.hpp **** }
- 415              		.loc 2 179 64 is_stmt 0
- 416 0178 93072000 		li	a5,2
- 417              	#APP
- 418              	# 179 "src/../h/riscv.hpp" 1
- 180:src/../h/riscv.hpp **** 
- 419              		csrc sip, a5
- 420              	# 0 "" 2
- 421              		.loc 2 180 1
- 422              	#NO_APP
- 423 0180 6F00400E 		j	.L3
- 424              	.LVL27:
- 425              	.L15:
- 426              	.LBE88:
- 427              	.LBE87:
-  35:src/riscv.cpp ****                     push_a0(MemoryAllocator::getInstance().deallocate((void *)a1));
- 428              		.loc 1 35 17 is_stmt 1
-  36:src/riscv.cpp ****                     break;
- 429              		.loc 1 36 21
- 430              	.LBB89:
- 431              	.LBB90:
+ 399              		.loc 2 145 65 is_stmt 0
+ 400              	#APP
+ 401              	# 145 "src/../h/riscv.hpp" 1
+ 146:src/../h/riscv.hpp **** 
+ 402              		csrw sepc, s6
+ 403              	# 0 "" 2
+ 404              		.loc 2 146 1
+ 405              	#NO_APP
+ 406 0144 6F00801A 		j	.L3
+ 407              	.LVL18:
+ 408              	.L22:
+ 409              	.LBE96:
+ 410              	.LBE95:
+  39:src/riscv.cpp ****                     push_a0(MemoryAllocator::getInstance().deallocate((void *)a1));
+ 411              		.loc 1 39 17 is_stmt 1
+  40:src/riscv.cpp ****                     break;
+ 412              		.loc 1 40 21
+ 413              	.LBB97:
+ 414              	.LBB98:
   26:src/../h/../h/MemoryAllocator.hpp ****         return instance;
- 432              		.loc 3 26 9
+ 415              		.loc 3 26 9
   26:src/../h/../h/MemoryAllocator.hpp ****         return instance;
- 433              		.loc 3 26 32 is_stmt 0
- 434 0184 97070000 		lbu	a5,_ZGVZN15MemoryAllocator11getInstanceEvE8instance
- 434      83C70700 
-GAS LISTING /tmp/ccvlzG8R.s 			page 16
+ 416              		.loc 3 26 32 is_stmt 0
+ 417 0148 97070000 		lbu	a5,_ZGVZN15MemoryAllocator11getInstanceEvE8instance
+ 417      83C70700 
+ 418 0150 63980700 		bnez	a5,.L25
+ 419              	.LVL19:
+ 420 0154 93071000 		li	a5,1
+ 421 0158 17070000 		sb	a5,_ZGVZN15MemoryAllocator11getInstanceEvE8instance,a4
+ 421      2300F700 
+ 422              	.LVL20:
+ 423              	.L25:
+ 424              		.loc 3 27 9 is_stmt 1
+ 425              	.LBE98:
+GAS LISTING /tmp/ccs9Di6y.s 			page 16
 
 
- 435 018c 63980700 		bnez	a5,.L19
- 436              	.LVL28:
- 437 0190 93071000 		li	a5,1
- 438 0194 17070000 		sb	a5,_ZGVZN15MemoryAllocator11getInstanceEvE8instance,a4
- 438      2300F700 
- 439              	.LVL29:
- 440              	.L19:
- 441              		.loc 3 27 9 is_stmt 1
- 442              	.LBE90:
- 443              	.LBE89:
-  36:src/riscv.cpp ****                     break;
- 444              		.loc 1 36 81 is_stmt 0
- 445 019c 13850400 		mv	a0,s1
- 446 01a0 97000000 		call	_ZN15MemoryAllocator10deallocateEPv@plt
- 446      E7800000 
- 447              	.LVL30:
- 448              	.LBB91:
- 449              	.LBB92:
+ 426              	.LBE97:
+  40:src/riscv.cpp ****                     break;
+ 427              		.loc 1 40 81 is_stmt 0
+ 428 0160 13850400 		mv	a0,s1
+ 429 0164 97000000 		call	_ZN15MemoryAllocator10deallocateEPv@plt
+ 429      E7800000 
+ 430              	.LVL21:
+ 431              	.LBB99:
+ 432              	.LBB100:
  267:src/../h/riscv.hpp **** }
- 450              		.loc 2 267 5 is_stmt 1
+ 433              		.loc 2 267 5 is_stmt 1
  267:src/../h/riscv.hpp **** }
- 451              		.loc 2 267 53 is_stmt 0
- 452              	#APP
- 453              	# 267 "src/../h/riscv.hpp" 1
- 454              		sd a0, 10*8(fp)
- 455              	# 0 "" 2
- 456              		.loc 2 268 1
- 457              	#NO_APP
- 458 01ac 6FF05FFC 		j	.L10
- 459              	.LVL31:
- 460              	.L14:
- 461              	.LBE92:
- 462              	.LBE91:
-  38:src/riscv.cpp ****                     if((uint64*)a1!= nullptr) stack = (uint64*)MemoryAllocator::getInstance().alloc
- 463              		.loc 1 38 17 is_stmt 1
-  39:src/riscv.cpp ****                     else stack = nullptr;
- 464              		.loc 1 39 21
- 465 01b0 638A0404 		beqz	s1,.L25
-  39:src/riscv.cpp ****                     else stack = nullptr;
- 466              		.loc 1 39 47
- 467              	.LBB93:
- 468              	.LBB94:
+ 434              		.loc 2 267 53 is_stmt 0
+ 435              	#APP
+ 436              	# 267 "src/../h/riscv.hpp" 1
+ 437              		sd a0, 10*8(fp)
+ 438              	# 0 "" 2
+ 439              		.loc 2 268 1
+ 440              	#NO_APP
+ 441 0170 6FF0DFFC 		j	.L9
+ 442              	.LVL22:
+ 443              	.L21:
+ 444              	.LBE100:
+ 445              	.LBE99:
+  42:src/riscv.cpp ****                     if(a1 != 0) stack = (uint64*)MemoryAllocator::getInstance().allocate(((DEFAULT_
+ 446              		.loc 1 42 17 is_stmt 1
+  43:src/riscv.cpp ****                     else stack = nullptr;
+ 447              		.loc 1 43 21
+ 448 0174 638A0404 		beqz	s1,.L32
+  43:src/riscv.cpp ****                     else stack = nullptr;
+ 449              		.loc 1 43 33
+ 450              	.LBB101:
+ 451              	.LBB102:
   26:src/../h/../h/MemoryAllocator.hpp ****         return instance;
- 469              		.loc 3 26 9
+ 452              		.loc 3 26 9
   26:src/../h/../h/MemoryAllocator.hpp ****         return instance;
- 470              		.loc 3 26 32 is_stmt 0
- 471 01b4 97070000 		lbu	a5,_ZGVZN15MemoryAllocator11getInstanceEvE8instance
- 471      83C70700 
- 472 01bc 63980700 		bnez	a5,.L21
- 473              	.LVL32:
- 474 01c0 93071000 		li	a5,1
- 475 01c4 17070000 		sb	a5,_ZGVZN15MemoryAllocator11getInstanceEvE8instance,a4
- 475      2300F700 
- 476              	.LVL33:
- 477              	.L21:
- 478              		.loc 3 27 9 is_stmt 1
- 479              	.LBE94:
-GAS LISTING /tmp/ccvlzG8R.s 			page 17
+ 453              		.loc 3 26 32 is_stmt 0
+ 454 0178 97070000 		lbu	a5,_ZGVZN15MemoryAllocator11getInstanceEvE8instance
+ 454      83C70700 
+ 455 0180 63980700 		bnez	a5,.L27
+ 456              	.LVL23:
+ 457 0184 93071000 		li	a5,1
+ 458 0188 17070000 		sb	a5,_ZGVZN15MemoryAllocator11getInstanceEvE8instance,a4
+ 458      2300F700 
+ 459              	.LVL24:
+ 460              	.L27:
+ 461              		.loc 3 27 9 is_stmt 1
+ 462              	.LBE102:
+ 463              	.LBE101:
+  43:src/riscv.cpp ****                     else stack = nullptr;
+ 464              		.loc 1 43 154 is_stmt 0
+ 465 0190 13051004 		li	a0,65
+ 466 0194 97000000 		call	_ZN15MemoryAllocator8allocateEm@plt
+ 466      E7800000 
+ 467              	.LVL25:
+ 468 019c 930B0500 		mv	s7,a0
+ 469              	.LVL26:
+GAS LISTING /tmp/ccs9Di6y.s 			page 17
 
 
- 480              	.LBE93:
-  39:src/riscv.cpp ****                     else stack = nullptr;
- 481              		.loc 1 39 168 is_stmt 0
- 482 01cc 13051004 		li	a0,65
- 483 01d0 97000000 		call	_ZN15MemoryAllocator8allocateEm@plt
+ 470              	.L26:
+  45:src/riscv.cpp ****                     (*handleAddr) = new PCB((PCB::Body)a1, (void*)a2, stack);
+ 471              		.loc 1 45 21 is_stmt 1
+  46:src/riscv.cpp ****                     if((PCB::Body)a1)Scheduler::put(*handleAddr);
+ 472              		.loc 1 46 21
+  46:src/riscv.cpp ****                     if((PCB::Body)a1)Scheduler::put(*handleAddr);
+ 473              		.loc 1 46 76 is_stmt 0
+ 474 01a0 13050003 		li	a0,48
+ 475 01a4 97000000 		call	_Znwm@plt
+ 475      E7800000 
+ 476              	.LVL27:
+ 477              	.LEHE0:
+ 478 01ac 130A0500 		mv	s4,a0
+ 479 01b0 93860B00 		mv	a3,s7
+ 480 01b4 13060900 		mv	a2,s2
+ 481 01b8 93850400 		mv	a1,s1
+ 482              	.LEHB1:
+ 483 01bc 97000000 		call	_ZN3PCBC1EPFvPvES0_Pm@plt
  483      E7800000 
- 484              	.LVL34:
- 485 01d8 930B0500 		mv	s7,a0
- 486              	.LVL35:
- 487              	.L20:
-  41:src/riscv.cpp ****                     (*handleAddr) = new PCB((PCB::Body)a1, (void*)a2, stack);
- 488              		.loc 1 41 21 is_stmt 1
-  42:src/riscv.cpp ****                     if((PCB::Body)a1)Scheduler::put(*handleAddr);
- 489              		.loc 1 42 21
-  42:src/riscv.cpp ****                     if((PCB::Body)a1)Scheduler::put(*handleAddr);
- 490              		.loc 1 42 76 is_stmt 0
- 491 01dc 13058003 		li	a0,56
- 492 01e0 97000000 		call	_Znwm@plt
- 492      E7800000 
- 493              	.LVL36:
- 494              	.LEHE0:
- 495 01e8 130B0500 		mv	s6,a0
- 496 01ec 93860B00 		mv	a3,s7
- 497 01f0 13860900 		mv	a2,s3
- 498 01f4 93850400 		mv	a1,s1
- 499              	.LEHB1:
- 500 01f8 97000000 		call	_ZN3PCBC1EPFvPvES0_Pm@plt
- 500      E7800000 
- 501              	.LVL37:
- 502              	.LEHE1:
- 503 0200 6F00C000 		j	.L29
- 504              	.LVL38:
- 505              	.L25:
-  40:src/riscv.cpp ****                     handleAddr = (PCB**) a3;
- 506              		.loc 1 40 32
- 507 0204 930B0000 		li	s7,0
- 508 0208 6FF05FFD 		j	.L20
- 509              	.LVL39:
+ 484              	.LVL28:
+ 485              	.LEHE1:
+ 486 01c4 6F00C000 		j	.L36
+ 487              	.LVL29:
+ 488              	.L32:
+  44:src/riscv.cpp ****                     handleAddr = (PCB**) a3;
+ 489              		.loc 1 44 32
+ 490 01c8 930B0000 		li	s7,0
+ 491 01cc 6FF05FFD 		j	.L26
+ 492              	.LVL30:
+ 493              	.L36:
+  46:src/riscv.cpp ****                     if((PCB::Body)a1)Scheduler::put(*handleAddr);
+ 494              		.loc 1 46 35 discriminator 2
+ 495 01d0 23B04901 		sd	s4,0(s3)
+  47:src/riscv.cpp **** 
+ 496              		.loc 1 47 21 is_stmt 1 discriminator 2
+ 497 01d4 63880400 		beqz	s1,.L28
+  47:src/riscv.cpp **** 
+ 498              		.loc 1 47 38 discriminator 1
+  47:src/riscv.cpp **** 
+ 499              		.loc 1 47 52 is_stmt 0 discriminator 1
+ 500 01d8 13050A00 		mv	a0,s4
+ 501              	.LEHB2:
+ 502 01dc 97000000 		call	_ZN9Scheduler3putEP3PCB@plt
+ 502      E7800000 
+ 503              	.LVL31:
+ 504              	.L28:
+  49:src/riscv.cpp ****                     push_a0(0);
+ 505              		.loc 1 49 21 is_stmt 1
+  49:src/riscv.cpp ****                     push_a0(0);
+ 506              		.loc 1 49 26 is_stmt 0
+ 507 01e4 83B70900 		ld	a5,0(s3)
+  49:src/riscv.cpp ****                     push_a0(0);
+ 508              		.loc 1 49 21
+ 509 01e8 63880700 		beqz	a5,.L37
  510              	.L29:
-  42:src/riscv.cpp ****                     if((PCB::Body)a1)Scheduler::put(*handleAddr);
- 511              		.loc 1 42 35 discriminator 2
- 512 020c 23306901 		sd	s6,0(s2)
-  43:src/riscv.cpp **** 
- 513              		.loc 1 43 21 is_stmt 1 discriminator 2
- 514 0210 63880400 		beqz	s1,.L22
-  43:src/riscv.cpp **** 
- 515              		.loc 1 43 38 discriminator 1
-  43:src/riscv.cpp **** 
- 516              		.loc 1 43 52 is_stmt 0 discriminator 1
- 517 0214 13050B00 		mv	a0,s6
- 518              	.LEHB2:
- 519 0218 97000000 		call	_ZN9Scheduler3putEP3PCB@plt
- 519      E7800000 
- 520              	.LVL40:
- 521              	.L22:
-  45:src/riscv.cpp ****                     push_a0(0);
- 522              		.loc 1 45 21 is_stmt 1
-GAS LISTING /tmp/ccvlzG8R.s 			page 18
+  50:src/riscv.cpp ****                     break;
+ 511              		.loc 1 50 21 is_stmt 1
+GAS LISTING /tmp/ccs9Di6y.s 			page 18
 
 
-  45:src/riscv.cpp ****                     push_a0(0);
- 523              		.loc 1 45 26 is_stmt 0
- 524 0220 83370900 		ld	a5,0(s2)
-  45:src/riscv.cpp ****                     push_a0(0);
- 525              		.loc 1 45 21
- 526 0224 63880700 		beqz	a5,.L30
- 527              	.L23:
-  46:src/riscv.cpp ****                     break;
- 528              		.loc 1 46 21 is_stmt 1
- 529              	.LVL41:
- 530              	.LBB95:
- 531              	.LBB96:
+ 512              	.LVL32:
+ 513              	.LBB103:
+ 514              	.LBB104:
+ 267:src/../h/riscv.hpp **** }
+ 515              		.loc 2 267 5
+ 267:src/../h/riscv.hpp **** }
+ 516              		.loc 2 267 53 is_stmt 0
+ 517 01ec 93070000 		li	a5,0
+ 518              	#APP
+ 519              	# 267 "src/../h/riscv.hpp" 1
+ 520              		sd a5, 10*8(fp)
+ 521              	# 0 "" 2
+ 522              		.loc 2 268 1
+ 523              	#NO_APP
+ 524 01f4 6FF09FF4 		j	.L9
+ 525              	.LVL33:
+ 526              	.L37:
+ 527              	.LBE104:
+ 528              	.LBE103:
+  49:src/riscv.cpp ****                     push_a0(0);
+ 529              		.loc 1 49 39 is_stmt 1
+ 530              	.LBB105:
+ 531              	.LBB106:
  267:src/../h/riscv.hpp **** }
  532              		.loc 2 267 5
  267:src/../h/riscv.hpp **** }
  533              		.loc 2 267 53 is_stmt 0
- 534 0228 93070000 		li	a5,0
+ 534 01f8 9307F0FF 		li	a5,-1
  535              	#APP
  536              	# 267 "src/../h/riscv.hpp" 1
  537              		sd a5, 10*8(fp)
  538              	# 0 "" 2
  539              		.loc 2 268 1
  540              	#NO_APP
- 541 0230 6FF01FF4 		j	.L10
- 542              	.LVL42:
- 543              	.L30:
- 544              	.LBE96:
- 545              	.LBE95:
-  45:src/riscv.cpp ****                     push_a0(0);
- 546              		.loc 1 45 39 is_stmt 1
- 547              	.LBB97:
- 548              	.LBB98:
+ 541 0200 6FF0DFFE 		j	.L29
+ 542              	.LVL34:
+ 543              	.L20:
+ 544              	.LBE106:
+ 545              	.LBE105:
+  52:src/riscv.cpp ****                     push_a0(PCB::exit());
+ 546              		.loc 1 52 17 is_stmt 1
+  53:src/riscv.cpp ****                     break;
+ 547              		.loc 1 53 21
+  53:src/riscv.cpp ****                     break;
+ 548              		.loc 1 53 38 is_stmt 0
+ 549 0204 97000000 		call	_ZN3PCB4exitEv@plt
+ 549      E7800000 
+ 550              	.LVL35:
+ 551              	.LBB107:
+ 552              	.LBB108:
  267:src/../h/riscv.hpp **** }
- 549              		.loc 2 267 5
+ 553              		.loc 2 267 5 is_stmt 1
  267:src/../h/riscv.hpp **** }
- 550              		.loc 2 267 53 is_stmt 0
- 551 0234 9307F0FF 		li	a5,-1
- 552              	#APP
- 553              	# 267 "src/../h/riscv.hpp" 1
- 554              		sd a5, 10*8(fp)
- 555              	# 0 "" 2
- 556              		.loc 2 268 1
- 557              	#NO_APP
- 558 023c 6FF0DFFE 		j	.L23
- 559              	.LVL43:
- 560              	.L13:
- 561              	.LBE98:
- 562              	.LBE97:
-  48:src/riscv.cpp ****                     push_a0(PCB::exit());
- 563              		.loc 1 48 17 is_stmt 1
-  49:src/riscv.cpp ****                     break;
- 564              		.loc 1 49 21
-  49:src/riscv.cpp ****                     break;
- 565              		.loc 1 49 38 is_stmt 0
- 566 0240 97000000 		call	_ZN3PCB4exitEv@plt
- 566      E7800000 
- 567              	.LVL44:
-GAS LISTING /tmp/ccvlzG8R.s 			page 19
+ 554              		.loc 2 267 53 is_stmt 0
+ 555              	#APP
+ 556              	# 267 "src/../h/riscv.hpp" 1
+ 557              		sd a0, 10*8(fp)
+GAS LISTING /tmp/ccs9Di6y.s 			page 19
 
 
- 568              	.LBB99:
- 569              	.LBB100:
+ 558              	# 0 "" 2
+ 559              		.loc 2 268 1
+ 560              	#NO_APP
+ 561 0210 6FF0DFF2 		j	.L9
+ 562              	.LVL36:
+ 563              	.L19:
+ 564              	.LBE108:
+ 565              	.LBE107:
+  55:src/riscv.cpp ****                     PCB::dispatch();
+ 566              		.loc 1 55 17 is_stmt 1
+  56:src/riscv.cpp ****                     break;
+ 567              		.loc 1 56 21
+  56:src/riscv.cpp ****                     break;
+ 568              		.loc 1 56 34 is_stmt 0
+ 569 0214 97000000 		call	_ZN3PCB8dispatchEv@plt
+ 569      E7800000 
+ 570              	.LVL37:
+  57:src/riscv.cpp ****                 case 0x14:
+ 571              		.loc 1 57 21 is_stmt 1
+ 572 021c 6FF01FF2 		j	.L9
+ 573              	.L18:
+  58:src/riscv.cpp ****                     ((PCB*)a1)->join();
+ 574              		.loc 1 58 17
+  59:src/riscv.cpp ****                     break;
+ 575              		.loc 1 59 21
+  59:src/riscv.cpp ****                     break;
+ 576              		.loc 1 59 37 is_stmt 0
+ 577 0220 13850400 		mv	a0,s1
+ 578 0224 97000000 		call	_ZN3PCB4joinEv@plt
+ 578      E7800000 
+ 579              	.LVL38:
+  60:src/riscv.cpp ****                 case 0x21: //sem_open
+ 580              		.loc 1 60 21 is_stmt 1
+ 581 022c 6FF01FF1 		j	.L9
+ 582              	.L17:
+  61:src/riscv.cpp ****                     value = a2;
+ 583              		.loc 1 61 17
+  62:src/riscv.cpp ****                     semAddr = (Sem**) a1;
+ 584              		.loc 1 62 21
+  62:src/riscv.cpp ****                     semAddr = (Sem**) a1;
+ 585              		.loc 1 62 27 is_stmt 0
+ 586 0230 1B090900 		sext.w	s2,s2
+ 587              	.LVL39:
+  63:src/riscv.cpp ****                     *semAddr = new Sem(value);
+ 588              		.loc 1 63 21 is_stmt 1
+  64:src/riscv.cpp ****                     if(!(*semAddr))push_a0(-1);
+ 589              		.loc 1 64 21
+  64:src/riscv.cpp ****                     if(!(*semAddr))push_a0(-1);
+ 590              		.loc 1 64 45 is_stmt 0
+ 591 0234 13050002 		li	a0,32
+ 592 0238 97000000 		call	_Znwm@plt
+ 592      E7800000 
+ 593              	.LVL40:
+ 594              	.LBB109:
+ 595              	.LBB110:
+ 596              	.LBB111:
+ 597              	.LBB112:
+GAS LISTING /tmp/ccs9Di6y.s 			page 20
+
+
+ 598              		.file 4 "src/../h/list.hpp"
+   1:src/../h/list.hpp **** #ifndef PROJECT_BASE_V1_1_LIST_HPP
+   2:src/../h/list.hpp **** #define PROJECT_BASE_V1_1_LIST_HPP
+   3:src/../h/list.hpp **** 
+   4:src/../h/list.hpp **** template<typename T>
+   5:src/../h/list.hpp **** class List
+   6:src/../h/list.hpp **** {
+   7:src/../h/list.hpp **** private:
+   8:src/../h/list.hpp ****     struct Elem
+   9:src/../h/list.hpp ****     {
+  10:src/../h/list.hpp ****         T *data;
+  11:src/../h/list.hpp ****         Elem *next;
+  12:src/../h/list.hpp **** 
+  13:src/../h/list.hpp ****         Elem(T *data, Elem *next) : data(data), next(next) {}
+  14:src/../h/list.hpp ****     };
+  15:src/../h/list.hpp **** 
+  16:src/../h/list.hpp ****     Elem *head, *tail;
+  17:src/../h/list.hpp **** 
+  18:src/../h/list.hpp **** public:
+  19:src/../h/list.hpp ****     List() : head(0), tail(0) {}
+ 599              		.loc 4 19 29
+ 600 0240 23340500 		sd	zero,8(a0)
+ 601 0244 23380500 		sd	zero,16(a0)
+ 602              	.LVL41:
+ 603              	.LBE112:
+ 604              	.LBE111:
+ 605              		.file 5 "src/../h/../h/Sem.hpp"
+   1:src/../h/../h/Sem.hpp **** //
+   2:src/../h/../h/Sem.hpp **** // Created by os on 8/17/23.
+   3:src/../h/../h/Sem.hpp **** //
+   4:src/../h/../h/Sem.hpp **** 
+   5:src/../h/../h/Sem.hpp **** #ifndef PROJECT_BASE_V1_1_SEM_HPP
+   6:src/../h/../h/Sem.hpp **** #define PROJECT_BASE_V1_1_SEM_HPP
+   7:src/../h/../h/Sem.hpp **** 
+   8:src/../h/../h/Sem.hpp **** #include "PCB.hpp"
+   9:src/../h/../h/Sem.hpp **** class Sem {
+  10:src/../h/../h/Sem.hpp **** private:
+  11:src/../h/../h/Sem.hpp ****     int value;
+  12:src/../h/../h/Sem.hpp ****     List<PCB> waitQueue;
+  13:src/../h/../h/Sem.hpp ****     bool valid;
+  14:src/../h/../h/Sem.hpp **** 
+  15:src/../h/../h/Sem.hpp **** public:
+  16:src/../h/../h/Sem.hpp ****     Sem(int initial_value) {
+  17:src/../h/../h/Sem.hpp ****         value = initial_value;
+ 606              		.loc 5 17 9 is_stmt 1
+ 607              		.loc 5 17 15 is_stmt 0
+ 608 0248 23202501 		sw	s2,0(a0)
+  18:src/../h/../h/Sem.hpp ****         valid = true;
+ 609              		.loc 5 18 9 is_stmt 1
+ 610              		.loc 5 18 15 is_stmt 0
+ 611 024c 93071000 		li	a5,1
+ 612 0250 230CF500 		sb	a5,24(a0)
+ 613              	.LVL42:
+ 614              	.LBE110:
+ 615              	.LBE109:
+  64:src/riscv.cpp ****                     if(!(*semAddr))push_a0(-1);
+ 616              		.loc 1 64 30
+GAS LISTING /tmp/ccs9Di6y.s 			page 21
+
+
+ 617 0254 23B0A400 		sd	a0,0(s1)
+  65:src/riscv.cpp ****                     push_a0(0);
+ 618              		.loc 1 65 21 is_stmt 1
+ 619 0258 63080500 		beqz	a0,.L38
+ 620              	.L30:
+  66:src/riscv.cpp ****                     break;
+ 621              		.loc 1 66 21
+ 622              	.LVL43:
+ 623              	.LBB113:
+ 624              	.LBB114:
  267:src/../h/riscv.hpp **** }
- 570              		.loc 2 267 5 is_stmt 1
+ 625              		.loc 2 267 5
  267:src/../h/riscv.hpp **** }
- 571              		.loc 2 267 53 is_stmt 0
- 572              	#APP
- 573              	# 267 "src/../h/riscv.hpp" 1
- 574              		sd a0, 10*8(fp)
- 575              	# 0 "" 2
- 576              		.loc 2 268 1
- 577              	#NO_APP
- 578 024c 6FF05FF2 		j	.L10
- 579              	.LVL45:
- 580              	.L11:
- 581              	.LBE100:
- 582              	.LBE99:
-  51:src/riscv.cpp ****                     PCB::dispatch();
- 583              		.loc 1 51 17 is_stmt 1
-  52:src/riscv.cpp ****                     break;
- 584              		.loc 1 52 21
-  52:src/riscv.cpp ****                     break;
- 585              		.loc 1 52 34 is_stmt 0
- 586 0250 97000000 		call	_ZN3PCB8dispatchEv@plt
- 586      E7800000 
- 587              	.LVL46:
-  53:src/riscv.cpp ****                 case 0x14:
- 588              		.loc 1 53 21 is_stmt 1
- 589 0258 6FF09FF1 		j	.L10
- 590              	.LVL47:
- 591              	.L4:
-  72:src/riscv.cpp ****             //timer interrupt
- 592              		.loc 1 72 9
-  74:src/riscv.cpp ****             break;
- 593              		.loc 1 74 13
- 594              	.LBB101:
- 595              	.LBB102:
+ 626              		.loc 2 267 53 is_stmt 0
+ 627 025c 93070000 		li	a5,0
+ 628              	#APP
+ 629              	# 267 "src/../h/riscv.hpp" 1
+ 630              		sd a5, 10*8(fp)
+ 631              	# 0 "" 2
+ 632              		.loc 2 268 1
+ 633              	#NO_APP
+ 634 0264 6FF09FED 		j	.L9
+ 635              	.LVL44:
+ 636              	.L38:
+ 637              	.LBE114:
+ 638              	.LBE113:
+  65:src/riscv.cpp ****                     push_a0(0);
+ 639              		.loc 1 65 36 is_stmt 1
+ 640              	.LBB115:
+ 641              	.LBB116:
+ 267:src/../h/riscv.hpp **** }
+ 642              		.loc 2 267 5
+ 267:src/../h/riscv.hpp **** }
+ 643              		.loc 2 267 53 is_stmt 0
+ 644 0268 9307F0FF 		li	a5,-1
+ 645              	#APP
+ 646              	# 267 "src/../h/riscv.hpp" 1
+ 647              		sd a5, 10*8(fp)
+ 648              	# 0 "" 2
+ 649              		.loc 2 268 1
+ 650              	#NO_APP
+ 651 0270 6FF0DFFE 		j	.L30
+ 652              	.LVL45:
+ 653              	.L16:
+ 654              	.LBE116:
+ 655              	.LBE115:
+  68:src/riscv.cpp ****                     push_a0(((Sem*)a1)->close());
+ 656              		.loc 1 68 17 is_stmt 1
+  69:src/riscv.cpp ****                     break;
+ 657              		.loc 1 69 21
+  69:src/riscv.cpp ****                     break;
+ 658              		.loc 1 69 46 is_stmt 0
+ 659 0274 13850400 		mv	a0,s1
+ 660 0278 97000000 		call	_ZN3Sem5closeEv@plt
+ 660      E7800000 
+ 661              	.LVL46:
+ 662              	.LBB117:
+GAS LISTING /tmp/ccs9Di6y.s 			page 22
+
+
+ 663              	.LBB118:
+ 267:src/../h/riscv.hpp **** }
+ 664              		.loc 2 267 5 is_stmt 1
+ 267:src/../h/riscv.hpp **** }
+ 665              		.loc 2 267 53 is_stmt 0
+ 666              	#APP
+ 667              	# 267 "src/../h/riscv.hpp" 1
+ 668              		sd a0, 10*8(fp)
+ 669              	# 0 "" 2
+ 670              		.loc 2 268 1
+ 671              	#NO_APP
+ 672 0284 6FF09FEB 		j	.L9
+ 673              	.LVL47:
+ 674              	.L15:
+ 675              	.LBE118:
+ 676              	.LBE117:
+  71:src/riscv.cpp ****                     sem = (Sem*)a1;
+ 677              		.loc 1 71 17 is_stmt 1
+  72:src/riscv.cpp ****                     push_a0(sem->wait());
+ 678              		.loc 1 72 21
+  73:src/riscv.cpp ****                     break;
+ 679              		.loc 1 73 21
+  73:src/riscv.cpp ****                     break;
+ 680              		.loc 1 73 38 is_stmt 0
+ 681 0288 13850400 		mv	a0,s1
+ 682 028c 97000000 		call	_ZN3Sem4waitEv@plt
+ 682      E7800000 
+ 683              	.LVL48:
+ 684              	.LBB119:
+ 685              	.LBB120:
+ 267:src/../h/riscv.hpp **** }
+ 686              		.loc 2 267 5 is_stmt 1
+ 267:src/../h/riscv.hpp **** }
+ 687              		.loc 2 267 53 is_stmt 0
+ 688              	#APP
+ 689              	# 267 "src/../h/riscv.hpp" 1
+ 690              		sd a0, 10*8(fp)
+ 691              	# 0 "" 2
+ 692              		.loc 2 268 1
+ 693              	#NO_APP
+ 694 0298 6FF05FEA 		j	.L9
+ 695              	.LVL49:
+ 696              	.L14:
+ 697              	.LBE120:
+ 698              	.LBE119:
+  75:src/riscv.cpp ****                     push_a0(((Sem*)a1)->signal());
+ 699              		.loc 1 75 17 is_stmt 1
+  76:src/riscv.cpp ****                     break;
+ 700              		.loc 1 76 21
+  76:src/riscv.cpp ****                     break;
+ 701              		.loc 1 76 47 is_stmt 0
+ 702 029c 13850400 		mv	a0,s1
+ 703 02a0 97000000 		call	_ZN3Sem6signalEv@plt
+ 703      E7800000 
+ 704              	.LVL50:
+ 705              	.LBB121:
+ 706              	.LBB122:
+GAS LISTING /tmp/ccs9Di6y.s 			page 23
+
+
+ 267:src/../h/riscv.hpp **** }
+ 707              		.loc 2 267 5 is_stmt 1
+ 267:src/../h/riscv.hpp **** }
+ 708              		.loc 2 267 53 is_stmt 0
+ 709              	#APP
+ 710              	# 267 "src/../h/riscv.hpp" 1
+ 711              		sd a0, 10*8(fp)
+ 712              	# 0 "" 2
+ 713              		.loc 2 268 1
+ 714              	#NO_APP
+ 715 02ac 6FF01FE9 		j	.L9
+ 716              	.LVL51:
+ 717              	.L13:
+ 718              	.LBE122:
+ 719              	.LBE121:
+  78:src/riscv.cpp ****                     c = __getc();
+ 720              		.loc 1 78 17 is_stmt 1
+  79:src/riscv.cpp ****                     push_a0((char)c);
+ 721              		.loc 1 79 21
+  79:src/riscv.cpp ****                     push_a0((char)c);
+ 722              		.loc 1 79 31 is_stmt 0
+ 723 02b0 97000000 		call	__getc@plt
+ 723      E7800000 
+ 724              	.LVL52:
+  80:src/riscv.cpp ****                     break;
+ 725              		.loc 1 80 21 is_stmt 1
+ 726              	.LBB123:
+ 727              	.LBB124:
+ 267:src/../h/riscv.hpp **** }
+ 728              		.loc 2 267 5
+ 267:src/../h/riscv.hpp **** }
+ 729              		.loc 2 267 53 is_stmt 0
+ 730              	#APP
+ 731              	# 267 "src/../h/riscv.hpp" 1
+ 732              		sd a0, 10*8(fp)
+ 733              	# 0 "" 2
+ 734              		.loc 2 268 1
+ 735              	#NO_APP
+ 736 02bc 6FF01FE8 		j	.L9
+ 737              	.LVL53:
+ 738              	.L12:
+ 739              	.LBE124:
+ 740              	.LBE123:
+  82:src/riscv.cpp ****                     __putc(a1);
+ 741              		.loc 1 82 17 is_stmt 1
+  83:src/riscv.cpp ****                 case 0x51:
+ 742              		.loc 1 83 21
+  83:src/riscv.cpp ****                 case 0x51:
+ 743              		.loc 1 83 27 is_stmt 0
+ 744 02c0 13F5F40F 		andi	a0,s1,0xff
+ 745 02c4 97000000 		call	__putc@plt
+ 745      E7800000 
+ 746              	.LVL54:
+ 747              	.L10:
+  84:src/riscv.cpp ****                     w_sstatus(sstatus);
+ 748              		.loc 1 84 17 is_stmt 1
+  85:src/riscv.cpp ****                     mc_sstatus(1<<8);
+GAS LISTING /tmp/ccs9Di6y.s 			page 24
+
+
+ 749              		.loc 1 85 21
+ 750              	.LBB125:
+ 751              	.LBB126:
+ 213:src/../h/riscv.hpp **** }
+ 752              		.loc 2 213 5
+ 213:src/../h/riscv.hpp **** }
+ 753              		.loc 2 213 77 is_stmt 0
+ 754              	#APP
+ 755              	# 213 "src/../h/riscv.hpp" 1
+ 756              		csrw sstatus, s5
+ 757              	# 0 "" 2
+ 758              	.LVL55:
+ 759              	#NO_APP
+ 760              	.LBE126:
+ 761              	.LBE125:
+  86:src/riscv.cpp ****                     w_sepc(sepc+4);
+ 762              		.loc 1 86 21 is_stmt 1
+ 763              	.LBB127:
+ 764              	.LBB128:
+ 201:src/../h/riscv.hpp **** }
+ 765              		.loc 2 201 5
+ 201:src/../h/riscv.hpp **** }
+ 766              		.loc 2 201 68 is_stmt 0
+ 767 02d0 93070010 		li	a5,256
+ 768              	#APP
+ 769              	# 201 "src/../h/riscv.hpp" 1
+ 770              		csrc sstatus, a5
+ 771              	# 0 "" 2
+ 772              	.LVL56:
+ 773              	#NO_APP
+ 774              	.LBE128:
+ 775              	.LBE127:
+  87:src/riscv.cpp ****                     return;
+ 776              		.loc 1 87 21 is_stmt 1
+  87:src/riscv.cpp ****                     return;
+ 777              		.loc 1 87 27 is_stmt 0
+ 778 02d8 130A8A00 		addi	s4,s4,8
+ 779              	.LVL57:
+ 780              	.LBB129:
+ 781              	.LBB130:
+ 145:src/../h/riscv.hpp **** }
+ 782              		.loc 2 145 5 is_stmt 1
+ 145:src/../h/riscv.hpp **** }
+ 783              		.loc 2 145 65 is_stmt 0
+ 784              	#APP
+ 785              	# 145 "src/../h/riscv.hpp" 1
+ 146:src/../h/riscv.hpp **** 
+ 786              		csrw sepc, s4
+ 787              	# 0 "" 2
+ 788              		.loc 2 146 1
+ 789              	#NO_APP
+ 790 02e0 6F00C000 		j	.L3
+ 791              	.LVL58:
+ 792              	.L4:
+ 793              	.LBE130:
+ 794              	.LBE129:
+  98:src/riscv.cpp ****             //timer interrupt
+GAS LISTING /tmp/ccs9Di6y.s 			page 25
+
+
+ 795              		.loc 1 98 9 is_stmt 1
+ 100:src/riscv.cpp ****             break;
+ 796              		.loc 1 100 13
+ 797              	.LBB131:
+ 798              	.LBB132:
  179:src/../h/riscv.hpp **** }
- 596              		.loc 2 179 5
+ 799              		.loc 2 179 5
  179:src/../h/riscv.hpp **** }
- 597              		.loc 2 179 64 is_stmt 0
- 598 025c 93072000 		li	a5,2
- 599              	.LVL48:
- 600              	#APP
- 601              	# 179 "src/../h/riscv.hpp" 1
- 602              		csrc sip, a5
- 603              	# 0 "" 2
- 604              	.LVL49:
- 605              	#NO_APP
- 606              	.L3:
- 607              	.LBE102:
- 608              	.LBE101:
- 609              	.LBE103:
- 610              	.LBE65:
-  80:src/riscv.cpp ****         default:
-  81:src/riscv.cpp ****             return;
-  82:src/riscv.cpp ****             //printString("ERROR: Unexpected interrupt!");
-GAS LISTING /tmp/ccvlzG8R.s 			page 20
+ 800              		.loc 2 179 64 is_stmt 0
+ 801 02e4 93072000 		li	a5,2
+ 802              	.LVL59:
+ 803              	#APP
+ 804              	# 179 "src/../h/riscv.hpp" 1
+ 805              		csrc sip, a5
+ 806              	# 0 "" 2
+ 807              	.LVL60:
+ 808              	#NO_APP
+ 809              	.L3:
+ 810              	.LBE132:
+ 811              	.LBE131:
+ 812              	.LBE133:
+ 813              	.LBE83:
+ 106:src/riscv.cpp ****         default:
+ 107:src/riscv.cpp ****             return;
+ 108:src/riscv.cpp ****             //printString("ERROR: Unexpected interrupt!");
+ 109:src/riscv.cpp ****     }
+ 110:src/riscv.cpp **** 
+ 111:src/riscv.cpp **** }...
+ 814              		.loc 1 111 1
+ 815 02ec 83308108 		ld	ra,136(sp)
+ 816              		.cfi_remember_state
+ 817              		.cfi_restore 1
+ 818 02f0 03340108 		ld	s0,128(sp)
+ 819              		.cfi_restore 8
+ 820              		.cfi_def_cfa 2, 144
+ 821 02f4 83348107 		ld	s1,120(sp)
+ 822              		.cfi_restore 9
+ 823              	.LVL61:
+ 824 02f8 03390107 		ld	s2,112(sp)
+ 825              		.cfi_restore 18
+ 826 02fc 83398106 		ld	s3,104(sp)
+ 827              		.cfi_restore 19
+ 828              	.LVL62:
+ 829 0300 033A0106 		ld	s4,96(sp)
+ 830              		.cfi_restore 20
+ 831 0304 833A8105 		ld	s5,88(sp)
+ 832              		.cfi_restore 21
+ 833 0308 033B0105 		ld	s6,80(sp)
+ 834              		.cfi_restore 22
+ 835 030c 833B8104 		ld	s7,72(sp)
+ 836              		.cfi_restore 23
+ 837 0310 033C0104 		ld	s8,64(sp)
+ 838              		.cfi_restore 24
+ 839 0314 13010109 		addi	sp,sp,144
+ 840              		.cfi_def_cfa_offset 0
+ 841 0318 67800000 		jr	ra
+ 842              	.LVL63:
+GAS LISTING /tmp/ccs9Di6y.s 			page 26
 
 
-  83:src/riscv.cpp ****     }
-  84:src/riscv.cpp **** 
-  85:src/riscv.cpp **** }...
- 611              		.loc 1 85 1
- 612 0264 83308108 		ld	ra,136(sp)
- 613              		.cfi_remember_state
- 614              		.cfi_restore 1
- 615 0268 03340108 		ld	s0,128(sp)
- 616              		.cfi_restore 8
- 617              		.cfi_def_cfa 2, 144
- 618 026c 83348107 		ld	s1,120(sp)
- 619              		.cfi_restore 9
- 620              	.LVL50:
- 621 0270 03390107 		ld	s2,112(sp)
- 622              		.cfi_restore 18
- 623              	.LVL51:
- 624 0274 83398106 		ld	s3,104(sp)
- 625              		.cfi_restore 19
- 626              	.LVL52:
- 627 0278 033A0106 		ld	s4,96(sp)
- 628              		.cfi_restore 20
- 629 027c 833A8105 		ld	s5,88(sp)
- 630              		.cfi_restore 21
- 631 0280 033B0105 		ld	s6,80(sp)
- 632              		.cfi_restore 22
- 633 0284 833B8104 		ld	s7,72(sp)
- 634              		.cfi_restore 23
- 635 0288 033C0104 		ld	s8,64(sp)
- 636              		.cfi_restore 24
- 637 028c 13010109 		addi	sp,sp,144
- 638              		.cfi_def_cfa_offset 0
- 639 0290 67800000 		jr	ra
- 640              	.LVL53:
- 641              	.L26:
- 642              		.cfi_restore_state
- 643 0294 93040500 		mv	s1,a0
- 644              	.LVL54:
- 645              	.LBB105:
- 646              	.LBB104:
-  42:src/riscv.cpp ****                     (*handleAddr) = new PCB((PCB::Body)a1, (void*)a2, stack);
- 647              		.loc 1 42 76
- 648 0298 13050B00 		mv	a0,s6
- 649 029c 97000000 		call	_ZdlPv@plt
- 649      E7800000 
- 650              	.LVL55:
- 651 02a4 13850400 		mv	a0,s1
- 652 02a8 97000000 		call	_Unwind_Resume@plt
- 652      E7800000 
- 653              	.LVL56:
- 654              	.LEHE2:
- 655              	.LBE104:
- 656              	.LBE105:
- 657              		.cfi_endproc
- 658              	.LFE52:
- 659              		.globl	__gxx_personality_v0
- 660              		.section	.gcc_except_table,"a",@progbits
- 661              	.LLSDA52:
-GAS LISTING /tmp/ccvlzG8R.s 			page 21
+ 843              	.L33:
+ 844              		.cfi_restore_state
+ 845 031c 93040500 		mv	s1,a0
+ 846              	.LVL64:
+ 847              	.LBB135:
+ 848              	.LBB134:
+  46:src/riscv.cpp ****                     (*handleAddr) = new PCB((PCB::Body)a1, (void*)a2, stack);
+ 849              		.loc 1 46 76
+ 850 0320 13050A00 		mv	a0,s4
+ 851 0324 97000000 		call	_ZdlPv@plt
+ 851      E7800000 
+ 852              	.LVL65:
+ 853 032c 13850400 		mv	a0,s1
+ 854 0330 97000000 		call	_Unwind_Resume@plt
+ 854      E7800000 
+ 855              	.LVL66:
+ 856              	.LEHE2:
+ 857              	.LBE134:
+ 858              	.LBE135:
+ 859              		.cfi_endproc
+ 860              	.LFE49:
+ 861              		.globl	__gxx_personality_v0
+ 862              		.section	.gcc_except_table,"a",@progbits
+ 863              	.LLSDA49:
+ 864 0000 FF       		.byte	0xff
+ 865 0001 FF       		.byte	0xff
+ 866 0002 03       		.byte	0x3
+ 867 0003 27       		.byte	0x27
+ 868 0004 00000000 		.4byte	.LEHB0-.LFB49
+ 869 0008 00000000 		.4byte	.LEHE0-.LEHB0
+ 870 000c 00000000 		.4byte	0
+ 871 0010 00       		.byte	0
+ 872 0011 00000000 		.4byte	.LEHB1-.LFB49
+ 873 0015 00000000 		.4byte	.LEHE1-.LEHB1
+ 874 0019 00000000 		.4byte	.L33-.LFB49
+ 875 001d 00       		.byte	0
+ 876 001e 00000000 		.4byte	.LEHB2-.LFB49
+ 877 0022 00000000 		.4byte	.LEHE2-.LEHB2
+ 878 0026 00000000 		.4byte	0
+ 879 002a 00       		.byte	0
+ 880              		.text
+ 882              		.weak	_ZGVZN15MemoryAllocator11getInstanceEvE8instance
+ 883              		.section	.bss._ZGVZN15MemoryAllocator11getInstanceEvE8instance,"awG",@nobits,_ZGVZN15MemoryAllocat
+ 884              		.align	3
+ 887              	_ZGVZN15MemoryAllocator11getInstanceEvE8instance:
+ 888 0000 00000000 		.zero	8
+ 888      00000000 
+ 889              		.text
+ 890              	.Letext0:
+ 891              		.file 6 "src/../h/../h/../lib/hw.h"
+ 892              		.file 7 "src/../h/Scheduler.hpp"
+ 893              		.file 8 "src/../h/PCB.hpp"
+ 894              		.file 9 "src/../h/../h/syscall_c.hpp"
+ 895              		.file 10 "src/../h/../h/../lib/console.h"
+ 4957              		.align	3
+ 4960              	DW.ref.__gxx_personality_v0:
+ 4961 0000 00000000 		.dword	__gxx_personality_v0
+GAS LISTING /tmp/ccs9Di6y.s 			page 27
 
 
- 662 0000 FF       		.byte	0xff
- 663 0001 FF       		.byte	0xff
- 664 0002 03       		.byte	0x3
- 665 0003 27       		.byte	0x27
- 666 0004 00000000 		.4byte	.LEHB0-.LFB52
- 667 0008 00000000 		.4byte	.LEHE0-.LEHB0
- 668 000c 00000000 		.4byte	0
- 669 0010 00       		.byte	0
- 670 0011 00000000 		.4byte	.LEHB1-.LFB52
- 671 0015 00000000 		.4byte	.LEHE1-.LEHB1
- 672 0019 00000000 		.4byte	.L26-.LFB52
- 673 001d 00       		.byte	0
- 674 001e 00000000 		.4byte	.LEHB2-.LFB52
- 675 0022 00000000 		.4byte	.LEHE2-.LEHB2
- 676 0026 00000000 		.4byte	0
- 677 002a 00       		.byte	0
- 678              		.text
- 680              		.weak	_ZGVZN15MemoryAllocator11getInstanceEvE8instance
- 681              		.section	.bss._ZGVZN15MemoryAllocator11getInstanceEvE8instance,"awG",@nobits,_ZGVZN15MemoryAllocat
- 682              		.align	3
- 685              	_ZGVZN15MemoryAllocator11getInstanceEvE8instance:
- 686 0000 00000000 		.zero	8
- 686      00000000 
- 687              		.text
- 688              	.Letext0:
- 689              		.file 4 "src/../h/../h/../lib/hw.h"
- 690              		.file 5 "src/../h/Scheduler.hpp"
- 691              		.file 6 "src/../h/list.hpp"
- 692              		.file 7 "src/../h/PCB.hpp"
- 693              		.file 8 "src/../h/../h/Sem.hpp"
- 694              		.file 9 "src/../h/../h/../lib/console.h"
- 4364              		.align	3
- 4367              	DW.ref.__gxx_personality_v0:
- 4368 0000 00000000 		.dword	__gxx_personality_v0
- 4368      00000000 
- 4369              		.ident	"GCC: (Ubuntu 9.4.0-1ubuntu1~20.04) 9.4.0"
- 4370              		.section	.note.GNU-stack,"",@progbits
-GAS LISTING /tmp/ccvlzG8R.s 			page 22
+ 4961      00000000 
+ 4962              		.ident	"GCC: (Ubuntu 9.4.0-1ubuntu1~20.04) 9.4.0"
+ 4963              		.section	.note.GNU-stack,"",@progbits
+GAS LISTING /tmp/ccs9Di6y.s 			page 28
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 riscv.cpp
-     /tmp/ccvlzG8R.s:9      .text:0000000000000000 _ZN5Riscv10popSppSpieEv
-     /tmp/ccvlzG8R.s:13     .text:0000000000000000 .L0 
-     /tmp/ccvlzG8R.s:14     .text:0000000000000000 .L0 
-     /tmp/ccvlzG8R.s:15     .text:0000000000000004 .L0 
-     /tmp/ccvlzG8R.s:17     .text:0000000000000008 .L0 
-     /tmp/ccvlzG8R.s:19     .text:000000000000000c .L0 
-     /tmp/ccvlzG8R.s:21     .text:000000000000000c .L0 
+     /tmp/ccs9Di6y.s:9      .text:0000000000000000 _ZN5Riscv10popSppSpieEv
+     /tmp/ccs9Di6y.s:13     .text:0000000000000000 .L0 
+     /tmp/ccs9Di6y.s:14     .text:0000000000000000 .L0 
+     /tmp/ccs9Di6y.s:15     .text:0000000000000004 .L0 
+     /tmp/ccs9Di6y.s:17     .text:0000000000000008 .L0 
+     /tmp/ccs9Di6y.s:19     .text:000000000000000c .L0 
+     /tmp/ccs9Di6y.s:21     .text:000000000000000c .L0 
        src/riscv.cpp:7      .text:000000000000000c .L0 
-     /tmp/ccvlzG8R.s:27     .text:0000000000000010 .L0 
+     /tmp/ccs9Di6y.s:27     .text:0000000000000010 .L0 
        src/riscv.cpp:8      .text:0000000000000010 .L0 
-     /tmp/ccvlzG8R.s:33     .text:0000000000000014 .L0 
-     /tmp/ccvlzG8R.s:34     .text:0000000000000018 .L0 
-     /tmp/ccvlzG8R.s:35     .text:0000000000000018 .L0 
-     /tmp/ccvlzG8R.s:37     .text:000000000000001c .L0 
-     /tmp/ccvlzG8R.s:39     .text:0000000000000020 .L0 
-     /tmp/ccvlzG8R.s:45     .text:0000000000000020 _ZN5Riscv11trapHandlerEv
-     /tmp/ccvlzG8R.s:48     .text:0000000000000020 .L0 
-     /tmp/ccvlzG8R.s:4367   .data.rel.local.DW.ref.__gxx_personality_v0:0000000000000000 DW.ref.__gxx_personality_v0
-     /tmp/ccvlzG8R.s:51     .text:0000000000000020 .L0 
-     /tmp/ccvlzG8R.s:52     .text:0000000000000024 .L0 
-     /tmp/ccvlzG8R.s:63     .text:000000000000004c .L0 
-     /tmp/ccvlzG8R.s:64     .text:000000000000004c .L0 
-     /tmp/ccvlzG8R.s:65     .text:000000000000004c .L0 
-     /tmp/ccvlzG8R.s:66     .text:000000000000004c .L0 
-     /tmp/ccvlzG8R.s:67     .text:000000000000004c .L0 
-     /tmp/ccvlzG8R.s:68     .text:000000000000004c .L0 
-     /tmp/ccvlzG8R.s:69     .text:000000000000004c .L0 
-     /tmp/ccvlzG8R.s:70     .text:000000000000004c .L0 
-     /tmp/ccvlzG8R.s:71     .text:000000000000004c .L0 
-     /tmp/ccvlzG8R.s:72     .text:000000000000004c .L0 
-     /tmp/ccvlzG8R.s:74     .text:0000000000000050 .L0 
-     /tmp/ccvlzG8R.s:79     .text:0000000000000050 .L0 
-     /tmp/ccvlzG8R.s:80     .text:0000000000000050 .L0 
-     /tmp/ccvlzG8R.s:81     .text:0000000000000050 .L0 
+     /tmp/ccs9Di6y.s:33     .text:0000000000000014 .L0 
+     /tmp/ccs9Di6y.s:34     .text:0000000000000018 .L0 
+     /tmp/ccs9Di6y.s:35     .text:0000000000000018 .L0 
+     /tmp/ccs9Di6y.s:37     .text:000000000000001c .L0 
+     /tmp/ccs9Di6y.s:39     .text:0000000000000020 .L0 
+     /tmp/ccs9Di6y.s:45     .text:0000000000000020 _ZN5Riscv11trapHandlerEv
+     /tmp/ccs9Di6y.s:48     .text:0000000000000020 .L0 
+     /tmp/ccs9Di6y.s:4960   .data.rel.local.DW.ref.__gxx_personality_v0:0000000000000000 DW.ref.__gxx_personality_v0
+     /tmp/ccs9Di6y.s:51     .text:0000000000000020 .L0 
+     /tmp/ccs9Di6y.s:52     .text:0000000000000024 .L0 
+     /tmp/ccs9Di6y.s:63     .text:000000000000004c .L0 
+     /tmp/ccs9Di6y.s:64     .text:000000000000004c .L0 
+     /tmp/ccs9Di6y.s:65     .text:000000000000004c .L0 
+     /tmp/ccs9Di6y.s:66     .text:000000000000004c .L0 
+     /tmp/ccs9Di6y.s:67     .text:000000000000004c .L0 
+     /tmp/ccs9Di6y.s:68     .text:000000000000004c .L0 
+     /tmp/ccs9Di6y.s:69     .text:000000000000004c .L0 
+     /tmp/ccs9Di6y.s:70     .text:000000000000004c .L0 
+     /tmp/ccs9Di6y.s:71     .text:000000000000004c .L0 
+     /tmp/ccs9Di6y.s:72     .text:000000000000004c .L0 
+     /tmp/ccs9Di6y.s:74     .text:0000000000000050 .L0 
+     /tmp/ccs9Di6y.s:79     .text:0000000000000050 .L0 
+     /tmp/ccs9Di6y.s:80     .text:0000000000000050 .L0 
+     /tmp/ccs9Di6y.s:81     .text:0000000000000050 .L0 
   src/../h/riscv.hpp:127    .text:0000000000000050 .L0 
-     /tmp/ccvlzG8R.s:89     .text:0000000000000058 .L0 
-     /tmp/ccvlzG8R.s:90     .text:0000000000000058 .L0 
-     /tmp/ccvlzG8R.s:97     .text:000000000000005c .L0 
-     /tmp/ccvlzG8R.s:98     .text:000000000000005c .L0 
-     /tmp/ccvlzG8R.s:99     .text:000000000000005c .L0 
+     /tmp/ccs9Di6y.s:89     .text:0000000000000058 .L0 
+     /tmp/ccs9Di6y.s:90     .text:0000000000000058 .L0 
+     /tmp/ccs9Di6y.s:97     .text:000000000000005c .L0 
+     /tmp/ccs9Di6y.s:98     .text:000000000000005c .L0 
+     /tmp/ccs9Di6y.s:99     .text:000000000000005c .L0 
   src/../h/riscv.hpp:228    .text:000000000000005c .L0 
-     /tmp/ccvlzG8R.s:107    .text:0000000000000064 .L0 
-     /tmp/ccvlzG8R.s:108    .text:0000000000000064 .L0 
-     /tmp/ccvlzG8R.s:115    .text:0000000000000068 .L0 
-     /tmp/ccvlzG8R.s:116    .text:0000000000000068 .L0 
-     /tmp/ccvlzG8R.s:117    .text:0000000000000068 .L0 
+     /tmp/ccs9Di6y.s:107    .text:0000000000000064 .L0 
+     /tmp/ccs9Di6y.s:108    .text:0000000000000064 .L0 
+     /tmp/ccs9Di6y.s:115    .text:0000000000000068 .L0 
+     /tmp/ccs9Di6y.s:116    .text:0000000000000068 .L0 
+     /tmp/ccs9Di6y.s:117    .text:0000000000000068 .L0 
   src/../h/riscv.hpp:238    .text:0000000000000068 .L0 
-     /tmp/ccvlzG8R.s:125    .text:0000000000000070 .L0 
-     /tmp/ccvlzG8R.s:126    .text:0000000000000070 .L0 
-     /tmp/ccvlzG8R.s:133    .text:0000000000000074 .L0 
-     /tmp/ccvlzG8R.s:134    .text:0000000000000074 .L0 
-     /tmp/ccvlzG8R.s:135    .text:0000000000000074 .L0 
+     /tmp/ccs9Di6y.s:125    .text:0000000000000070 .L0 
+     /tmp/ccs9Di6y.s:126    .text:0000000000000070 .L0 
+     /tmp/ccs9Di6y.s:133    .text:0000000000000074 .L0 
+     /tmp/ccs9Di6y.s:134    .text:0000000000000074 .L0 
+     /tmp/ccs9Di6y.s:135    .text:0000000000000074 .L0 
   src/../h/riscv.hpp:248    .text:0000000000000074 .L0 
-     /tmp/ccvlzG8R.s:143    .text:000000000000007c .L0 
-     /tmp/ccvlzG8R.s:144    .text:000000000000007c .L0 
-GAS LISTING /tmp/ccvlzG8R.s 			page 23
+     /tmp/ccs9Di6y.s:143    .text:000000000000007c .L0 
+     /tmp/ccs9Di6y.s:144    .text:000000000000007c .L0 
+GAS LISTING /tmp/ccs9Di6y.s 			page 29
 
 
-     /tmp/ccvlzG8R.s:151    .text:0000000000000080 .L0 
-     /tmp/ccvlzG8R.s:152    .text:0000000000000080 .L0 
-     /tmp/ccvlzG8R.s:153    .text:0000000000000080 .L0 
+     /tmp/ccs9Di6y.s:151    .text:0000000000000080 .L0 
+     /tmp/ccs9Di6y.s:152    .text:0000000000000080 .L0 
+     /tmp/ccs9Di6y.s:153    .text:0000000000000080 .L0 
   src/../h/riscv.hpp:258    .text:0000000000000080 .L0 
-     /tmp/ccvlzG8R.s:161    .text:0000000000000088 .L0 
-     /tmp/ccvlzG8R.s:162    .text:0000000000000088 .L0 
-     /tmp/ccvlzG8R.s:167    .text:000000000000008c .L0 
-     /tmp/ccvlzG8R.s:168    .text:000000000000008c .L0 
-     /tmp/ccvlzG8R.s:170    .text:000000000000008c .L0 
-     /tmp/ccvlzG8R.s:184    .text:00000000000000b8 .L0 
-     /tmp/ccvlzG8R.s:185    .text:00000000000000b8 .L0 
-     /tmp/ccvlzG8R.s:188    .text:00000000000000b8 .L0 
-     /tmp/ccvlzG8R.s:189    .text:00000000000000b8 .L0 
-     /tmp/ccvlzG8R.s:190    .text:00000000000000b8 .L0 
+     /tmp/ccs9Di6y.s:161    .text:0000000000000088 .L0 
+     /tmp/ccs9Di6y.s:162    .text:0000000000000088 .L0 
+     /tmp/ccs9Di6y.s:167    .text:000000000000008c .L0 
+     /tmp/ccs9Di6y.s:168    .text:000000000000008c .L0 
+     /tmp/ccs9Di6y.s:170    .text:000000000000008c .L0 
+     /tmp/ccs9Di6y.s:184    .text:00000000000000b8 .L0 
+     /tmp/ccs9Di6y.s:185    .text:00000000000000b8 .L0 
+     /tmp/ccs9Di6y.s:188    .text:00000000000000b8 .L0 
+     /tmp/ccs9Di6y.s:189    .text:00000000000000b8 .L0 
+     /tmp/ccs9Di6y.s:190    .text:00000000000000b8 .L0 
   src/../h/riscv.hpp:139    .text:00000000000000b8 .L0 
-     /tmp/ccvlzG8R.s:199    .text:00000000000000c0 .L0 
-     /tmp/ccvlzG8R.s:200    .text:00000000000000c0 .L0 
-     /tmp/ccvlzG8R.s:204    .text:00000000000000c4 .L0 
-     /tmp/ccvlzG8R.s:209    .text:00000000000000c8 .L0 
-     /tmp/ccvlzG8R.s:210    .text:00000000000000c8 .L0 
-     /tmp/ccvlzG8R.s:211    .text:00000000000000c8 .L0 
+     /tmp/ccs9Di6y.s:199    .text:00000000000000c0 .L0 
+     /tmp/ccs9Di6y.s:200    .text:00000000000000c0 .L0 
+     /tmp/ccs9Di6y.s:204    .text:00000000000000c4 .L0 
+     /tmp/ccs9Di6y.s:209    .text:00000000000000c8 .L0 
+     /tmp/ccs9Di6y.s:210    .text:00000000000000c8 .L0 
+     /tmp/ccs9Di6y.s:211    .text:00000000000000c8 .L0 
   src/../h/riscv.hpp:207    .text:00000000000000c8 .L0 
-     /tmp/ccvlzG8R.s:219    .text:00000000000000d0 .L0 
-     /tmp/ccvlzG8R.s:220    .text:00000000000000d0 .L0 
-     /tmp/ccvlzG8R.s:225    .text:00000000000000d4 .L0 
-     /tmp/ccvlzG8R.s:226    .text:00000000000000d4 .L0 
-     /tmp/ccvlzG8R.s:227    .text:00000000000000d4 .L0 
-     /tmp/ccvlzG8R.s:228    .text:00000000000000d4 .L0 
-     /tmp/ccvlzG8R.s:269    .text:0000000000000104 .L0 
-     /tmp/ccvlzG8R.s:276    .text:0000000000000114 .L0 
-     /tmp/ccvlzG8R.s:278    .text:0000000000000114 .L0 
-     /tmp/ccvlzG8R.s:279    .text:0000000000000114 .L0 
-     /tmp/ccvlzG8R.s:282    .text:000000000000011c .L0 
-     /tmp/ccvlzG8R.s:288    .text:0000000000000128 .L0 
-     /tmp/ccvlzG8R.s:292    .text:0000000000000128 .L0 
-     /tmp/ccvlzG8R.s:293    .text:0000000000000128 .L0 
-  src/../h/riscv.hpp:213    .text:0000000000000128 .L0 
-     /tmp/ccvlzG8R.s:305    .text:000000000000012c .L0 
-     /tmp/ccvlzG8R.s:306    .text:000000000000012c .L0 
-     /tmp/ccvlzG8R.s:307    .text:000000000000012c .L0 
-     /tmp/ccvlzG8R.s:318    .text:0000000000000134 .L0 
-     /tmp/ccvlzG8R.s:319    .text:0000000000000134 .L0 
-     /tmp/ccvlzG8R.s:324    .text:0000000000000138 .L0 
-  src/../h/riscv.hpp:145    .text:0000000000000138 .L0 
-     /tmp/ccvlzG8R.s:336    .text:000000000000013c .L0 
-     /tmp/ccvlzG8R.s:337    .text:000000000000013c .L0 
-     /tmp/ccvlzG8R.s:338    .text:000000000000013c .L0 
-     /tmp/ccvlzG8R.s:345    .text:0000000000000144 .L0 
-     /tmp/ccvlzG8R.s:351    .text:0000000000000148 .L0 
-     /tmp/ccvlzG8R.s:355    .text:0000000000000148 .L0 
-     /tmp/ccvlzG8R.s:356    .text:0000000000000148 .L0 
-     /tmp/ccvlzG8R.s:685    .bss._ZGVZN15MemoryAllocator11getInstanceEvE8instance:0000000000000000 _ZGVZN15MemoryAllocator11getInstanceEvE8instance
-     /tmp/ccvlzG8R.s:357    .text:0000000000000148 .L0 
-     /tmp/ccvlzG8R.s:367    .text:0000000000000160 .L0 
-     /tmp/ccvlzG8R.s:368    .text:0000000000000160 .L0 
-     /tmp/ccvlzG8R.s:374    .text:000000000000016c .L0 
-     /tmp/ccvlzG8R.s:375    .text:000000000000016c .L0 
-GAS LISTING /tmp/ccvlzG8R.s 			page 24
+     /tmp/ccs9Di6y.s:219    .text:00000000000000d0 .L0 
+     /tmp/ccs9Di6y.s:220    .text:00000000000000d0 .L0 
+     /tmp/ccs9Di6y.s:225    .text:00000000000000d4 .L0 
+     /tmp/ccs9Di6y.s:226    .text:00000000000000d4 .L0 
+     /tmp/ccs9Di6y.s:227    .text:00000000000000d4 .L0 
+     /tmp/ccs9Di6y.s:228    .text:00000000000000d4 .L0 
+     /tmp/ccs9Di6y.s:229    .text:00000000000000d4 .L0 
+     /tmp/ccs9Di6y.s:230    .text:00000000000000d4 .L0 
+     /tmp/ccs9Di6y.s:231    .text:00000000000000d4 .L0 
+     /tmp/ccs9Di6y.s:232    .text:00000000000000d4 .L0 
+     /tmp/ccs9Di6y.s:332    .text:00000000000000f8 .L0 
+     /tmp/ccs9Di6y.s:338    .text:0000000000000108 .L0 
+     /tmp/ccs9Di6y.s:340    .text:0000000000000108 .L0 
+     /tmp/ccs9Di6y.s:341    .text:0000000000000108 .L0 
+     /tmp/ccs9Di6y.s:344    .text:0000000000000110 .L0 
+     /tmp/ccs9Di6y.s:348    .text:0000000000000114 .L0 
+     /tmp/ccs9Di6y.s:352    .text:0000000000000114 .L0 
+     /tmp/ccs9Di6y.s:353    .text:0000000000000114 .L0 
+     /tmp/ccs9Di6y.s:887    .bss._ZGVZN15MemoryAllocator11getInstanceEvE8instance:0000000000000000 _ZGVZN15MemoryAllocator11getInstanceEvE8instance
+     /tmp/ccs9Di6y.s:354    .text:0000000000000114 .L0 
+     /tmp/ccs9Di6y.s:364    .text:000000000000012c .L0 
+     /tmp/ccs9Di6y.s:365    .text:000000000000012c .L0 
+     /tmp/ccs9Di6y.s:371    .text:0000000000000138 .L0 
+     /tmp/ccs9Di6y.s:372    .text:0000000000000138 .L0 
+  src/../h/riscv.hpp:267    .text:0000000000000138 .L0 
+     /tmp/ccs9Di6y.s:385    .text:000000000000013c .L0 
+     /tmp/ccs9Di6y.s:386    .text:000000000000013c .L0 
+  src/../h/riscv.hpp:213    .text:000000000000013c .L0 
+     /tmp/ccs9Di6y.s:398    .text:0000000000000140 .L0 
+     /tmp/ccs9Di6y.s:399    .text:0000000000000140 .L0 
+  src/../h/riscv.hpp:145    .text:0000000000000140 .L0 
+     /tmp/ccs9Di6y.s:406    .text:0000000000000144 .L0 
+     /tmp/ccs9Di6y.s:412    .text:0000000000000148 .L0 
+     /tmp/ccs9Di6y.s:415    .text:0000000000000148 .L0 
+     /tmp/ccs9Di6y.s:416    .text:0000000000000148 .L0 
+GAS LISTING /tmp/ccs9Di6y.s 			page 30
 
 
+     /tmp/ccs9Di6y.s:417    .text:0000000000000148 .L0 
+     /tmp/ccs9Di6y.s:427    .text:0000000000000160 .L0 
+     /tmp/ccs9Di6y.s:428    .text:0000000000000160 .L0 
+     /tmp/ccs9Di6y.s:434    .text:000000000000016c .L0 
   src/../h/riscv.hpp:267    .text:000000000000016c .L0 
-     /tmp/ccvlzG8R.s:388    .text:0000000000000170 .L0 
-     /tmp/ccvlzG8R.s:389    .text:0000000000000170 .L0 
-  src/../h/riscv.hpp:213    .text:0000000000000170 .L0 
-     /tmp/ccvlzG8R.s:401    .text:0000000000000174 .L0 
-     /tmp/ccvlzG8R.s:402    .text:0000000000000174 .L0 
-  src/../h/riscv.hpp:145    .text:0000000000000174 .L0 
-     /tmp/ccvlzG8R.s:414    .text:0000000000000178 .L0 
-     /tmp/ccvlzG8R.s:415    .text:0000000000000178 .L0 
-     /tmp/ccvlzG8R.s:416    .text:0000000000000178 .L0 
-     /tmp/ccvlzG8R.s:423    .text:0000000000000180 .L0 
-     /tmp/ccvlzG8R.s:429    .text:0000000000000184 .L0 
-     /tmp/ccvlzG8R.s:432    .text:0000000000000184 .L0 
-     /tmp/ccvlzG8R.s:433    .text:0000000000000184 .L0 
-     /tmp/ccvlzG8R.s:434    .text:0000000000000184 .L0 
-     /tmp/ccvlzG8R.s:444    .text:000000000000019c .L0 
-     /tmp/ccvlzG8R.s:445    .text:000000000000019c .L0 
-     /tmp/ccvlzG8R.s:451    .text:00000000000001a8 .L0 
-  src/../h/riscv.hpp:267    .text:00000000000001a8 .L0 
-     /tmp/ccvlzG8R.s:458    .text:00000000000001ac .L0 
-     /tmp/ccvlzG8R.s:464    .text:00000000000001b0 .L0 
-     /tmp/ccvlzG8R.s:465    .text:00000000000001b0 .L0 
-     /tmp/ccvlzG8R.s:469    .text:00000000000001b4 .L0 
-     /tmp/ccvlzG8R.s:470    .text:00000000000001b4 .L0 
-     /tmp/ccvlzG8R.s:471    .text:00000000000001b4 .L0 
-     /tmp/ccvlzG8R.s:481    .text:00000000000001cc .L0 
-     /tmp/ccvlzG8R.s:482    .text:00000000000001cc .L0 
-     /tmp/ccvlzG8R.s:489    .text:00000000000001dc .L0 
-     /tmp/ccvlzG8R.s:490    .text:00000000000001dc .L0 
-     /tmp/ccvlzG8R.s:491    .text:00000000000001dc .L0 
-     /tmp/ccvlzG8R.s:507    .text:0000000000000204 .L0 
-     /tmp/ccvlzG8R.s:512    .text:000000000000020c .L0 
-     /tmp/ccvlzG8R.s:514    .text:0000000000000210 .L0 
-     /tmp/ccvlzG8R.s:516    .text:0000000000000214 .L0 
-     /tmp/ccvlzG8R.s:517    .text:0000000000000214 .L0 
-     /tmp/ccvlzG8R.s:523    .text:0000000000000220 .L0 
-     /tmp/ccvlzG8R.s:524    .text:0000000000000220 .L0 
-     /tmp/ccvlzG8R.s:526    .text:0000000000000224 .L0 
-     /tmp/ccvlzG8R.s:532    .text:0000000000000228 .L0 
-     /tmp/ccvlzG8R.s:533    .text:0000000000000228 .L0 
-     /tmp/ccvlzG8R.s:534    .text:0000000000000228 .L0 
-     /tmp/ccvlzG8R.s:541    .text:0000000000000230 .L0 
-     /tmp/ccvlzG8R.s:549    .text:0000000000000234 .L0 
-     /tmp/ccvlzG8R.s:550    .text:0000000000000234 .L0 
-     /tmp/ccvlzG8R.s:551    .text:0000000000000234 .L0 
-     /tmp/ccvlzG8R.s:558    .text:000000000000023c .L0 
-     /tmp/ccvlzG8R.s:564    .text:0000000000000240 .L0 
-     /tmp/ccvlzG8R.s:565    .text:0000000000000240 .L0 
-     /tmp/ccvlzG8R.s:566    .text:0000000000000240 .L0 
-     /tmp/ccvlzG8R.s:571    .text:0000000000000248 .L0 
-  src/../h/riscv.hpp:267    .text:0000000000000248 .L0 
-     /tmp/ccvlzG8R.s:578    .text:000000000000024c .L0 
-     /tmp/ccvlzG8R.s:584    .text:0000000000000250 .L0 
-     /tmp/ccvlzG8R.s:585    .text:0000000000000250 .L0 
-     /tmp/ccvlzG8R.s:586    .text:0000000000000250 .L0 
-     /tmp/ccvlzG8R.s:589    .text:0000000000000258 .L0 
-     /tmp/ccvlzG8R.s:593    .text:000000000000025c .L0 
-GAS LISTING /tmp/ccvlzG8R.s 			page 25
+     /tmp/ccs9Di6y.s:441    .text:0000000000000170 .L0 
+     /tmp/ccs9Di6y.s:447    .text:0000000000000174 .L0 
+     /tmp/ccs9Di6y.s:448    .text:0000000000000174 .L0 
+     /tmp/ccs9Di6y.s:452    .text:0000000000000178 .L0 
+     /tmp/ccs9Di6y.s:453    .text:0000000000000178 .L0 
+     /tmp/ccs9Di6y.s:454    .text:0000000000000178 .L0 
+     /tmp/ccs9Di6y.s:464    .text:0000000000000190 .L0 
+     /tmp/ccs9Di6y.s:465    .text:0000000000000190 .L0 
+     /tmp/ccs9Di6y.s:472    .text:00000000000001a0 .L0 
+     /tmp/ccs9Di6y.s:473    .text:00000000000001a0 .L0 
+     /tmp/ccs9Di6y.s:474    .text:00000000000001a0 .L0 
+     /tmp/ccs9Di6y.s:490    .text:00000000000001c8 .L0 
+     /tmp/ccs9Di6y.s:495    .text:00000000000001d0 .L0 
+     /tmp/ccs9Di6y.s:497    .text:00000000000001d4 .L0 
+     /tmp/ccs9Di6y.s:499    .text:00000000000001d8 .L0 
+     /tmp/ccs9Di6y.s:500    .text:00000000000001d8 .L0 
+     /tmp/ccs9Di6y.s:506    .text:00000000000001e4 .L0 
+     /tmp/ccs9Di6y.s:507    .text:00000000000001e4 .L0 
+     /tmp/ccs9Di6y.s:509    .text:00000000000001e8 .L0 
+     /tmp/ccs9Di6y.s:515    .text:00000000000001ec .L0 
+     /tmp/ccs9Di6y.s:516    .text:00000000000001ec .L0 
+     /tmp/ccs9Di6y.s:517    .text:00000000000001ec .L0 
+     /tmp/ccs9Di6y.s:524    .text:00000000000001f4 .L0 
+     /tmp/ccs9Di6y.s:532    .text:00000000000001f8 .L0 
+     /tmp/ccs9Di6y.s:533    .text:00000000000001f8 .L0 
+     /tmp/ccs9Di6y.s:534    .text:00000000000001f8 .L0 
+     /tmp/ccs9Di6y.s:541    .text:0000000000000200 .L0 
+     /tmp/ccs9Di6y.s:547    .text:0000000000000204 .L0 
+     /tmp/ccs9Di6y.s:548    .text:0000000000000204 .L0 
+     /tmp/ccs9Di6y.s:549    .text:0000000000000204 .L0 
+     /tmp/ccs9Di6y.s:554    .text:000000000000020c .L0 
+  src/../h/riscv.hpp:267    .text:000000000000020c .L0 
+     /tmp/ccs9Di6y.s:561    .text:0000000000000210 .L0 
+     /tmp/ccs9Di6y.s:567    .text:0000000000000214 .L0 
+     /tmp/ccs9Di6y.s:568    .text:0000000000000214 .L0 
+     /tmp/ccs9Di6y.s:569    .text:0000000000000214 .L0 
+     /tmp/ccs9Di6y.s:572    .text:000000000000021c .L0 
+     /tmp/ccs9Di6y.s:575    .text:0000000000000220 .L0 
+     /tmp/ccs9Di6y.s:576    .text:0000000000000220 .L0 
+     /tmp/ccs9Di6y.s:577    .text:0000000000000220 .L0 
+     /tmp/ccs9Di6y.s:581    .text:000000000000022c .L0 
+     /tmp/ccs9Di6y.s:584    .text:0000000000000230 .L0 
+     /tmp/ccs9Di6y.s:585    .text:0000000000000230 .L0 
+     /tmp/ccs9Di6y.s:586    .text:0000000000000230 .L0 
+     /tmp/ccs9Di6y.s:589    .text:0000000000000234 .L0 
+     /tmp/ccs9Di6y.s:590    .text:0000000000000234 .L0 
+     /tmp/ccs9Di6y.s:591    .text:0000000000000234 .L0 
+     /tmp/ccs9Di6y.s:600    .text:0000000000000240 .L0 
+     /tmp/ccs9Di6y.s:607    .text:0000000000000248 .L0 
+     /tmp/ccs9Di6y.s:608    .text:0000000000000248 .L0 
+     /tmp/ccs9Di6y.s:610    .text:000000000000024c .L0 
+     /tmp/ccs9Di6y.s:611    .text:000000000000024c .L0 
+GAS LISTING /tmp/ccs9Di6y.s 			page 31
 
 
-     /tmp/ccvlzG8R.s:596    .text:000000000000025c .L0 
-     /tmp/ccvlzG8R.s:597    .text:000000000000025c .L0 
-     /tmp/ccvlzG8R.s:598    .text:000000000000025c .L0 
-     /tmp/ccvlzG8R.s:612    .text:0000000000000264 .L0 
-     /tmp/ccvlzG8R.s:613    .text:0000000000000268 .L0 
-     /tmp/ccvlzG8R.s:614    .text:0000000000000268 .L0 
-     /tmp/ccvlzG8R.s:616    .text:000000000000026c .L0 
-     /tmp/ccvlzG8R.s:617    .text:000000000000026c .L0 
-     /tmp/ccvlzG8R.s:619    .text:0000000000000270 .L0 
-     /tmp/ccvlzG8R.s:622    .text:0000000000000274 .L0 
-     /tmp/ccvlzG8R.s:625    .text:0000000000000278 .L0 
-     /tmp/ccvlzG8R.s:628    .text:000000000000027c .L0 
-     /tmp/ccvlzG8R.s:630    .text:0000000000000280 .L0 
-     /tmp/ccvlzG8R.s:632    .text:0000000000000284 .L0 
-     /tmp/ccvlzG8R.s:634    .text:0000000000000288 .L0 
-     /tmp/ccvlzG8R.s:636    .text:000000000000028c .L0 
-     /tmp/ccvlzG8R.s:638    .text:0000000000000290 .L0 
-     /tmp/ccvlzG8R.s:642    .text:0000000000000294 .L0 
-     /tmp/ccvlzG8R.s:648    .text:0000000000000298 .L0 
-     /tmp/ccvlzG8R.s:657    .text:00000000000002b0 .L0 
-     /tmp/ccvlzG8R.s:695    .text:00000000000002b0 .L0 
-     /tmp/ccvlzG8R.s:243    .rodata:0000000000000000 .L12
-     /tmp/ccvlzG8R.s:235    .text:00000000000000ec .L0 
-     /tmp/ccvlzG8R.s:357    .text:0000000000000148 .L0 
-     /tmp/ccvlzG8R.s:361    .text:0000000000000158 .L0 
-     /tmp/ccvlzG8R.s:434    .text:0000000000000184 .L0 
-     /tmp/ccvlzG8R.s:438    .text:0000000000000194 .L0 
-     /tmp/ccvlzG8R.s:471    .text:00000000000001b4 .L0 
-     /tmp/ccvlzG8R.s:475    .text:00000000000001c4 .L0 
-     /tmp/ccvlzG8R.s:591    .text:000000000000025c .L4
-     /tmp/ccvlzG8R.s:266    .text:0000000000000104 .L5
-     /tmp/ccvlzG8R.s:606    .text:0000000000000264 .L3
-     /tmp/ccvlzG8R.s:284    .text:0000000000000120 .L9
-     /tmp/ccvlzG8R.s:382    .text:0000000000000170 .L10
-     /tmp/ccvlzG8R.s:363    .text:0000000000000160 .L18
-     /tmp/ccvlzG8R.s:440    .text:000000000000019c .L19
-     /tmp/ccvlzG8R.s:505    .text:0000000000000204 .L25
-     /tmp/ccvlzG8R.s:477    .text:00000000000001cc .L21
-     /tmp/ccvlzG8R.s:510    .text:000000000000020c .L29
-     /tmp/ccvlzG8R.s:487    .text:00000000000001dc .L20
-     /tmp/ccvlzG8R.s:521    .text:0000000000000220 .L22
-     /tmp/ccvlzG8R.s:543    .text:0000000000000234 .L30
-     /tmp/ccvlzG8R.s:527    .text:0000000000000228 .L23
-     /tmp/ccvlzG8R.s:347    .text:0000000000000148 .L16
-     /tmp/ccvlzG8R.s:425    .text:0000000000000184 .L15
-     /tmp/ccvlzG8R.s:460    .text:00000000000001b0 .L14
-     /tmp/ccvlzG8R.s:560    .text:0000000000000240 .L13
-     /tmp/ccvlzG8R.s:580    .text:0000000000000250 .L11
-     /tmp/ccvlzG8R.s:277    .text:0000000000000114 .LEHB0
-     /tmp/ccvlzG8R.s:46     .text:0000000000000020 .LFB52
-     /tmp/ccvlzG8R.s:494    .text:00000000000001e8 .LEHE0
-     /tmp/ccvlzG8R.s:499    .text:00000000000001f8 .LEHB1
-     /tmp/ccvlzG8R.s:502    .text:0000000000000200 .LEHE1
-     /tmp/ccvlzG8R.s:641    .text:0000000000000294 .L26
-     /tmp/ccvlzG8R.s:518    .text:0000000000000218 .LEHB2
-     /tmp/ccvlzG8R.s:654    .text:00000000000002b0 .LEHE2
-     /tmp/ccvlzG8R.s:2533   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-GAS LISTING /tmp/ccvlzG8R.s 			page 26
+     /tmp/ccs9Di6y.s:617    .text:0000000000000254 .L0 
+     /tmp/ccs9Di6y.s:619    .text:0000000000000258 .L0 
+     /tmp/ccs9Di6y.s:625    .text:000000000000025c .L0 
+     /tmp/ccs9Di6y.s:626    .text:000000000000025c .L0 
+     /tmp/ccs9Di6y.s:627    .text:000000000000025c .L0 
+     /tmp/ccs9Di6y.s:634    .text:0000000000000264 .L0 
+     /tmp/ccs9Di6y.s:642    .text:0000000000000268 .L0 
+     /tmp/ccs9Di6y.s:643    .text:0000000000000268 .L0 
+     /tmp/ccs9Di6y.s:644    .text:0000000000000268 .L0 
+     /tmp/ccs9Di6y.s:651    .text:0000000000000270 .L0 
+     /tmp/ccs9Di6y.s:657    .text:0000000000000274 .L0 
+     /tmp/ccs9Di6y.s:658    .text:0000000000000274 .L0 
+     /tmp/ccs9Di6y.s:659    .text:0000000000000274 .L0 
+     /tmp/ccs9Di6y.s:665    .text:0000000000000280 .L0 
+  src/../h/riscv.hpp:267    .text:0000000000000280 .L0 
+     /tmp/ccs9Di6y.s:672    .text:0000000000000284 .L0 
+     /tmp/ccs9Di6y.s:678    .text:0000000000000288 .L0 
+     /tmp/ccs9Di6y.s:679    .text:0000000000000288 .L0 
+     /tmp/ccs9Di6y.s:680    .text:0000000000000288 .L0 
+     /tmp/ccs9Di6y.s:681    .text:0000000000000288 .L0 
+     /tmp/ccs9Di6y.s:687    .text:0000000000000294 .L0 
+  src/../h/riscv.hpp:267    .text:0000000000000294 .L0 
+     /tmp/ccs9Di6y.s:694    .text:0000000000000298 .L0 
+     /tmp/ccs9Di6y.s:700    .text:000000000000029c .L0 
+     /tmp/ccs9Di6y.s:701    .text:000000000000029c .L0 
+     /tmp/ccs9Di6y.s:702    .text:000000000000029c .L0 
+     /tmp/ccs9Di6y.s:708    .text:00000000000002a8 .L0 
+  src/../h/riscv.hpp:267    .text:00000000000002a8 .L0 
+     /tmp/ccs9Di6y.s:715    .text:00000000000002ac .L0 
+     /tmp/ccs9Di6y.s:721    .text:00000000000002b0 .L0 
+     /tmp/ccs9Di6y.s:722    .text:00000000000002b0 .L0 
+     /tmp/ccs9Di6y.s:723    .text:00000000000002b0 .L0 
+     /tmp/ccs9Di6y.s:728    .text:00000000000002b8 .L0 
+     /tmp/ccs9Di6y.s:729    .text:00000000000002b8 .L0 
+  src/../h/riscv.hpp:267    .text:00000000000002b8 .L0 
+     /tmp/ccs9Di6y.s:736    .text:00000000000002bc .L0 
+     /tmp/ccs9Di6y.s:742    .text:00000000000002c0 .L0 
+     /tmp/ccs9Di6y.s:743    .text:00000000000002c0 .L0 
+     /tmp/ccs9Di6y.s:744    .text:00000000000002c0 .L0 
+     /tmp/ccs9Di6y.s:749    .text:00000000000002cc .L0 
+     /tmp/ccs9Di6y.s:752    .text:00000000000002cc .L0 
+     /tmp/ccs9Di6y.s:753    .text:00000000000002cc .L0 
+  src/../h/riscv.hpp:213    .text:00000000000002cc .L0 
+     /tmp/ccs9Di6y.s:765    .text:00000000000002d0 .L0 
+     /tmp/ccs9Di6y.s:766    .text:00000000000002d0 .L0 
+     /tmp/ccs9Di6y.s:767    .text:00000000000002d0 .L0 
+     /tmp/ccs9Di6y.s:777    .text:00000000000002d8 .L0 
+     /tmp/ccs9Di6y.s:778    .text:00000000000002d8 .L0 
+     /tmp/ccs9Di6y.s:783    .text:00000000000002dc .L0 
+  src/../h/riscv.hpp:145    .text:00000000000002dc .L0 
+     /tmp/ccs9Di6y.s:790    .text:00000000000002e0 .L0 
+     /tmp/ccs9Di6y.s:796    .text:00000000000002e4 .L0 
+     /tmp/ccs9Di6y.s:799    .text:00000000000002e4 .L0 
+     /tmp/ccs9Di6y.s:800    .text:00000000000002e4 .L0 
+     /tmp/ccs9Di6y.s:801    .text:00000000000002e4 .L0 
+     /tmp/ccs9Di6y.s:815    .text:00000000000002ec .L0 
+     /tmp/ccs9Di6y.s:816    .text:00000000000002f0 .L0 
+GAS LISTING /tmp/ccs9Di6y.s 			page 32
 
 
-     /tmp/ccvlzG8R.s:4267   .debug_str:0000000000000835 .LASF178
-     /tmp/ccvlzG8R.s:4331   .debug_str:0000000000000aa2 .LASF179
-     /tmp/ccvlzG8R.s:4281   .debug_str:000000000000095c .LASF180
-     /tmp/ccvlzG8R.s:5      .text:0000000000000000 .Ltext0
-     /tmp/ccvlzG8R.s:688    .text:00000000000002b0 .Letext0
-     /tmp/ccvlzG8R.s:3969   .debug_line:0000000000000000 .Ldebug_line0
-     /tmp/ccvlzG8R.s:4081   .debug_str:000000000000033f .LASF0
-     /tmp/ccvlzG8R.s:4119   .debug_str:0000000000000438 .LASF1
-     /tmp/ccvlzG8R.s:4201   .debug_str:000000000000068a .LASF2
-     /tmp/ccvlzG8R.s:4211   .debug_str:00000000000006d2 .LASF4
-     /tmp/ccvlzG8R.s:4093   .debug_str:0000000000000394 .LASF3
-     /tmp/ccvlzG8R.s:3979   .debug_str:0000000000000034 .LASF5
-     /tmp/ccvlzG8R.s:4181   .debug_str:00000000000005ee .LASF6
-     /tmp/ccvlzG8R.s:4109   .debug_str:00000000000003f9 .LASF7
-     /tmp/ccvlzG8R.s:4063   .debug_str:00000000000002a5 .LASF8
-     /tmp/ccvlzG8R.s:4069   .debug_str:00000000000002e5 .LASF9
-     /tmp/ccvlzG8R.s:4009   .debug_str:000000000000012a .LASF10
-     /tmp/ccvlzG8R.s:4055   .debug_str:0000000000000280 .LASF11
-     /tmp/ccvlzG8R.s:4021   .debug_str:0000000000000179 .LASF12
-     /tmp/ccvlzG8R.s:4007   .debug_str:000000000000011a .LASF13
-     /tmp/ccvlzG8R.s:4251   .debug_str:00000000000007ea .LASF14
-     /tmp/ccvlzG8R.s:4049   .debug_str:0000000000000249 .LASF15
-     /tmp/ccvlzG8R.s:4237   .debug_str:000000000000077d .LASF16
-     /tmp/ccvlzG8R.s:4101   .debug_str:00000000000003d8 .LASF181
-     /tmp/ccvlzG8R.s:4117   .debug_str:0000000000000433 .LASF17
-     /tmp/ccvlzG8R.s:4011   .debug_str:0000000000000139 .LASF18
-     /tmp/ccvlzG8R.s:4175   .debug_str:00000000000005c1 .LASF27
-     /tmp/ccvlzG8R.s:3991   .debug_str:0000000000000098 .LASF91
-     /tmp/ccvlzG8R.s:4291   .debug_str:00000000000009b4 .LASF19
-     /tmp/ccvlzG8R.s:4241   .debug_str:000000000000079a .LASF20
-     /tmp/ccvlzG8R.s:4333   .debug_str:0000000000000ab0 .LASF30
-     /tmp/ccvlzG8R.s:4139   .debug_str:00000000000004bb .LASF32
-     /tmp/ccvlzG8R.s:3995   .debug_str:00000000000000d9 .LASF63
-     /tmp/ccvlzG8R.s:4349   .debug_str:0000000000000b21 .LASF65
-     /tmp/ccvlzG8R.s:4357   .debug_str:0000000000000b61 .LASF21
-     /tmp/ccvlzG8R.s:4067   .debug_str:00000000000002c5 .LASF23
-     /tmp/ccvlzG8R.s:4135   .debug_str:000000000000049a .LASF22
-     /tmp/ccvlzG8R.s:4171   .debug_str:0000000000000589 .LASF24
-     /tmp/ccvlzG8R.s:4097   .debug_str:00000000000003b7 .LASF39
-     /tmp/ccvlzG8R.s:4203   .debug_str:0000000000000698 .LASF25
-     /tmp/ccvlzG8R.s:4297   .debug_str:00000000000009cb .LASF26
-     /tmp/ccvlzG8R.s:4061   .debug_str:000000000000029b .LASF28
-     /tmp/ccvlzG8R.s:4019   .debug_str:000000000000016e .LASF29
-     /tmp/ccvlzG8R.s:4343   .debug_str:0000000000000af5 .LASF182
-     /tmp/ccvlzG8R.s:3985   .debug_str:0000000000000051 .LASF183
-     /tmp/ccvlzG8R.s:3973   .debug_str:000000000000000c .LASF31
-     /tmp/ccvlzG8R.s:4221   .debug_str:0000000000000717 .LASF33
-     /tmp/ccvlzG8R.s:4005   .debug_str:0000000000000110 .LASF34
-     /tmp/ccvlzG8R.s:4293   .debug_str:00000000000009be .LASF184
-     /tmp/ccvlzG8R.s:4243   .debug_str:00000000000007a9 .LASF35
-     /tmp/ccvlzG8R.s:4157   .debug_str:0000000000000539 .LASF36
-     /tmp/ccvlzG8R.s:4145   .debug_str:0000000000000506 .LASF37
-     /tmp/ccvlzG8R.s:4329   .debug_str:0000000000000a8f .LASF38
-     /tmp/ccvlzG8R.s:3997   .debug_str:00000000000000de .LASF40
-     /tmp/ccvlzG8R.s:4023   .debug_str:0000000000000189 .LASF185
-     /tmp/ccvlzG8R.s:4115   .debug_str:000000000000042a .LASF41
-     /tmp/ccvlzG8R.s:4279   .debug_str:000000000000093f .LASF42
-GAS LISTING /tmp/ccvlzG8R.s 			page 27
+     /tmp/ccs9Di6y.s:817    .text:00000000000002f0 .L0 
+     /tmp/ccs9Di6y.s:819    .text:00000000000002f4 .L0 
+     /tmp/ccs9Di6y.s:820    .text:00000000000002f4 .L0 
+     /tmp/ccs9Di6y.s:822    .text:00000000000002f8 .L0 
+     /tmp/ccs9Di6y.s:825    .text:00000000000002fc .L0 
+     /tmp/ccs9Di6y.s:827    .text:0000000000000300 .L0 
+     /tmp/ccs9Di6y.s:830    .text:0000000000000304 .L0 
+     /tmp/ccs9Di6y.s:832    .text:0000000000000308 .L0 
+     /tmp/ccs9Di6y.s:834    .text:000000000000030c .L0 
+     /tmp/ccs9Di6y.s:836    .text:0000000000000310 .L0 
+     /tmp/ccs9Di6y.s:838    .text:0000000000000314 .L0 
+     /tmp/ccs9Di6y.s:840    .text:0000000000000318 .L0 
+     /tmp/ccs9Di6y.s:844    .text:000000000000031c .L0 
+     /tmp/ccs9Di6y.s:850    .text:0000000000000320 .L0 
+     /tmp/ccs9Di6y.s:859    .text:0000000000000338 .L0 
+     /tmp/ccs9Di6y.s:896    .text:0000000000000338 .L0 
+     /tmp/ccs9Di6y.s:244    .rodata:0000000000000000 .L11
+     /tmp/ccs9Di6y.s:236    .text:00000000000000e0 .L0 
+     /tmp/ccs9Di6y.s:354    .text:0000000000000114 .L0 
+     /tmp/ccs9Di6y.s:358    .text:0000000000000124 .L0 
+     /tmp/ccs9Di6y.s:417    .text:0000000000000148 .L0 
+     /tmp/ccs9Di6y.s:421    .text:0000000000000158 .L0 
+     /tmp/ccs9Di6y.s:454    .text:0000000000000178 .L0 
+     /tmp/ccs9Di6y.s:458    .text:0000000000000188 .L0 
+     /tmp/ccs9Di6y.s:792    .text:00000000000002e4 .L4
+     /tmp/ccs9Di6y.s:329    .text:00000000000000f8 .L5
+     /tmp/ccs9Di6y.s:809    .text:00000000000002ec .L3
+     /tmp/ccs9Di6y.s:379    .text:000000000000013c .L9
+     /tmp/ccs9Di6y.s:360    .text:000000000000012c .L24
+     /tmp/ccs9Di6y.s:423    .text:0000000000000160 .L25
+     /tmp/ccs9Di6y.s:488    .text:00000000000001c8 .L32
+     /tmp/ccs9Di6y.s:460    .text:0000000000000190 .L27
+     /tmp/ccs9Di6y.s:493    .text:00000000000001d0 .L36
+     /tmp/ccs9Di6y.s:470    .text:00000000000001a0 .L26
+     /tmp/ccs9Di6y.s:504    .text:00000000000001e4 .L28
+     /tmp/ccs9Di6y.s:526    .text:00000000000001f8 .L37
+     /tmp/ccs9Di6y.s:510    .text:00000000000001ec .L29
+     /tmp/ccs9Di6y.s:636    .text:0000000000000268 .L38
+     /tmp/ccs9Di6y.s:620    .text:000000000000025c .L30
+     /tmp/ccs9Di6y.s:346    .text:0000000000000114 .L23
+     /tmp/ccs9Di6y.s:408    .text:0000000000000148 .L22
+     /tmp/ccs9Di6y.s:443    .text:0000000000000174 .L21
+     /tmp/ccs9Di6y.s:543    .text:0000000000000204 .L20
+     /tmp/ccs9Di6y.s:563    .text:0000000000000214 .L19
+     /tmp/ccs9Di6y.s:573    .text:0000000000000220 .L18
+     /tmp/ccs9Di6y.s:582    .text:0000000000000230 .L17
+     /tmp/ccs9Di6y.s:653    .text:0000000000000274 .L16
+     /tmp/ccs9Di6y.s:674    .text:0000000000000288 .L15
+     /tmp/ccs9Di6y.s:696    .text:000000000000029c .L14
+     /tmp/ccs9Di6y.s:717    .text:00000000000002b0 .L13
+     /tmp/ccs9Di6y.s:738    .text:00000000000002c0 .L12
+     /tmp/ccs9Di6y.s:747    .text:00000000000002cc .L10
+     /tmp/ccs9Di6y.s:339    .text:0000000000000108 .LEHB0
+     /tmp/ccs9Di6y.s:46     .text:0000000000000020 .LFB49
+     /tmp/ccs9Di6y.s:477    .text:00000000000001ac .LEHE0
+     /tmp/ccs9Di6y.s:482    .text:00000000000001bc .LEHB1
+     /tmp/ccs9Di6y.s:485    .text:00000000000001c4 .LEHE1
+GAS LISTING /tmp/ccs9Di6y.s 			page 33
 
 
-     /tmp/ccvlzG8R.s:4131   .debug_str:000000000000048d .LASF43
-     /tmp/ccvlzG8R.s:4193   .debug_str:0000000000000650 .LASF44
-     /tmp/ccvlzG8R.s:4177   .debug_str:00000000000005d1 .LASF45
-     /tmp/ccvlzG8R.s:4307   .debug_str:0000000000000a0a .LASF46
-     /tmp/ccvlzG8R.s:4359   .debug_str:0000000000000b6a .LASF47
-     /tmp/ccvlzG8R.s:4141   .debug_str:00000000000004df .LASF48
-     /tmp/ccvlzG8R.s:4225   .debug_str:000000000000073f .LASF49
-     /tmp/ccvlzG8R.s:4013   .debug_str:000000000000013e .LASF50
-     /tmp/ccvlzG8R.s:4191   .debug_str:0000000000000647 .LASF51
-     /tmp/ccvlzG8R.s:4247   .debug_str:00000000000007bf .LASF52
-     /tmp/ccvlzG8R.s:4259   .debug_str:0000000000000814 .LASF186
-     /tmp/ccvlzG8R.s:4263   .debug_str:0000000000000827 .LASF95
-     /tmp/ccvlzG8R.s:4003   .debug_str:000000000000010a .LASF53
-     /tmp/ccvlzG8R.s:4227   .debug_str:000000000000074a .LASF54
-     /tmp/ccvlzG8R.s:4015   .debug_str:000000000000015b .LASF55
-     /tmp/ccvlzG8R.s:3999   .debug_str:00000000000000f5 .LASF56
-     /tmp/ccvlzG8R.s:4315   .debug_str:0000000000000a42 .LASF57
-     /tmp/ccvlzG8R.s:4347   .debug_str:0000000000000b15 .LASF58
-     /tmp/ccvlzG8R.s:4261   .debug_str:000000000000081c .LASF59
-     /tmp/ccvlzG8R.s:4323   .debug_str:0000000000000a59 .LASF60
-     /tmp/ccvlzG8R.s:4209   .debug_str:00000000000006c9 .LASF61
-     /tmp/ccvlzG8R.s:4091   .debug_str:0000000000000378 .LASF62
-     /tmp/ccvlzG8R.s:4037   .debug_str:0000000000000213 .LASF64
-     /tmp/ccvlzG8R.s:3989   .debug_str:0000000000000085 .LASF66
-     /tmp/ccvlzG8R.s:4231   .debug_str:0000000000000758 .LASF67
-     /tmp/ccvlzG8R.s:4207   .debug_str:00000000000006ba .LASF68
-     /tmp/ccvlzG8R.s:4217   .debug_str:00000000000006f3 .LASF81
-     /tmp/ccvlzG8R.s:4167   .debug_str:0000000000000573 .LASF187
-     /tmp/ccvlzG8R.s:4341   .debug_str:0000000000000aef .LASF69
-     /tmp/ccvlzG8R.s:4273   .debug_str:0000000000000911 .LASF70
-     /tmp/ccvlzG8R.s:4265   .debug_str:000000000000082d .LASF188
-     /tmp/ccvlzG8R.s:4089   .debug_str:0000000000000373 .LASF71
-     /tmp/ccvlzG8R.s:4355   .debug_str:0000000000000b52 .LASF72
-     /tmp/ccvlzG8R.s:4025   .debug_str:00000000000001a0 .LASF189
-     /tmp/ccvlzG8R.s:3993   .debug_str:00000000000000b1 .LASF190
-     /tmp/ccvlzG8R.s:4301   .debug_str:00000000000009f6 .LASF161
-     /tmp/ccvlzG8R.s:4257   .debug_str:0000000000000802 .LASF163
-     /tmp/ccvlzG8R.s:4195   .debug_str:000000000000066c .LASF73
-     /tmp/ccvlzG8R.s:4035   .debug_str:000000000000020e .LASF74
-     /tmp/ccvlzG8R.s:4229   .debug_str:0000000000000752 .LASF75
-     /tmp/ccvlzG8R.s:4255   .debug_str:00000000000007fd .LASF76
-     /tmp/ccvlzG8R.s:4283   .debug_str:000000000000097f .LASF77
-     /tmp/ccvlzG8R.s:4041   .debug_str:0000000000000221 .LASF78
-     /tmp/ccvlzG8R.s:4073   .debug_str:00000000000002fe .LASF79
-     /tmp/ccvlzG8R.s:4151   .debug_str:0000000000000522 .LASF80
-     /tmp/ccvlzG8R.s:4001   .debug_str:00000000000000fe .LASF82
-     /tmp/ccvlzG8R.s:4143   .debug_str:00000000000004fa .LASF83
-     /tmp/ccvlzG8R.s:4125   .debug_str:000000000000046d .LASF84
-     /tmp/ccvlzG8R.s:3971   .debug_str:0000000000000000 .LASF85
-     /tmp/ccvlzG8R.s:4039   .debug_str:000000000000021c .LASF86
-     /tmp/ccvlzG8R.s:4147   .debug_str:000000000000050b .LASF87
-     /tmp/ccvlzG8R.s:4253   .debug_str:00000000000007f6 .LASF88
-     /tmp/ccvlzG8R.s:4245   .debug_str:00000000000007ae .LASF89
-     /tmp/ccvlzG8R.s:4277   .debug_str:0000000000000935 .LASF90
-     /tmp/ccvlzG8R.s:4173   .debug_str:00000000000005ad .LASF92
-     /tmp/ccvlzG8R.s:4133   .debug_str:0000000000000495 .LASF93
-     /tmp/ccvlzG8R.s:4311   .debug_str:0000000000000a32 .LASF94
-GAS LISTING /tmp/ccvlzG8R.s 			page 28
+     /tmp/ccs9Di6y.s:843    .text:000000000000031c .L33
+     /tmp/ccs9Di6y.s:501    .text:00000000000001dc .LEHB2
+     /tmp/ccs9Di6y.s:856    .text:0000000000000338 .LEHE2
+     /tmp/ccs9Di6y.s:2995   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+     /tmp/ccs9Di6y.s:4856   .debug_str:000000000000087b .LASF190
+     /tmp/ccs9Di6y.s:4922   .debug_str:0000000000000aee .LASF191
+     /tmp/ccs9Di6y.s:4870   .debug_str:00000000000009a2 .LASF192
+     /tmp/ccs9Di6y.s:5      .text:0000000000000000 .Ltext0
+     /tmp/ccs9Di6y.s:890    .text:0000000000000338 .Letext0
+     /tmp/ccs9Di6y.s:4544   .debug_line:0000000000000000 .Ldebug_line0
+     /tmp/ccs9Di6y.s:4668   .debug_str:0000000000000385 .LASF0
+     /tmp/ccs9Di6y.s:4704   .debug_str:0000000000000479 .LASF1
+     /tmp/ccs9Di6y.s:4788   .debug_str:00000000000006d4 .LASF2
+     /tmp/ccs9Di6y.s:4798   .debug_str:000000000000071c .LASF4
+     /tmp/ccs9Di6y.s:4680   .debug_str:00000000000003da .LASF3
+     /tmp/ccs9Di6y.s:4554   .debug_str:0000000000000034 .LASF5
+     /tmp/ccs9Di6y.s:4770   .debug_str:0000000000000642 .LASF6
+     /tmp/ccs9Di6y.s:4694   .debug_str:000000000000043a .LASF7
+     /tmp/ccs9Di6y.s:4646   .debug_str:00000000000002d1 .LASF8
+     /tmp/ccs9Di6y.s:4654   .debug_str:0000000000000322 .LASF9
+     /tmp/ccs9Di6y.s:4588   .debug_str:0000000000000140 .LASF10
+     /tmp/ccs9Di6y.s:4638   .debug_str:00000000000002ac .LASF11
+     /tmp/ccs9Di6y.s:4602   .debug_str:00000000000001a0 .LASF12
+     /tmp/ccs9Di6y.s:4586   .debug_str:0000000000000130 .LASF13
+     /tmp/ccs9Di6y.s:4836   .debug_str:0000000000000823 .LASF14
+     /tmp/ccs9Di6y.s:4632   .debug_str:0000000000000275 .LASF15
+     /tmp/ccs9Di6y.s:4822   .debug_str:00000000000007b6 .LASF16
+     /tmp/ccs9Di6y.s:4688   .debug_str:000000000000041e .LASF193
+     /tmp/ccs9Di6y.s:4702   .debug_str:0000000000000474 .LASF17
+     /tmp/ccs9Di6y.s:4590   .debug_str:000000000000014f .LASF18
+     /tmp/ccs9Di6y.s:4764   .debug_str:0000000000000615 .LASF27
+     /tmp/ccs9Di6y.s:4568   .debug_str:000000000000009e .LASF109
+     /tmp/ccs9Di6y.s:4884   .debug_str:0000000000000a05 .LASF19
+     /tmp/ccs9Di6y.s:4826   .debug_str:00000000000007d3 .LASF20
+     /tmp/ccs9Di6y.s:4924   .debug_str:0000000000000afc .LASF30
+     /tmp/ccs9Di6y.s:4728   .debug_str:000000000000050f .LASF32
+     /tmp/ccs9Di6y.s:4574   .debug_str:00000000000000ef .LASF63
+     /tmp/ccs9Di6y.s:4942   .debug_str:0000000000000b7b .LASF65
+     /tmp/ccs9Di6y.s:4950   .debug_str:0000000000000bbb .LASF21
+     /tmp/ccs9Di6y.s:4652   .debug_str:0000000000000302 .LASF23
+     /tmp/ccs9Di6y.s:4722   .debug_str:00000000000004e2 .LASF22
+     /tmp/ccs9Di6y.s:4760   .debug_str:00000000000005dd .LASF24
+     /tmp/ccs9Di6y.s:4684   .debug_str:00000000000003fd .LASF39
+     /tmp/ccs9Di6y.s:4790   .debug_str:00000000000006e2 .LASF25
+     /tmp/ccs9Di6y.s:4890   .debug_str:0000000000000a1c .LASF26
+     /tmp/ccs9Di6y.s:4644   .debug_str:00000000000002c7 .LASF28
+     /tmp/ccs9Di6y.s:4600   .debug_str:0000000000000195 .LASF29
+     /tmp/ccs9Di6y.s:4936   .debug_str:0000000000000b4f .LASF194
+     /tmp/ccs9Di6y.s:4560   .debug_str:0000000000000051 .LASF195
+     /tmp/ccs9Di6y.s:4548   .debug_str:000000000000000c .LASF31
+     /tmp/ccs9Di6y.s:4808   .debug_str:0000000000000761 .LASF33
+     /tmp/ccs9Di6y.s:4584   .debug_str:0000000000000126 .LASF34
+     /tmp/ccs9Di6y.s:4886   .debug_str:0000000000000a0f .LASF196
+     /tmp/ccs9Di6y.s:4828   .debug_str:00000000000007e2 .LASF35
+     /tmp/ccs9Di6y.s:4746   .debug_str:000000000000058d .LASF36
+     /tmp/ccs9Di6y.s:4734   .debug_str:000000000000055a .LASF37
+     /tmp/ccs9Di6y.s:4920   .debug_str:0000000000000adb .LASF38
+GAS LISTING /tmp/ccs9Di6y.s 			page 34
 
 
-     /tmp/ccvlzG8R.s:4113   .debug_str:000000000000041f .LASF96
-     /tmp/ccvlzG8R.s:4123   .debug_str:0000000000000464 .LASF97
-     /tmp/ccvlzG8R.s:4337   .debug_str:0000000000000ad2 .LASF98
-     /tmp/ccvlzG8R.s:4071   .debug_str:00000000000002f3 .LASF99
-     /tmp/ccvlzG8R.s:4077   .debug_str:0000000000000316 .LASF100
-     /tmp/ccvlzG8R.s:4219   .debug_str:0000000000000709 .LASF101
-     /tmp/ccvlzG8R.s:4051   .debug_str:000000000000025f .LASF102
-     /tmp/ccvlzG8R.s:4083   .debug_str:000000000000034c .LASF103
-     /tmp/ccvlzG8R.s:4327   .debug_str:0000000000000a75 .LASF104
-     /tmp/ccvlzG8R.s:4289   .debug_str:00000000000009ab .LASF105
-     /tmp/ccvlzG8R.s:4285   .debug_str:0000000000000987 .LASF106
-     /tmp/ccvlzG8R.s:4197   .debug_str:0000000000000676 .LASF107
-     /tmp/ccvlzG8R.s:4165   .debug_str:000000000000055e .LASF108
-     /tmp/ccvlzG8R.s:4183   .debug_str:0000000000000601 .LASF109
-     /tmp/ccvlzG8R.s:4187   .debug_str:0000000000000620 .LASF110
-     /tmp/ccvlzG8R.s:4159   .debug_str:000000000000053e .LASF111
-     /tmp/ccvlzG8R.s:4111   .debug_str:000000000000040c .LASF112
-     /tmp/ccvlzG8R.s:4149   .debug_str:000000000000051a .LASF113
-     /tmp/ccvlzG8R.s:4275   .debug_str:0000000000000921 .LASF114
-     /tmp/ccvlzG8R.s:4155   .debug_str:0000000000000531 .LASF115
-     /tmp/ccvlzG8R.s:4163   .debug_str:000000000000054a .LASF116
-     /tmp/ccvlzG8R.s:4127   .debug_str:0000000000000472 .LASF117
-     /tmp/ccvlzG8R.s:4189   .debug_str:0000000000000633 .LASF118
-     /tmp/ccvlzG8R.s:4353   .debug_str:0000000000000b4a .LASF119
-     /tmp/ccvlzG8R.s:4087   .debug_str:000000000000035f .LASF120
-     /tmp/ccvlzG8R.s:4029   .debug_str:00000000000001dd .LASF121
-     /tmp/ccvlzG8R.s:4213   .debug_str:00000000000006d9 .LASF122
-     /tmp/ccvlzG8R.s:4215   .debug_str:00000000000006ec .LASF123
-     /tmp/ccvlzG8R.s:4047   .debug_str:0000000000000236 .LASF124
-     /tmp/ccvlzG8R.s:4043   .debug_str:0000000000000227 .LASF125
-     /tmp/ccvlzG8R.s:4075   .debug_str:0000000000000304 .LASF126
-     /tmp/ccvlzG8R.s:4085   .debug_str:0000000000000359 .LASF127
-     /tmp/ccvlzG8R.s:4033   .debug_str:00000000000001fc .LASF128
-     /tmp/ccvlzG8R.s:3981   .debug_str:000000000000003b .LASF129
-     /tmp/ccvlzG8R.s:4205   .debug_str:00000000000006a2 .LASF130
-     /tmp/ccvlzG8R.s:4199   .debug_str:000000000000067f .LASF131
-     /tmp/ccvlzG8R.s:4185   .debug_str:0000000000000608 .LASF132
-     /tmp/ccvlzG8R.s:4313   .debug_str:0000000000000a38 .LASF133
-     /tmp/ccvlzG8R.s:4335   .debug_str:0000000000000abc .LASF134
-     /tmp/ccvlzG8R.s:4309   .debug_str:0000000000000a28 .LASF135
-     /tmp/ccvlzG8R.s:4137   .debug_str:00000000000004a5 .LASF136
-     /tmp/ccvlzG8R.s:4233   .debug_str:000000000000075d .LASF137
-     /tmp/ccvlzG8R.s:4129   .debug_str:000000000000047a .LASF138
-     /tmp/ccvlzG8R.s:4059   .debug_str:0000000000000294 .LASF139
-     /tmp/ccvlzG8R.s:4271   .debug_str:00000000000008fe .LASF140
-     /tmp/ccvlzG8R.s:4287   .debug_str:000000000000099c .LASF141
-     /tmp/ccvlzG8R.s:3987   .debug_str:0000000000000069 .LASF142
-     /tmp/ccvlzG8R.s:4319   .debug_str:0000000000000a4f .LASF143
-     /tmp/ccvlzG8R.s:4169   .debug_str:0000000000000578 .LASF144
-     /tmp/ccvlzG8R.s:4099   .debug_str:00000000000003d3 .LASF145
-     /tmp/ccvlzG8R.s:4249   .debug_str:00000000000007d9 .LASF146
-     /tmp/ccvlzG8R.s:4321   .debug_str:0000000000000a54 .LASF147
-     /tmp/ccvlzG8R.s:4095   .debug_str:00000000000003a6 .LASF148
-     /tmp/ccvlzG8R.s:4153   .debug_str:000000000000052c .LASF149
-     /tmp/ccvlzG8R.s:4179   .debug_str:00000000000005dd .LASF150
-     /tmp/ccvlzG8R.s:4161   .debug_str:0000000000000545 .LASF151
-     /tmp/ccvlzG8R.s:3977   .debug_str:0000000000000023 .LASF152
-GAS LISTING /tmp/ccvlzG8R.s 			page 29
+     /tmp/ccs9Di6y.s:4576   .debug_str:00000000000000f4 .LASF40
+     /tmp/ccs9Di6y.s:4604   .debug_str:00000000000001b0 .LASF197
+     /tmp/ccs9Di6y.s:4700   .debug_str:000000000000046b .LASF41
+     /tmp/ccs9Di6y.s:4868   .debug_str:0000000000000985 .LASF42
+     /tmp/ccs9Di6y.s:4716   .debug_str:00000000000004ce .LASF43
+     /tmp/ccs9Di6y.s:4782   .debug_str:00000000000006a4 .LASF44
+     /tmp/ccs9Di6y.s:4766   .debug_str:0000000000000625 .LASF45
+     /tmp/ccs9Di6y.s:4900   .debug_str:0000000000000a5b .LASF46
+     /tmp/ccs9Di6y.s:4952   .debug_str:0000000000000bc4 .LASF47
+     /tmp/ccs9Di6y.s:4730   .debug_str:0000000000000533 .LASF48
+     /tmp/ccs9Di6y.s:4810   .debug_str:0000000000000778 .LASF49
+     /tmp/ccs9Di6y.s:4594   .debug_str:0000000000000165 .LASF50
+     /tmp/ccs9Di6y.s:4780   .debug_str:000000000000069b .LASF51
+     /tmp/ccs9Di6y.s:4832   .debug_str:00000000000007f8 .LASF52
+     /tmp/ccs9Di6y.s:4844   .debug_str:000000000000084d .LASF198
+     /tmp/ccs9Di6y.s:4852   .debug_str:000000000000086d .LASF96
+     /tmp/ccs9Di6y.s:4582   .debug_str:0000000000000120 .LASF53
+     /tmp/ccs9Di6y.s:4812   .debug_str:0000000000000783 .LASF54
+     /tmp/ccs9Di6y.s:4596   .debug_str:0000000000000182 .LASF55
+     /tmp/ccs9Di6y.s:4578   .debug_str:000000000000010b .LASF56
+     /tmp/ccs9Di6y.s:4908   .debug_str:0000000000000a93 .LASF57
+     /tmp/ccs9Di6y.s:4940   .debug_str:0000000000000b6f .LASF58
+     /tmp/ccs9Di6y.s:4846   .debug_str:0000000000000855 .LASF59
+     /tmp/ccs9Di6y.s:4916   .debug_str:0000000000000aaa .LASF60
+     /tmp/ccs9Di6y.s:4796   .debug_str:0000000000000713 .LASF61
+     /tmp/ccs9Di6y.s:4678   .debug_str:00000000000003be .LASF62
+     /tmp/ccs9Di6y.s:4620   .debug_str:000000000000023f .LASF64
+     /tmp/ccs9Di6y.s:4566   .debug_str:000000000000008b .LASF66
+     /tmp/ccs9Di6y.s:4816   .debug_str:0000000000000791 .LASF67
+     /tmp/ccs9Di6y.s:4794   .debug_str:0000000000000704 .LASF68
+     /tmp/ccs9Di6y.s:4804   .debug_str:000000000000073d .LASF81
+     /tmp/ccs9Di6y.s:4756   .debug_str:00000000000005c7 .LASF199
+     /tmp/ccs9Di6y.s:4934   .debug_str:0000000000000b49 .LASF69
+     /tmp/ccs9Di6y.s:4862   .debug_str:0000000000000957 .LASF70
+     /tmp/ccs9Di6y.s:4854   .debug_str:0000000000000873 .LASF200
+     /tmp/ccs9Di6y.s:4676   .debug_str:00000000000003b9 .LASF71
+     /tmp/ccs9Di6y.s:4948   .debug_str:0000000000000bac .LASF72
+     /tmp/ccs9Di6y.s:4608   .debug_str:00000000000001cc .LASF201
+     /tmp/ccs9Di6y.s:4570   .debug_str:00000000000000b7 .LASF202
+     /tmp/ccs9Di6y.s:4894   .debug_str:0000000000000a47 .LASF163
+     /tmp/ccs9Di6y.s:4842   .debug_str:000000000000083b .LASF165
+     /tmp/ccs9Di6y.s:4618   .debug_str:000000000000023a .LASF73
+     /tmp/ccs9Di6y.s:4814   .debug_str:000000000000078b .LASF74
+     /tmp/ccs9Di6y.s:4840   .debug_str:0000000000000836 .LASF75
+     /tmp/ccs9Di6y.s:4874   .debug_str:00000000000009ca .LASF76
+     /tmp/ccs9Di6y.s:4624   .debug_str:000000000000024d .LASF77
+     /tmp/ccs9Di6y.s:4660   .debug_str:000000000000034e .LASF78
+     /tmp/ccs9Di6y.s:4740   .debug_str:0000000000000576 .LASF79
+     /tmp/ccs9Di6y.s:4880   .debug_str:00000000000009f6 .LASF80
+     /tmp/ccs9Di6y.s:4580   .debug_str:0000000000000114 .LASF82
+     /tmp/ccs9Di6y.s:4732   .debug_str:000000000000054e .LASF83
+     /tmp/ccs9Di6y.s:4710   .debug_str:00000000000004ae .LASF84
+     /tmp/ccs9Di6y.s:4546   .debug_str:0000000000000000 .LASF85
+     /tmp/ccs9Di6y.s:4622   .debug_str:0000000000000248 .LASF86
+     /tmp/ccs9Di6y.s:4736   .debug_str:000000000000055f .LASF87
+     /tmp/ccs9Di6y.s:4838   .debug_str:000000000000082f .LASF88
+     /tmp/ccs9Di6y.s:4830   .debug_str:00000000000007e7 .LASF89
+GAS LISTING /tmp/ccs9Di6y.s 			page 35
 
 
-     /tmp/ccvlzG8R.s:4103   .debug_str:00000000000003de .LASF153
-     /tmp/ccvlzG8R.s:4107   .debug_str:00000000000003e8 .LASF154
-     /tmp/ccvlzG8R.s:4325   .debug_str:0000000000000a70 .LASF155
-     /tmp/ccvlzG8R.s:4079   .debug_str:000000000000032e .LASF156
-     /tmp/ccvlzG8R.s:4105   .debug_str:00000000000003e3 .LASF157
-     /tmp/ccvlzG8R.s:4223   .debug_str:000000000000072e .LASF158
-     /tmp/ccvlzG8R.s:4295   .debug_str:00000000000009c3 .LASF159
-     /tmp/ccvlzG8R.s:4339   .debug_str:0000000000000adb .LASF160
-     /tmp/ccvlzG8R.s:4345   .debug_str:0000000000000b09 .LASF162
-     /tmp/ccvlzG8R.s:4121   .debug_str:000000000000044b .LASF164
-     /tmp/ccvlzG8R.s:4045   .debug_str:000000000000022d .LASF165
-     /tmp/ccvlzG8R.s:658    .text:00000000000002b0 .LFE52
-     /tmp/ccvlzG8R.s:4239   .debug_str:0000000000000793 .LASF166
-     /tmp/ccvlzG8R.s:3714   .debug_loc:0000000000000000 .LLST0
-     /tmp/ccvlzG8R.s:3735   .debug_loc:000000000000005e .LLST1
-     /tmp/ccvlzG8R.s:3754   .debug_loc:00000000000000ba .LLST2
-     /tmp/ccvlzG8R.s:3765   .debug_loc:00000000000000f0 .LLST3
-     /tmp/ccvlzG8R.s:3776   .debug_loc:0000000000000126 .LLST4
-     /tmp/ccvlzG8R.s:4269   .debug_str:00000000000008f9 .LASF167
-     /tmp/ccvlzG8R.s:3787   .debug_loc:000000000000015c .LLST5
-     /tmp/ccvlzG8R.s:4317   .debug_str:0000000000000a47 .LASF168
-     /tmp/ccvlzG8R.s:3802   .debug_loc:00000000000001a5 .LLST6
-     /tmp/ccvlzG8R.s:3959   .debug_ranges:0000000000000000 .Ldebug_ranges0
-     /tmp/ccvlzG8R.s:3817   .debug_loc:00000000000001ee .LLST7
-     /tmp/ccvlzG8R.s:3824   .debug_loc:0000000000000211 .LLST8
-     /tmp/ccvlzG8R.s:3983   .debug_str:0000000000000046 .LASF169
-     /tmp/ccvlzG8R.s:3839   .debug_loc:000000000000025a .LLST9
-     /tmp/ccvlzG8R.s:186    .text:00000000000000b8 .LBB67
-     /tmp/ccvlzG8R.s:202    .text:00000000000000c4 .LBE67
-     /tmp/ccvlzG8R.s:207    .text:00000000000000c8 .LBB69
-     /tmp/ccvlzG8R.s:223    .text:00000000000000d4 .LBE69
-     /tmp/ccvlzG8R.s:290    .text:0000000000000128 .LBB71
-     /tmp/ccvlzG8R.s:301    .text:000000000000012c .LBE71
-     /tmp/ccvlzG8R.s:3854   .debug_loc:00000000000002a3 .LLST10
-     /tmp/ccvlzG8R.s:303    .text:000000000000012c .LBB73
-     /tmp/ccvlzG8R.s:316    .text:0000000000000134 .LBE73
-     /tmp/ccvlzG8R.s:3861   .debug_loc:00000000000002c6 .LLST11
-     /tmp/ccvlzG8R.s:321    .text:0000000000000138 .LBB75
-     /tmp/ccvlzG8R.s:332    .text:000000000000013c .LBE75
-     /tmp/ccvlzG8R.s:3870   .debug_loc:00000000000002ec .LLST12
-     /tmp/ccvlzG8R.s:334    .text:000000000000013c .LBB77
-     /tmp/ccvlzG8R.s:349    .text:0000000000000148 .LBE77
-     /tmp/ccvlzG8R.s:3877   .debug_loc:000000000000030f .LLST13
-     /tmp/ccvlzG8R.s:352    .text:0000000000000148 .LBB79
-     /tmp/ccvlzG8R.s:366    .text:0000000000000160 .LBE79
-     /tmp/ccvlzG8R.s:372    .text:000000000000016c .LBB81
-     /tmp/ccvlzG8R.s:384    .text:0000000000000170 .LBE81
-     /tmp/ccvlzG8R.s:386    .text:0000000000000170 .LBB83
-     /tmp/ccvlzG8R.s:397    .text:0000000000000174 .LBE83
-     /tmp/ccvlzG8R.s:3885   .debug_loc:0000000000000333 .LLST15
-     /tmp/ccvlzG8R.s:399    .text:0000000000000174 .LBB85
-     /tmp/ccvlzG8R.s:410    .text:0000000000000178 .LBE85
-     /tmp/ccvlzG8R.s:3892   .debug_loc:0000000000000356 .LLST16
-     /tmp/ccvlzG8R.s:412    .text:0000000000000178 .LBB87
-     /tmp/ccvlzG8R.s:427    .text:0000000000000184 .LBE87
-     /tmp/ccvlzG8R.s:3899   .debug_loc:0000000000000379 .LLST17
-     /tmp/ccvlzG8R.s:430    .text:0000000000000184 .LBB89
-GAS LISTING /tmp/ccvlzG8R.s 			page 30
+     /tmp/ccs9Di6y.s:4564   .debug_str:0000000000000085 .LASF90
+     /tmp/ccs9Di6y.s:4572   .debug_str:00000000000000df .LASF91
+     /tmp/ccs9Di6y.s:4866   .debug_str:000000000000097b .LASF92
+     /tmp/ccs9Di6y.s:4762   .debug_str:0000000000000601 .LASF93
+     /tmp/ccs9Di6y.s:4720   .debug_str:00000000000004dd .LASF94
+     /tmp/ccs9Di6y.s:4904   .debug_str:0000000000000a83 .LASF95
+     /tmp/ccs9Di6y.s:4698   .debug_str:0000000000000460 .LASF97
+     /tmp/ccs9Di6y.s:4708   .debug_str:00000000000004a5 .LASF98
+     /tmp/ccs9Di6y.s:4928   .debug_str:0000000000000b1e .LASF99
+     /tmp/ccs9Di6y.s:4658   .debug_str:0000000000000343 .LASF100
+     /tmp/ccs9Di6y.s:4666   .debug_str:000000000000036d .LASF101
+     /tmp/ccs9Di6y.s:4806   .debug_str:0000000000000753 .LASF102
+     /tmp/ccs9Di6y.s:4634   .debug_str:000000000000028b .LASF103
+     /tmp/ccs9Di6y.s:4670   .debug_str:0000000000000392 .LASF104
+     /tmp/ccs9Di6y.s:4918   .debug_str:0000000000000ac1 .LASF105
+     /tmp/ccs9Di6y.s:4882   .debug_str:00000000000009fc .LASF106
+     /tmp/ccs9Di6y.s:4876   .debug_str:00000000000009d2 .LASF107
+     /tmp/ccs9Di6y.s:4784   .debug_str:00000000000006c0 .LASF108
+     /tmp/ccs9Di6y.s:4754   .debug_str:00000000000005b2 .LASF110
+     /tmp/ccs9Di6y.s:4772   .debug_str:0000000000000655 .LASF111
+     /tmp/ccs9Di6y.s:4776   .debug_str:0000000000000674 .LASF112
+     /tmp/ccs9Di6y.s:4748   .debug_str:0000000000000592 .LASF113
+     /tmp/ccs9Di6y.s:4696   .debug_str:000000000000044d .LASF114
+     /tmp/ccs9Di6y.s:4738   .debug_str:000000000000056e .LASF115
+     /tmp/ccs9Di6y.s:4864   .debug_str:0000000000000967 .LASF116
+     /tmp/ccs9Di6y.s:4744   .debug_str:0000000000000585 .LASF117
+     /tmp/ccs9Di6y.s:4752   .debug_str:000000000000059e .LASF118
+     /tmp/ccs9Di6y.s:4712   .debug_str:00000000000004b3 .LASF119
+     /tmp/ccs9Di6y.s:4778   .debug_str:0000000000000687 .LASF120
+     /tmp/ccs9Di6y.s:4946   .debug_str:0000000000000ba4 .LASF121
+     /tmp/ccs9Di6y.s:4674   .debug_str:00000000000003a5 .LASF122
+     /tmp/ccs9Di6y.s:4612   .debug_str:0000000000000209 .LASF123
+     /tmp/ccs9Di6y.s:4800   .debug_str:0000000000000723 .LASF124
+     /tmp/ccs9Di6y.s:4802   .debug_str:0000000000000736 .LASF125
+     /tmp/ccs9Di6y.s:4630   .debug_str:0000000000000262 .LASF126
+     /tmp/ccs9Di6y.s:4626   .debug_str:0000000000000253 .LASF127
+     /tmp/ccs9Di6y.s:4664   .debug_str:000000000000035b .LASF128
+     /tmp/ccs9Di6y.s:4672   .debug_str:000000000000039f .LASF129
+     /tmp/ccs9Di6y.s:4616   .debug_str:0000000000000228 .LASF130
+     /tmp/ccs9Di6y.s:4556   .debug_str:000000000000003b .LASF131
+     /tmp/ccs9Di6y.s:4792   .debug_str:00000000000006ec .LASF132
+     /tmp/ccs9Di6y.s:4786   .debug_str:00000000000006c9 .LASF133
+     /tmp/ccs9Di6y.s:4774   .debug_str:000000000000065c .LASF134
+     /tmp/ccs9Di6y.s:4906   .debug_str:0000000000000a89 .LASF135
+     /tmp/ccs9Di6y.s:4926   .debug_str:0000000000000b08 .LASF136
+     /tmp/ccs9Di6y.s:4902   .debug_str:0000000000000a79 .LASF137
+     /tmp/ccs9Di6y.s:4726   .debug_str:00000000000004f9 .LASF138
+     /tmp/ccs9Di6y.s:4818   .debug_str:0000000000000796 .LASF139
+     /tmp/ccs9Di6y.s:4714   .debug_str:00000000000004bb .LASF140
+     /tmp/ccs9Di6y.s:4642   .debug_str:00000000000002c0 .LASF141
+     /tmp/ccs9Di6y.s:4860   .debug_str:0000000000000944 .LASF142
+     /tmp/ccs9Di6y.s:4878   .debug_str:00000000000009e7 .LASF143
+     /tmp/ccs9Di6y.s:4562   .debug_str:0000000000000069 .LASF144
+     /tmp/ccs9Di6y.s:4912   .debug_str:0000000000000aa0 .LASF145
+     /tmp/ccs9Di6y.s:4758   .debug_str:00000000000005cc .LASF146
+     /tmp/ccs9Di6y.s:4686   .debug_str:0000000000000419 .LASF147
+     /tmp/ccs9Di6y.s:4834   .debug_str:0000000000000812 .LASF148
+GAS LISTING /tmp/ccs9Di6y.s 			page 36
 
 
-     /tmp/ccvlzG8R.s:443    .text:000000000000019c .LBE89
-     /tmp/ccvlzG8R.s:448    .text:00000000000001a8 .LBB91
-     /tmp/ccvlzG8R.s:462    .text:00000000000001b0 .LBE91
-     /tmp/ccvlzG8R.s:3907   .debug_loc:000000000000039d .LLST18
-     /tmp/ccvlzG8R.s:467    .text:00000000000001b4 .LBB93
-     /tmp/ccvlzG8R.s:480    .text:00000000000001cc .LBE93
-     /tmp/ccvlzG8R.s:530    .text:0000000000000228 .LBB95
-     /tmp/ccvlzG8R.s:545    .text:0000000000000234 .LBE95
-     /tmp/ccvlzG8R.s:3914   .debug_loc:00000000000003c0 .LLST19
-     /tmp/ccvlzG8R.s:547    .text:0000000000000234 .LBB97
-     /tmp/ccvlzG8R.s:562    .text:0000000000000240 .LBE97
-     /tmp/ccvlzG8R.s:3922   .debug_loc:00000000000003e4 .LLST20
-     /tmp/ccvlzG8R.s:568    .text:0000000000000248 .LBB99
-     /tmp/ccvlzG8R.s:582    .text:0000000000000250 .LBE99
-     /tmp/ccvlzG8R.s:3931   .debug_loc:0000000000000409 .LLST21
-     /tmp/ccvlzG8R.s:594    .text:000000000000025c .LBB101
-     /tmp/ccvlzG8R.s:608    .text:0000000000000264 .LBE101
-     /tmp/ccvlzG8R.s:3938   .debug_loc:000000000000042c .LLST22
-     /tmp/ccvlzG8R.s:280    .text:000000000000011c .LVL12
-     /tmp/ccvlzG8R.s:370    .text:000000000000016c .LVL23
-     /tmp/ccvlzG8R.s:447    .text:00000000000001a8 .LVL30
-     /tmp/ccvlzG8R.s:484    .text:00000000000001d8 .LVL34
-     /tmp/ccvlzG8R.s:493    .text:00000000000001e8 .LVL36
-     /tmp/ccvlzG8R.s:501    .text:0000000000000200 .LVL37
-     /tmp/ccvlzG8R.s:520    .text:0000000000000220 .LVL40
-     /tmp/ccvlzG8R.s:567    .text:0000000000000248 .LVL44
-     /tmp/ccvlzG8R.s:587    .text:0000000000000258 .LVL46
-     /tmp/ccvlzG8R.s:650    .text:00000000000002a4 .LVL55
-     /tmp/ccvlzG8R.s:76     .text:0000000000000050 .LBB55
-     /tmp/ccvlzG8R.s:93     .text:000000000000005c .LBE55
-     /tmp/ccvlzG8R.s:95     .text:000000000000005c .LBB57
-     /tmp/ccvlzG8R.s:111    .text:0000000000000068 .LBE57
-     /tmp/ccvlzG8R.s:113    .text:0000000000000068 .LBB59
-     /tmp/ccvlzG8R.s:129    .text:0000000000000074 .LBE59
-     /tmp/ccvlzG8R.s:131    .text:0000000000000074 .LBB61
-     /tmp/ccvlzG8R.s:147    .text:0000000000000080 .LBE61
-     /tmp/ccvlzG8R.s:149    .text:0000000000000080 .LBB63
-     /tmp/ccvlzG8R.s:165    .text:000000000000008c .LBE63
-     /tmp/ccvlzG8R.s:653    .text:00000000000002b0 .LVL56
-     /tmp/ccvlzG8R.s:10     .text:0000000000000000 .LFB51
-     /tmp/ccvlzG8R.s:40     .text:0000000000000020 .LFE51
-     /tmp/ccvlzG8R.s:4303   .debug_str:00000000000009fe .LASF170
-     /tmp/ccvlzG8R.s:4017   .debug_str:0000000000000165 .LASF171
-     /tmp/ccvlzG8R.s:4027   .debug_str:00000000000001ae .LASF191
-     /tmp/ccvlzG8R.s:4057   .debug_str:000000000000028f .LASF192
-     /tmp/ccvlzG8R.s:4235   .debug_str:0000000000000764 .LASF193
-     /tmp/ccvlzG8R.s:4065   .debug_str:00000000000002b5 .LASF194
-     /tmp/ccvlzG8R.s:4053   .debug_str:000000000000027a .LASF172
-     /tmp/ccvlzG8R.s:4351   .debug_str:0000000000000b3d .LASF174
-     /tmp/ccvlzG8R.s:4305   .debug_str:0000000000000a03 .LASF173
-     /tmp/ccvlzG8R.s:3975   .debug_str:0000000000000013 .LASF175
-     /tmp/ccvlzG8R.s:4299   .debug_str:00000000000009e7 .LASF176
-     /tmp/ccvlzG8R.s:4031   .debug_str:00000000000001e4 .LASF177
-     /tmp/ccvlzG8R.s:91     .text:000000000000005c .LVL0
-     /tmp/ccvlzG8R.s:179    .text:00000000000000b0 .LVL5
-     /tmp/ccvlzG8R.s:195    .text:00000000000000bc .LVL6
-     /tmp/ccvlzG8R.s:265    .text:0000000000000104 .LVL10
-GAS LISTING /tmp/ccvlzG8R.s 			page 31
+     /tmp/ccs9Di6y.s:4914   .debug_str:0000000000000aa5 .LASF149
+     /tmp/ccs9Di6y.s:4682   .debug_str:00000000000003ec .LASF150
+     /tmp/ccs9Di6y.s:4742   .debug_str:0000000000000580 .LASF151
+     /tmp/ccs9Di6y.s:4768   .debug_str:0000000000000631 .LASF152
+     /tmp/ccs9Di6y.s:4750   .debug_str:0000000000000599 .LASF153
+     /tmp/ccs9Di6y.s:4552   .debug_str:0000000000000023 .LASF154
+     /tmp/ccs9Di6y.s:4690   .debug_str:0000000000000424 .LASF155
+     /tmp/ccs9Di6y.s:4692   .debug_str:0000000000000429 .LASF156
+     /tmp/ccs9Di6y.s:4606   .debug_str:00000000000001c7 .LASF157
+     /tmp/ccs9Di6y.s:4650   .debug_str:00000000000002f1 .LASF158
+     /tmp/ccs9Di6y.s:4872   .debug_str:00000000000009c5 .LASF159
+     /tmp/ccs9Di6y.s:4592   .debug_str:0000000000000154 .LASF160
+     /tmp/ccs9Di6y.s:4888   .debug_str:0000000000000a14 .LASF161
+     /tmp/ccs9Di6y.s:4932   .debug_str:0000000000000b35 .LASF162
+     /tmp/ccs9Di6y.s:4938   .debug_str:0000000000000b63 .LASF164
+     /tmp/ccs9Di6y.s:4706   .debug_str:000000000000048c .LASF166
+     /tmp/ccs9Di6y.s:4628   .debug_str:0000000000000259 .LASF167
+     /tmp/ccs9Di6y.s:4640   .debug_str:00000000000002bb .LASF175
+     /tmp/ccs9Di6y.s:4656   .debug_str:0000000000000330 .LASF177
+     /tmp/ccs9Di6y.s:860    .text:0000000000000338 .LFE49
+     /tmp/ccs9Di6y.s:4824   .debug_str:00000000000007cc .LASF168
+     /tmp/ccs9Di6y.s:4212   .debug_loc:0000000000000000 .LLST0
+     /tmp/ccs9Di6y.s:4233   .debug_loc:000000000000005e .LLST1
+     /tmp/ccs9Di6y.s:4248   .debug_loc:00000000000000a7 .LLST2
+     /tmp/ccs9Di6y.s:4259   .debug_loc:00000000000000dd .LLST3
+     /tmp/ccs9Di6y.s:4278   .debug_loc:0000000000000139 .LLST4
+     /tmp/ccs9Di6y.s:4858   .debug_str:000000000000093f .LASF169
+     /tmp/ccs9Di6y.s:4289   .debug_loc:000000000000016f .LLST5
+     /tmp/ccs9Di6y.s:4910   .debug_str:0000000000000a98 .LASF170
+     /tmp/ccs9Di6y.s:4304   .debug_loc:00000000000001b8 .LLST6
+     /tmp/ccs9Di6y.s:4534   .debug_ranges:0000000000000000 .Ldebug_ranges0
+     /tmp/ccs9Di6y.s:4319   .debug_loc:0000000000000201 .LLST7
+     /tmp/ccs9Di6y.s:4326   .debug_loc:0000000000000224 .LLST8
+     /tmp/ccs9Di6y.s:4558   .debug_str:0000000000000046 .LASF171
+     /tmp/ccs9Di6y.s:4341   .debug_loc:000000000000026d .LLST9
+     /tmp/ccs9Di6y.s:4850   .debug_str:0000000000000865 .LASF172
+     /tmp/ccs9Di6y.s:4356   .debug_loc:00000000000002b6 .LLST10
+     /tmp/ccs9Di6y.s:4363   .debug_loc:00000000000002d9 .LLST11
+     /tmp/ccs9Di6y.s:4370   .debug_loc:00000000000002fc .LLST12
+     /tmp/ccs9Di6y.s:4377   .debug_loc:000000000000031f .LLST13
+     /tmp/ccs9Di6y.s:186    .text:00000000000000b8 .LBB85
+     /tmp/ccs9Di6y.s:202    .text:00000000000000c4 .LBE85
+     /tmp/ccs9Di6y.s:207    .text:00000000000000c8 .LBB87
+     /tmp/ccs9Di6y.s:223    .text:00000000000000d4 .LBE87
+     /tmp/ccs9Di6y.s:349    .text:0000000000000114 .LBB89
+     /tmp/ccs9Di6y.s:363    .text:000000000000012c .LBE89
+     /tmp/ccs9Di6y.s:369    .text:0000000000000138 .LBB91
+     /tmp/ccs9Di6y.s:381    .text:000000000000013c .LBE91
+     /tmp/ccs9Di6y.s:383    .text:000000000000013c .LBB93
+     /tmp/ccs9Di6y.s:394    .text:0000000000000140 .LBE93
+     /tmp/ccs9Di6y.s:4384   .debug_loc:0000000000000342 .LLST15
+     /tmp/ccs9Di6y.s:396    .text:0000000000000140 .LBB95
+     /tmp/ccs9Di6y.s:410    .text:0000000000000148 .LBE95
+     /tmp/ccs9Di6y.s:4391   .debug_loc:0000000000000365 .LLST16
+     /tmp/ccs9Di6y.s:413    .text:0000000000000148 .LBB97
+     /tmp/ccs9Di6y.s:426    .text:0000000000000160 .LBE97
+     /tmp/ccs9Di6y.s:431    .text:000000000000016c .LBB99
+GAS LISTING /tmp/ccs9Di6y.s 			page 37
 
 
-     /tmp/ccvlzG8R.s:590    .text:000000000000025c .LVL47
-     /tmp/ccvlzG8R.s:604    .text:0000000000000264 .LVL49
-     /tmp/ccvlzG8R.s:109    .text:0000000000000068 .LVL1
-     /tmp/ccvlzG8R.s:234    .text:00000000000000ec .LVL9
-     /tmp/ccvlzG8R.s:270    .text:0000000000000108 .LVL11
-     /tmp/ccvlzG8R.s:283    .text:0000000000000120 .LVL13
-     /tmp/ccvlzG8R.s:308    .text:0000000000000130 .LVL16
-     /tmp/ccvlzG8R.s:599    .text:0000000000000260 .LVL48
-     /tmp/ccvlzG8R.s:127    .text:0000000000000074 .LVL2
-     /tmp/ccvlzG8R.s:620    .text:0000000000000270 .LVL50
-     /tmp/ccvlzG8R.s:640    .text:0000000000000294 .LVL53
-     /tmp/ccvlzG8R.s:644    .text:0000000000000298 .LVL54
-     /tmp/ccvlzG8R.s:145    .text:0000000000000080 .LVL3
-     /tmp/ccvlzG8R.s:626    .text:0000000000000278 .LVL52
-     /tmp/ccvlzG8R.s:163    .text:000000000000008c .LVL4
-     /tmp/ccvlzG8R.s:623    .text:0000000000000274 .LVL51
-     /tmp/ccvlzG8R.s:205    .text:00000000000000c8 .LVL7
-     /tmp/ccvlzG8R.s:221    .text:00000000000000d4 .LVL8
-     /tmp/ccvlzG8R.s:380    .text:0000000000000170 .LVL24
-     /tmp/ccvlzG8R.s:486    .text:00000000000001dc .LVL35
-     /tmp/ccvlzG8R.s:504    .text:0000000000000204 .LVL38
-     /tmp/ccvlzG8R.s:509    .text:000000000000020c .LVL39
-     /tmp/ccvlzG8R.s:559    .text:0000000000000240 .LVL43
-     /tmp/ccvlzG8R.s:289    .text:0000000000000128 .LVL14
-     /tmp/ccvlzG8R.s:298    .text:000000000000012c .LVL15
-     /tmp/ccvlzG8R.s:313    .text:0000000000000134 .LVL17
-     /tmp/ccvlzG8R.s:320    .text:0000000000000138 .LVL18
-     /tmp/ccvlzG8R.s:329    .text:000000000000013c .LVL19
-     /tmp/ccvlzG8R.s:346    .text:0000000000000148 .LVL20
-     /tmp/ccvlzG8R.s:394    .text:0000000000000174 .LVL25
-     /tmp/ccvlzG8R.s:407    .text:0000000000000178 .LVL26
-     /tmp/ccvlzG8R.s:424    .text:0000000000000184 .LVL27
-     /tmp/ccvlzG8R.s:459    .text:00000000000001b0 .LVL31
-     /tmp/ccvlzG8R.s:529    .text:0000000000000228 .LVL41
-     /tmp/ccvlzG8R.s:542    .text:0000000000000234 .LVL42
-     /tmp/ccvlzG8R.s:579    .text:0000000000000250 .LVL45
-     /tmp/ccvlzG8R.s:696    .debug_info:0000000000000000 .Ldebug_info0
-     /tmp/ccvlzG8R.s:182    .text:00000000000000b8 .LBB66
-     /tmp/ccvlzG8R.s:267    .text:0000000000000104 .LBE66
-     /tmp/ccvlzG8R.s:274    .text:0000000000000114 .LBB103
-     /tmp/ccvlzG8R.s:609    .text:0000000000000264 .LBE103
-     /tmp/ccvlzG8R.s:646    .text:0000000000000298 .LBB104
-     /tmp/ccvlzG8R.s:655    .text:00000000000002b0 .LBE104
-     /tmp/ccvlzG8R.s:661    .gcc_except_table:0000000000000000 .LLSDA52
+     /tmp/ccs9Di6y.s:445    .text:0000000000000174 .LBE99
+     /tmp/ccs9Di6y.s:4398   .debug_loc:0000000000000388 .LLST17
+     /tmp/ccs9Di6y.s:450    .text:0000000000000178 .LBB101
+     /tmp/ccs9Di6y.s:463    .text:0000000000000190 .LBE101
+     /tmp/ccs9Di6y.s:513    .text:00000000000001ec .LBB103
+     /tmp/ccs9Di6y.s:528    .text:00000000000001f8 .LBE103
+     /tmp/ccs9Di6y.s:4405   .debug_loc:00000000000003ab .LLST18
+     /tmp/ccs9Di6y.s:530    .text:00000000000001f8 .LBB105
+     /tmp/ccs9Di6y.s:545    .text:0000000000000204 .LBE105
+     /tmp/ccs9Di6y.s:4413   .debug_loc:00000000000003cf .LLST19
+     /tmp/ccs9Di6y.s:551    .text:000000000000020c .LBB107
+     /tmp/ccs9Di6y.s:565    .text:0000000000000214 .LBE107
+     /tmp/ccs9Di6y.s:4422   .debug_loc:00000000000003f4 .LLST20
+     /tmp/ccs9Di6y.s:594    .text:0000000000000240 .LBB109
+     /tmp/ccs9Di6y.s:615    .text:0000000000000254 .LBE109
+     /tmp/ccs9Di6y.s:4429   .debug_loc:0000000000000417 .LLST21
+     /tmp/ccs9Di6y.s:4436   .debug_loc:000000000000043a .LLST22
+     /tmp/ccs9Di6y.s:596    .text:0000000000000240 .LBB111
+     /tmp/ccs9Di6y.s:604    .text:0000000000000248 .LBE111
+     /tmp/ccs9Di6y.s:4443   .debug_loc:000000000000045d .LLST23
+     /tmp/ccs9Di6y.s:623    .text:000000000000025c .LBB113
+     /tmp/ccs9Di6y.s:638    .text:0000000000000268 .LBE113
+     /tmp/ccs9Di6y.s:4452   .debug_loc:0000000000000482 .LLST24
+     /tmp/ccs9Di6y.s:640    .text:0000000000000268 .LBB115
+     /tmp/ccs9Di6y.s:655    .text:0000000000000274 .LBE115
+     /tmp/ccs9Di6y.s:4460   .debug_loc:00000000000004a6 .LLST25
+     /tmp/ccs9Di6y.s:662    .text:0000000000000280 .LBB117
+     /tmp/ccs9Di6y.s:676    .text:0000000000000288 .LBE117
+     /tmp/ccs9Di6y.s:4469   .debug_loc:00000000000004cb .LLST26
+     /tmp/ccs9Di6y.s:684    .text:0000000000000294 .LBB119
+     /tmp/ccs9Di6y.s:698    .text:000000000000029c .LBE119
+     /tmp/ccs9Di6y.s:4476   .debug_loc:00000000000004ee .LLST27
+     /tmp/ccs9Di6y.s:705    .text:00000000000002a8 .LBB121
+     /tmp/ccs9Di6y.s:719    .text:00000000000002b0 .LBE121
+     /tmp/ccs9Di6y.s:4483   .debug_loc:0000000000000511 .LLST28
+     /tmp/ccs9Di6y.s:726    .text:00000000000002b8 .LBB123
+     /tmp/ccs9Di6y.s:740    .text:00000000000002c0 .LBE123
+     /tmp/ccs9Di6y.s:750    .text:00000000000002cc .LBB125
+     /tmp/ccs9Di6y.s:761    .text:00000000000002d0 .LBE125
+     /tmp/ccs9Di6y.s:4490   .debug_loc:0000000000000534 .LLST30
+     /tmp/ccs9Di6y.s:763    .text:00000000000002d0 .LBB127
+     /tmp/ccs9Di6y.s:775    .text:00000000000002d8 .LBE127
+     /tmp/ccs9Di6y.s:4497   .debug_loc:0000000000000557 .LLST31
+     /tmp/ccs9Di6y.s:780    .text:00000000000002dc .LBB129
+     /tmp/ccs9Di6y.s:794    .text:00000000000002e4 .LBE129
+     /tmp/ccs9Di6y.s:4506   .debug_loc:000000000000057d .LLST32
+     /tmp/ccs9Di6y.s:797    .text:00000000000002e4 .LBB131
+     /tmp/ccs9Di6y.s:811    .text:00000000000002ec .LBE131
+     /tmp/ccs9Di6y.s:4513   .debug_loc:00000000000005a0 .LLST33
+     /tmp/ccs9Di6y.s:342    .text:0000000000000110 .LVL11
+     /tmp/ccs9Di6y.s:367    .text:0000000000000138 .LVL15
+     /tmp/ccs9Di6y.s:430    .text:000000000000016c .LVL21
+     /tmp/ccs9Di6y.s:467    .text:000000000000019c .LVL25
+     /tmp/ccs9Di6y.s:476    .text:00000000000001ac .LVL27
+     /tmp/ccs9Di6y.s:484    .text:00000000000001c4 .LVL28
+     /tmp/ccs9Di6y.s:503    .text:00000000000001e4 .LVL31
+     /tmp/ccs9Di6y.s:550    .text:000000000000020c .LVL35
+GAS LISTING /tmp/ccs9Di6y.s 			page 38
+
+
+     /tmp/ccs9Di6y.s:570    .text:000000000000021c .LVL37
+     /tmp/ccs9Di6y.s:579    .text:000000000000022c .LVL38
+     /tmp/ccs9Di6y.s:593    .text:0000000000000240 .LVL40
+     /tmp/ccs9Di6y.s:661    .text:0000000000000280 .LVL46
+     /tmp/ccs9Di6y.s:683    .text:0000000000000294 .LVL48
+     /tmp/ccs9Di6y.s:704    .text:00000000000002a8 .LVL50
+     /tmp/ccs9Di6y.s:724    .text:00000000000002b8 .LVL52
+     /tmp/ccs9Di6y.s:746    .text:00000000000002cc .LVL54
+     /tmp/ccs9Di6y.s:852    .text:000000000000032c .LVL65
+     /tmp/ccs9Di6y.s:76     .text:0000000000000050 .LBB73
+     /tmp/ccs9Di6y.s:93     .text:000000000000005c .LBE73
+     /tmp/ccs9Di6y.s:95     .text:000000000000005c .LBB75
+     /tmp/ccs9Di6y.s:111    .text:0000000000000068 .LBE75
+     /tmp/ccs9Di6y.s:113    .text:0000000000000068 .LBB77
+     /tmp/ccs9Di6y.s:129    .text:0000000000000074 .LBE77
+     /tmp/ccs9Di6y.s:131    .text:0000000000000074 .LBB79
+     /tmp/ccs9Di6y.s:147    .text:0000000000000080 .LBE79
+     /tmp/ccs9Di6y.s:149    .text:0000000000000080 .LBB81
+     /tmp/ccs9Di6y.s:165    .text:000000000000008c .LBE81
+     /tmp/ccs9Di6y.s:855    .text:0000000000000338 .LVL66
+     /tmp/ccs9Di6y.s:4848   .debug_str:0000000000000860 .LASF173
+     /tmp/ccs9Di6y.s:10     .text:0000000000000000 .LFB48
+     /tmp/ccs9Di6y.s:40     .text:0000000000000020 .LFE48
+     /tmp/ccs9Di6y.s:4896   .debug_str:0000000000000a4f .LASF174
+     /tmp/ccs9Di6y.s:4930   .debug_str:0000000000000b27 .LASF176
+     /tmp/ccs9Di6y.s:4724   .debug_str:00000000000004ed .LASF178
+     /tmp/ccs9Di6y.s:4598   .debug_str:000000000000018c .LASF179
+     /tmp/ccs9Di6y.s:4610   .debug_str:00000000000001da .LASF203
+     /tmp/ccs9Di6y.s:4820   .debug_str:000000000000079d .LASF180
+     /tmp/ccs9Di6y.s:4648   .debug_str:00000000000002e1 .LASF181
+     /tmp/ccs9Di6y.s:4636   .debug_str:00000000000002a6 .LASF184
+     /tmp/ccs9Di6y.s:4944   .debug_str:0000000000000b97 .LASF186
+     /tmp/ccs9Di6y.s:4662   .debug_str:0000000000000354 .LASF182
+     /tmp/ccs9Di6y.s:4718   .debug_str:00000000000004d6 .LASF183
+     /tmp/ccs9Di6y.s:4898   .debug_str:0000000000000a54 .LASF185
+     /tmp/ccs9Di6y.s:4550   .debug_str:0000000000000013 .LASF187
+     /tmp/ccs9Di6y.s:4892   .debug_str:0000000000000a38 .LASF188
+     /tmp/ccs9Di6y.s:4614   .debug_str:0000000000000210 .LASF189
+     /tmp/ccs9Di6y.s:91     .text:000000000000005c .LVL0
+     /tmp/ccs9Di6y.s:179    .text:00000000000000b0 .LVL5
+     /tmp/ccs9Di6y.s:195    .text:00000000000000bc .LVL6
+     /tmp/ccs9Di6y.s:328    .text:00000000000000f8 .LVL10
+     /tmp/ccs9Di6y.s:791    .text:00000000000002e4 .LVL58
+     /tmp/ccs9Di6y.s:802    .text:00000000000002e8 .LVL59
+     /tmp/ccs9Di6y.s:109    .text:0000000000000068 .LVL1
+     /tmp/ccs9Di6y.s:235    .text:00000000000000e0 .LVL9
+     /tmp/ccs9Di6y.s:807    .text:00000000000002ec .LVL60
+     /tmp/ccs9Di6y.s:127    .text:0000000000000074 .LVL2
+     /tmp/ccs9Di6y.s:823    .text:00000000000002f8 .LVL61
+     /tmp/ccs9Di6y.s:842    .text:000000000000031c .LVL63
+     /tmp/ccs9Di6y.s:846    .text:0000000000000320 .LVL64
+     /tmp/ccs9Di6y.s:145    .text:0000000000000080 .LVL3
+     /tmp/ccs9Di6y.s:377    .text:000000000000013c .LVL16
+     /tmp/ccs9Di6y.s:407    .text:0000000000000148 .LVL18
+     /tmp/ccs9Di6y.s:587    .text:0000000000000234 .LVL39
+     /tmp/ccs9Di6y.s:652    .text:0000000000000274 .LVL45
+     /tmp/ccs9Di6y.s:163    .text:000000000000008c .LVL4
+GAS LISTING /tmp/ccs9Di6y.s 			page 39
+
+
+     /tmp/ccs9Di6y.s:828    .text:0000000000000300 .LVL62
+     /tmp/ccs9Di6y.s:205    .text:00000000000000c8 .LVL7
+     /tmp/ccs9Di6y.s:345    .text:0000000000000114 .LVL12
+     /tmp/ccs9Di6y.s:221    .text:00000000000000d4 .LVL8
+     /tmp/ccs9Di6y.s:469    .text:00000000000001a0 .LVL26
+     /tmp/ccs9Di6y.s:487    .text:00000000000001c8 .LVL29
+     /tmp/ccs9Di6y.s:492    .text:00000000000001d0 .LVL30
+     /tmp/ccs9Di6y.s:542    .text:0000000000000204 .LVL34
+     /tmp/ccs9Di6y.s:673    .text:0000000000000288 .LVL47
+     /tmp/ccs9Di6y.s:695    .text:000000000000029c .LVL49
+     /tmp/ccs9Di6y.s:737    .text:00000000000002c0 .LVL53
+     /tmp/ccs9Di6y.s:391    .text:0000000000000140 .LVL17
+     /tmp/ccs9Di6y.s:442    .text:0000000000000174 .LVL22
+     /tmp/ccs9Di6y.s:512    .text:00000000000001ec .LVL32
+     /tmp/ccs9Di6y.s:525    .text:00000000000001f8 .LVL33
+     /tmp/ccs9Di6y.s:562    .text:0000000000000214 .LVL36
+     /tmp/ccs9Di6y.s:613    .text:0000000000000254 .LVL42
+     /tmp/ccs9Di6y.s:602    .text:0000000000000248 .LVL41
+     /tmp/ccs9Di6y.s:622    .text:000000000000025c .LVL43
+     /tmp/ccs9Di6y.s:635    .text:0000000000000268 .LVL44
+     /tmp/ccs9Di6y.s:716    .text:00000000000002b0 .LVL51
+     /tmp/ccs9Di6y.s:758    .text:00000000000002d0 .LVL55
+     /tmp/ccs9Di6y.s:772    .text:00000000000002d8 .LVL56
+     /tmp/ccs9Di6y.s:779    .text:00000000000002dc .LVL57
+     /tmp/ccs9Di6y.s:897    .debug_info:0000000000000000 .Ldebug_info0
+     /tmp/ccs9Di6y.s:182    .text:00000000000000b8 .LBB84
+     /tmp/ccs9Di6y.s:330    .text:00000000000000f8 .LBE84
+     /tmp/ccs9Di6y.s:336    .text:0000000000000108 .LBB133
+     /tmp/ccs9Di6y.s:812    .text:00000000000002ec .LBE133
+     /tmp/ccs9Di6y.s:848    .text:0000000000000320 .LBB134
+     /tmp/ccs9Di6y.s:857    .text:0000000000000338 .LBE134
+     /tmp/ccs9Di6y.s:863    .gcc_except_table:0000000000000000 .LLSDA49
 
 UNDEFINED SYMBOLS
 console_handler
@@ -1835,9 +2269,12 @@ _ZN3PCBC1EPFvPvES0_Pm
 _ZN9Scheduler3putEP3PCB
 _ZN3PCB4exitEv
 _ZN3PCB8dispatchEv
+_ZN3PCB4joinEv
+_ZN3Sem5closeEv
+_ZN3Sem4waitEv
+_ZN3Sem6signalEv
+__getc
+__putc
 _ZdlPv
 _Unwind_Resume
 __gxx_personality_v0
-GAS LISTING /tmp/ccvlzG8R.s 			page 32
-
-

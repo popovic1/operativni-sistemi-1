@@ -44,23 +44,27 @@ void Thread::dispatch() {
 }
 
 Thread::~Thread() {
-    thread_exit();
     delete (PCB*)myHandle;
+    thread_exit();
+
 }
 
-//Semaphore::Semaphore(unsigned int init)  {
-//    sem_open(&myHandle, init);
-//}
-//
-//int Semaphore::signal() {
-//    return sem_signal(myHandle);
-//}
-//
-//int Semaphore::wait() {
-//    return sem_wait(myHandle);
-//}
-//
-//Semaphore::~Semaphore() {
-//    sem_close(myHandle);
-//}
+Semaphore::Semaphore(unsigned int init)  {
+    sem_open(&myHandle, init);
+}
+
+Semaphore::~Semaphore() {
+    sem_close(myHandle);
+    delete (Sem*)myHandle;
+}
+
+int Semaphore::signal() {
+    return sem_signal(myHandle);
+}
+
+int Semaphore::wait() {
+    return sem_wait(myHandle);
+}
+
+
 

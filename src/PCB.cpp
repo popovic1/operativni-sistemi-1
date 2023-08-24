@@ -18,9 +18,13 @@ PCB::PCB(PCB::Body body, void *args, uint64 *stack) {
     this->args = args;
     state = READY;
 
-    semaphore = new Sem();
+    //semaphore = new Sem();
 }
 
+PCB::~PCB() {
+    if(body)delete[] stack;
+    //delete semaphore;
+}
 
 
 void PCB::dispatch() {
@@ -40,12 +44,12 @@ void PCB::dispatch() {
 }
 
 void PCB::join() {
-    semaphore->wait();
+    //semaphore->wait();
 }
 
 int PCB::exit() {
     if(running->state==RUNNING){
-        delete PCB::running->semaphore;
+        //delete PCB::running->semaphore;
         running->state=FINISHED;
         thread_dispatch();
         return 0;

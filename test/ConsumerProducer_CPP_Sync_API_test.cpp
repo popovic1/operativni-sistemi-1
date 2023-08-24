@@ -117,6 +117,7 @@ void producerConsumer_CPP_Sync_API() {
     getString(input, 30);
     threadNum = stringToInt(input);
 
+
     printString("Unesite velicinu bafera?\n");
     getString(input, 30);
     n = stringToInt(input);

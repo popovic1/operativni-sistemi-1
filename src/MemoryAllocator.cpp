@@ -59,7 +59,7 @@ void *MemoryAllocator::allocate(size_t size) {
 
             // Return the memory
 
-            void *userPtr = (Block *) ((uint64 *) current + sizeof(Block));
+            void *userPtr = (char *) ((uint64 *) current + sizeof(Block));
             return userPtr;
         }
         prev = current;

@@ -4,36 +4,53 @@
 
 #include "../h/Sem.hpp"
 
-void Sem::wait() {
-    value--;
-    if (value < 0) {
-        // Block the current thread
-        PCB* currentThread = PCB::running;
-        waitQueue.addLast(currentThread);
-        currentThread->setState(PCB::SUSPENDED);
-        PCB::dispatch();
+int Sem::wait() {
+    if(valid != true){
+        printStr("ERROR------------------------------------------------------------");
+        return -1;
+
     }
+    if (--value < 0) {
+        // Block the current thread
+        waitQueue.addLast(PCB::running);
+        PCB::running->setState(PCB::SUSPENDED);
+        thread_dispatch();
+    }
+    return 0;
 }
 
-void Sem::signal() {
-    value++;
-    if (value <= 0) {
+int Sem::signal() {
+    if(!valid) {
+        printStr("ERROR------------------------------------------------------------");
+        return -1;
+    }
+    if (++value <= 0) {
         // Wake up a waiting thread
         PCB *threadToWake = waitQueue.removeFirst();
         threadToWake->setState(PCB::READY);
         Scheduler::put(threadToWake);
     }
+    return 0;
 }
 
 Sem::~Sem() {
-    signalAll();
+    if(valid){
+        close();
+    }
 }
 
-void Sem::signalAll() {
-
+int Sem::signalAll() {
+    if(!valid) return -1;
     while (waitQueue.peekFirst() != 0) {
         PCB *threadToWake = waitQueue.removeFirst();
         threadToWake->setState(PCB::READY);
         Scheduler::put(threadToWake);
     }
+    return 0;
+}
+
+int Sem::close() {
+    int returnVal = signalAll();
+    valid = false;
+    return returnVal;
 }

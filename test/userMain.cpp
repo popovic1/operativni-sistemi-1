@@ -2,7 +2,7 @@
 
 #define LEVEL_1_IMPLEMENTED 1
 #define LEVEL_2_IMPLEMENTED 1
-#define LEVEL_3_IMPLEMENTED 0
+#define LEVEL_3_IMPLEMENTED 1
 #define LEVEL_4_IMPLEMENTED 0
 
 #if LEVEL_2_IMPLEMENTED == 1
@@ -32,9 +32,9 @@
 
 void userMain() {
     printString("Unesite broj testa? [1-7]\n");
-//    int test = getc() - '0';
-    int test = 2;
-    //getc(); // Enter posle broja
+    int test = getc() - '0';
+    getc(); // Enter posle broja
+    printInteger(test);
 
     if ((test >= 1 && test <= 2) || test == 7) {
         if (LEVEL_2_IMPLEMENTED == 0) {

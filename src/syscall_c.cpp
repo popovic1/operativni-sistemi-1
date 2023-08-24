@@ -1,6 +1,7 @@
 #include "../h/syscall_c.hpp"
 
 
+
 void *mem_alloc(size_t size) {
     size_t sizeInBlocks = ((size + 16 + MEM_BLOCK_SIZE - 1) / MEM_BLOCK_SIZE);
     Riscv::w_a1((uint64) sizeInBlocks);
@@ -37,7 +38,7 @@ int thread_create(thread_t *handle, void(*start_routine)(void *), void *arg) {
     Riscv::w_a1((uint64) start_routine);
     Riscv::w_a2((uint64) arg);
     //thread_t* t = handle;
-    Riscv::w_a3((uint64) handle);
+    Riscv::w_a7((uint64) handle);
     Riscv::w_a0(0x11);
 
     __asm__ volatile ("ecall");
@@ -62,6 +63,70 @@ void thread_dispatch(){
 }
 
 void thread_join(thread_t handle){
+    Riscv::w_a1((uint64)handle);
     Riscv::w_a0(0x14);
 
+    __asm__ volatile ("ecall");
+
+}
+
+int sem_open(sem_t* handle, unsigned init){
+    Riscv::w_a2(init);
+    Riscv::w_a1((uint64)handle);
+    Riscv::w_a0(0x21);
+
+    __asm__ volatile ("ecall");
+
+    volatile long a0;
+    __asm__ volatile ("mv %0, a0" : "=r"(a0));
+    return a0;
+}
+
+int sem_close(sem_t handle){
+    Riscv::w_a1((uint64)handle);
+    Riscv::w_a0(0x22);
+
+    __asm__ volatile ("ecall");
+
+    volatile long a0;
+    __asm__ volatile ("mv %0, a0" : "=r"(a0));
+    return a0;
+}
+
+int sem_wait(sem_t id){
+    Riscv::w_a1((uint64)id);
+    Riscv::w_a0(0x23);
+
+    __asm__ volatile ("ecall");
+
+    volatile long a0;
+    __asm__ volatile ("mv %0, a0" : "=r"(a0));
+    return a0;
+}
+
+int sem_signal(sem_t id){
+    Riscv::w_a1((uint64)id);
+    Riscv::w_a0(0x24);
+
+    __asm__ volatile ("ecall");
+
+    volatile long a0;
+    __asm__ volatile ("mv %0, a0" : "=r"(a0));
+    return a0;
+}
+
+char getc(){
+    Riscv::w_a0(0x41);
+
+    __asm__ volatile ("ecall");
+
+    volatile long a0;
+    __asm__ volatile ("mv %0, a0" : "=r"(a0));
+    return (char)a0;
+}
+
+void putc(char c){
+    Riscv::w_a1(c);
+    Riscv::w_a0(0x42);
+    __asm__ volatile ("ecall");
 }

@@ -22,7 +22,7 @@ public:
         FINISHED
     };
 
-    ~PCB() { delete[] stack; }
+    ~PCB();
 
     bool isFinished() const { return state == FINISHED; }
 
@@ -50,7 +50,7 @@ private:
 
     static void wrapper();
 
-    Sem* semaphore;
+    //Sem* semaphore;
 
     Body body;
     uint64 *stack;

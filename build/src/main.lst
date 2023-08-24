@@ -1,4 +1,4 @@
-GAS LISTING /tmp/ccapaTpE.s 			page 1
+GAS LISTING /tmp/ccYYMODl.s 			page 1
 
 
    1              		.file	"main.cpp"
@@ -9,7 +9,7 @@ GAS LISTING /tmp/ccapaTpE.s 			page 1
    6              		.align	2
    7              		.globl	_Z7createCm
    9              	_Z7createCm:
-  10              	.LFB55:
+  10              	.LFB52:
   11              		.file 1 "src/main.cpp"
    1:src/main.cpp  **** 
    2:src/main.cpp  **** #include "../h/riscv.hpp"
@@ -58,7 +58,7 @@ GAS LISTING /tmp/ccapaTpE.s 			page 1
   20              		.cfi_offset 1, -8
   21              		.cfi_offset 8, -16
   22              		.cfi_offset 9, -24
-GAS LISTING /tmp/ccapaTpE.s 			page 2
+GAS LISTING /tmp/ccYYMODl.s 			page 2
 
 
   23 0010 13040102 		addi	s0,sp,32
@@ -72,16 +72,16 @@ GAS LISTING /tmp/ccapaTpE.s 			page 1
   30 001c 97000000 		call	_Znwm@plt
   30      E7800000 
   31              	.LVL2:
-  32              	.LBB29:
-  33              	.LBB30:
+  32              	.LBB23:
+  33              	.LBB24:
   28:src/main.cpp  ****     }
   34              		.loc 1 28 9 is_stmt 1
   28:src/main.cpp  ****     }
   35              		.loc 1 28 13 is_stmt 0
   36 0024 23309500 		sd	s1,0(a0)
   37              	.LVL3:
-  38              	.LBE30:
-  39              	.LBE29:
+  38              	.LBE24:
+  39              	.LBE23:
   38:src/main.cpp  **** }
   40              		.loc 1 38 1
   41 0028 83308101 		ld	ra,24(sp)
@@ -96,11 +96,11 @@ GAS LISTING /tmp/ccapaTpE.s 			page 1
   50              		.cfi_def_cfa_offset 0
   51 0038 67800000 		jr	ra
   52              		.cfi_endproc
-  53              	.LFE55:
+  53              	.LFE52:
   55              		.align	2
   56              		.globl	main
   58              	main:
-  59              	.LFB56:
+  59              	.LFB53:
   39:src/main.cpp  **** 
   40:src/main.cpp  **** extern void userMain();
   41:src/main.cpp  **** 
@@ -108,7 +108,7 @@ GAS LISTING /tmp/ccapaTpE.s 			page 1
   60              		.loc 1 42 12 is_stmt 1
   61              		.cfi_startproc
   62              		.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-  63              		.cfi_lsda 0x1b,.LLSDA56
+  63              		.cfi_lsda 0x1b,.LLSDA53
   64 003c 130101FD 		addi	sp,sp,-48
   65              		.cfi_def_cfa_offset 48
   66 0040 23341102 		sd	ra,40(sp)
@@ -118,7 +118,7 @@ GAS LISTING /tmp/ccapaTpE.s 			page 1
   70 0050 23343101 		sd	s3,8(sp)
   71              		.cfi_offset 1, -8
   72              		.cfi_offset 8, -16
-GAS LISTING /tmp/ccapaTpE.s 			page 3
+GAS LISTING /tmp/ccYYMODl.s 			page 3
 
 
   73              		.cfi_offset 9, -24
@@ -130,8 +130,8 @@ GAS LISTING /tmp/ccapaTpE.s 			page 1
   44:src/main.cpp  **** 
   45:src/main.cpp  ****     MemoryAllocator::getInstance().init();
   78              		.loc 1 45 5
-  79              	.LBB31:
-  80              	.LBB32:
+  79              	.LBB25:
+  80              	.LBB26:
   81              		.file 2 "src/../h/../h/MemoryAllocator.hpp"
    1:src/../h/../h/MemoryAllocator.hpp **** #ifndef PROJECT_BASE_V1_1_MEMORYALLOCATOR_HPP
    2:src/../h/../h/MemoryAllocator.hpp **** #define PROJECT_BASE_V1_1_MEMORYALLOCATOR_HPP
@@ -172,13 +172,13 @@ GAS LISTING /tmp/ccapaTpE.s 			page 1
   90              	.L4:
   27:src/../h/../h/MemoryAllocator.hpp ****         return instance;
   91              		.loc 2 27 9 is_stmt 1
-  92              	.LBE32:
-  93              	.LBE31:
-  94              	.LBB33:
-  95              	.LBB34:
+  92              	.LBE26:
+  93              	.LBE25:
+  94              	.LBB27:
+  95              	.LBB28:
   28:src/../h/../h/MemoryAllocator.hpp ****     }
   29:src/../h/../h/MemoryAllocator.hpp **** 
-GAS LISTING /tmp/ccapaTpE.s 			page 4
+GAS LISTING /tmp/ccYYMODl.s 			page 4
 
 
   30:src/../h/../h/MemoryAllocator.hpp ****     static void init() {
@@ -224,8 +224,8 @@ GAS LISTING /tmp/ccapaTpE.s 			page 1
  118 00a8 97070000 		la	a5,_ZN15MemoryAllocator14allocated_listE
  118      83B70700 
  119 00b0 23B00700 		sd	zero,0(a5)
- 120              	.LBE34:
- 121              	.LBE33:
+ 120              	.LBE28:
+ 121              	.LBE27:
   46:src/main.cpp  ****     Riscv::w_stvec((uint64) &Riscv::supervisorTrap+1);
  122              		.loc 1 46 5 is_stmt 1
  123              		.loc 1 46 19 is_stmt 0
@@ -233,12 +233,12 @@ GAS LISTING /tmp/ccapaTpE.s 			page 1
  124      83B70700 
  125 00bc 93871700 		addi	a5,a5,1
  126              	.LVL7:
- 127              	.LBB35:
- 128              	.LBB36:
+ 127              	.LBB29:
+ 128              	.LBB30:
  129              		.file 3 "src/../h/riscv.hpp"
    1:src/../h/riscv.hpp **** #ifndef PROJECT_BASE_V1_1_RISCV_HPP
    2:src/../h/riscv.hpp **** #define PROJECT_BASE_V1_1_RISCV_HPP
-GAS LISTING /tmp/ccapaTpE.s 			page 5
+GAS LISTING /tmp/ccYYMODl.s 			page 5
 
 
    3:src/../h/riscv.hpp **** 
@@ -298,7 +298,7 @@ GAS LISTING /tmp/ccapaTpE.s 			page 1
   57:src/../h/riscv.hpp ****         SIP_SSIP = (1<<1),
   58:src/../h/riscv.hpp ****         SIP_SEIP = (1<<9)
   59:src/../h/riscv.hpp ****     };
-GAS LISTING /tmp/ccapaTpE.s 			page 6
+GAS LISTING /tmp/ccYYMODl.s 			page 6
 
 
   60:src/../h/riscv.hpp **** 
@@ -353,12 +353,12 @@ GAS LISTING /tmp/ccapaTpE.s 			page 1
  109:src/../h/riscv.hpp **** 
  110:src/../h/riscv.hpp ****     static void w_a2(uint64 a1);
  111:src/../h/riscv.hpp **** 
- 112:src/../h/riscv.hpp ****     static uint64 r_a3();
+ 112:src/../h/riscv.hpp ****     static uint64 r_a7();
  113:src/../h/riscv.hpp **** 
- 114:src/../h/riscv.hpp ****     static void w_a3(uint64 a1);
+ 114:src/../h/riscv.hpp ****     static void w_a7(uint64 a7);
  115:src/../h/riscv.hpp **** 
  116:src/../h/riscv.hpp ****     static void push_a0(long a0);
-GAS LISTING /tmp/ccapaTpE.s 			page 7
+GAS LISTING /tmp/ccYYMODl.s 			page 7
 
 
  117:src/../h/riscv.hpp **** 
@@ -411,14 +411,14 @@ GAS LISTING /tmp/ccapaTpE.s 			page 1
  135              	# 0 "" 2
  136              	.LVL8:
  137              	#NO_APP
- 138              	.LBE36:
- 139              	.LBE35:
+ 138              	.LBE30:
+ 139              	.LBE29:
   47:src/main.cpp  ****     PCB* pcb = new PCB(nullptr, nullptr, nullptr);
  140              		.loc 1 47 5 is_stmt 1
  141              		.loc 1 47 49 is_stmt 0
- 142 00c4 13058003 		li	a0,56
+ 142 00c4 13050003 		li	a0,48
  143              	.LEHB0:
-GAS LISTING /tmp/ccapaTpE.s 			page 8
+GAS LISTING /tmp/ccYYMODl.s 			page 8
 
 
  144 00c8 97000000 		call	_Znwm@plt
@@ -443,8 +443,8 @@ GAS LISTING /tmp/ccapaTpE.s 			page 1
   49:src/main.cpp  ****     pcb->setState(PCB::RUNNING);
  159              		.loc 1 49 5 is_stmt 1 discriminator 2
  160              	.LVL11:
- 161              	.LBB37:
- 162              	.LBB38:
+ 161              	.LBB31:
+ 162              	.LBB32:
  163              		.file 4 "src/../h/PCB.hpp"
    1:src/../h/PCB.hpp **** #ifndef PROJECT_BASE_V1_1_PCB_HPP
    2:src/../h/PCB.hpp **** #define PROJECT_BASE_V1_1_PCB_HPP
@@ -470,7 +470,7 @@ GAS LISTING /tmp/ccapaTpE.s 			page 1
   22:src/../h/PCB.hpp ****         FINISHED
   23:src/../h/PCB.hpp ****     };
   24:src/../h/PCB.hpp **** 
-  25:src/../h/PCB.hpp ****     ~PCB() { delete[] stack; }
+  25:src/../h/PCB.hpp ****     ~PCB();
   26:src/../h/PCB.hpp **** 
   27:src/../h/PCB.hpp ****     bool isFinished() const { return state == FINISHED; }
   28:src/../h/PCB.hpp **** 
@@ -478,17 +478,17 @@ GAS LISTING /tmp/ccapaTpE.s 			page 1
  164              		.loc 4 29 30 discriminator 2
  165              		.loc 4 29 36 is_stmt 0 discriminator 2
  166 00f4 93071000 		li	a5,1
-GAS LISTING /tmp/ccapaTpE.s 			page 9
+GAS LISTING /tmp/ccYYMODl.s 			page 9
 
 
- 167 00f8 2328F902 		sw	a5,48(s2)
+ 167 00f8 2324F902 		sw	a5,40(s2)
  168              	.LVL12:
- 169              	.LBE38:
- 170              	.LBE37:
+ 169              	.LBE32:
+ 170              	.LBE31:
   50:src/main.cpp  ****     Riscv::ms_sstatus(Riscv::SSTATUS_SIE);
  171              		.loc 1 50 5 is_stmt 1 discriminator 2
- 172              	.LBB39:
- 173              	.LBB40:
+ 172              	.LBB33:
+ 173              	.LBB34:
  159:src/../h/riscv.hpp **** 
  160:src/../h/riscv.hpp **** inline uint64 Riscv::r_stval()
  161:src/../h/riscv.hpp **** {
@@ -537,757 +537,693 @@ GAS LISTING /tmp/ccapaTpE.s 			page 1
  180              	# 0 "" 2
  181              	.LVL13:
  182              	#NO_APP
- 183              	.LBE40:
-GAS LISTING /tmp/ccapaTpE.s 			page 10
+ 183              	.LBE34:
+GAS LISTING /tmp/ccYYMODl.s 			page 10
 
 
- 184              	.LBE39:
+ 184              	.LBE33:
   51:src/main.cpp  **** 
-  52:src/main.cpp  ****     switchToUserMode();
- 185              		.loc 1 52 5 is_stmt 1 discriminator 2
- 186              	.LEHB2:
- 187              		.loc 1 52 21 is_stmt 0 discriminator 2
- 188 0104 97000000 		call	_Z16switchToUserModev@plt
- 188      E7800000 
- 189              	.LVL14:
+  52:src/main.cpp  **** 
   53:src/main.cpp  **** 
   54:src/main.cpp  ****     uint64* stack = (uint64*)MemoryAllocator::getInstance().allocate(((DEFAULT_STACK_SIZE + 16+ MEM
- 190              		.loc 1 54 5 is_stmt 1 discriminator 2
- 191              	.LBB41:
- 192              	.LBB42:
+ 185              		.loc 1 54 5 is_stmt 1 discriminator 2
+ 186              	.LBB35:
+ 187              	.LBB36:
   26:src/../h/../h/MemoryAllocator.hpp ****         return instance;
- 193              		.loc 2 26 9 discriminator 2
+ 188              		.loc 2 26 9 discriminator 2
   26:src/../h/../h/MemoryAllocator.hpp ****         return instance;
- 194              		.loc 2 26 32 is_stmt 0 discriminator 2
- 195 010c 97070000 		lbu	a5,_ZGVZN15MemoryAllocator11getInstanceEvE8instance
- 195      83C70700 
- 196 0114 63980700 		bnez	a5,.L5
- 197              	.LVL15:
+ 189              		.loc 2 26 32 is_stmt 0 discriminator 2
+ 190 0104 97070000 		lbu	a5,_ZGVZN15MemoryAllocator11getInstanceEvE8instance
+ 190      83C70700 
+ 191 010c 63980700 		bnez	a5,.L5
+ 192              	.LVL14:
   26:src/../h/../h/MemoryAllocator.hpp ****         return instance;
- 198              		.loc 2 26 32
- 199 0118 93071000 		li	a5,1
- 200 011c 17070000 		sb	a5,_ZGVZN15MemoryAllocator11getInstanceEvE8instance,a4
- 200      2300F700 
- 201              	.LVL16:
- 202              	.L5:
+ 193              		.loc 2 26 32
+ 194 0110 93071000 		li	a5,1
+ 195 0114 17070000 		sb	a5,_ZGVZN15MemoryAllocator11getInstanceEvE8instance,a4
+ 195      2300F700 
+ 196              	.LVL15:
+ 197              	.L5:
   27:src/../h/../h/MemoryAllocator.hpp ****     }
- 203              		.loc 2 27 9 is_stmt 1
- 204              	.LBE42:
- 205              	.LBE41:
- 206              		.loc 1 54 134 is_stmt 0
- 207 0124 13051004 		li	a0,65
- 208 0128 97000000 		call	_ZN15MemoryAllocator8allocateEm@plt
- 208      E7800000 
- 209              	.LVL17:
- 210 0130 93090500 		mv	s3,a0
- 211              	.LVL18:
+ 198              		.loc 2 27 9 is_stmt 1
+ 199              	.LBE36:
+ 200              	.LBE35:
+ 201              		.loc 1 54 134 is_stmt 0
+ 202 011c 13051004 		li	a0,65
+ 203              	.LEHB2:
+ 204 0120 97000000 		call	_ZN15MemoryAllocator8allocateEm@plt
+ 204      E7800000 
+ 205              	.LVL16:
+ 206 0128 93090500 		mv	s3,a0
+ 207              	.LVL17:
   55:src/main.cpp  ****     PCB* usrT = new PCB((void (*)(void *))(userMain), nullptr, stack);
- 212              		.loc 1 55 5 is_stmt 1
- 213              		.loc 1 55 69 is_stmt 0
- 214 0134 13058003 		li	a0,56
- 215              	.LVL19:
- 216 0138 97000000 		call	_Znwm@plt
- 216      E7800000 
- 217              	.LVL20:
- 218              	.LEHE2:
- 219 0140 93040500 		mv	s1,a0
- 220 0144 93860900 		mv	a3,s3
- 221 0148 13060000 		li	a2,0
- 222 014c 97050000 		la	a1,_Z8userMainv
- 222      83B50500 
- 223              	.LEHB3:
- 224 0154 97000000 		call	_ZN3PCBC1EPFvPvES0_Pm@plt
- 224      E7800000 
-GAS LISTING /tmp/ccapaTpE.s 			page 11
-
-
- 225              	.LVL21:
- 226              	.LEHE3:
+ 208              		.loc 1 55 5 is_stmt 1
+ 209              		.loc 1 55 69 is_stmt 0
+ 210 012c 13050003 		li	a0,48
+ 211              	.LVL18:
+ 212 0130 97000000 		call	_Znwm@plt
+ 212      E7800000 
+ 213              	.LVL19:
+ 214              	.LEHE2:
+ 215 0138 93040500 		mv	s1,a0
+ 216 013c 93860900 		mv	a3,s3
+ 217 0140 13060000 		li	a2,0
+ 218 0144 97050000 		la	a1,_Z8userMainv
+ 218      83B50500 
+ 219              	.LEHB3:
+ 220 014c 97000000 		call	_ZN3PCBC1EPFvPvES0_Pm@plt
+ 220      E7800000 
+ 221              	.LVL20:
+ 222              	.LEHE3:
   56:src/main.cpp  ****     Scheduler::put(usrT);
- 227              		.loc 1 56 5 is_stmt 1 discriminator 2
- 228              		.loc 1 56 19 is_stmt 0 discriminator 2
- 229 015c 13850400 		mv	a0,s1
- 230              	.LEHB4:
- 231 0160 97000000 		call	_ZN9Scheduler3putEP3PCB@plt
+ 223              		.loc 1 56 5 is_stmt 1 discriminator 2
+ 224              		.loc 1 56 19 is_stmt 0 discriminator 2
+GAS LISTING /tmp/ccYYMODl.s 			page 11
+
+
+ 225 0154 13850400 		mv	a0,s1
+ 226              	.LEHB4:
+ 227 0158 97000000 		call	_ZN9Scheduler3putEP3PCB@plt
+ 227      E7800000 
+ 228              	.LVL21:
+  57:src/main.cpp  **** 
+  58:src/main.cpp  ****     switchToUserMode();
+ 229              		.loc 1 58 5 is_stmt 1 discriminator 2
+ 230              		.loc 1 58 21 is_stmt 0 discriminator 2
+ 231 0160 97000000 		call	_Z16switchToUserModev@plt
  231      E7800000 
  232              	.LVL22:
  233              	.L7:
-  57:src/main.cpp  **** 
-  58:src/main.cpp  **** 
-  59:src/main.cpp  ****     while (!usrT->isFinished()){
- 234              		.loc 1 59 5 is_stmt 1
- 235              		.loc 1 59 12
- 236              	.LBB43:
- 237              	.LBB44:
+  59:src/main.cpp  **** 
+  60:src/main.cpp  **** 
+  61:src/main.cpp  ****     while (!usrT->isFinished()){
+ 234              		.loc 1 61 5 is_stmt 1
+ 235              		.loc 1 61 12
+ 236              	.LBB37:
+ 237              	.LBB38:
   27:src/../h/PCB.hpp **** 
  238              		.loc 4 27 31
   27:src/../h/PCB.hpp **** 
  239              		.loc 4 27 38 is_stmt 0
- 240 0168 03A70403 		lw	a4,48(s1)
+ 240 0168 03A78402 		lw	a4,40(s1)
  241              	.LVL23:
- 242              	.LBE44:
- 243              	.LBE43:
- 244              		.loc 1 59 12
+ 242              	.LBE38:
+ 243              	.LBE37:
+ 244              		.loc 1 61 12
  245 016c 93073000 		li	a5,3
  246 0170 6308F700 		beq	a4,a5,.L6
-  60:src/main.cpp  ****         thread_dispatch();
- 247              		.loc 1 60 9 is_stmt 1
- 248              		.loc 1 60 24 is_stmt 0
+  62:src/main.cpp  ****         thread_dispatch();
+ 247              		.loc 1 62 9 is_stmt 1
+ 248              		.loc 1 62 24 is_stmt 0
  249 0174 97000000 		call	_Z15thread_dispatchv@plt
  249      E7800000 
  250              	.LVL24:
-  59:src/main.cpp  ****         thread_dispatch();
- 251              		.loc 1 59 5
+  61:src/main.cpp  ****         thread_dispatch();
+ 251              		.loc 1 61 5
  252 017c 6FF0DFFE 		j	.L7
  253              	.L6:
-  61:src/main.cpp  ****     }
-  62:src/main.cpp  **** 
-  63:src/main.cpp  **** 
-  64:src/main.cpp  ****     delete usrT;
- 254              		.loc 1 64 5 is_stmt 1
- 255              		.loc 1 64 16 is_stmt 0
- 256 0180 63800402 		beqz	s1,.L8
- 257              	.LVL25:
- 258              	.LBB45:
- 259              	.LBB46:
-  25:src/../h/PCB.hpp **** 
- 260              		.loc 4 25 14 is_stmt 1
-  25:src/../h/PCB.hpp **** 
- 261              		.loc 4 25 23 is_stmt 0
- 262 0184 03B50401 		ld	a0,16(s1)
-  25:src/../h/PCB.hpp **** 
- 263              		.loc 4 25 28
- 264 0188 63060500 		beqz	a0,.L9
-GAS LISTING /tmp/ccapaTpE.s 			page 12
+  63:src/main.cpp  ****     }
+  64:src/main.cpp  **** 
+  65:src/main.cpp  **** 
+  66:src/main.cpp  ****     delete usrT;
+ 254              		.loc 1 66 5 is_stmt 1
+ 255              		.loc 1 66 16 is_stmt 0
+ 256 0180 638E0400 		beqz	s1,.L8
+ 257              		.loc 1 66 12 discriminator 1
+ 258 0184 13850400 		mv	a0,s1
+ 259 0188 97000000 		call	_ZN3PCBD1Ev@plt
+ 259      E7800000 
+ 260              	.LVL25:
+ 261 0190 13850400 		mv	a0,s1
+ 262 0194 97000000 		call	_ZdlPv@plt
+ 262      E7800000 
+ 263              	.LVL26:
+GAS LISTING /tmp/ccYYMODl.s 			page 12
 
 
-  25:src/../h/PCB.hpp **** 
- 265              		.loc 4 25 23
- 266 018c 97000000 		call	_ZdaPv@plt
- 266      E7800000 
- 267              	.LVL26:
- 268              	.L9:
- 269              	.LBE46:
- 270              	.LBE45:
- 271              		.loc 1 64 12
- 272 0194 13850400 		mv	a0,s1
- 273 0198 97000000 		call	_ZdlPv@plt
+ 264              	.L8:
+  67:src/main.cpp  ****     delete pcb;
+ 265              		.loc 1 67 5 is_stmt 1
+ 266              		.loc 1 67 15 is_stmt 0
+ 267 019c 630E0900 		beqz	s2,.L14
+ 268              		.loc 1 67 12 discriminator 1
+ 269 01a0 13050900 		mv	a0,s2
+ 270 01a4 97000000 		call	_ZN3PCBD1Ev@plt
+ 270      E7800000 
+ 271              	.LVL27:
+ 272 01ac 13050900 		mv	a0,s2
+ 273 01b0 97000000 		call	_ZdlPv@plt
  273      E7800000 
- 274              	.LVL27:
- 275              	.L8:
-  65:src/main.cpp  ****     delete pcb;
- 276              		.loc 1 65 5 is_stmt 1
- 277              		.loc 1 65 15 is_stmt 0
- 278 01a0 63000902 		beqz	s2,.L16
- 279              	.LVL28:
- 280              	.LBB47:
- 281              	.LBB48:
-  25:src/../h/PCB.hpp **** 
- 282              		.loc 4 25 14 is_stmt 1
-  25:src/../h/PCB.hpp **** 
- 283              		.loc 4 25 23 is_stmt 0
- 284 01a4 03350901 		ld	a0,16(s2)
-  25:src/../h/PCB.hpp **** 
- 285              		.loc 4 25 28
- 286 01a8 63060500 		beqz	a0,.L11
-  25:src/../h/PCB.hpp **** 
- 287              		.loc 4 25 23
- 288 01ac 97000000 		call	_ZdaPv@plt
- 288      E7800000 
- 289              	.LVL29:
- 290              	.L11:
- 291              	.LBE48:
- 292              	.LBE47:
- 293              		.loc 1 65 12
- 294 01b4 13050900 		mv	a0,s2
- 295 01b8 97000000 		call	_ZdlPv@plt
- 295      E7800000 
- 296              	.LVL30:
- 297              	.LEHE4:
-  66:src/main.cpp  **** 
-  67:src/main.cpp  ****     //printString("MAIN START\n");
+ 274              	.LVL28:
+ 275              	.LEHE4:
   68:src/main.cpp  **** 
-  69:src/main.cpp  **** 
+  69:src/main.cpp  ****     //printString("MAIN START\n");
   70:src/main.cpp  **** 
   71:src/main.cpp  **** 
-  72:src/main.cpp  ****     //printString("Finished\n");
+  72:src/main.cpp  **** 
   73:src/main.cpp  **** 
-  74:src/main.cpp  ****     return 0;
- 298              		.loc 1 74 5 is_stmt 1
- 299              	.L16:
-  75:src/main.cpp  **** }...
- 300              		.loc 1 75 1 is_stmt 0
- 301 01c0 13050000 		li	a0,0
-GAS LISTING /tmp/ccapaTpE.s 			page 13
-
-
- 302 01c4 83308102 		ld	ra,40(sp)
- 303              		.cfi_remember_state
- 304              		.cfi_restore 1
- 305 01c8 03340102 		ld	s0,32(sp)
- 306              		.cfi_restore 8
- 307              		.cfi_def_cfa 2, 48
- 308 01cc 83348101 		ld	s1,24(sp)
- 309              		.cfi_restore 9
- 310              	.LVL31:
- 311 01d0 03390101 		ld	s2,16(sp)
- 312              		.cfi_restore 18
- 313              	.LVL32:
- 314 01d4 83398100 		ld	s3,8(sp)
- 315              		.cfi_restore 19
- 316              	.LVL33:
- 317 01d8 13010103 		addi	sp,sp,48
- 318              		.cfi_def_cfa_offset 0
- 319 01dc 67800000 		jr	ra
- 320              	.L14:
- 321              		.cfi_restore_state
- 322 01e0 93040500 		mv	s1,a0
+  74:src/main.cpp  ****     //printString("Finished\n");
+  75:src/main.cpp  **** 
+  76:src/main.cpp  ****     return 0;
+ 276              		.loc 1 76 5 is_stmt 1 discriminator 1
+ 277              	.L14:
+  77:src/main.cpp  **** }...
+ 278              		.loc 1 77 1 is_stmt 0
+ 279 01b8 13050000 		li	a0,0
+ 280 01bc 83308102 		ld	ra,40(sp)
+ 281              		.cfi_remember_state
+ 282              		.cfi_restore 1
+ 283 01c0 03340102 		ld	s0,32(sp)
+ 284              		.cfi_restore 8
+ 285              		.cfi_def_cfa 2, 48
+ 286 01c4 83348101 		ld	s1,24(sp)
+ 287              		.cfi_restore 9
+ 288              	.LVL29:
+ 289 01c8 03390101 		ld	s2,16(sp)
+ 290              		.cfi_restore 18
+ 291              	.LVL30:
+ 292 01cc 83398100 		ld	s3,8(sp)
+ 293              		.cfi_restore 19
+ 294              	.LVL31:
+ 295 01d0 13010103 		addi	sp,sp,48
+ 296              		.cfi_def_cfa_offset 0
+ 297 01d4 67800000 		jr	ra
+ 298              	.L12:
+ 299              		.cfi_restore_state
+ 300 01d8 93040500 		mv	s1,a0
   47:src/main.cpp  ****     PCB* pcb = new PCB(nullptr, nullptr, nullptr);
- 323              		.loc 1 47 49
- 324 01e4 13050900 		mv	a0,s2
- 325 01e8 97000000 		call	_ZdlPv@plt
- 325      E7800000 
- 326              	.LVL34:
- 327 01f0 13850400 		mv	a0,s1
- 328              	.LEHB5:
- 329 01f4 97000000 		call	_Unwind_Resume@plt
- 329      E7800000 
- 330              	.LVL35:
- 331              	.LEHE5:
- 332              	.L15:
- 333 01fc 13090500 		mv	s2,a0
- 334              	.LVL36:
+ 301              		.loc 1 47 49
+ 302 01dc 13050900 		mv	a0,s2
+ 303 01e0 97000000 		call	_ZdlPv@plt
+ 303      E7800000 
+ 304              	.LVL32:
+ 305 01e8 13850400 		mv	a0,s1
+GAS LISTING /tmp/ccYYMODl.s 			page 13
+
+
+ 306              	.LEHB5:
+ 307 01ec 97000000 		call	_Unwind_Resume@plt
+ 307      E7800000 
+ 308              	.LVL33:
+ 309              	.LEHE5:
+ 310              	.L13:
+ 311 01f4 13090500 		mv	s2,a0
+ 312              	.LVL34:
   55:src/main.cpp  ****     PCB* usrT = new PCB((void (*)(void *))(userMain), nullptr, stack);
- 335              		.loc 1 55 69
- 336 0200 13850400 		mv	a0,s1
- 337 0204 97000000 		call	_ZdlPv@plt
- 337      E7800000 
- 338              	.LVL37:
- 339 020c 13050900 		mv	a0,s2
- 340              	.LEHB6:
- 341 0210 97000000 		call	_Unwind_Resume@plt
- 341      E7800000 
- 342              	.LVL38:
- 343              	.LEHE6:
- 344              		.cfi_endproc
- 345              	.LFE56:
- 346              		.globl	__gxx_personality_v0
- 347              		.section	.gcc_except_table,"a",@progbits
- 348              	.LLSDA56:
- 349 0000 FF       		.byte	0xff
- 350 0001 FF       		.byte	0xff
- 351 0002 03       		.byte	0x3
- 352 0003 5B       		.byte	0x5b
-GAS LISTING /tmp/ccapaTpE.s 			page 14
+ 313              		.loc 1 55 69
+ 314 01f8 13850400 		mv	a0,s1
+ 315 01fc 97000000 		call	_ZdlPv@plt
+ 315      E7800000 
+ 316              	.LVL35:
+ 317 0204 13050900 		mv	a0,s2
+ 318              	.LEHB6:
+ 319 0208 97000000 		call	_Unwind_Resume@plt
+ 319      E7800000 
+ 320              	.LVL36:
+ 321              	.LEHE6:
+ 322              		.cfi_endproc
+ 323              	.LFE53:
+ 324              		.globl	__gxx_personality_v0
+ 325              		.section	.gcc_except_table,"a",@progbits
+ 326              	.LLSDA53:
+ 327 0000 FF       		.byte	0xff
+ 328 0001 FF       		.byte	0xff
+ 329 0002 03       		.byte	0x3
+ 330 0003 5B       		.byte	0x5b
+ 331 0004 00000000 		.4byte	.LEHB0-.LFB53
+ 332 0008 00000000 		.4byte	.LEHE0-.LEHB0
+ 333 000c 00000000 		.4byte	0
+ 334 0010 00       		.byte	0
+ 335 0011 00000000 		.4byte	.LEHB1-.LFB53
+ 336 0015 00000000 		.4byte	.LEHE1-.LEHB1
+ 337 0019 00000000 		.4byte	.L12-.LFB53
+ 338 001d 00       		.byte	0
+ 339 001e 00000000 		.4byte	.LEHB2-.LFB53
+ 340 0022 00000000 		.4byte	.LEHE2-.LEHB2
+ 341 0026 00000000 		.4byte	0
+ 342 002a 00       		.byte	0
+ 343 002b 00000000 		.4byte	.LEHB3-.LFB53
+ 344 002f 00000000 		.4byte	.LEHE3-.LEHB3
+ 345 0033 00000000 		.4byte	.L13-.LFB53
+ 346 0037 00       		.byte	0
+ 347 0038 00000000 		.4byte	.LEHB4-.LFB53
+ 348 003c 00000000 		.4byte	.LEHE4-.LEHB4
+ 349 0040 00000000 		.4byte	0
+ 350 0044 00       		.byte	0
+ 351 0045 00000000 		.4byte	.LEHB5-.LFB53
+ 352 0049 00000000 		.4byte	.LEHE5-.LEHB5
+ 353 004d 00000000 		.4byte	0
+ 354 0051 00       		.byte	0
+ 355 0052 00000000 		.4byte	.LEHB6-.LFB53
+ 356 0056 00000000 		.4byte	.LEHE6-.LEHB6
+ 357 005a 00000000 		.4byte	0
+ 358 005e 00       		.byte	0
+GAS LISTING /tmp/ccYYMODl.s 			page 14
 
 
- 353 0004 00000000 		.4byte	.LEHB0-.LFB56
- 354 0008 00000000 		.4byte	.LEHE0-.LEHB0
- 355 000c 00000000 		.4byte	0
- 356 0010 00       		.byte	0
- 357 0011 00000000 		.4byte	.LEHB1-.LFB56
- 358 0015 00000000 		.4byte	.LEHE1-.LEHB1
- 359 0019 00000000 		.4byte	.L14-.LFB56
- 360 001d 00       		.byte	0
- 361 001e 00000000 		.4byte	.LEHB2-.LFB56
- 362 0022 00000000 		.4byte	.LEHE2-.LEHB2
- 363 0026 00000000 		.4byte	0
- 364 002a 00       		.byte	0
- 365 002b 00000000 		.4byte	.LEHB3-.LFB56
- 366 002f 00000000 		.4byte	.LEHE3-.LEHB3
- 367 0033 00000000 		.4byte	.L15-.LFB56
- 368 0037 00       		.byte	0
- 369 0038 00000000 		.4byte	.LEHB4-.LFB56
- 370 003c 00000000 		.4byte	.LEHE4-.LEHB4
- 371 0040 00000000 		.4byte	0
- 372 0044 00       		.byte	0
- 373 0045 00000000 		.4byte	.LEHB5-.LFB56
- 374 0049 00000000 		.4byte	.LEHE5-.LEHB5
- 375 004d 00000000 		.4byte	0
- 376 0051 00       		.byte	0
- 377 0052 00000000 		.4byte	.LEHB6-.LFB56
- 378 0056 00000000 		.4byte	.LEHE6-.LEHB6
- 379 005a 00000000 		.4byte	0
- 380 005e 00       		.byte	0
- 381              		.text
- 383              		.weak	_ZGVZN15MemoryAllocator11getInstanceEvE8instance
- 384              		.section	.bss._ZGVZN15MemoryAllocator11getInstanceEvE8instance,"awG",@nobits,_ZGVZN15MemoryAllocat
- 385              		.align	3
- 388              	_ZGVZN15MemoryAllocator11getInstanceEvE8instance:
- 389 0000 00000000 		.zero	8
- 389      00000000 
- 390              		.text
- 391              	.Letext0:
- 392              		.file 5 "src/../h/../h/../lib/hw.h"
- 393              		.file 6 "src/../h/Scheduler.hpp"
- 394              		.file 7 "src/../h/list.hpp"
- 395              		.file 8 "src/../h/../h/Sem.hpp"
- 396              		.file 9 "src/../h/syscall_cpp.hpp"
- 397              		.file 10 "src/../h/../h/syscall_c.hpp"
- 3797              		.align	3
- 3800              	DW.ref.__gxx_personality_v0:
- 3801 0000 00000000 		.dword	__gxx_personality_v0
- 3801      00000000 
- 3802              		.ident	"GCC: (Ubuntu 9.4.0-1ubuntu1~20.04) 9.4.0"
- 3803              		.section	.note.GNU-stack,"",@progbits
-GAS LISTING /tmp/ccapaTpE.s 			page 15
+ 359              		.text
+ 361              		.weak	_ZGVZN15MemoryAllocator11getInstanceEvE8instance
+ 362              		.section	.bss._ZGVZN15MemoryAllocator11getInstanceEvE8instance,"awG",@nobits,_ZGVZN15MemoryAllocat
+ 363              		.align	3
+ 366              	_ZGVZN15MemoryAllocator11getInstanceEvE8instance:
+ 367 0000 00000000 		.zero	8
+ 367      00000000 
+ 368              		.text
+ 369              	.Letext0:
+ 370              		.file 5 "src/../h/../h/../lib/hw.h"
+ 371              		.file 6 "src/../h/Scheduler.hpp"
+ 372              		.file 7 "src/../h/list.hpp"
+ 373              		.file 8 "src/../h/../h/syscall_c.hpp"
+ 374              		.file 9 "src/../h/syscall_cpp.hpp"
+ 3584              		.align	3
+ 3587              	DW.ref.__gxx_personality_v0:
+ 3588 0000 00000000 		.dword	__gxx_personality_v0
+ 3588      00000000 
+ 3589              		.ident	"GCC: (Ubuntu 9.4.0-1ubuntu1~20.04) 9.4.0"
+ 3590              		.section	.note.GNU-stack,"",@progbits
+GAS LISTING /tmp/ccYYMODl.s 			page 15
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 main.cpp
-     /tmp/ccapaTpE.s:9      .text:0000000000000000 _Z7createCm
-     /tmp/ccapaTpE.s:13     .text:0000000000000000 .L0 
-     /tmp/ccapaTpE.s:15     .text:0000000000000000 .L0 
-     /tmp/ccapaTpE.s:16     .text:0000000000000004 .L0 
-     /tmp/ccapaTpE.s:20     .text:0000000000000010 .L0 
-     /tmp/ccapaTpE.s:21     .text:0000000000000010 .L0 
-     /tmp/ccapaTpE.s:22     .text:0000000000000010 .L0 
-     /tmp/ccapaTpE.s:24     .text:0000000000000014 .L0 
-     /tmp/ccapaTpE.s:27     .text:0000000000000018 .L0 
-     /tmp/ccapaTpE.s:28     .text:0000000000000018 .L0 
-     /tmp/ccapaTpE.s:35     .text:0000000000000024 .L0 
-     /tmp/ccapaTpE.s:36     .text:0000000000000024 .L0 
-     /tmp/ccapaTpE.s:41     .text:0000000000000028 .L0 
-     /tmp/ccapaTpE.s:42     .text:000000000000002c .L0 
-     /tmp/ccapaTpE.s:44     .text:0000000000000030 .L0 
-     /tmp/ccapaTpE.s:45     .text:0000000000000030 .L0 
-     /tmp/ccapaTpE.s:47     .text:0000000000000034 .L0 
-     /tmp/ccapaTpE.s:50     .text:0000000000000038 .L0 
-     /tmp/ccapaTpE.s:52     .text:000000000000003c .L0 
-     /tmp/ccapaTpE.s:58     .text:000000000000003c main
-     /tmp/ccapaTpE.s:61     .text:000000000000003c .L0 
-     /tmp/ccapaTpE.s:3800   .data.rel.local.DW.ref.__gxx_personality_v0:0000000000000000 DW.ref.__gxx_personality_v0
-     /tmp/ccapaTpE.s:64     .text:000000000000003c .L0 
-     /tmp/ccapaTpE.s:65     .text:0000000000000040 .L0 
-     /tmp/ccapaTpE.s:71     .text:0000000000000054 .L0 
-     /tmp/ccapaTpE.s:72     .text:0000000000000054 .L0 
-     /tmp/ccapaTpE.s:73     .text:0000000000000054 .L0 
-     /tmp/ccapaTpE.s:74     .text:0000000000000054 .L0 
-     /tmp/ccapaTpE.s:75     .text:0000000000000054 .L0 
-     /tmp/ccapaTpE.s:77     .text:0000000000000058 .L0 
-     /tmp/ccapaTpE.s:82     .text:0000000000000058 .L0 
-     /tmp/ccapaTpE.s:83     .text:0000000000000058 .L0 
-     /tmp/ccapaTpE.s:388    .bss._ZGVZN15MemoryAllocator11getInstanceEvE8instance:0000000000000000 _ZGVZN15MemoryAllocator11getInstanceEvE8instance
-     /tmp/ccapaTpE.s:84     .text:0000000000000058 .L0 
-     /tmp/ccapaTpE.s:96     .text:0000000000000070 .L0 
-     /tmp/ccapaTpE.s:97     .text:0000000000000070 .L0 
-     /tmp/ccapaTpE.s:98     .text:0000000000000070 .L0 
-     /tmp/ccapaTpE.s:103    .text:0000000000000088 .L0 
-     /tmp/ccapaTpE.s:104    .text:0000000000000088 .L0 
-     /tmp/ccapaTpE.s:107    .text:0000000000000094 .L0 
-     /tmp/ccapaTpE.s:110    .text:000000000000009c .L0 
-     /tmp/ccapaTpE.s:112    .text:00000000000000a0 .L0 
-     /tmp/ccapaTpE.s:113    .text:00000000000000a0 .L0 
-     /tmp/ccapaTpE.s:115    .text:00000000000000a4 .L0 
-     /tmp/ccapaTpE.s:117    .text:00000000000000a8 .L0 
-     /tmp/ccapaTpE.s:118    .text:00000000000000a8 .L0 
-     /tmp/ccapaTpE.s:123    .text:00000000000000b4 .L0 
-     /tmp/ccapaTpE.s:124    .text:00000000000000b4 .L0 
-     /tmp/ccapaTpE.s:131    .text:00000000000000c0 .L0 
+     /tmp/ccYYMODl.s:9      .text:0000000000000000 _Z7createCm
+     /tmp/ccYYMODl.s:13     .text:0000000000000000 .L0 
+     /tmp/ccYYMODl.s:15     .text:0000000000000000 .L0 
+     /tmp/ccYYMODl.s:16     .text:0000000000000004 .L0 
+     /tmp/ccYYMODl.s:20     .text:0000000000000010 .L0 
+     /tmp/ccYYMODl.s:21     .text:0000000000000010 .L0 
+     /tmp/ccYYMODl.s:22     .text:0000000000000010 .L0 
+     /tmp/ccYYMODl.s:24     .text:0000000000000014 .L0 
+     /tmp/ccYYMODl.s:27     .text:0000000000000018 .L0 
+     /tmp/ccYYMODl.s:28     .text:0000000000000018 .L0 
+     /tmp/ccYYMODl.s:35     .text:0000000000000024 .L0 
+     /tmp/ccYYMODl.s:36     .text:0000000000000024 .L0 
+     /tmp/ccYYMODl.s:41     .text:0000000000000028 .L0 
+     /tmp/ccYYMODl.s:42     .text:000000000000002c .L0 
+     /tmp/ccYYMODl.s:44     .text:0000000000000030 .L0 
+     /tmp/ccYYMODl.s:45     .text:0000000000000030 .L0 
+     /tmp/ccYYMODl.s:47     .text:0000000000000034 .L0 
+     /tmp/ccYYMODl.s:50     .text:0000000000000038 .L0 
+     /tmp/ccYYMODl.s:52     .text:000000000000003c .L0 
+     /tmp/ccYYMODl.s:58     .text:000000000000003c main
+     /tmp/ccYYMODl.s:61     .text:000000000000003c .L0 
+     /tmp/ccYYMODl.s:3587   .data.rel.local.DW.ref.__gxx_personality_v0:0000000000000000 DW.ref.__gxx_personality_v0
+     /tmp/ccYYMODl.s:64     .text:000000000000003c .L0 
+     /tmp/ccYYMODl.s:65     .text:0000000000000040 .L0 
+     /tmp/ccYYMODl.s:71     .text:0000000000000054 .L0 
+     /tmp/ccYYMODl.s:72     .text:0000000000000054 .L0 
+     /tmp/ccYYMODl.s:73     .text:0000000000000054 .L0 
+     /tmp/ccYYMODl.s:74     .text:0000000000000054 .L0 
+     /tmp/ccYYMODl.s:75     .text:0000000000000054 .L0 
+     /tmp/ccYYMODl.s:77     .text:0000000000000058 .L0 
+     /tmp/ccYYMODl.s:82     .text:0000000000000058 .L0 
+     /tmp/ccYYMODl.s:83     .text:0000000000000058 .L0 
+     /tmp/ccYYMODl.s:366    .bss._ZGVZN15MemoryAllocator11getInstanceEvE8instance:0000000000000000 _ZGVZN15MemoryAllocator11getInstanceEvE8instance
+     /tmp/ccYYMODl.s:84     .text:0000000000000058 .L0 
+     /tmp/ccYYMODl.s:96     .text:0000000000000070 .L0 
+     /tmp/ccYYMODl.s:97     .text:0000000000000070 .L0 
+     /tmp/ccYYMODl.s:98     .text:0000000000000070 .L0 
+     /tmp/ccYYMODl.s:103    .text:0000000000000088 .L0 
+     /tmp/ccYYMODl.s:104    .text:0000000000000088 .L0 
+     /tmp/ccYYMODl.s:107    .text:0000000000000094 .L0 
+     /tmp/ccYYMODl.s:110    .text:000000000000009c .L0 
+     /tmp/ccYYMODl.s:112    .text:00000000000000a0 .L0 
+     /tmp/ccYYMODl.s:113    .text:00000000000000a0 .L0 
+     /tmp/ccYYMODl.s:115    .text:00000000000000a4 .L0 
+     /tmp/ccYYMODl.s:117    .text:00000000000000a8 .L0 
+     /tmp/ccYYMODl.s:118    .text:00000000000000a8 .L0 
+     /tmp/ccYYMODl.s:123    .text:00000000000000b4 .L0 
+     /tmp/ccYYMODl.s:124    .text:00000000000000b4 .L0 
+     /tmp/ccYYMODl.s:131    .text:00000000000000c0 .L0 
   src/../h/riscv.hpp:157    .text:00000000000000c0 .L0 
-     /tmp/ccapaTpE.s:141    .text:00000000000000c4 .L0 
-     /tmp/ccapaTpE.s:142    .text:00000000000000c4 .L0 
-     /tmp/ccapaTpE.s:156    .text:00000000000000e8 .L0 
-     /tmp/ccapaTpE.s:157    .text:00000000000000e8 .L0 
-     /tmp/ccapaTpE.s:164    .text:00000000000000f4 .L0 
-GAS LISTING /tmp/ccapaTpE.s 			page 16
+     /tmp/ccYYMODl.s:141    .text:00000000000000c4 .L0 
+     /tmp/ccYYMODl.s:142    .text:00000000000000c4 .L0 
+     /tmp/ccYYMODl.s:156    .text:00000000000000e8 .L0 
+     /tmp/ccYYMODl.s:157    .text:00000000000000e8 .L0 
+     /tmp/ccYYMODl.s:164    .text:00000000000000f4 .L0 
+GAS LISTING /tmp/ccYYMODl.s 			page 16
 
 
-     /tmp/ccapaTpE.s:165    .text:00000000000000f4 .L0 
-     /tmp/ccapaTpE.s:166    .text:00000000000000f4 .L0 
-     /tmp/ccapaTpE.s:174    .text:00000000000000fc .L0 
-     /tmp/ccapaTpE.s:175    .text:00000000000000fc .L0 
-     /tmp/ccapaTpE.s:176    .text:00000000000000fc .L0 
-     /tmp/ccapaTpE.s:187    .text:0000000000000104 .L0 
-     /tmp/ccapaTpE.s:188    .text:0000000000000104 .L0 
-     /tmp/ccapaTpE.s:193    .text:000000000000010c .L0 
-     /tmp/ccapaTpE.s:194    .text:000000000000010c .L0 
-     /tmp/ccapaTpE.s:195    .text:000000000000010c .L0 
-     /tmp/ccapaTpE.s:199    .text:0000000000000118 .L0 
-     /tmp/ccapaTpE.s:206    .text:0000000000000124 .L0 
-     /tmp/ccapaTpE.s:207    .text:0000000000000124 .L0 
-     /tmp/ccapaTpE.s:213    .text:0000000000000134 .L0 
-     /tmp/ccapaTpE.s:214    .text:0000000000000134 .L0 
-     /tmp/ccapaTpE.s:228    .text:000000000000015c .L0 
-     /tmp/ccapaTpE.s:229    .text:000000000000015c .L0 
-     /tmp/ccapaTpE.s:235    .text:0000000000000168 .L0 
-     /tmp/ccapaTpE.s:238    .text:0000000000000168 .L0 
-     /tmp/ccapaTpE.s:239    .text:0000000000000168 .L0 
-     /tmp/ccapaTpE.s:240    .text:0000000000000168 .L0 
-     /tmp/ccapaTpE.s:245    .text:000000000000016c .L0 
-     /tmp/ccapaTpE.s:248    .text:0000000000000174 .L0 
-     /tmp/ccapaTpE.s:249    .text:0000000000000174 .L0 
-     /tmp/ccapaTpE.s:252    .text:000000000000017c .L0 
-     /tmp/ccapaTpE.s:255    .text:0000000000000180 .L0 
-     /tmp/ccapaTpE.s:256    .text:0000000000000180 .L0 
-     /tmp/ccapaTpE.s:261    .text:0000000000000184 .L0 
-     /tmp/ccapaTpE.s:262    .text:0000000000000184 .L0 
-     /tmp/ccapaTpE.s:264    .text:0000000000000188 .L0 
-     /tmp/ccapaTpE.s:266    .text:000000000000018c .L0 
-     /tmp/ccapaTpE.s:272    .text:0000000000000194 .L0 
-     /tmp/ccapaTpE.s:277    .text:00000000000001a0 .L0 
-     /tmp/ccapaTpE.s:278    .text:00000000000001a0 .L0 
-     /tmp/ccapaTpE.s:283    .text:00000000000001a4 .L0 
-     /tmp/ccapaTpE.s:284    .text:00000000000001a4 .L0 
-     /tmp/ccapaTpE.s:286    .text:00000000000001a8 .L0 
-     /tmp/ccapaTpE.s:288    .text:00000000000001ac .L0 
-     /tmp/ccapaTpE.s:294    .text:00000000000001b4 .L0 
-     /tmp/ccapaTpE.s:300    .text:00000000000001c0 .L0 
-     /tmp/ccapaTpE.s:301    .text:00000000000001c0 .L0 
-     /tmp/ccapaTpE.s:303    .text:00000000000001c8 .L0 
-     /tmp/ccapaTpE.s:304    .text:00000000000001c8 .L0 
-     /tmp/ccapaTpE.s:306    .text:00000000000001cc .L0 
-     /tmp/ccapaTpE.s:307    .text:00000000000001cc .L0 
-     /tmp/ccapaTpE.s:309    .text:00000000000001d0 .L0 
-     /tmp/ccapaTpE.s:312    .text:00000000000001d4 .L0 
-     /tmp/ccapaTpE.s:315    .text:00000000000001d8 .L0 
-     /tmp/ccapaTpE.s:318    .text:00000000000001dc .L0 
-     /tmp/ccapaTpE.s:321    .text:00000000000001e0 .L0 
-     /tmp/ccapaTpE.s:324    .text:00000000000001e4 .L0 
-     /tmp/ccapaTpE.s:336    .text:0000000000000200 .L0 
-     /tmp/ccapaTpE.s:344    .text:0000000000000218 .L0 
-     /tmp/ccapaTpE.s:398    .text:0000000000000218 .L0 
-     /tmp/ccapaTpE.s:84     .text:0000000000000058 .L0 
-     /tmp/ccapaTpE.s:88     .text:0000000000000068 .L0 
-     /tmp/ccapaTpE.s:98     .text:0000000000000070 .L0 
-GAS LISTING /tmp/ccapaTpE.s 			page 17
+     /tmp/ccYYMODl.s:165    .text:00000000000000f4 .L0 
+     /tmp/ccYYMODl.s:166    .text:00000000000000f4 .L0 
+     /tmp/ccYYMODl.s:174    .text:00000000000000fc .L0 
+     /tmp/ccYYMODl.s:175    .text:00000000000000fc .L0 
+     /tmp/ccYYMODl.s:176    .text:00000000000000fc .L0 
+     /tmp/ccYYMODl.s:188    .text:0000000000000104 .L0 
+     /tmp/ccYYMODl.s:189    .text:0000000000000104 .L0 
+     /tmp/ccYYMODl.s:190    .text:0000000000000104 .L0 
+     /tmp/ccYYMODl.s:194    .text:0000000000000110 .L0 
+     /tmp/ccYYMODl.s:201    .text:000000000000011c .L0 
+     /tmp/ccYYMODl.s:202    .text:000000000000011c .L0 
+     /tmp/ccYYMODl.s:209    .text:000000000000012c .L0 
+     /tmp/ccYYMODl.s:210    .text:000000000000012c .L0 
+     /tmp/ccYYMODl.s:224    .text:0000000000000154 .L0 
+     /tmp/ccYYMODl.s:225    .text:0000000000000154 .L0 
+     /tmp/ccYYMODl.s:230    .text:0000000000000160 .L0 
+     /tmp/ccYYMODl.s:231    .text:0000000000000160 .L0 
+     /tmp/ccYYMODl.s:235    .text:0000000000000168 .L0 
+     /tmp/ccYYMODl.s:238    .text:0000000000000168 .L0 
+     /tmp/ccYYMODl.s:239    .text:0000000000000168 .L0 
+     /tmp/ccYYMODl.s:240    .text:0000000000000168 .L0 
+     /tmp/ccYYMODl.s:245    .text:000000000000016c .L0 
+     /tmp/ccYYMODl.s:248    .text:0000000000000174 .L0 
+     /tmp/ccYYMODl.s:249    .text:0000000000000174 .L0 
+     /tmp/ccYYMODl.s:252    .text:000000000000017c .L0 
+     /tmp/ccYYMODl.s:255    .text:0000000000000180 .L0 
+     /tmp/ccYYMODl.s:256    .text:0000000000000180 .L0 
+     /tmp/ccYYMODl.s:258    .text:0000000000000184 .L0 
+     /tmp/ccYYMODl.s:266    .text:000000000000019c .L0 
+     /tmp/ccYYMODl.s:267    .text:000000000000019c .L0 
+     /tmp/ccYYMODl.s:269    .text:00000000000001a0 .L0 
+     /tmp/ccYYMODl.s:278    .text:00000000000001b8 .L0 
+     /tmp/ccYYMODl.s:279    .text:00000000000001b8 .L0 
+     /tmp/ccYYMODl.s:281    .text:00000000000001c0 .L0 
+     /tmp/ccYYMODl.s:282    .text:00000000000001c0 .L0 
+     /tmp/ccYYMODl.s:284    .text:00000000000001c4 .L0 
+     /tmp/ccYYMODl.s:285    .text:00000000000001c4 .L0 
+     /tmp/ccYYMODl.s:287    .text:00000000000001c8 .L0 
+     /tmp/ccYYMODl.s:290    .text:00000000000001cc .L0 
+     /tmp/ccYYMODl.s:293    .text:00000000000001d0 .L0 
+     /tmp/ccYYMODl.s:296    .text:00000000000001d4 .L0 
+     /tmp/ccYYMODl.s:299    .text:00000000000001d8 .L0 
+     /tmp/ccYYMODl.s:302    .text:00000000000001dc .L0 
+     /tmp/ccYYMODl.s:314    .text:00000000000001f8 .L0 
+     /tmp/ccYYMODl.s:322    .text:0000000000000210 .L0 
+     /tmp/ccYYMODl.s:375    .text:0000000000000210 .L0 
+     /tmp/ccYYMODl.s:84     .text:0000000000000058 .L0 
+     /tmp/ccYYMODl.s:88     .text:0000000000000068 .L0 
+     /tmp/ccYYMODl.s:98     .text:0000000000000070 .L0 
+     /tmp/ccYYMODl.s:100    .text:000000000000007c .L0 
+     /tmp/ccYYMODl.s:104    .text:0000000000000088 .L0 
+     /tmp/ccYYMODl.s:118    .text:00000000000000a8 .L0 
+     /tmp/ccYYMODl.s:124    .text:00000000000000b4 .L0 
+     /tmp/ccYYMODl.s:157    .text:00000000000000e8 .L0 
+     /tmp/ccYYMODl.s:190    .text:0000000000000104 .L0 
+     /tmp/ccYYMODl.s:195    .text:0000000000000114 .L0 
+     /tmp/ccYYMODl.s:218    .text:0000000000000144 .L0 
+GAS LISTING /tmp/ccYYMODl.s 			page 17
 
 
-     /tmp/ccapaTpE.s:100    .text:000000000000007c .L0 
-     /tmp/ccapaTpE.s:104    .text:0000000000000088 .L0 
-     /tmp/ccapaTpE.s:118    .text:00000000000000a8 .L0 
-     /tmp/ccapaTpE.s:124    .text:00000000000000b4 .L0 
-     /tmp/ccapaTpE.s:157    .text:00000000000000e8 .L0 
-     /tmp/ccapaTpE.s:195    .text:000000000000010c .L0 
-     /tmp/ccapaTpE.s:200    .text:000000000000011c .L0 
-     /tmp/ccapaTpE.s:222    .text:000000000000014c .L0 
-     /tmp/ccapaTpE.s:90     .text:0000000000000070 .L4
-     /tmp/ccapaTpE.s:202    .text:0000000000000124 .L5
-     /tmp/ccapaTpE.s:253    .text:0000000000000180 .L6
-     /tmp/ccapaTpE.s:233    .text:0000000000000168 .L7
-     /tmp/ccapaTpE.s:275    .text:00000000000001a0 .L8
-     /tmp/ccapaTpE.s:268    .text:0000000000000194 .L9
-     /tmp/ccapaTpE.s:299    .text:00000000000001c0 .L16
-     /tmp/ccapaTpE.s:290    .text:00000000000001b4 .L11
-     /tmp/ccapaTpE.s:143    .text:00000000000000c8 .LEHB0
-     /tmp/ccapaTpE.s:59     .text:000000000000003c .LFB56
-     /tmp/ccapaTpE.s:146    .text:00000000000000d0 .LEHE0
-     /tmp/ccapaTpE.s:151    .text:00000000000000e0 .LEHB1
-     /tmp/ccapaTpE.s:154    .text:00000000000000e8 .LEHE1
-     /tmp/ccapaTpE.s:320    .text:00000000000001e0 .L14
-     /tmp/ccapaTpE.s:186    .text:0000000000000104 .LEHB2
-     /tmp/ccapaTpE.s:218    .text:0000000000000140 .LEHE2
-     /tmp/ccapaTpE.s:223    .text:0000000000000154 .LEHB3
-     /tmp/ccapaTpE.s:226    .text:000000000000015c .LEHE3
-     /tmp/ccapaTpE.s:332    .text:00000000000001fc .L15
-     /tmp/ccapaTpE.s:230    .text:0000000000000160 .LEHB4
-     /tmp/ccapaTpE.s:297    .text:00000000000001c0 .LEHE4
-     /tmp/ccapaTpE.s:328    .text:00000000000001f4 .LEHB5
-     /tmp/ccapaTpE.s:331    .text:00000000000001fc .LEHE5
-     /tmp/ccapaTpE.s:340    .text:0000000000000210 .LEHB6
-     /tmp/ccapaTpE.s:343    .text:0000000000000218 .LEHE6
-     /tmp/ccapaTpE.s:2094   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-     /tmp/ccapaTpE.s:3706   .debug_str:00000000000008e8 .LASF193
-     /tmp/ccapaTpE.s:3480   .debug_str:00000000000002f8 .LASF194
-     /tmp/ccapaTpE.s:3718   .debug_str:0000000000000a0a .LASF195
-     /tmp/ccapaTpE.s:5      .text:0000000000000000 .Ltext0
-     /tmp/ccapaTpE.s:391    .text:0000000000000218 .Letext0
-     /tmp/ccapaTpE.s:3378   .debug_line:0000000000000000 .Ldebug_line0
-     /tmp/ccapaTpE.s:3508   .debug_str:00000000000003af .LASF0
-     /tmp/ccapaTpE.s:3544   .debug_str:000000000000049d .LASF1
-     /tmp/ccapaTpE.s:3638   .debug_str:0000000000000732 .LASF2
-     /tmp/ccapaTpE.s:3648   .debug_str:000000000000077a .LASF4
-     /tmp/ccapaTpE.s:3520   .debug_str:0000000000000404 .LASF3
-     /tmp/ccapaTpE.s:3390   .debug_str:000000000000003e .LASF5
-     /tmp/ccapaTpE.s:3608   .debug_str:0000000000000657 .LASF6
-     /tmp/ccapaTpE.s:3536   .debug_str:0000000000000469 .LASF7
-     /tmp/ccapaTpE.s:3490   .debug_str:0000000000000320 .LASF8
-     /tmp/ccapaTpE.s:3496   .debug_str:0000000000000355 .LASF9
-     /tmp/ccapaTpE.s:3420   .debug_str:000000000000013e .LASF10
-     /tmp/ccapaTpE.s:3478   .debug_str:00000000000002e9 .LASF11
-     /tmp/ccapaTpE.s:3432   .debug_str:000000000000018d .LASF12
-     /tmp/ccapaTpE.s:3418   .debug_str:000000000000012e .LASF13
-     /tmp/ccapaTpE.s:3686   .debug_str:000000000000088b .LASF14
-     /tmp/ccapaTpE.s:3464   .debug_str:000000000000027a .LASF15
-     /tmp/ccapaTpE.s:3674   .debug_str:0000000000000825 .LASF16
-GAS LISTING /tmp/ccapaTpE.s 			page 18
+     /tmp/ccYYMODl.s:90     .text:0000000000000070 .L4
+     /tmp/ccYYMODl.s:197    .text:000000000000011c .L5
+     /tmp/ccYYMODl.s:253    .text:0000000000000180 .L6
+     /tmp/ccYYMODl.s:233    .text:0000000000000168 .L7
+     /tmp/ccYYMODl.s:264    .text:000000000000019c .L8
+     /tmp/ccYYMODl.s:277    .text:00000000000001b8 .L14
+     /tmp/ccYYMODl.s:143    .text:00000000000000c8 .LEHB0
+     /tmp/ccYYMODl.s:59     .text:000000000000003c .LFB53
+     /tmp/ccYYMODl.s:146    .text:00000000000000d0 .LEHE0
+     /tmp/ccYYMODl.s:151    .text:00000000000000e0 .LEHB1
+     /tmp/ccYYMODl.s:154    .text:00000000000000e8 .LEHE1
+     /tmp/ccYYMODl.s:298    .text:00000000000001d8 .L12
+     /tmp/ccYYMODl.s:203    .text:0000000000000120 .LEHB2
+     /tmp/ccYYMODl.s:214    .text:0000000000000138 .LEHE2
+     /tmp/ccYYMODl.s:219    .text:000000000000014c .LEHB3
+     /tmp/ccYYMODl.s:222    .text:0000000000000154 .LEHE3
+     /tmp/ccYYMODl.s:310    .text:00000000000001f4 .L13
+     /tmp/ccYYMODl.s:226    .text:0000000000000158 .LEHB4
+     /tmp/ccYYMODl.s:275    .text:00000000000001b8 .LEHE4
+     /tmp/ccYYMODl.s:306    .text:00000000000001ec .LEHB5
+     /tmp/ccYYMODl.s:309    .text:00000000000001f4 .LEHE5
+     /tmp/ccYYMODl.s:318    .text:0000000000000208 .LEHB6
+     /tmp/ccYYMODl.s:321    .text:0000000000000210 .LEHE6
+     /tmp/ccYYMODl.s:1935   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+     /tmp/ccYYMODl.s:3497   .debug_str:000000000000083c .LASF175
+     /tmp/ccYYMODl.s:3289   .debug_str:00000000000002b9 .LASF176
+     /tmp/ccYYMODl.s:3507   .debug_str:0000000000000954 .LASF177
+     /tmp/ccYYMODl.s:5      .text:0000000000000000 .Ltext0
+     /tmp/ccYYMODl.s:369    .text:0000000000000210 .Letext0
+     /tmp/ccYYMODl.s:3199   .debug_line:0000000000000000 .Ldebug_line0
+     /tmp/ccYYMODl.s:3317   .debug_str:0000000000000374 .LASF0
+     /tmp/ccYYMODl.s:3351   .debug_str:000000000000045d .LASF1
+     /tmp/ccYYMODl.s:3435   .debug_str:00000000000006af .LASF2
+     /tmp/ccYYMODl.s:3445   .debug_str:00000000000006f7 .LASF4
+     /tmp/ccYYMODl.s:3329   .debug_str:00000000000003c9 .LASF3
+     /tmp/ccYYMODl.s:3205   .debug_str:0000000000000017 .LASF5
+     /tmp/ccYYMODl.s:3407   .debug_str:00000000000005de .LASF6
+     /tmp/ccYYMODl.s:3343   .debug_str:0000000000000429 .LASF7
+     /tmp/ccYYMODl.s:3299   .debug_str:00000000000002e1 .LASF8
+     /tmp/ccYYMODl.s:3307   .debug_str:0000000000000327 .LASF9
+     /tmp/ccYYMODl.s:3235   .debug_str:000000000000011c .LASF10
+     /tmp/ccYYMODl.s:3287   .debug_str:00000000000002aa .LASF11
+     /tmp/ccYYMODl.s:3249   .debug_str:000000000000017c .LASF12
+     /tmp/ccYYMODl.s:3233   .debug_str:000000000000010c .LASF13
+     /tmp/ccYYMODl.s:3479   .debug_str:00000000000007e6 .LASF14
+     /tmp/ccYYMODl.s:3277   .debug_str:0000000000000258 .LASF15
+     /tmp/ccYYMODl.s:3469   .debug_str:0000000000000791 .LASF16
+     /tmp/ccYYMODl.s:3337   .debug_str:000000000000040d .LASF178
+     /tmp/ccYYMODl.s:3349   .debug_str:0000000000000458 .LASF17
+     /tmp/ccYYMODl.s:3237   .debug_str:000000000000012b .LASF18
+     /tmp/ccYYMODl.s:3401   .debug_str:00000000000005b1 .LASF27
+     /tmp/ccYYMODl.s:3217   .debug_str:0000000000000085 .LASF94
+     /tmp/ccYYMODl.s:3519   .debug_str:00000000000009b1 .LASF19
+     /tmp/ccYYMODl.s:3471   .debug_str:00000000000007a7 .LASF20
+     /tmp/ccYYMODl.s:3555   .debug_str:0000000000000a9c .LASF30
+     /tmp/ccYYMODl.s:3369   .debug_str:00000000000004d8 .LASF32
+     /tmp/ccYYMODl.s:3221   .debug_str:00000000000000c6 .LASF63
+GAS LISTING /tmp/ccYYMODl.s 			page 18
 
 
-     /tmp/ccapaTpE.s:3528   .debug_str:0000000000000448 .LASF196
-     /tmp/ccapaTpE.s:3542   .debug_str:0000000000000498 .LASF17
-     /tmp/ccapaTpE.s:3422   .debug_str:000000000000014d .LASF18
-     /tmp/ccapaTpE.s:3602   .debug_str:000000000000062a .LASF27
-     /tmp/ccapaTpE.s:3402   .debug_str:00000000000000ac .LASF91
-     /tmp/ccapaTpE.s:3728   .debug_str:0000000000000a62 .LASF19
-     /tmp/ccapaTpE.s:3676   .debug_str:000000000000083b .LASF20
-     /tmp/ccapaTpE.s:3768   .debug_str:0000000000000b59 .LASF30
-     /tmp/ccapaTpE.s:3564   .debug_str:000000000000051d .LASF32
-     /tmp/ccapaTpE.s:3406   .debug_str:00000000000000ed .LASF63
-     /tmp/ccapaTpE.s:3782   .debug_str:0000000000000bc1 .LASF65
-     /tmp/ccapaTpE.s:3790   .debug_str:0000000000000c01 .LASF21
-     /tmp/ccapaTpE.s:3494   .debug_str:0000000000000335 .LASF23
-     /tmp/ccapaTpE.s:3560   .debug_str:00000000000004fc .LASF22
-     /tmp/ccapaTpE.s:3598   .debug_str:00000000000005f2 .LASF24
-     /tmp/ccapaTpE.s:3524   .debug_str:0000000000000427 .LASF39
-     /tmp/ccapaTpE.s:3640   .debug_str:0000000000000740 .LASF25
-     /tmp/ccapaTpE.s:3734   .debug_str:0000000000000a79 .LASF26
-     /tmp/ccapaTpE.s:3488   .debug_str:0000000000000316 .LASF28
-     /tmp/ccapaTpE.s:3430   .debug_str:0000000000000182 .LASF29
-     /tmp/ccapaTpE.s:3776   .debug_str:0000000000000b95 .LASF197
-     /tmp/ccapaTpE.s:3394   .debug_str:0000000000000050 .LASF168
-     /tmp/ccapaTpE.s:3382   .debug_str:000000000000000c .LASF31
-     /tmp/ccapaTpE.s:3658   .debug_str:00000000000007bf .LASF33
-     /tmp/ccapaTpE.s:3416   .debug_str:0000000000000124 .LASF34
-     /tmp/ccapaTpE.s:3730   .debug_str:0000000000000a6c .LASF198
-     /tmp/ccapaTpE.s:3678   .debug_str:000000000000084a .LASF35
-     /tmp/ccapaTpE.s:3582   .debug_str:000000000000059b .LASF36
-     /tmp/ccapaTpE.s:3570   .debug_str:0000000000000568 .LASF37
-     /tmp/ccapaTpE.s:3766   .debug_str:0000000000000b46 .LASF38
-     /tmp/ccapaTpE.s:3408   .debug_str:00000000000000f2 .LASF40
-     /tmp/ccapaTpE.s:3434   .debug_str:000000000000019d .LASF173
-     /tmp/ccapaTpE.s:3540   .debug_str:000000000000048f .LASF41
-     /tmp/ccapaTpE.s:3716   .debug_str:00000000000009ed .LASF42
-     /tmp/ccapaTpE.s:3556   .debug_str:00000000000004ef .LASF43
-     /tmp/ccapaTpE.s:3630   .debug_str:00000000000006f8 .LASF44
-     /tmp/ccapaTpE.s:3604   .debug_str:000000000000063a .LASF45
-     /tmp/ccapaTpE.s:3744   .debug_str:0000000000000ab8 .LASF46
-     /tmp/ccapaTpE.s:3792   .debug_str:0000000000000c0a .LASF47
-     /tmp/ccapaTpE.s:3566   .debug_str:0000000000000541 .LASF48
-     /tmp/ccapaTpE.s:3662   .debug_str:00000000000007e7 .LASF49
-     /tmp/ccapaTpE.s:3424   .debug_str:0000000000000152 .LASF50
-     /tmp/ccapaTpE.s:3622   .debug_str:00000000000006d0 .LASF51
-     /tmp/ccapaTpE.s:3682   .debug_str:0000000000000860 .LASF52
-     /tmp/ccapaTpE.s:3694   .debug_str:00000000000008b5 .LASF199
-     /tmp/ccapaTpE.s:3700   .debug_str:00000000000008cd .LASF95
-     /tmp/ccapaTpE.s:3414   .debug_str:000000000000011e .LASF53
-     /tmp/ccapaTpE.s:3664   .debug_str:00000000000007f2 .LASF54
-     /tmp/ccapaTpE.s:3426   .debug_str:000000000000016f .LASF55
-     /tmp/ccapaTpE.s:3410   .debug_str:0000000000000109 .LASF56
-     /tmp/ccapaTpE.s:3754   .debug_str:0000000000000b01 .LASF57
-     /tmp/ccapaTpE.s:3780   .debug_str:0000000000000bb5 .LASF58
-     /tmp/ccapaTpE.s:3696   .debug_str:00000000000008bd .LASF59
-     /tmp/ccapaTpE.s:3760   .debug_str:0000000000000b10 .LASF60
-     /tmp/ccapaTpE.s:3646   .debug_str:0000000000000771 .LASF61
-     /tmp/ccapaTpE.s:3518   .debug_str:00000000000003e8 .LASF62
-     /tmp/ccapaTpE.s:3452   .debug_str:0000000000000244 .LASF64
-GAS LISTING /tmp/ccapaTpE.s 			page 19
+     /tmp/ccYYMODl.s:3569   .debug_str:0000000000000b04 .LASF65
+     /tmp/ccYYMODl.s:3577   .debug_str:0000000000000b44 .LASF21
+     /tmp/ccYYMODl.s:3305   .debug_str:0000000000000307 .LASF23
+     /tmp/ccYYMODl.s:3365   .debug_str:00000000000004b7 .LASF22
+     /tmp/ccYYMODl.s:3397   .debug_str:0000000000000588 .LASF24
+     /tmp/ccYYMODl.s:3333   .debug_str:00000000000003ec .LASF39
+     /tmp/ccYYMODl.s:3437   .debug_str:00000000000006bd .LASF25
+     /tmp/ccYYMODl.s:3525   .debug_str:00000000000009c8 .LASF26
+     /tmp/ccYYMODl.s:3297   .debug_str:00000000000002d7 .LASF28
+     /tmp/ccYYMODl.s:3247   .debug_str:0000000000000171 .LASF29
+     /tmp/ccYYMODl.s:3563   .debug_str:0000000000000ad8 .LASF179
+     /tmp/ccYYMODl.s:3209   .debug_str:0000000000000029 .LASF154
+     /tmp/ccYYMODl.s:3201   .debug_str:0000000000000000 .LASF31
+     /tmp/ccYYMODl.s:3455   .debug_str:000000000000073c .LASF33
+     /tmp/ccYYMODl.s:3231   .debug_str:0000000000000102 .LASF34
+     /tmp/ccYYMODl.s:3521   .debug_str:00000000000009bb .LASF180
+     /tmp/ccYYMODl.s:3473   .debug_str:00000000000007b6 .LASF35
+     /tmp/ccYYMODl.s:3381   .debug_str:0000000000000531 .LASF36
+     /tmp/ccYYMODl.s:3373   .debug_str:0000000000000517 .LASF37
+     /tmp/ccYYMODl.s:3553   .debug_str:0000000000000a89 .LASF38
+     /tmp/ccYYMODl.s:3223   .debug_str:00000000000000cb .LASF40
+     /tmp/ccYYMODl.s:3251   .debug_str:000000000000018c .LASF159
+     /tmp/ccYYMODl.s:3347   .debug_str:000000000000044f .LASF41
+     /tmp/ccYYMODl.s:3505   .debug_str:0000000000000937 .LASF42
+     /tmp/ccYYMODl.s:3361   .debug_str:00000000000004aa .LASF43
+     /tmp/ccYYMODl.s:3429   .debug_str:000000000000067f .LASF44
+     /tmp/ccYYMODl.s:3403   .debug_str:00000000000005c1 .LASF45
+     /tmp/ccYYMODl.s:3533   .debug_str:0000000000000a00 .LASF46
+     /tmp/ccYYMODl.s:3579   .debug_str:0000000000000b4d .LASF47
+     /tmp/ccYYMODl.s:3371   .debug_str:00000000000004fc .LASF48
+     /tmp/ccYYMODl.s:3457   .debug_str:0000000000000753 .LASF49
+     /tmp/ccYYMODl.s:3241   .debug_str:0000000000000141 .LASF50
+     /tmp/ccYYMODl.s:3421   .debug_str:0000000000000657 .LASF51
+     /tmp/ccYYMODl.s:3475   .debug_str:00000000000007bb .LASF52
+     /tmp/ccYYMODl.s:3485   .debug_str:0000000000000809 .LASF181
+     /tmp/ccYYMODl.s:3491   .debug_str:0000000000000821 .LASF80
+     /tmp/ccYYMODl.s:3229   .debug_str:00000000000000fc .LASF53
+     /tmp/ccYYMODl.s:3459   .debug_str:000000000000075e .LASF54
+     /tmp/ccYYMODl.s:3243   .debug_str:000000000000015e .LASF55
+     /tmp/ccYYMODl.s:3225   .debug_str:00000000000000e2 .LASF56
+     /tmp/ccYYMODl.s:3543   .debug_str:0000000000000a49 .LASF57
+     /tmp/ccYYMODl.s:3567   .debug_str:0000000000000af8 .LASF58
+     /tmp/ccYYMODl.s:3487   .debug_str:0000000000000811 .LASF59
+     /tmp/ccYYMODl.s:3549   .debug_str:0000000000000a58 .LASF60
+     /tmp/ccYYMODl.s:3443   .debug_str:00000000000006ee .LASF61
+     /tmp/ccYYMODl.s:3327   .debug_str:00000000000003ad .LASF62
+     /tmp/ccYYMODl.s:3267   .debug_str:0000000000000227 .LASF64
+     /tmp/ccYYMODl.s:3215   .debug_str:0000000000000072 .LASF66
+     /tmp/ccYYMODl.s:3463   .debug_str:000000000000076c .LASF67
+     /tmp/ccYYMODl.s:3441   .debug_str:00000000000006df .LASF68
+     /tmp/ccYYMODl.s:3451   .debug_str:0000000000000718 .LASF182
+     /tmp/ccYYMODl.s:3393   .debug_str:0000000000000572 .LASF183
+     /tmp/ccYYMODl.s:3561   .debug_str:0000000000000ad2 .LASF69
+     /tmp/ccYYMODl.s:3501   .debug_str:0000000000000913 .LASF70
+     /tmp/ccYYMODl.s:3493   .debug_str:0000000000000827 .LASF184
+     /tmp/ccYYMODl.s:3325   .debug_str:00000000000003a8 .LASF71
+     /tmp/ccYYMODl.s:3575   .debug_str:0000000000000b35 .LASF72
+GAS LISTING /tmp/ccYYMODl.s 			page 19
 
 
-     /tmp/ccapaTpE.s:3400   .debug_str:0000000000000099 .LASF66
-     /tmp/ccapaTpE.s:3668   .debug_str:0000000000000800 .LASF67
-     /tmp/ccapaTpE.s:3644   .debug_str:0000000000000762 .LASF68
-     /tmp/ccapaTpE.s:3654   .debug_str:000000000000079b .LASF81
-     /tmp/ccapaTpE.s:3594   .debug_str:00000000000005dc .LASF200
-     /tmp/ccapaTpE.s:3774   .debug_str:0000000000000b8f .LASF69
-     /tmp/ccapaTpE.s:3710   .debug_str:00000000000009bf .LASF70
-     /tmp/ccapaTpE.s:3702   .debug_str:00000000000008d3 .LASF201
-     /tmp/ccapaTpE.s:3516   .debug_str:00000000000003e3 .LASF71
-     /tmp/ccapaTpE.s:3788   .debug_str:0000000000000bf2 .LASF72
-     /tmp/ccapaTpE.s:3436   .debug_str:00000000000001b4 .LASF202
-     /tmp/ccapaTpE.s:3404   .debug_str:00000000000000c5 .LASF203
-     /tmp/ccapaTpE.s:3738   .debug_str:0000000000000aa4 .LASF162
-     /tmp/ccapaTpE.s:3692   .debug_str:00000000000008a3 .LASF164
-     /tmp/ccapaTpE.s:3632   .debug_str:0000000000000714 .LASF73
-     /tmp/ccapaTpE.s:3450   .debug_str:000000000000023f .LASF74
-     /tmp/ccapaTpE.s:3666   .debug_str:00000000000007fa .LASF75
-     /tmp/ccapaTpE.s:3690   .debug_str:000000000000089e .LASF76
-     /tmp/ccapaTpE.s:3720   .debug_str:0000000000000a2d .LASF77
-     /tmp/ccapaTpE.s:3456   .debug_str:0000000000000252 .LASF78
-     /tmp/ccapaTpE.s:3500   .debug_str:000000000000036e .LASF79
-     /tmp/ccapaTpE.s:3576   .debug_str:0000000000000584 .LASF80
-     /tmp/ccapaTpE.s:3412   .debug_str:0000000000000112 .LASF82
-     /tmp/ccapaTpE.s:3568   .debug_str:000000000000055c .LASF83
-     /tmp/ccapaTpE.s:3548   .debug_str:00000000000004c9 .LASF84
-     /tmp/ccapaTpE.s:3380   .debug_str:0000000000000000 .LASF85
-     /tmp/ccapaTpE.s:3454   .debug_str:000000000000024d .LASF86
-     /tmp/ccapaTpE.s:3572   .debug_str:000000000000056d .LASF87
-     /tmp/ccapaTpE.s:3688   .debug_str:0000000000000897 .LASF88
-     /tmp/ccapaTpE.s:3680   .debug_str:000000000000084f .LASF89
-     /tmp/ccapaTpE.s:3714   .debug_str:00000000000009e3 .LASF90
-     /tmp/ccapaTpE.s:3600   .debug_str:0000000000000616 .LASF92
-     /tmp/ccapaTpE.s:3558   .debug_str:00000000000004f7 .LASF93
-     /tmp/ccapaTpE.s:3750   .debug_str:0000000000000af1 .LASF94
-     /tmp/ccapaTpE.s:3468   .debug_str:00000000000002ab .LASF96
-     /tmp/ccapaTpE.s:3472   .debug_str:00000000000002c4 .LASF97
-     /tmp/ccapaTpE.s:3704   .debug_str:00000000000008db .LASF98
-     /tmp/ccapaTpE.s:3444   .debug_str:0000000000000209 .LASF99
-     /tmp/ccapaTpE.s:3498   .debug_str:0000000000000363 .LASF100
-     /tmp/ccapaTpE.s:3504   .debug_str:0000000000000386 .LASF101
-     /tmp/ccapaTpE.s:3656   .debug_str:00000000000007b1 .LASF102
-     /tmp/ccapaTpE.s:3466   .debug_str:0000000000000290 .LASF103
-     /tmp/ccapaTpE.s:3510   .debug_str:00000000000003bc .LASF104
-     /tmp/ccapaTpE.s:3764   .debug_str:0000000000000b2c .LASF105
-     /tmp/ccapaTpE.s:3726   .debug_str:0000000000000a59 .LASF106
-     /tmp/ccapaTpE.s:3722   .debug_str:0000000000000a35 .LASF107
-     /tmp/ccapaTpE.s:3634   .debug_str:000000000000071e .LASF108
-     /tmp/ccapaTpE.s:3592   .debug_str:00000000000005c7 .LASF109
-     /tmp/ccapaTpE.s:3612   .debug_str:0000000000000674 .LASF110
-     /tmp/ccapaTpE.s:3618   .debug_str:00000000000006a9 .LASF111
-     /tmp/ccapaTpE.s:3584   .debug_str:00000000000005a0 .LASF112
-     /tmp/ccapaTpE.s:3538   .debug_str:000000000000047c .LASF113
-     /tmp/ccapaTpE.s:3574   .debug_str:000000000000057c .LASF114
-     /tmp/ccapaTpE.s:3712   .debug_str:00000000000009cf .LASF115
-     /tmp/ccapaTpE.s:3580   .debug_str:0000000000000593 .LASF116
-     /tmp/ccapaTpE.s:3590   .debug_str:00000000000005b3 .LASF117
-     /tmp/ccapaTpE.s:3550   .debug_str:00000000000004ce .LASF118
-GAS LISTING /tmp/ccapaTpE.s 			page 20
+     /tmp/ccYYMODl.s:3253   .debug_str:00000000000001a3 .LASF185
+     /tmp/ccYYMODl.s:3219   .debug_str:000000000000009e .LASF186
+     /tmp/ccYYMODl.s:3529   .debug_str:00000000000009f3 .LASF148
+     /tmp/ccYYMODl.s:3483   .debug_str:00000000000007f7 .LASF150
+     /tmp/ccYYMODl.s:3265   .debug_str:0000000000000222 .LASF73
+     /tmp/ccYYMODl.s:3461   .debug_str:0000000000000766 .LASF74
+     /tmp/ccYYMODl.s:3481   .debug_str:00000000000007f2 .LASF75
+     /tmp/ccYYMODl.s:3511   .debug_str:000000000000097c .LASF76
+     /tmp/ccYYMODl.s:3269   .debug_str:0000000000000230 .LASF77
+     /tmp/ccYYMODl.s:3363   .debug_str:00000000000004b2 .LASF78
+     /tmp/ccYYMODl.s:3539   .debug_str:0000000000000a39 .LASF79
+     /tmp/ccYYMODl.s:3281   .debug_str:0000000000000289 .LASF81
+     /tmp/ccYYMODl.s:3283   .debug_str:0000000000000298 .LASF82
+     /tmp/ccYYMODl.s:3495   .debug_str:000000000000082f .LASF83
+     /tmp/ccYYMODl.s:3259   .debug_str:00000000000001ec .LASF84
+     /tmp/ccYYMODl.s:3309   .debug_str:0000000000000335 .LASF85
+     /tmp/ccYYMODl.s:3313   .debug_str:0000000000000352 .LASF86
+     /tmp/ccYYMODl.s:3453   .debug_str:000000000000072e .LASF87
+     /tmp/ccYYMODl.s:3279   .debug_str:000000000000026e .LASF88
+     /tmp/ccYYMODl.s:3319   .debug_str:0000000000000381 .LASF89
+     /tmp/ccYYMODl.s:3551   .debug_str:0000000000000a6f .LASF90
+     /tmp/ccYYMODl.s:3517   .debug_str:00000000000009a8 .LASF91
+     /tmp/ccYYMODl.s:3513   .debug_str:0000000000000984 .LASF92
+     /tmp/ccYYMODl.s:3431   .debug_str:000000000000069b .LASF93
+     /tmp/ccYYMODl.s:3389   .debug_str:0000000000000556 .LASF95
+     /tmp/ccYYMODl.s:3411   .debug_str:00000000000005fb .LASF96
+     /tmp/ccYYMODl.s:3417   .debug_str:0000000000000630 .LASF97
+     /tmp/ccYYMODl.s:3383   .debug_str:0000000000000536 .LASF98
+     /tmp/ccYYMODl.s:3345   .debug_str:000000000000043c .LASF99
+     /tmp/ccYYMODl.s:3375   .debug_str:000000000000051c .LASF100
+     /tmp/ccYYMODl.s:3503   .debug_str:0000000000000923 .LASF101
+     /tmp/ccYYMODl.s:3379   .debug_str:0000000000000529 .LASF102
+     /tmp/ccYYMODl.s:3387   .debug_str:0000000000000542 .LASF103
+     /tmp/ccYYMODl.s:3355   .debug_str:0000000000000489 .LASF104
+     /tmp/ccYYMODl.s:3419   .debug_str:0000000000000643 .LASF105
+     /tmp/ccYYMODl.s:3573   .debug_str:0000000000000b2d .LASF106
+     /tmp/ccYYMODl.s:3323   .debug_str:0000000000000394 .LASF107
+     /tmp/ccYYMODl.s:3423   .debug_str:0000000000000660 .LASF108
+     /tmp/ccYYMODl.s:3447   .debug_str:00000000000006fe .LASF109
+     /tmp/ccYYMODl.s:3449   .debug_str:0000000000000711 .LASF110
+     /tmp/ccYYMODl.s:3275   .debug_str:0000000000000245 .LASF111
+     /tmp/ccYYMODl.s:3271   .debug_str:0000000000000236 .LASF112
+     /tmp/ccYYMODl.s:3311   .debug_str:0000000000000340 .LASF113
+     /tmp/ccYYMODl.s:3321   .debug_str:000000000000038e .LASF114
+     /tmp/ccYYMODl.s:3263   .debug_str:0000000000000210 .LASF115
+     /tmp/ccYYMODl.s:3207   .debug_str:000000000000001e .LASF116
+     /tmp/ccYYMODl.s:3439   .debug_str:00000000000006c7 .LASF117
+     /tmp/ccYYMODl.s:3433   .debug_str:00000000000006a4 .LASF118
+     /tmp/ccYYMODl.s:3413   .debug_str:0000000000000602 .LASF119
+     /tmp/ccYYMODl.s:3541   .debug_str:0000000000000a3f .LASF120
+     /tmp/ccYYMODl.s:3557   .debug_str:0000000000000aa8 .LASF121
+     /tmp/ccYYMODl.s:3535   .debug_str:0000000000000a1e .LASF122
+     /tmp/ccYYMODl.s:3367   .debug_str:00000000000004c2 .LASF123
+     /tmp/ccYYMODl.s:3465   .debug_str:0000000000000771 .LASF124
+     /tmp/ccYYMODl.s:3359   .debug_str:0000000000000497 .LASF125
+     /tmp/ccYYMODl.s:3295   .debug_str:00000000000002d0 .LASF126
+     /tmp/ccYYMODl.s:3499   .debug_str:0000000000000900 .LASF127
+GAS LISTING /tmp/ccYYMODl.s 			page 20
 
 
-     /tmp/ccapaTpE.s:3620   .debug_str:00000000000006bc .LASF119
-     /tmp/ccapaTpE.s:3786   .debug_str:0000000000000bea .LASF120
-     /tmp/ccapaTpE.s:3514   .debug_str:00000000000003cf .LASF121
-     /tmp/ccapaTpE.s:3624   .debug_str:00000000000006d9 .LASF122
-     /tmp/ccapaTpE.s:3650   .debug_str:0000000000000781 .LASF123
-     /tmp/ccapaTpE.s:3652   .debug_str:0000000000000794 .LASF124
-     /tmp/ccapaTpE.s:3462   .debug_str:0000000000000267 .LASF125
-     /tmp/ccapaTpE.s:3458   .debug_str:0000000000000258 .LASF126
-     /tmp/ccapaTpE.s:3502   .debug_str:0000000000000374 .LASF127
-     /tmp/ccapaTpE.s:3512   .debug_str:00000000000003c9 .LASF128
-     /tmp/ccapaTpE.s:3448   .debug_str:000000000000022d .LASF129
-     /tmp/ccapaTpE.s:3392   .debug_str:0000000000000045 .LASF130
-     /tmp/ccapaTpE.s:3642   .debug_str:000000000000074a .LASF131
-     /tmp/ccapaTpE.s:3636   .debug_str:0000000000000727 .LASF132
-     /tmp/ccapaTpE.s:3614   .debug_str:000000000000067b .LASF133
-     /tmp/ccapaTpE.s:3752   .debug_str:0000000000000af7 .LASF134
-     /tmp/ccapaTpE.s:3770   .debug_str:0000000000000b65 .LASF135
-     /tmp/ccapaTpE.s:3746   .debug_str:0000000000000ad6 .LASF136
-     /tmp/ccapaTpE.s:3562   .debug_str:0000000000000507 .LASF137
-     /tmp/ccapaTpE.s:3670   .debug_str:0000000000000805 .LASF138
-     /tmp/ccapaTpE.s:3554   .debug_str:00000000000004dc .LASF139
-     /tmp/ccapaTpE.s:3486   .debug_str:000000000000030f .LASF140
-     /tmp/ccapaTpE.s:3708   .debug_str:00000000000009ac .LASF141
-     /tmp/ccapaTpE.s:3724   .debug_str:0000000000000a4a .LASF142
-     /tmp/ccapaTpE.s:3398   .debug_str:000000000000007d .LASF143
-     /tmp/ccapaTpE.s:3756   .debug_str:0000000000000b06 .LASF144
-     /tmp/ccapaTpE.s:3596   .debug_str:00000000000005e1 .LASF145
-     /tmp/ccapaTpE.s:3526   .debug_str:0000000000000443 .LASF146
-     /tmp/ccapaTpE.s:3684   .debug_str:000000000000087a .LASF147
-     /tmp/ccapaTpE.s:3758   .debug_str:0000000000000b0b .LASF148
-     /tmp/ccapaTpE.s:3522   .debug_str:0000000000000416 .LASF149
-     /tmp/ccapaTpE.s:3578   .debug_str:000000000000058e .LASF150
-     /tmp/ccapaTpE.s:3606   .debug_str:0000000000000646 .LASF151
-     /tmp/ccapaTpE.s:3588   .debug_str:00000000000005ae .LASF152
-     /tmp/ccapaTpE.s:3386   .debug_str:0000000000000023 .LASF153
-     /tmp/ccapaTpE.s:3530   .debug_str:000000000000044e .LASF154
-     /tmp/ccapaTpE.s:3534   .debug_str:0000000000000458 .LASF155
-     /tmp/ccapaTpE.s:3762   .debug_str:0000000000000b27 .LASF156
-     /tmp/ccapaTpE.s:3506   .debug_str:000000000000039e .LASF157
-     /tmp/ccapaTpE.s:3532   .debug_str:0000000000000453 .LASF158
-     /tmp/ccapaTpE.s:3660   .debug_str:00000000000007d6 .LASF159
-     /tmp/ccapaTpE.s:3732   .debug_str:0000000000000a71 .LASF160
-     /tmp/ccapaTpE.s:3772   .debug_str:0000000000000b7b .LASF161
-     /tmp/ccapaTpE.s:3778   .debug_str:0000000000000ba9 .LASF163
-     /tmp/ccapaTpE.s:3546   .debug_str:00000000000004b0 .LASF165
-     /tmp/ccapaTpE.s:3460   .debug_str:000000000000025e .LASF166
-     /tmp/ccapaTpE.s:3698   .debug_str:00000000000008c8 .LASF167
-     /tmp/ccapaTpE.s:3610   .debug_str:000000000000066a .LASF169
-     /tmp/ccapaTpE.s:3484   .debug_str:000000000000030a .LASF170
-     /tmp/ccapaTpE.s:345    .text:0000000000000218 .LFE56
-     /tmp/ccapaTpE.s:3251   .debug_loc:0000000000000000 .LLST3
-     /tmp/ccapaTpE.s:3262   .debug_loc:0000000000000036 .LLST4
-     /tmp/ccapaTpE.s:3492   .debug_str:0000000000000330 .LASF171
-     /tmp/ccapaTpE.s:3277   .debug_loc:000000000000007f .LLST5
-     /tmp/ccapaTpE.s:79     .text:0000000000000058 .LBB31
-     /tmp/ccapaTpE.s:93     .text:0000000000000070 .LBE31
-     /tmp/ccapaTpE.s:94     .text:0000000000000070 .LBB33
-GAS LISTING /tmp/ccapaTpE.s 			page 21
+     /tmp/ccYYMODl.s:3515   .debug_str:0000000000000999 .LASF128
+     /tmp/ccYYMODl.s:3213   .debug_str:0000000000000056 .LASF129
+     /tmp/ccYYMODl.s:3545   .debug_str:0000000000000a4e .LASF130
+     /tmp/ccYYMODl.s:3395   .debug_str:0000000000000577 .LASF131
+     /tmp/ccYYMODl.s:3335   .debug_str:0000000000000408 .LASF132
+     /tmp/ccYYMODl.s:3477   .debug_str:00000000000007d5 .LASF133
+     /tmp/ccYYMODl.s:3547   .debug_str:0000000000000a53 .LASF134
+     /tmp/ccYYMODl.s:3331   .debug_str:00000000000003db .LASF135
+     /tmp/ccYYMODl.s:3377   .debug_str:0000000000000524 .LASF136
+     /tmp/ccYYMODl.s:3405   .debug_str:00000000000005cd .LASF137
+     /tmp/ccYYMODl.s:3385   .debug_str:000000000000053d .LASF138
+     /tmp/ccYYMODl.s:3227   .debug_str:00000000000000eb .LASF139
+     /tmp/ccYYMODl.s:3339   .debug_str:0000000000000413 .LASF140
+     /tmp/ccYYMODl.s:3341   .debug_str:0000000000000418 .LASF141
+     /tmp/ccYYMODl.s:3399   .debug_str:00000000000005ac .LASF142
+     /tmp/ccYYMODl.s:3301   .debug_str:00000000000002f1 .LASF143
+     /tmp/ccYYMODl.s:3509   .debug_str:0000000000000977 .LASF144
+     /tmp/ccYYMODl.s:3239   .debug_str:0000000000000130 .LASF145
+     /tmp/ccYYMODl.s:3523   .debug_str:00000000000009c0 .LASF146
+     /tmp/ccYYMODl.s:3559   .debug_str:0000000000000abe .LASF147
+     /tmp/ccYYMODl.s:3565   .debug_str:0000000000000aec .LASF149
+     /tmp/ccYYMODl.s:3353   .debug_str:0000000000000470 .LASF151
+     /tmp/ccYYMODl.s:3273   .debug_str:000000000000023c .LASF152
+     /tmp/ccYYMODl.s:3489   .debug_str:000000000000081c .LASF153
+     /tmp/ccYYMODl.s:3409   .debug_str:00000000000005f1 .LASF155
+     /tmp/ccYYMODl.s:3293   .debug_str:00000000000002cb .LASF156
+     /tmp/ccYYMODl.s:323    .text:0000000000000210 .LFE53
+     /tmp/ccYYMODl.s:3086   .debug_loc:0000000000000000 .LLST3
+     /tmp/ccYYMODl.s:3097   .debug_loc:0000000000000036 .LLST4
+     /tmp/ccYYMODl.s:3303   .debug_str:0000000000000302 .LASF157
+     /tmp/ccYYMODl.s:3112   .debug_loc:000000000000007f .LLST5
+     /tmp/ccYYMODl.s:79     .text:0000000000000058 .LBB25
+     /tmp/ccYYMODl.s:93     .text:0000000000000070 .LBE25
+     /tmp/ccYYMODl.s:94     .text:0000000000000070 .LBB27
+     /tmp/ccYYMODl.s:121    .text:00000000000000b4 .LBE27
+     /tmp/ccYYMODl.s:127    .text:00000000000000c0 .LBB29
+     /tmp/ccYYMODl.s:139    .text:00000000000000c4 .LBE29
+     /tmp/ccYYMODl.s:3119   .debug_loc:00000000000000a2 .LLST6
+     /tmp/ccYYMODl.s:161    .text:00000000000000f4 .LBB31
+     /tmp/ccYYMODl.s:170    .text:00000000000000fc .LBE31
+     /tmp/ccYYMODl.s:3126   .debug_loc:00000000000000c5 .LLST7
+     /tmp/ccYYMODl.s:3134   .debug_loc:00000000000000e9 .LLST8
+     /tmp/ccYYMODl.s:172    .text:00000000000000fc .LBB33
+     /tmp/ccYYMODl.s:184    .text:0000000000000104 .LBE33
+     /tmp/ccYYMODl.s:3141   .debug_loc:000000000000010c .LLST9
+     /tmp/ccYYMODl.s:186    .text:0000000000000104 .LBB35
+     /tmp/ccYYMODl.s:200    .text:000000000000011c .LBE35
+     /tmp/ccYYMODl.s:236    .text:0000000000000168 .LBB37
+     /tmp/ccYYMODl.s:243    .text:000000000000016c .LBE37
+     /tmp/ccYYMODl.s:3149   .debug_loc:0000000000000130 .LLST10
+     /tmp/ccYYMODl.s:145    .text:00000000000000d0 .LVL9
+     /tmp/ccYYMODl.s:153    .text:00000000000000e8 .LVL10
+     /tmp/ccYYMODl.s:205    .text:0000000000000128 .LVL16
+     /tmp/ccYYMODl.s:213    .text:0000000000000138 .LVL19
+     /tmp/ccYYMODl.s:221    .text:0000000000000154 .LVL20
+     /tmp/ccYYMODl.s:228    .text:0000000000000160 .LVL21
+     /tmp/ccYYMODl.s:232    .text:0000000000000168 .LVL22
+GAS LISTING /tmp/ccYYMODl.s 			page 21
 
 
-     /tmp/ccapaTpE.s:121    .text:00000000000000b4 .LBE33
-     /tmp/ccapaTpE.s:127    .text:00000000000000c0 .LBB35
-     /tmp/ccapaTpE.s:139    .text:00000000000000c4 .LBE35
-     /tmp/ccapaTpE.s:3284   .debug_loc:00000000000000a2 .LLST6
-     /tmp/ccapaTpE.s:161    .text:00000000000000f4 .LBB37
-     /tmp/ccapaTpE.s:170    .text:00000000000000fc .LBE37
-     /tmp/ccapaTpE.s:3291   .debug_loc:00000000000000c5 .LLST7
-     /tmp/ccapaTpE.s:3299   .debug_loc:00000000000000e9 .LLST8
-     /tmp/ccapaTpE.s:172    .text:00000000000000fc .LBB39
-     /tmp/ccapaTpE.s:184    .text:0000000000000104 .LBE39
-     /tmp/ccapaTpE.s:3306   .debug_loc:000000000000010c .LLST9
-     /tmp/ccapaTpE.s:191    .text:000000000000010c .LBB41
-     /tmp/ccapaTpE.s:205    .text:0000000000000124 .LBE41
-     /tmp/ccapaTpE.s:236    .text:0000000000000168 .LBB43
-     /tmp/ccapaTpE.s:243    .text:000000000000016c .LBE43
-     /tmp/ccapaTpE.s:3314   .debug_loc:0000000000000130 .LLST10
-     /tmp/ccapaTpE.s:258    .text:0000000000000184 .LBB45
-     /tmp/ccapaTpE.s:270    .text:0000000000000194 .LBE45
-     /tmp/ccapaTpE.s:3321   .debug_loc:0000000000000153 .LLST11
-     /tmp/ccapaTpE.s:267    .text:0000000000000194 .LVL26
-     /tmp/ccapaTpE.s:280    .text:00000000000001a4 .LBB47
-     /tmp/ccapaTpE.s:292    .text:00000000000001b4 .LBE47
-     /tmp/ccapaTpE.s:3328   .debug_loc:0000000000000176 .LLST12
-     /tmp/ccapaTpE.s:289    .text:00000000000001b4 .LVL29
-     /tmp/ccapaTpE.s:145    .text:00000000000000d0 .LVL9
-     /tmp/ccapaTpE.s:153    .text:00000000000000e8 .LVL10
-     /tmp/ccapaTpE.s:189    .text:000000000000010c .LVL14
-     /tmp/ccapaTpE.s:209    .text:0000000000000130 .LVL17
-     /tmp/ccapaTpE.s:217    .text:0000000000000140 .LVL20
-     /tmp/ccapaTpE.s:225    .text:000000000000015c .LVL21
-     /tmp/ccapaTpE.s:232    .text:0000000000000168 .LVL22
-     /tmp/ccapaTpE.s:250    .text:000000000000017c .LVL24
-     /tmp/ccapaTpE.s:274    .text:00000000000001a0 .LVL27
-     /tmp/ccapaTpE.s:296    .text:00000000000001c0 .LVL30
-     /tmp/ccapaTpE.s:326    .text:00000000000001f0 .LVL34
-     /tmp/ccapaTpE.s:330    .text:00000000000001fc .LVL35
-     /tmp/ccapaTpE.s:338    .text:000000000000020c .LVL37
-     /tmp/ccapaTpE.s:342    .text:0000000000000218 .LVL38
-     /tmp/ccapaTpE.s:3628   .debug_str:00000000000006f0 .LASF172
-     /tmp/ccapaTpE.s:3440   .debug_str:00000000000001ce .LASF174
-     /tmp/ccapaTpE.s:10     .text:0000000000000000 .LFB55
-     /tmp/ccapaTpE.s:53     .text:000000000000003c .LFE55
-     /tmp/ccapaTpE.s:3335   .debug_loc:0000000000000199 .LLST0
-     /tmp/ccapaTpE.s:32     .text:0000000000000024 .LBB29
-     /tmp/ccapaTpE.s:39     .text:0000000000000028 .LBE29
-     /tmp/ccapaTpE.s:3351   .debug_loc:00000000000001e3 .LLST1
-     /tmp/ccapaTpE.s:3358   .debug_loc:0000000000000206 .LLST2
-     /tmp/ccapaTpE.s:31     .text:0000000000000024 .LVL2
-     /tmp/ccapaTpE.s:3482   .debug_str:0000000000000305 .LASF177
-     /tmp/ccapaTpE.s:3470   .debug_str:00000000000002ba .LASF179
-     /tmp/ccapaTpE.s:3740   .debug_str:0000000000000aac .LASF175
-     /tmp/ccapaTpE.s:3552   .debug_str:00000000000004d6 .LASF176
-     /tmp/ccapaTpE.s:3388   .debug_str:0000000000000034 .LASF178
-     /tmp/ccapaTpE.s:3438   .debug_str:00000000000001c2 .LASF180
-     /tmp/ccapaTpE.s:3428   .debug_str:0000000000000179 .LASF181
-     /tmp/ccapaTpE.s:3442   .debug_str:00000000000001da .LASF204
-     /tmp/ccapaTpE.s:3672   .debug_str:000000000000080c .LASF182
-GAS LISTING /tmp/ccapaTpE.s 			page 22
-
-
-     /tmp/ccapaTpE.s:3586   .debug_str:00000000000005a7 .LASF183
-     /tmp/ccapaTpE.s:3474   .debug_str:00000000000002d0 .LASF185
-     /tmp/ccapaTpE.s:3476   .debug_str:00000000000002e3 .LASF184
-     /tmp/ccapaTpE.s:3784   .debug_str:0000000000000bdd .LASF186
-     /tmp/ccapaTpE.s:3616   .debug_str:0000000000000693 .LASF187
-     /tmp/ccapaTpE.s:3748   .debug_str:0000000000000ae0 .LASF188
-     /tmp/ccapaTpE.s:3396   .debug_str:0000000000000068 .LASF189
-     /tmp/ccapaTpE.s:3626   .debug_str:00000000000006e0 .LASF190
-     /tmp/ccapaTpE.s:3742   .debug_str:0000000000000ab1 .LASF191
-     /tmp/ccapaTpE.s:3384   .debug_str:0000000000000013 .LASF192
-     /tmp/ccapaTpE.s:3736   .debug_str:0000000000000a95 .LASF205
-     /tmp/ccapaTpE.s:3446   .debug_str:0000000000000215 .LASF206
-     /tmp/ccapaTpE.s:313    .text:00000000000001d4 .LVL32
-     /tmp/ccapaTpE.s:334    .text:0000000000000200 .LVL36
-     /tmp/ccapaTpE.s:211    .text:0000000000000134 .LVL18
-     /tmp/ccapaTpE.s:215    .text:0000000000000138 .LVL19
-     /tmp/ccapaTpE.s:316    .text:00000000000001d8 .LVL33
-     /tmp/ccapaTpE.s:310    .text:00000000000001d0 .LVL31
-     /tmp/ccapaTpE.s:126    .text:00000000000000c0 .LVL7
-     /tmp/ccapaTpE.s:136    .text:00000000000000c4 .LVL8
-     /tmp/ccapaTpE.s:160    .text:00000000000000f4 .LVL11
-     /tmp/ccapaTpE.s:168    .text:00000000000000fc .LVL12
-     /tmp/ccapaTpE.s:181    .text:0000000000000104 .LVL13
-     /tmp/ccapaTpE.s:241    .text:000000000000016c .LVL23
-     /tmp/ccapaTpE.s:257    .text:0000000000000184 .LVL25
-     /tmp/ccapaTpE.s:279    .text:00000000000001a4 .LVL28
-     /tmp/ccapaTpE.s:14     .text:0000000000000000 .LVL0
-     /tmp/ccapaTpE.s:29     .text:000000000000001c .LVL1
-     /tmp/ccapaTpE.s:48     .text:0000000000000034 .LVL4
-     /tmp/ccapaTpE.s:37     .text:0000000000000028 .LVL3
-     /tmp/ccapaTpE.s:399    .debug_info:0000000000000000 .Ldebug_info0
-     /tmp/ccapaTpE.s:348    .gcc_except_table:0000000000000000 .LLSDA56
+     /tmp/ccYYMODl.s:250    .text:000000000000017c .LVL24
+     /tmp/ccYYMODl.s:260    .text:0000000000000190 .LVL25
+     /tmp/ccYYMODl.s:263    .text:000000000000019c .LVL26
+     /tmp/ccYYMODl.s:271    .text:00000000000001ac .LVL27
+     /tmp/ccYYMODl.s:274    .text:00000000000001b8 .LVL28
+     /tmp/ccYYMODl.s:304    .text:00000000000001e8 .LVL32
+     /tmp/ccYYMODl.s:308    .text:00000000000001f4 .LVL33
+     /tmp/ccYYMODl.s:316    .text:0000000000000204 .LVL35
+     /tmp/ccYYMODl.s:320    .text:0000000000000210 .LVL36
+     /tmp/ccYYMODl.s:3427   .debug_str:0000000000000677 .LASF158
+     /tmp/ccYYMODl.s:3255   .debug_str:00000000000001b1 .LASF160
+     /tmp/ccYYMODl.s:10     .text:0000000000000000 .LFB52
+     /tmp/ccYYMODl.s:53     .text:000000000000003c .LFE52
+     /tmp/ccYYMODl.s:3156   .debug_loc:0000000000000153 .LLST0
+     /tmp/ccYYMODl.s:32     .text:0000000000000024 .LBB23
+     /tmp/ccYYMODl.s:39     .text:0000000000000028 .LBE23
+     /tmp/ccYYMODl.s:3172   .debug_loc:000000000000019d .LLST1
+     /tmp/ccYYMODl.s:3179   .debug_loc:00000000000001c0 .LLST2
+     /tmp/ccYYMODl.s:31     .text:0000000000000024 .LVL2
+     /tmp/ccYYMODl.s:3291   .debug_str:00000000000002c6 .LASF163
+     /tmp/ccYYMODl.s:3315   .debug_str:000000000000036a .LASF165
+     /tmp/ccYYMODl.s:3531   .debug_str:00000000000009fb .LASF161
+     /tmp/ccYYMODl.s:3357   .debug_str:0000000000000491 .LASF162
+     /tmp/ccYYMODl.s:3245   .debug_str:0000000000000168 .LASF164
+     /tmp/ccYYMODl.s:3257   .debug_str:00000000000001bd .LASF187
+     /tmp/ccYYMODl.s:3467   .debug_str:0000000000000778 .LASF166
+     /tmp/ccYYMODl.s:3285   .debug_str:00000000000002a4 .LASF167
+     /tmp/ccYYMODl.s:3571   .debug_str:0000000000000b20 .LASF169
+     /tmp/ccYYMODl.s:3415   .debug_str:000000000000061a .LASF168
+     /tmp/ccYYMODl.s:3537   .debug_str:0000000000000a28 .LASF170
+     /tmp/ccYYMODl.s:3211   .debug_str:0000000000000041 .LASF171
+     /tmp/ccYYMODl.s:3425   .debug_str:0000000000000667 .LASF172
+     /tmp/ccYYMODl.s:3391   .debug_str:000000000000056b .LASF173
+     /tmp/ccYYMODl.s:3203   .debug_str:0000000000000007 .LASF174
+     /tmp/ccYYMODl.s:3527   .debug_str:00000000000009e4 .LASF188
+     /tmp/ccYYMODl.s:3261   .debug_str:00000000000001f8 .LASF189
+     /tmp/ccYYMODl.s:291    .text:00000000000001cc .LVL30
+     /tmp/ccYYMODl.s:312    .text:00000000000001f8 .LVL34
+     /tmp/ccYYMODl.s:207    .text:000000000000012c .LVL17
+     /tmp/ccYYMODl.s:211    .text:0000000000000130 .LVL18
+     /tmp/ccYYMODl.s:294    .text:00000000000001d0 .LVL31
+     /tmp/ccYYMODl.s:288    .text:00000000000001c8 .LVL29
+     /tmp/ccYYMODl.s:126    .text:00000000000000c0 .LVL7
+     /tmp/ccYYMODl.s:136    .text:00000000000000c4 .LVL8
+     /tmp/ccYYMODl.s:160    .text:00000000000000f4 .LVL11
+     /tmp/ccYYMODl.s:168    .text:00000000000000fc .LVL12
+     /tmp/ccYYMODl.s:181    .text:0000000000000104 .LVL13
+     /tmp/ccYYMODl.s:241    .text:000000000000016c .LVL23
+     /tmp/ccYYMODl.s:14     .text:0000000000000000 .LVL0
+     /tmp/ccYYMODl.s:29     .text:000000000000001c .LVL1
+     /tmp/ccYYMODl.s:48     .text:0000000000000034 .LVL4
+     /tmp/ccYYMODl.s:37     .text:0000000000000028 .LVL3
+     /tmp/ccYYMODl.s:376    .debug_info:0000000000000000 .Ldebug_info0
+     /tmp/ccYYMODl.s:326    .gcc_except_table:0000000000000000 .LLSDA53
 
 UNDEFINED SYMBOLS
 _Znwm
+GAS LISTING /tmp/ccYYMODl.s 			page 22
+
+
 HEAP_START_ADDR
 _ZN15MemoryAllocator9free_listE
 HEAP_END_ADDR
@@ -1295,12 +1231,12 @@ _ZN15MemoryAllocator14allocated_listE
 _ZN5Riscv14supervisorTrapEv
 _ZN3PCBC1EPFvPvES0_Pm
 _ZN3PCB7runningE
-_Z16switchToUserModev
 _ZN15MemoryAllocator8allocateEm
 _Z8userMainv
 _ZN9Scheduler3putEP3PCB
+_Z16switchToUserModev
 _Z15thread_dispatchv
-_ZdaPv
+_ZN3PCBD1Ev
 _ZdlPv
 _Unwind_Resume
 __gxx_personality_v0
