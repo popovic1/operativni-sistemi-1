@@ -51,7 +51,7 @@ int _thread::exit() {
     if(running->state==RUNNING){
         //delete _thread::running->semaphore;
         running->state=FINISHED;
-        thread_dispatch();
+        //thread_dispatch();
         return 0;
     }
     return -1;

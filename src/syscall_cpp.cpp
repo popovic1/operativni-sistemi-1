@@ -44,8 +44,9 @@ void Thread::dispatch() {
 }
 
 Thread::~Thread() {
-    delete (_thread*)myHandle;
+
     thread_exit();
+    delete (_thread*)myHandle;
 
 
 
