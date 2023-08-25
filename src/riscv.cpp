@@ -81,6 +81,7 @@ void Riscv::trapHandler() {
                     break;
                 case 0x42:
                     __putc((char) a3);
+                    break;
                 case 0x51:
                     w_sstatus(sstatus);
                     mc_sstatus(1 << 8);
