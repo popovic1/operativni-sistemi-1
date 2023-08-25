@@ -1,11 +1,7 @@
-//
-// Created by os on 7/28/23.
-//
-
 #include "../h/_thread.hpp"
 #include "../h/_sem.hpp"
 
-_thread* _thread::running;
+_thread *_thread::running;
 
 
 _thread::_thread(_thread::Body body, void *args, uint64 *stack) {
@@ -18,12 +14,12 @@ _thread::_thread(_thread::Body body, void *args, uint64 *stack) {
     this->args = args;
     state = READY;
 
-    //semaphore = new _sem();
+    semaphore = new _sem();
 }
 
 _thread::~_thread() {
-    if(body)delete[] stack;
-    //delete semaphore;
+    if (body)delete[] stack;
+    delete semaphore;
 }
 
 
@@ -36,7 +32,7 @@ void _thread::dispatch() {
         Scheduler::put(old);
     }
     running = Scheduler::get();
-    running->state=RUNNING;
+    running->state = RUNNING;
 
     _thread::contextSwitch(&old->context, &running->context);
 
@@ -44,13 +40,13 @@ void _thread::dispatch() {
 }
 
 void _thread::join() {
-    //semaphore->wait();
+    semaphore->wait();
 }
 
 int _thread::exit() {
-    if(running->state==RUNNING){
-        //delete _thread::running->semaphore;
-        running->state=FINISHED;
+    if (running->state == RUNNING) {
+        delete _thread::running->semaphore;
+        running->state = FINISHED;
         //thread_dispatch();
         return 0;
     }
@@ -60,7 +56,7 @@ int _thread::exit() {
 void _thread::wrapper() {
     Riscv::popSppSpie();
     running->body(running->args);
-    running->state=FINISHED;
+    running->state = FINISHED;
     thread_dispatch();
 }
 

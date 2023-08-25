@@ -50,7 +50,7 @@ private:
 
     static void wrapper();
 
-    //_sem* semaphore;
+    _sem *semaphore;
 
     Body body;
     uint64 *stack;

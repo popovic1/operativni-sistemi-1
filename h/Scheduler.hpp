@@ -12,9 +12,9 @@ class Scheduler {
 private:
     static List<_thread> readyQueue;
 public:
-    static _thread* get();
+    static _thread *get();
 
-    static void put(_thread* handle);
+    static void put(_thread *handle);
 
     static uint64 remove();
 };

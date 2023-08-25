@@ -1,7 +1,3 @@
-//
-// Created by os on 1/28/23.
-//
-
 #include "../h/MemoryAllocator.hpp"
 
 Block *MemoryAllocator::free_list = nullptr;

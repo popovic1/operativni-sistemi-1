@@ -9,6 +9,4 @@ void printStr(char const *string);
 void printInteger(uint64 integer);
 
 
-
-
 #endif //PROJECT_BASE_V1_1_PRINT_HPP

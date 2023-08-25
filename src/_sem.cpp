@@ -1,12 +1,8 @@
-//
-// Created by os on 8/17/23.
-//
-
 #include "../h/_sem.hpp"
 
 int _sem::wait() {
-    if(valid != true){
-        printStr("ERROR------------------------------------------------------------");
+    if (valid != true) {
+
         return -1;
 
     }
@@ -21,10 +17,7 @@ int _sem::wait() {
 }
 
 int _sem::signal() {
-    if(!valid) {
-        printStr("ERROR------------------------------------------------------------");
-        return -1;
-    }
+    if (!valid) { return -1; }
     if (++value <= 0) {
         // Wake up a waiting thread
         _thread *threadToWake = waitQueue.removeFirst();
@@ -35,13 +28,13 @@ int _sem::signal() {
 }
 
 _sem::~_sem() {
-    if(valid){
+    if (valid) {
         close();
     }
 }
 
 int _sem::signalAll() {
-    if(!valid) return -1;
+    if (!valid) return -1;
     while (waitQueue.peekFirst() != 0) {
         _thread *threadToWake = waitQueue.removeFirst();
         threadToWake->setState(_thread::READY);

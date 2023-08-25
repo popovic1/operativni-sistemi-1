@@ -4,11 +4,11 @@
 
 #include "../h/syscall_cpp.hpp"
 
-void* operator new(size_t size) {
+void *operator new(size_t size) {
     return mem_alloc(size);
 }
 
-void* operator new[](size_t size) {
+void *operator new[](size_t size) {
     return mem_alloc(size);
 }
 
@@ -16,21 +16,21 @@ void operator delete(void *ptr) { mem_free(ptr); }
 
 void operator delete[](void *ptr) { mem_free(ptr); }
 
-void switchToUserMode(){ toUserMode();}
+void switchToUserMode() { toUserMode(); }
 
-Thread::Thread(void (*body)(void*), void* arg) {
+Thread::Thread(void (*body)(void *), void *arg) {
     thread_create(&myHandle, body, arg);
     Scheduler::remove();
 }
 
-Thread::Thread() : Thread(threadWrapper, this){}
+Thread::Thread() : Thread(threadWrapper, this) {}
 
 void Thread::threadWrapper(void *t) {
-    ((Thread*)t)->run();
+    ((Thread *) t)->run();
 }
 
 int Thread::start() {
-    Scheduler::put((_thread*)myHandle);
+    Scheduler::put((_thread *) myHandle);
 
     return 0;
 }
@@ -46,19 +46,18 @@ void Thread::dispatch() {
 Thread::~Thread() {
 
     thread_exit();
-    delete (_thread*)myHandle;
-
+    delete (_thread *) myHandle;
 
 
 }
 
-Semaphore::Semaphore(unsigned int init)  {
+Semaphore::Semaphore(unsigned int init) {
     sem_open(&myHandle, init);
 }
 
 Semaphore::~Semaphore() {
     sem_close(myHandle);
-    delete (_sem*)myHandle;
+    delete (_sem *) myHandle;
 }
 
 int Semaphore::signal() {

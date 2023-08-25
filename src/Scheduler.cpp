@@ -1,7 +1,3 @@
-//
-// Created by os on 7/28/23.
-//
-
 #include "../h/Scheduler.hpp"
 
 

@@ -1,11 +1,8 @@
-//
-// Created by os on 8/17/23.
-//
-
 #ifndef PROJECT_BASE_V1_1__SEM_HPP
 #define PROJECT_BASE_V1_1__SEM_HPP
 
 #include "_thread.hpp"
+
 class _sem {
 private:
     int value;
@@ -33,7 +30,6 @@ public:
 
     int signalAll();
 };
-
 
 
 #endif //PROJECT_BASE_V1_1__SEM_HPP
