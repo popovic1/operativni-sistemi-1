@@ -1,0 +1,16 @@
+GAS LISTING /tmp/ccAvPD3l.s 			page 1
+
+
+   1              		.file	"ThreadSleep_C_API_test.cpp"
+   2              		.option pic
+   3              		.option norelax
+   4              		.text
+   5              	.Ltext0:
+   6              	.Letext0:
+GAS LISTING /tmp/ccAvPD3l.s 			page 2
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 ThreadSleep_C_API_test.cpp
+
+NO UNDEFINED SYMBOLS

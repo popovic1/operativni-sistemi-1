@@ -1,6 +1,7 @@
 #ifndef PROJECT_BASE_V1_1_MEMORYALLOCATOR_HPP
 #define PROJECT_BASE_V1_1_MEMORYALLOCATOR_HPP
-#include "../lib/hw.h"
+
+#include "print.hpp"
 
 struct Block {
     size_t size;
@@ -29,14 +30,6 @@ public:
 
     static void init() {
         // Initialize the free list
-
-        // For testing purposes
-//        uint64 start = (uint64)((Block *) HEAP_START_ADDR);
-//        printInteger(start);
-//        printString("\n");
-//        uint64 end = (uint64)((Block *) HEAP_END_ADDR);
-//        printInteger(end);
-//        printString("\n");
 
         free_list = (Block *) HEAP_START_ADDR;
         free_list->size = (uint64 *) HEAP_END_ADDR - (uint64 *) HEAP_START_ADDR;

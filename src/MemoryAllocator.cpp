@@ -1,7 +1,3 @@
-//
-// Created by os on 1/28/23.
-//
-
 #include "../h/MemoryAllocator.hpp"
 
 Block *MemoryAllocator::free_list = nullptr;
@@ -108,7 +104,7 @@ void *MemoryAllocator::allocate(size_t size) {
 
             // Return the memory
 
-            void *userPtr = (Block *) ((uint64 *) current + sizeof(Block));
+            void *userPtr = (char *) ((uint64 *) current + sizeof(Block));
             return userPtr;
         }
         prev = current;

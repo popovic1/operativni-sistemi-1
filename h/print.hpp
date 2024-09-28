@@ -4,8 +4,9 @@
 #include "../lib/hw.h"
 #include "../lib/console.h"
 
-extern void printString(char const *string);
+void printStr(char const *string);
 
-extern void printInteger(uint64 integer);
+void printInteger(uint64 integer);
+
 
 #endif //PROJECT_BASE_V1_1_PRINT_HPP
